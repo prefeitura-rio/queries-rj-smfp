@@ -59,18 +59,20 @@ def get_basic_treated_query(spreadsheet_id: str, dataset_id: str, table_id: str)
 
 
 def dump_query_into_model_sql(
-    query: str, dataset_id: str, table_id: str, model_sql_path: str = None
+    query: str, dataset_id: str, table_id: str, model_sql_folder_path: str = None
 ):
     # path to save the model
     model_sql_path = (
-        Path(f"models/{dataset_id}/{table_id}.sql")
-        if model_sql_path is None
-        else Path(model_sql_path)
+        Path("models/")
+        if model_sql_folder_path is None
+        else Path(model_sql_folder_path)
     )
+    model_sql_path_file = model_sql_path / dataset_id / f"{table_id}.sql"
+
     if query != "":
-        model_sql_path.parent.mkdir(parents=True, exist_ok=True)
+        model_sql_path_file.parent.mkdir(parents=True, exist_ok=True)
         # save publish.sql in table_folder
-        model_sql_path.open("w", encoding="utf-8").write(query)
+        model_sql_path_file.open("w", encoding="utf-8").write(query)
     else:
         print("No query to save")
 
