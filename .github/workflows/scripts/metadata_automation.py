@@ -201,3 +201,55 @@ if __name__ == "__main__":
                 )
                 # Dump the metadata into the schema.yaml file
                 dump_metadata_into_schema_yaml(dataset_id, table_id, table_metadata)
+
+
+def get_basic_treated_query(spreadsheet_id=str):
+    """
+    generates a basic treated query
+    """
+
+    gspread_client = get_gspread_client()
+    spreadsheet = download_spreadsheet(spreadsheet_id, gspread_client)
+
+    columns = pd.read_excel(spreadsheet, sheet_name="colunas")
+
+    ## se Nome da coluna 'e null a coluna nao deve entrar em producao'
+    columns = columns[columns["Nome da coluna"].notnull()]
+    tabela = pd.read_excel(spreadsheet, sheet_name="tabela", header=None)
+    table_columns = tabela[0].tolist()
+    tabela = tabela.T.tail(1)
+    tabela.columns = table_columns
+
+    project_id = tabela["bigquery_project"].values[0]
+    dataset_id = tabela["dataset_id"].values[0]
+    table_id = tabela["table_id"].values[0]
+
+    originais = columns["Nome original da coluna"].tolist()
+    nomes = columns["Nome da coluna"].tolist()
+    tipos = columns["Tipo da coluna"].tolist()
+
+    indent_space = 4 * " "
+    query = "SELECT \n"
+    for original, nome, tipo in zip(originais, nomes, tipos):
+        if tipo == "GEOGRAPHY":
+            query += f"ST_GEOGFROMTEXT({original}) AS {nome},\n"
+        elif "id" in nome or tipo == "INT64":
+            query += (
+                indent_space
+                + f"SAFE_CAST(REGEXP_REPLACE({original}, r'\.0$', '') AS {tipo}) AS {nome},\n"
+            )
+        elif tipo == "DATETIME":
+            query += (
+                indent_space
+                + f"SAFE_CAST(SAFE.PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%S', {original}) AS {tipo}) AS {nome},\n"
+            )
+        elif tipo == "FLOAT64":
+            query += indent_space + (
+                f"SAFE_CAST(REGEXP_REPLACE({original}, r',', '.') AS {tipo}) AS {nome},"
+            )
+        else:
+            query += indent_space + f"SAFE_CAST({original} AS {tipo}) AS {nome},\n"
+
+    query += f"FROM {project_id}.{dataset_id}_staging.{table_id} AS t"
+
+    return query
