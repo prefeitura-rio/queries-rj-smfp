@@ -1,0 +1,14 @@
+version: 2
+models :
+  - name: tipo_vinculo
+    description: "**Descrição:** Tipos de vínculos existentes tanto na administração\
+      \ direta como indireta da prefeitura do Rio de Janeiro.\n**Frequência de atualização:**\
+      \  \n**Cobertura temporal:**  \n**Órgão gestor dos dados:**  \n**Publicado por\
+      \ (Nome):**  \n**Publicado por (E-mail):**  \n**Banco de origem:**  \n**View\
+      \ ou Tabela de Origem:** VW_DLK_ERG_TIPO_VINC_\n**Query de extração:**  \n**bigquery_project:**\
+      \ rj-smfp\n"
+    columns:
+      - name: sigla
+        description: Sigla do tipo de vínculo. Ex. A DISPOSICAO-CLT.
+      - name: nome
+        description: Nome do tipo de vínculo. Ex. A DISPOSICAO DA PREFEITURA-CLT.
