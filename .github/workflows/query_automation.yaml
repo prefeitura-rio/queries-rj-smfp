@@ -1,4 +1,4 @@
-name: Metadata Automation
+name: Query Automation
 
 on:
   pull_request_target:
