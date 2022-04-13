@@ -65,7 +65,7 @@ def dump_query_into_model_sql(
     model_sql_path = (
         Path(f"models/{dataset_id}/{table_id}.sql")
         if model_sql_path is None
-        else model_sql_path
+        else Path(model_sql_path)
     )
     if query != "":
         model_sql_path.parent.mkdir(parents=True, exist_ok=True)
