@@ -69,12 +69,14 @@ def dump_query_into_model_sql(
     )
     model_sql_path_file = model_sql_path / dataset_id / f"{table_id}.sql"
 
-    if query != "":
+    if not query:
+        print("No query to save")
+    elif model_sql_path_file.exists():
+        print(f"{model_sql_path_file} already exists. Skipping...")
+    else:
         model_sql_path_file.parent.mkdir(parents=True, exist_ok=True)
         # save publish.sql in table_folder
         model_sql_path_file.open("w", encoding="utf-8").write(query)
-    else:
-        print("No query to save")
 
 
 if __name__ == "__main__":
