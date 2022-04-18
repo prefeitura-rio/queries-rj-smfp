@@ -58,21 +58,21 @@ def get_basic_treated_query(spreadsheet_id: str, dataset_id: str, table_id: str)
     return query
 
 
-def dump_query_into_model_sql(
-    query: str, dataset_id: str, table_id: str, model_sql_folder_path: str = None
+def get_model_file_path(
+    model_sql_folder_path: str = None, dataset_id: str = None, table_id: str = None
 ):
-    # path to save the model
     model_sql_path = (
         Path("models/")
         if model_sql_folder_path is None
         else Path(model_sql_folder_path)
     )
-    model_sql_path_file = model_sql_path / dataset_id / f"{table_id}.sql"
+    return model_sql_path / dataset_id / f"{table_id}.sql"
+
+
+def dump_query_into_model_sql(query: str, model_sql_path_file: str):
 
     if not query:
         print("No query to save")
-    elif model_sql_path_file.exists():
-        print(f"{model_sql_path_file} already exists. Skipping...")
     else:
         model_sql_path_file.parent.mkdir(parents=True, exist_ok=True)
         # save publish.sql in table_folder
@@ -97,14 +97,21 @@ if __name__ == "__main__":
             # Get the table
             table: dict = dataset[table_id]
 
-            # Check whether there is a spreadsheet ID set for this table
-            if "spreadsheet_id" in table and table["spreadsheet_id"]:
-                print(
-                    f"- Creating basic treated querie for table {table_id}...", end="\n"
-                )
+            # path to save the model
+            model_sql_path_file = get_model_file_path(
+                model_sql_folder_path=None, dataset_id=dataset_id, table_id=table_id
+            )
 
+            # Check whether there is a spreadsheet ID set for this table
+            if model_sql_path_file.exists():
+                print(f"{model_sql_path_file} already exists. Skipping...")
+            elif "spreadsheet_id" in table and table["spreadsheet_id"]:
+                print(
+                    f"- Creating basic treated querie for table {table_id}...",
+                    end="\n",
+                )
                 # Fetch a basic query from Google Sheets metadata
                 query = get_basic_treated_query(
                     table["spreadsheet_id"], dataset_id, table_id
                 )
-                dump_query_into_model_sql(query, dataset_id, table_id)
+                dump_query_into_model_sql(query, model_sql_path_file)
