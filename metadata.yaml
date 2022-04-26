@@ -3,7 +3,7 @@ models:
     cargo:
       spreadsheet_id: "1gAXVDwLldxye8PbdKSeTAIWsoBFit01i"
     categoria:
-      spreadsheet_id: "d/1kB3HM5ySVq_Ri60mTUYVOlRs5KrtEGUy"
+      spreadsheet_id: "1l3LemudEq6l6tEc11la6tA4X98viZIOy"
     # empresa:
     #   spreadsheet_id: "1xq2TSLwT0i8sTpkFdnRvUuBwQHabiJAE"
     fita_banco:
@@ -11,9 +11,9 @@ models:
     # folha_empresa:
     #   spreadsheet_id: "14y2HXmdJZ9MENeRzIR4YDk6GX8KdzEzx"
     forma_provimento:
-      spreadsheet_id: "15H4o1iEGRuD3IEfmingheppyn06EdRD"
+      spreadsheet_id: "1K4RsAttwXU69liZxHe_bsyJcLvZe-psD"
     funcionario:
-      spreadsheet_id: "1x6PLe-7GfhTYIzLHtGa8De81dmkfdKNF"
+      spreadsheet_id: "1kz8tnsgllWm0E_13tpiaGDAshyB1p7cq"
     horario_trabalho:
       spreadsheet_id: "1G8xViLwTl3wub7SITGROxVVR0MtZDl-H"
     jornada:
