@@ -90,10 +90,13 @@ def fetch_metadata_from_google_sheets(
     spreadsheet: BytesIO = download_spreadsheet(spreadsheet_id, gspread_client)
 
     df_table_metadata = pd.read_excel(
-        spreadsheet, sheet_name="tabela", header=None
+        spreadsheet, sheet_name="tabela", header=None, engine="openpyxl"
     ).fillna(" ")
 
-    df_columns_metadata = pd.read_excel(spreadsheet, sheet_name="colunas")
+    df_columns_metadata = pd.read_excel(
+        spreadsheet, sheet_name="colunas", engine="openpyxl"
+    )
+
     df_columns_metadata = df_columns_metadata[
         (df_columns_metadata["Nome da coluna"].notnull())
         & (df_columns_metadata["Tipo da coluna"].notnull())
