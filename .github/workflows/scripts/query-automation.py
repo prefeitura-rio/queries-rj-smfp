@@ -34,7 +34,7 @@ def get_basic_treated_query(spreadsheet_id: str, dataset_id: str, table_id: str)
 
     tabela = pd.read_excel(spreadsheet, sheet_name="tabela", header=None)
     table_columns = tabela[0].tolist()
-    tabela = tabela.T.tail(1)
+    tabela = tabela[1].T.tail(1)
     tabela.columns = table_columns
 
     project_id = tabela["bigquery_project"].values[0]
