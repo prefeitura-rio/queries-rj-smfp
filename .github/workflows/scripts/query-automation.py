@@ -1,10 +1,10 @@
-import sys
+# import sys
 
-sys.path.append(".github/workflows/")
+# sys.path.append(".github/workflows/")
 
 import pandas as pd
 
-from scripts.metadata_automation import *
+from metadata_automation import *
 
 
 ## this need to be the same as pipelines/utils/util.py (remove_columns_accents)
@@ -32,19 +32,21 @@ def get_basic_treated_query(spreadsheet_id: str, dataset_id: str, table_id: str)
     gspread_client = get_gspread_client()
     spreadsheet = download_spreadsheet(spreadsheet_id, gspread_client)
 
-    columns = pd.read_excel(spreadsheet, sheet_name="colunas")
-
-    ## se Nome da coluna 'e null a coluna nao deve entrar em producao'
-    columns = columns[columns["Nome da coluna"].notnull()]
-    columns["Nome da coluna"] = remove_accents_and_lower(columns["Nome da coluna"])
     tabela = pd.read_excel(spreadsheet, sheet_name="tabela", header=None)
     table_columns = tabela[0].tolist()
     tabela = tabela.T.tail(1)
     tabela.columns = table_columns
 
     project_id = tabela["bigquery_project"].values[0]
-    # dataset_id = tabela["dataset_id"].values[0]
-    # table_id = tabela["table_id"].values[0]
+
+    columns = pd.read_excel(spreadsheet, sheet_name="colunas")
+
+    ## se Nome da coluna 'e null a coluna nao deve entrar em producao'
+    columns = columns[columns["Nome da coluna"].notnull()]
+
+    columns["Nome original da coluna"] = remove_accents_and_lower(
+        columns["Nome original da coluna"]
+    )
 
     originais = columns["Nome original da coluna"].tolist()
     nomes = columns["Nome da coluna"].tolist()
