@@ -1,9 +1,27 @@
-import os
 import sys
 
 sys.path.append(".github/workflows/")
 
+import pandas as pd
+
 from scripts.metadata_automation import *
+
+
+## this need to be the same as pipelines/utils/util.py (remove_columns_accents)
+def remove_accents_and_lower(data: pd.Series):
+    """
+    Remove accents from dataframe columns.
+    """
+    return list(
+        data.str.normalize("NFKD")
+        .str.encode("ascii", errors="ignore")
+        .str.decode("utf-8")
+        .str.replace(" ", "_")
+        .str.replace(".", "")
+        .str.replace("/", "_")
+        .str.replace("-", "_")
+        .str.lower()
+    )
 
 
 def get_basic_treated_query(spreadsheet_id: str, dataset_id: str, table_id: str):
@@ -18,6 +36,7 @@ def get_basic_treated_query(spreadsheet_id: str, dataset_id: str, table_id: str)
 
     ## se Nome da coluna 'e null a coluna nao deve entrar em producao'
     columns = columns[columns["Nome da coluna"].notnull()]
+    columns["Nome da coluna"] = remove_accents_and_lower(columns["Nome da coluna"])
     tabela = pd.read_excel(spreadsheet, sheet_name="tabela", header=None)
     table_columns = tabela[0].tolist()
     tabela = tabela.T.tail(1)
