@@ -1,0 +1,771 @@
+version: 2
+models :
+  - name: cargo
+    description: "**titulo_data_rio:**  \n**tags:**  \n**descricao_breve:**  \n**descricao_aprofundada:**\
+      \ Tipos de cargos existentes na administração direta ou indireta. Não entram\
+      \ os tipos de cargos em comissão.\n**frequencia_atualizacao:**  \n**cobertura_temporal:**\
+      \  \n**orgao_gestor:**  \n**publicador_nome:**  \n**publicador_email:**  \n\
+      **origem_banco:**  \n**origem_tabela_view:** VW_DLK_ERG_CARGOS_\n**query_extracao:**\
+      \  \n**bigquery_project:** rj-smfp\n"
+    columns:
+      - name: id_cargo
+        description: Código dado pela prefeitura do Rio de Janeiro ao tipo de cargo.
+      - name: nome
+        description: Nome do tipo de cargo. Ex. Analista de Sistemas.
+      - name: categoria
+        description: 'Categoria do tipo de cargo. Exemplo: Educação, saúde etc. Categoria
+          é um conjunto de cargos.'
+      - name: subcategoria
+        description: Subcategoria do tipo de cargo. É uma subdivisão da categoria.
+          Ex. Apoio, Geral, lotados na saúde.
+      - name: tipo_controle_vaga
+        description: 'Tipo de controle de vaga: Livre (não existe controle de vagas
+          no ERGON), Quadro (O ERGON controla o número máximo de vagas no cargo) ou
+          Numerada.'
+      - name: escolaridade
+        description: Escolaridade minima exigida para o tipo de cargo.
+      - name: aglutinador
+        description: Todos cadastrados com N.
+  - name: categoria
+    description: "**titulo_data_rio:**  \n**tags:**  \n**descricao_breve:**  \n**descricao_aprofundada:**\
+      \ Categorias existentes na administração direta ou indireta da Prefeitura do\
+      \ Rio de Janeiro. Exemplo: Educação, saúde etc. Categoria é um conjunto de cargos.\n\
+      **frequencia_atualizacao:**  \n**cobertura_temporal:**  \n**orgao_gestor:**\
+      \  \n**publicador_nome:**  \n**publicador_email:**  \n**origem_banco:**  \n\
+      **origem_tabela_view:** VW_DLK_ERG_CATEGORIAS_\n**query_extracao:**  \n**bigquery_project:**\
+      \ rj-smfp\n"
+    columns:
+      - name: sigla
+        description: Sigla da categoria. Ex. EDUCACAO.
+      - name: nome
+        description: Nome da categoria. Ex. Educação.
+  - name: fita_banco
+    description: "**titulo_data_rio:**  \n**tags:**  \n**descricao_breve:**  \n**descricao_aprofundada:**\
+      \ Fitas enviadas para o tesouro municipal contendo informações sobre pagamentos\
+      \ a serem feitos a funcionários tanto pela administração direta quanto indireta.\n\
+      **frequencia_atualizacao:**  \n**cobertura_temporal:**  \n**orgao_gestor:**\
+      \  \n**publicador_nome:**  \n**publicador_email:**  \n**origem_banco:**  \n\
+      **origem_tabela_view:** VW_DLK_ERG_FITA_BANCO\n**query_extracao:**  \n**bigquery_project:**\
+      \ rj-smfp\n"
+    columns:
+      - name: id_lancamento
+        description: Chave gerada pelo banco para a fitabanco para cada numfunc
+      - name: data_folha
+        description: Mês e ano da folha de pagamentos.
+      - name: data_exercicio
+        description: Data do início do exercício do funcionário relativo a este vínculo.
+      - name: data_aposentadoria
+        description: Data de aposentadoria relacionada ao vínculo. Caso não tenha
+          havido ainda aposentadoria fica em branco.
+      - name: data_vacancia
+        description: Data de vacância relativa ao vínculo. A vacância ocorre quando
+          se encerra o vínculo.
+      - name: data_credito
+        description: Data em que vai ser creditado o valor na conta corrente.
+      - name: id_funcao
+        description: 'Identificador no banco de dados da pessoa, cadastrada na tabela
+          de funcionários,  que vai receber o pagamento. '
+      - name: id_vinculo
+        description: Identificador no banco de dados do vínculo da pessoa que vai
+          receber o pagamento.
+      - name: numero_folha
+        description: Número da Folha
+      - name: rubrica
+        description: Rubrica relativa ao pagamento a ser feito à pessoa que vai receber
+          o pagamento. Caso haja rubricas diferentes haverá um registro para cada
+          rubrica na fita_banco.
+      - name: setor
+        description: Setor onde trabalha o funcionário. Caso não trabalhe o setor
+          é a EGM.
+      - name: valor_bruto
+        description: Remuneração bruta.
+      - name: valor_descontos
+        description: Total de descontos.
+      - name: valor_liquido
+        description: Valor liquido a ser deposito para a pessoa que vai receber o
+          pagamento.
+      - name: pensionistas
+        description: Número do pensionista associado ao funcionário, usado somente
+          para a empresa 04 (Pensionistas da PREVIRIO).
+      - name: dependente
+        description: Número do dependente associado ao funcionário, quando dependente
+          for cotista (pr ex. pensão alimentícia). Quando há mais de um dependente,
+          há um registro por dependente.
+      - name: agencia_banco
+        description: 'Número da agência onde está a conta corrente da pessoa que vai
+          receber o pagamento, onde será depositado o pagamento. '
+      - name: banco
+        description: Número do banco onde está a conta corrente da pessoa que vai
+          receber o pagamento, onde será depositado o pagamento.
+      - name: conta_banco
+        description: Número da conta corrente da pessoa que vai receber o pagamento,
+          onde será depositado o pagamento.
+      - name: cargo
+        description: Cargo do funcionário associado ao pagamento.
+      - name: cargo_subcategoria
+        description: Subcategoria do cargo. É uma subdivisão da categoria. Ex. Apoio,
+          Geral, lotados na saúde.
+      - name: id_referencia
+        description: Código do nível/posicionamento após o provimento. Ex PROFESSOR
+          II, MM1, MM2, MM3, MM4, MM5, MM6, MM7, 999990 - ESPECIAL o valor do vencimento
+          é zero.
+      - name: funcao
+        description: Função do funcionário que vai receber o pagamento, caso seja
+          um funcionário. Caso a pessoa não tenha funcão, fica em branco.
+      - name: nome_fita_banco
+        description: Nome da fita banco.
+      - name: id_empresa
+        description: Código da empresa onde trabalha a pessoa que vai receber o pagamento.
+      - name: id_ficha
+        description: Identificador único no banco de dados da ficha financeira da
+          pessoa que vai receber o pagamento.
+      - name: regime_juridico
+        description: Nome do regime jurídico da pessoa que vai receber o pagamento.
+          Ex. Celetista, estatutário.
+      - name: tipo_vinculo
+        description: 'Detalhamento do regime jurídico. Exemplo: CLT - Contrato indeterminado,
+          CLT - Contrato determinado.'
+      - name: categoria
+        description: 'Categoria do vínculo. Exemplo: Educação, saúde etc. Categoria
+          é um conjunto de cargos.'
+      - name: cpf
+        description: CPF da pessoa que vai receber o pagamento.
+      - name: id_lotacao
+        description: Órgão de Lotação. Código Numérico que indica a Secretaria em
+          que o servidor está lotado. 1800 - SMS, 1600 - SME, etc. Ver tabela hsetor_.
+      - name: id_jornada
+        description: 'Código dado pela prefeitura do Rio de Janeiro para a jornada
+          semanal do cargo/emprego associado ao vínculo. '
+  - name: forma_provimento
+    description: "**titulo_data_rio:**  \n**tags:**  \n**descricao_breve:** Formas\
+      \ de provimentos possiveis tanto na administração direta como indireta da prefeitura\
+      \ do Rio de Janeiro.\n**descricao_aprofundada:**  \n**frequencia_atualizacao:**\
+      \  \n**cobertura_temporal:**  \n**orgao_gestor:**  \n**publicador_nome:**  \n\
+      **publicador_email:**  \n**origem_banco:**  \n**origem_tabela_view:** VW_DLK_ERG_FORMAS_PROV_\n\
+      **query_extracao:**  \n**bigquery_project:** rj-smfp\n"
+    columns:
+      - name: sigla
+        description: Sigla da forma de provimento. Ex. 01.
+      - name: nome
+        description: Nome da forma de provimento. Ex. NOMEACAO OU PROVIMENTO (relativo
+          a sigla 01).
+      - name: inativo
+        description: Booleano que indica que a forma de provimento é válida para funcionários
+          inativos.
+      - name: primeiro_provimento
+        description: Booleano que indica se a forma de provimento pode ser um primeiro
+          tipo de provimento ( quando se entra na prefeitura ).
+      - name: ativo
+        description: Booleano que indica que a forma de provimento é válida para funcionários
+          ativos.
+  - name: funcionario
+    description: "**titulo_data_rio:**  \n**tags:**  \n**descricao_breve:** Pessoas\
+      \ físicas que precisam ter suas informações guardadas pela prefeitura para algum\
+      \ controle, como controle de pagamento, de frenquência ou de lotação. Em geral\
+      \ são pessoas que entram ou entraram em alguma folha de pagamento da prefeitura\
+      \ do Rio de Janeiro, sendo funcionário ou não, prestando serviço ou não (ex.\
+      \ pensionista previdenciário).\n**descricao_aprofundada:**  \n**frequencia_atualizacao:**\
+      \  \n**cobertura_temporal:**  \n**orgao_gestor:**  \n**publicador_nome:**  \n\
+      **publicador_email:**  \n**origem_banco:**  \n**origem_tabela_view:** VW_DLK_ERG_FUNCIONARIOS\n\
+      **query_extracao:**  \n**bigquery_project:** rj-smfp\n"
+    columns:
+      - name: id_vinculo
+        description: Identificador no banco de dados do vínculo da pessoa. A pessoa
+          tem um vínculo caso receba algum pagamento da prefeitura.
+      - name: nome
+        description: Nome da pessoa.
+      - name: nome_social
+        description: Nome social da pessoa.
+      - name: nome_tratamento
+        description: Nome pelo qual a pessoa geralmente é chamada, seu apelido, seu
+          nome de guerra.
+      - name: sexo
+        description: Sexo da pessoa.
+      - name: raca_cor
+        description: Raça ou cor da pessoa.
+      - name: deficiente
+        description: Booleano que indica que a pessoa é deficiente.
+      - name: tipo_deficiencia
+        description: Identificador no banco de dados do tipo de Deficiência do funcionário.
+          Chave para a tabela 'ERG_TIPO_DEFIC'.
+      - name: data_nascimento
+        description: Data de nascimento da pessoa.
+      - name: pais_nascimento
+        description: País de nascimento da pessoa.
+      - name: municipio_nascimento
+        description: Cidade de nascimento da pessoa.
+      - name: municipio_moradia
+        description: Cidade do endereço de moradia da pessoa.
+      - name: sigla_uf_nascimento
+        description: UF de nascimento da pessoa.
+      - name: grupo_sanguineo
+        description: Grupo sanguíneo da pessoa.
+      - name: nome_pai
+        description: Nome do pai da pessoa.
+      - name: nome_mae
+        description: Nome da mãe da pessoa.
+      - name: estado_civil
+        description: Estado civil da pessoa.
+      - name: escolaridade
+        description: Escolaridade da pessoa.
+      - name: nacionalidade
+        description: Nacionalidade da pessoa.
+      - name: tipo_logradouro
+        description: Tipo de logradouro do endereço da pessoa. Ex. Rua, praça.
+      - name: logradouro
+        description: Nome do logradouro do endereço da pessoa.
+      - name: numero_porta
+        description: Número de porta do enderaço da pessoa.
+      - name: complemento_numero_porta
+        description: Complemento ao número de porta do endereço da pessoa. Ex. apt
+          87.
+      - name: bairro
+        description: Bairro do endereço da pessoa.
+      - name: municipio
+        description: Cidade do endereço da pessoa.
+      - name: sigla_uf
+        description: UF do endereço da pessoa.
+      - name: cep
+        description: Número do cep do endereço da pessoa.
+      - name: cep_exterior
+        description: código postal de endereço no exterior da pessoa.
+      - name: celular
+        description: Número do telefone celular da pessoa.
+      - name: telefone
+        description: Telefone da pessoa.
+      - name: ramal
+        description: Ramal do telefone da pessoa.
+      - name: email
+        description: E-mail da pessoa.
+      - name: email_alternativo
+        description: E-Mail alternativo da pessoa.
+      - name: ano_primeiro_emprego
+        description: Ano do 1º emprego da pessoa.
+      - name: data_primeiro_emprego
+        description: Data do primeiro emprego da pessoa na vida.
+      - name: sigla_uf_emprego_anterior
+        description: UF do emprego anterior da pessoa.
+      - name: data_primeira_habitacao
+        description: Data da primeira habilitação da pessoa.
+      - name: deficiente_fisico
+        description: Booleano indicando se a pessoa tem deficiência física.
+      - name: deficiente_visual
+        description: Booleano indicando se a pessoa tem deficiência visual.
+      - name: deficiente_auditivo
+        description: Booleano indicando se a pessoa tem deficiência auditiva
+      - name: deficiente_mental
+        description: Booleano indicando se a pessoa tem deficiência mental
+      - name: deficiente_intelectual
+        description: Booleano indicando se a pessoa tem deficiência intelectual.
+      - name: id_rg
+        description: Número do RG da pessoa.
+      - name: tipo_rg
+        description: 'Tipo do documento de RG da pessoa. Ex. Identidade. CTPS, passaporte
+          etc '
+      - name: emissor_rg
+        description: Órgão expeditor do documento de RG da pessoa.
+      - name: sigla_uf_rg
+        description: UF do órgão expeditor do RG da pessoa.
+      - name: data_expedicao_rg
+        description: Data de expedição do RG da pessoa. RG é o documento nacional
+          de identificação civil no Brasil.
+      - name: id_cpf
+        description: Número do cpf  da pessoa.
+      - name: id_ctps
+        description: Número da carteira profissional da pessoa.
+      - name: serie_ctps
+        description: Série da carteira de trabalho da pessoa.
+      - name: sigla_uf_ctps
+        description: UF da carteira profissional da pessoa.
+      - name: id_titulo_eleitor
+        description: Número do título de eleitor da pessoa.
+      - name: zona_eleitoral
+        description: Zona do título de eleitor da pessoa.
+      - name: secao_eleitoral
+        description: Seção do título de eleitor da pessoa.
+      - name: sigla_uf_titulo_eleitor
+        description: UF do título de eleitor da pessoa.
+      - name: id_documento_militar
+        description: Número do documento militar da pessoa.
+      - name: serie_documento_militar
+        description: Série do documento militar da pessoa.
+      - name: categoria_militar
+        description: Categoria no documento militar. Ex. 1ª, 2ª ou 3ª categoria. 1ª
+          categoria - quando possuírem instrução militar suficiente; 2ª categoria
+          - quando possuírem instrução militar insuficiente; 3ª categoria - quando
+          não possuírem instrução militar.
+      - name: emissor_documento_militar
+        description: Orgão Expeditor do Documento Militar da pessoa.
+      - name: sigla_uf_documento_militar
+        description: UF do Documento Militar da pessoa.
+      - name: id_cnh
+        description: Número da CNH da pessoa.
+      - name: categoria_cnh
+        description: Categoria da CNH da pessoa.
+      - name: validade_cnh
+        description: Validade da CNH da pessoa.
+      - name: sigla_uf_cnh
+        description: UF da CNH da pessoa.
+      - name: orgao_emissor_cnh
+        description: Órgão emissor da CNH da pessoa.
+      - name: data_expedicao_cnh
+        description: Data de expedição da CNH da pessoa.
+      - name: id_pispasep
+        description: 'Número do NIS da pessoa. NIS significa Número de Identificação
+          Social. O documento está relacionado às pessoas que recebem ou não benefícios
+          sociais do Governo Federal. '
+      - name: data_inicio_pis
+        description: Data início do NIS da pessoa.
+      - name: id_nis
+        description: 'Número do NIS da pessoa. NIS significa Número de Identificação
+          Social. O documento está relacionado às pessoas que recebem ou não benefícios
+          sociais do Governo Federal. '
+      - name: numero_banco_nis
+        description: Número do banco do NIS da pessoa.
+      - name: id_identidade_profissional
+        description: Número da identidade profissional da pessoa.
+      - name: tipo_identidade_profissional
+        description: Tipo de identidade profissional da pessoa.
+      - name: id_ric
+        description: Número do RIC - REGISTRO DE IDENTIDADE CIVIL da pessoa. documento
+          de registro de identidade civil, que integra todos os estados federados
+          e o Distrito Federal, garantindo, através de processos multibiométricos
+          e integração de bases de dados, a identificação unívoca do brasileiro nato
+          ou naturalizado.
+      - name: emissor_ric
+        description: Órgão emissor do RIC da pessoa.
+      - name: data_emissao_ric
+        description: Data de amissão do RIC da pessoa.
+      - name: expedicao_documento_orgao_classe
+        description: Data de expedição do documento de órgão de classe.
+      - name: emissor_documento_orgao_classe
+        description: Órgão emissor do documento do orgão de classe.
+      - name: sigla_uf_documento_orgoao_classe
+        description: "UF do documento do orgão de classe.\n"
+      - name: possui_impedimento
+        description: Preenchido caso a pessoa tenha algum impedimento. Ex. Impedimento
+          judicial, Curatela definitiva, interditado provisoriamente.
+      - name: numero_banco
+        description: Número do banco com a conta corrente da pessoa.
+      - name: agencia_banco
+        description: Número da agência com a conta corrente da pessoa.
+      - name: conta_banco
+        description: Número da conta corrente da pessoa.
+      - name: data_ultima_atualizacao_bancaria
+        description: Data da última atualização das informações bancárias da pessoa.
+      - name: tipo_certidao
+        description: "Tipo da certidão que altera o estado civil, caso o servidor\
+          \ tenha modificado seu estado civil apresentada, caso não tenha fica em\
+          \ branco.\n"
+      - name: numero_certidao
+        description: Número da certidão de casamento, nascimento ou união estável
+          da pessoa.
+      - name: livro_certidao
+        description: Livro da certidão de casamento, nascimento ou união estável da
+          pessoa.
+      - name: folha_certidao
+        description: Folha da certidão de casamento, nascimento ou união estável da
+          pessoa.
+      - name: cartorio_ceridao
+        description: Cartório da certidão de casamento, nascimento ou união estável
+          da pessoa.
+      - name: sigla_uf_cartorio_certidao
+        description: UF do cartório que emitiu a certidão que altera o estado civil,
+          caso o servidor tenha modificado seu estado civil, caso não tenha fica em
+          branco.
+      - name: municipio_emissor_certidao
+        description: Cidade de emissão da certidão que altera o estado civil, caso
+          o servidor tenha modificado seu estado civil, caso não tenha fica em branco.
+      - name: municipio_cartorio_emissor_certudai
+        description: Cidade do cartório que emitiu a certidão que altera o estado
+          civil, caso o servidor tenha modificado seu estado civil, caso não tenha
+          fica em branco.
+      - name: matricula_certidao
+        description: Matrícula da certidão apresentada de casamento, ou de união estável
+          ou de nascimento da pessoa.
+      - name: trabalho_voluntario
+        description: Booleano se a pessoa já participou de algum Trabalho Voluntário.
+      - name: interesse_trabalho_voluntario
+        description: Booleano que indica se a pessoa tem interesse em participar em
+          trabalhos voluntários.
+      - name: interesse_projeto_olimpico
+        description: Booleano que indica se existe interesse da pessoa em participar
+          do projeto olímpico.
+      - name: interesse_projeto_sociais
+        description: Booleano que indica se existe interesse da pessoa em participar
+          de projetos sociais.
+      - name: recebe_beneficio_previdenciario
+        description: "Booleano indicando se a pessoa já percebe algum benefício previdenciário\
+          \ (pensão, aposentadoria).\ncampo em branco"
+      - name: nome_posse_alteracao_sexo
+        description: Nome na posse da pessoa que mudou de sexo.
+      - name: sexo_posse_alteracao_sexo
+        description: Sexo da pessoa na posse da pessoa que mudou de sexo.
+      - name: data_alteracao_sexo
+        description: Data da alteração de sexo.
+      - name: id_rne
+        description: Número de inscrição da pessoa no Registro Nacional de Estrangeiros
+          da pessoa.
+      - name: ano_chegada_brasil
+        description: Ano da chegada ao Brasil caso a pessoa seja estrangeira.
+      - name: emissor_rne
+        description: Órgão emissor do Registro Nacional de Estrangeiros.
+      - name: data_expedicao_rne
+        description: Data de expedição do Registro Nacional de Estrangeiros
+      - name: data_chegada_estrangeiro
+        description: Data de chegada da pessoa ao Brasil, em caso de estrangeiro
+      - name: data_naturalizacao
+        description: Data de naturalização brasileira em caso de estrangeiro naturalizado.
+      - name: estrangeiro_casado_brasileiro
+        description: Booleano que indica se a pessoa, caso estrangeiro, é ou não casado
+          com brasileiro.
+      - name: estrangeiro_filho_brasileiro
+        description: Booleano que indica se a pessoa, caso estrangeira, tem filhos
+          brasileiros.
+      - name: login_facebook
+        description: Login da pessoa no Facebook.
+      - name: login_twitter
+        description: Login da pessoa no Twitter.
+      - name: login_google_plus
+        description: Login da pessoa no Google+.
+      - name: login_instagram
+        description: Login da pessoa no Instagram.
+      - name: login_linkedin
+        description: Login da pessoa no Linkedln.
+      - name: login_myspace
+        description: Login da pessoa no MySpace.
+  - name: horario_trabalho
+    description: "**titulo_data_rio:**  \n**tags:**  \n**descricao_breve:** Horários\
+      \ possíveis para funcionários da administração direta da prefeitura do Rio de\
+      \ Janeiro (ainda não tem dados diponibilizados) (esperado colocação também da\
+      \ administração indireta).\n**descricao_aprofundada:**  \n**frequencia_atualizacao:**\
+      \  \n**cobertura_temporal:**  \n**orgao_gestor:**  \n**publicador_nome:**  \n\
+      **publicador_email:**  \n**origem_banco:**  \n**origem_tabela_view:** VW_DLK_ERG_HORARIO_TRAB_.\
+      \ Esta visão não está sendo mais atualizada.\n**query_extracao:**  \n**bigquery_project:**\
+      \ rj-smfp\n"
+    columns:
+      - name: id_horario
+        description: Identificador do horário na base de dados.
+      - name: descricao
+        description: Descrição do horário. Neste atributo deve constar o horário de
+          entrada, de almoço e de saída relativos a todos os dias da semana.
+      - name: publicacao_diario_oficial
+        description: Publicação em diário oficial autorizando o horário.
+      - name: carga_horaria_mes
+        description: Carga mensal em horas do horário.
+      - name: carga_horaria_semana
+        description: Carga semanal em horas do horário.
+      - name: carga_horaria_dia
+        description: Carga diária em horas do horário.
+      - name: id_registro
+        description: ' '
+  - name: jornada
+    description: "**titulo_data_rio:**  \n**tags:**  \n**descricao_breve:** Tipos\
+      \ de jornadas existentes tanto na administração direta como indireta da prefeitura\
+      \ do Rio de Janeiro. Jornada é a carga horária semanal.\n**descricao_aprofundada:**\
+      \  \n**frequencia_atualizacao:**  \n**cobertura_temporal:**  \n**orgao_gestor:**\
+      \  \n**publicador_nome:**  \n**publicador_email:**  \n**origem_banco:**  \n\
+      **origem_tabela_view:** VW_DLK_ERG_JORNADAS_\n**query_extracao:**  \n**bigquery_project:**\
+      \ rj-smfp\n"
+    columns:
+      - name: sigla
+        description: Sigla da jornada. Ex. 40 horas.
+      - name: nome
+        description: Nome da jornada. Ex. 40 horas semanais.
+      - name: horas_semana
+        description: Número de horas semanais da jornada.
+      - name: horas_mes
+        description: Número de horas mensais da jornada.
+  - name: matricula
+    description: "**titulo_data_rio:**  \n**tags:**  \n**descricao_breve:** Matrículas\
+      \ dadas pela prefeitura do Rio de Janeiro para pessoas que devem receber pagamento\
+      \ ou para pessoas em outros casos de interesse da prefeitura do Rio de Janeiro.\n\
+      **descricao_aprofundada:**  \n**frequencia_atualizacao:**  \n**cobertura_temporal:**\
+      \  \n**orgao_gestor:**  \n**publicador_nome:**  \n**publicador_email:**  \n\
+      **origem_banco:**  \n**origem_tabela_view:** VW_DLK_ERG_ERG_MATRICULAS\n**query_extracao:**\
+      \  \n**bigquery_project:** rj-smfp\n"
+    columns:
+      - name: id_funcionario
+        description: Número do funcionário. Número dado a pessoa que ganhou sua primeira
+          matrícula da prefeitura do Rio de Janeiro.
+      - name: id_matricula
+        description: Número da matrícula.
+  - name: orgaos_externos
+    description: "**titulo_data_rio:**  \n**tags:**  \n**descricao_breve:** Órgãos\
+      \ de outros entes federativos que não da prefeitura do Rio de Janeiro. Usada,\
+      \ geralmente, para documentar a origem de servidores cedidos à prefeitura do\
+      \ Rio de Janeiro.\n**descricao_aprofundada:**  \n**frequencia_atualizacao:**\
+      \  \n**cobertura_temporal:**  \n**orgao_gestor:**  \n**publicador_nome:**  \n\
+      **publicador_email:**  \n**origem_banco:**  \n**origem_tabela_view:** VW_DLK_ERG_ORGAOS_EXTERNOS\n\
+      **query_extracao:**  \n**bigquery_project:** rj-smfp\n"
+    columns:
+      - name: nome
+        description: Nome do órgão. Ex. GE ACRE (Governo do estado do Acre),PR NITEROI
+          (Prefeitura de Niteroi)
+      - name: nome_completo
+        description: Nome por extenso do órgão. Ex. Prefeitura da cidade de Niteroi.
+      - name: tipo
+        description: Tipo do órgão. Ex. OUT.GOV. (outro governo estadual, que não
+          o do Rio de Janeiro), OUT.PREF. (outra prefeitura que não a do Rio de Janeiro)
+  - name: orgaos_regime_juridico
+    description: "**titulo_data_rio:**  \n**tags:**  \n**descricao_breve:** Regimes\
+      \ jurídicos que podem ser aceitos para contratação de funcionários nos órgãos\
+      \ da administração direta ou indireta da prefeitura do Rio de Janeiro assim\
+      \ como outras empresas de interesse da prefeitura, tais como as organizações\
+      \ sociais.\n**descricao_aprofundada:**  \n**frequencia_atualizacao:**  \n**cobertura_temporal:**\
+      \  \n**orgao_gestor:**  \n**publicador_nome:**  \n**publicador_email:**  \n\
+      **origem_banco:**  \n**origem_tabela_view:** VW_DLK_ERG_ORGAOS_REGIMES_JUR_\n\
+      **query_extracao:**  \n**bigquery_project:** rj-smfp\n"
+    columns:
+      - name: sigla
+        description: Sigla do regime jurídico. Ex. CLT, EFETIVO etc
+      - name: nome
+        description: Código, dado pela prefeitura do Rio de Janeiro, da empresa.
+  - name: provimento
+    description: "**titulo_data_rio:**  \n**tags:**  \n**descricao_breve:** Eventos\
+      \ relacionados aos vínculos tanto com a administração direta como indireta da\
+      \ prefeitura do Rio de Janeiro. Um provimento pode ser uma progressão, mudança\
+      \ de lotação, mudança de vencimento (referência) etc. Um provimento é um evento\
+      \ na situação funcional do vínculo.\n**descricao_aprofundada:**  \n**frequencia_atualizacao:**\
+      \  \n**cobertura_temporal:**  \n**orgao_gestor:**  \n**publicador_nome:**  \n\
+      **publicador_email:**  \n**origem_banco:**  \n**origem_tabela_view:** VW_DLK_ERG_PROVIMENTOS_EV\n\
+      **query_extracao:**  \n**bigquery_project:** rj-smfp\n"
+    columns:
+      - name: id_funcionario
+        description: 'Identificador no banco de dados da pessoa cadastrada na tabela
+          de funcionários. '
+      - name: id_vinculo
+        description: Identificador no banco de dados do vínculo da pessoa.
+      - name: data_inicio
+        description: Data de inicio de um provimento.
+      - name: data_fim
+        description: Data de fim do provimento
+      - name: id_setor
+        description: Código dado pela prefeitura do Rio de Janeiro para o setor de
+          lotação do servidor após o provimento. Código da estrutura organizacional
+          atribuidos pela GI/CGGI/CSIC.
+      - name: id_cargo
+        description: Código dado pela prefeitura do Rio de Janeiro para o cargo/emprego
+          relacionado ao vínculo do servidor. Regime juridicos A DISPOSICAO, APOS.
+          SERV. PUBLICO, CONT. SAL. FAMILIA e EST. AOS QUADROS o cargo é 999990 -
+          ESPECIAL
+      - name: id_referencia
+        description: Código do nível/posicionamento após o provimento. Ex PROFESSOR
+          II, MM1, MM2, MM3, MM4, MM5, MM6, MM7, 999990 - ESPECIAL o valor do vencimento
+          é zero.
+      - name: id_jornada
+        description: Código dado pela prefeitura do Rio de Janeiro para a jornada
+          semanal do cargo/emprego associado ao vínculo. Não é modificada pelos provimentos.
+      - name: forma
+        description: Forma de provimento. Ex. 10 (EM EXERCÍCIO - CC/FG, ocorre quando
+          a pessoa entra exercício em cargo em comissão).
+      - name: observacoes
+        description: Observação - texto livre.  Ex. NOMEADA C/ VAL. 30/03/20 P/ C.C
+          COORDENADOR TECNICO, 074842 CVL/SUBSC/CGRH/CTNRH, PCCS - LEI 6.739/2020
+          etc
+      - name: regime_horas
+        description: Regime de horas após o provimento. Ex. Plantonista ou Rotina.
+          Utilizado pela RIOSAUDE.
+      - name: empresa_vinculo
+        description: Empresa do servidor após o provimento. Sempre é a mesma empresa
+          do vínculo.
+  - name: regime_juridico
+    description: "**titulo_data_rio:**  \n**tags:**  \n**descricao_breve:** Tipos\
+      \ de regimes jurídicos existentes entre os vínculos de funcionários e a administração\
+      \ direta ou indireta da prefeitura do Rio de Janeiro.\n**descricao_aprofundada:**\
+      \  \n**frequencia_atualizacao:**  \n**cobertura_temporal:**  \n**orgao_gestor:**\
+      \  \n**publicador_nome:**  \n**publicador_email:**  \n**origem_banco:**  \n\
+      **origem_tabela_view:** VW_DLK_ERG_REGIMES_JUR_\n**query_extracao:**  \n**bigquery_project:**\
+      \ rj-smfp\n"
+    columns:
+      - name: sigla
+        description: Sigla do regime jurídico. Ex. CLT, EFETIVO etc
+      - name: nome
+        description: Nome do regime jurídico. Ex. Celetista, estatutário.
+  - name: setor
+    description: "**titulo_data_rio:**  \n**tags:**  \n**descricao_breve:**  \n**descricao_aprofundada:**\
+      \ Setores existentes tanto na administração direta como indireta da prefeitura\
+      \ do Rio de Janeiro. Os setores são os mesmos do SICI.\n**frequencia_atualizacao:**\
+      \  \n**cobertura_temporal:**  \n**orgao_gestor:**  \n**publicador_nome:**  \n\
+      **publicador_email:**  \n**origem_banco:**  \n**origem_tabela_view:** VW_DLK_ERG_HSETOR_\n\
+      **query_extracao:**  \n**bigquery_project:** rj-smfp\n"
+    columns:
+      - name: data_inicio
+        description: Data em que o setor foi colocado no presente organograma.
+      - name: data_fim
+        description: Data em que o setor saiu do organograma.
+      - name: id_setor_pai
+        description: Código, dado pelo SICI, do setor que está acima.
+      - name: id_setor
+        description: Código, dado pelo SICI, do setor.
+      - name: nome
+        description: Nome do setor, possivelmente abreviado pelo tamanho do atributo.
+      - name: nome_completo
+        description: Nome completo setor.
+      - name: sigla
+        description: Sigla do setor. Ex. FP/SUBGGC.
+      - name: id_empresa
+        description: Código, dado pelo SICI, da empresa onde está localizada o setor.
+      - name: id_empresa_prevrio
+        description: Código da empresa na PREVRIO.
+      - name: id_secretaria
+        description: Código, dado pelo SICI. da secretaria onde está o setor.
+      - name: extinto
+        description: Booleano que indica que o setor foi extinto.
+  - name: tipo_orgao
+    description: "**titulo_data_rio:**  \n**tags:**  \n**descricao_breve:** Tipos\
+      \ de órgãos tanto da administração direta como indireta da prefeitura do Rio\
+      \ de Janeiro.\n**descricao_aprofundada:**  \n**frequencia_atualizacao:**  \n\
+      **cobertura_temporal:**  \n**orgao_gestor:**  \n**publicador_nome:**  \n**publicador_email:**\
+      \  \n**origem_banco:**  \n**origem_tabela_view:** VW_DLK_ERG_TIPO_ORGAO\n**query_extracao:**\
+      \  \n**bigquery_project:** rj-smfp\n"
+    columns:
+      - name: tipo
+        description: Sigla do tipo do órgão. Ex. DIR.EST.
+      - name: descricao
+        description: Descrição do tipo do órgão. Ex. ADMINISTRACAO DIRETA ESTADUAL.
+  - name: tipo_vinculo
+    description: "**titulo_data_rio:**  \n**tags:**  \n**descricao_breve:** Tipos\
+      \ de vínculos existentes tanto na administração direta como indireta da prefeitura\
+      \ do Rio de Janeiro.\n**descricao_aprofundada:**  \n**frequencia_atualizacao:**\
+      \  \n**cobertura_temporal:**  \n**orgao_gestor:**  \n**publicador_nome:**  \n\
+      **publicador_email:**  \n**origem_banco:**  \n**origem_tabela_view:** VW_DLK_ERG_TIPO_VINC_\n\
+      **query_extracao:**  \n**bigquery_project:** rj-smfp\n"
+    columns:
+      - name: sigla
+        description: Sigla do tipo de vínculo. Ex. A DISPOSICAO-CLT.
+      - name: nome
+        description: Nome do tipo de vínculo. Ex. A DISPOSICAO DA PREFEITURA-CLT.
+  - name: vinculo
+    description: "**titulo_data_rio:**  \n**tags:**  \n**descricao_breve:** Vínculos\
+      \ de pagamento ( em geral empregatícios ), tanto antigos como atuais, da administração\
+      \ direta e indireta da prefeitura do Rio de Janeiro. Um vínculo, em geral, está\
+      \ associado a uma matrícula. Uma pessoa pode ter vários vínculos com a prefeitura.\n\
+      **descricao_aprofundada:**  \n**frequencia_atualizacao:**  \n**cobertura_temporal:**\
+      \  \n**orgao_gestor:**  \n**publicador_nome:**  \n**publicador_email:**  \n\
+      **origem_banco:**  \n**origem_tabela_view:** VW_DLK_ERG_VINCULOS\n**query_extracao:**\
+      \  \n**bigquery_project:** rj-smfp\n**Obs:** Um vínculo é em geral de funcionários,\
+      \ mas tem outros tipos, como pensionista especial. Somente pessoas a partir\
+      \ da data de migração do Ergon.\n"
+    columns:
+      - name: id_funcionario
+        description: Número do funcionário, pode estar repetido nesta visão, caso
+          o funcionário tenha ou tenha tido outros vínculos. Existe um para cada pessoa,
+          independente do número de vínculos.
+      - name: id_vinculo
+        description: Número do vínculo da pessoa. O número é dado sequencialmente,
+          com 1 para o primeiro vínculo, 2 para o segundo e assim por diante. Ex.
+          Uma pessoa que é professora, e funcionária do IPLANRIO, tem dois vínculos.
+      - name: tipo
+        description: 'Detalhamento do regime jurídico. Exemplo: CLT - Contrato indeterminado,
+          CLT - Contrato determinado.'
+      - name: data_nomeacao
+        description: Data de nomeação do funcionário relativa ao vínculo.
+      - name: data_posse
+        description: Data da posse do funcionário relativo a este vínculo.
+      - name: data_exercicio
+        description: Data do início do exercício do funcionário relativo a este vínculo.
+      - name: regime_juridico
+        description: 'Regime jurídico do vínculo. Ex.: Estatutário, celetista, aposentado
+          etc'
+      - name: categoria
+        description: 'Categoria do vínculo. Exemplo: Educação, saúde etc. Categoria
+          é um conjunto de cargos.'
+      - name: desconta_ir
+        description: Booleano indicando se o vínculo desconta IR ou não. Valores N
+          ou S.
+      - name: descricao_provimento
+        description: Descrição do provimento. Campo livre.
+      - name: classificacao_concurso
+        description: Classificação no concurso relativo a este vínculo, caso tenha
+          sido feito concurso. Em branco caso não tenha feito.
+      - name: data_inicio_cessao
+        description: Data de inicio da cessão, quanto o servidor é cedido. Quando
+          o servidor não é cedido o atributo fica em branco. Cessão é o emprestimo
+          de funcionário de órgão externo à prefeitura (ou da administração indireta)
+          para a administração direta da prefeitura do Rio de Janeiro.
+      - name: data_fim_cessao
+        description: Data do fim da cessão, quanto o servidor é cedido. Quando o servidor
+          não é cedido ou não foi devolvido fica em branco.
+      - name: data_concurso
+        description: Data do concurso relativo ao vínculo. Caso não tenha havido concurso
+          fica em branco.
+      - name: data_fgts
+        description: Data em que o funcionário optou pelo FGTS, caso o funcionário
+          seja celetista. Caso não fica em branco.
+      - name: data_inicio_contrato
+        description: Data de início do contrato por tempo determinado, caso o vínculo
+          esteja relacionado a um contrato. Caso não fica em branco.
+      - name: data_fim_contrato
+        description: Data de fim do contrato por tempo determinado, caso o vínculo
+          esteja relacionado a um contrato. Caso não fica em branco.
+      - name: data_prorrogacao_contrato
+        description: Data da prorrogação do contrato relacionado ao vínculo, caso
+          tenha sido assinado um contrato por tempo determinado. Caso não fica em
+          branco
+      - name: data_aposentadoria
+        description: Data de aposentadoria relacionada ao vínculo. Caso não tenha
+          havido ainda aposentadoria fica em branco.
+      - name: tipo_aposentadoria
+        description: 'Tipo da aposentadoria relativa ao vínculo. Exemplo: 47 - integral
+          art 3'
+      - name: data_vacancia
+        description: Data de vacância relativa ao vínculo. A vacância ocorre quando
+          se encerra o vínculo.
+      - name: id_vacancia
+        description: 'Código de vacância relativa ao vínculo. '
+      - name: id_vinculo_anterior
+        description: Número do vínculo anterior, caso haja algum. Se não fica em branco.
+      - name: id_vinculo_posterior
+        description: Número do vínculo posterior, caso haja algum. Se não fica em
+          branco.
+      - name: tipo_orgao_origem
+        description: 'Tipo do órgão da origem do funcionário ( em caso do funcionário
+          ser cedido para a prefeitura do Rio de Janeiro). Exemplo: DIR.EST. (Direta
+          estatual)'
+      - name: funcao_origem_requisicao
+        description: Função, na origem, da pessoa requisitada. Atributo de preenchimento
+          livre. Em branco caso não tenha havido requisição.
+      - name: telefone_requisicao
+        description: Telefone de onde o funcionário foi requisitado. Em branco caso
+          não tenha havido requisição.
+      - name: motivo_vacancia
+        description: 'Motivo da vacância. O que encerrou o vínculo, caso ele tenha
+          sido encerrado. Caso não o atributo está em branco. Campo livre para preenchimento. '
+      - name: id_matricula_vinculo
+        description: Matricula do funcionário relativa a este vínculo.
+      - name: orgao_origem_requisicao
+        description: Órgão de origem do funcionário que foi requisitado. Caso a pessoa
+          associada ao vínculo tenha sido requisitada pela prefeitura. Caso não tenha
+          sido requisitado fica em branco.
+      - name: tipo_onus_requisicao
+        description: 'Tipo de ônus da requisição. Exemplo: Com ônus, sem ônus, não
+          se aplica.'
+      - name: tipo_ressarcimento_requisicao
+        description: Tipo de ressarcimento da requisição. Exemplo Sim ou não. Está
+          associado ao atributo TIPO_ONUS_REQ.
+      - name: tipo_requisicao
+        description: 'Tipo da requisição. Exemplo: Externo, interna, permuta.'
+      - name: data_pagamento_requisicao
+        description: Data de pagamento da rescisão do vínculo, caso tenha havido rescisão.
+      - name: origem_servidor_cedido
+        description: Origem do servidor cedido. Ex direta estadual, indireta estatual.
+      - name: id_processo_origem
+        description: Número do processo que deu origem da vaga associada ao vínculo.
+      - name: contrato_suspenso
+        description: Booleana que indica se o contrato do empregado público cedido
+          encontra-se suspenso.
+      - name: professor
+        description: Caso o vínculo seja de professor contém a disciplina que ele
+          leciona. Caso não seja professor fica em branco.
+      - name: cota
+        description: Indica se o vínculo foi preenchido por cota. Em branco, não entrou
+          por cota. Caso esteja preenchido o vínculo foi preenchido por cota.  Valores
+          possíveis Lei 2.111/1994 para DEFICIENTE, LEi 5.401/2012 para Raça, lei
+          5.695/2014 para Raça.
+      - name: id_empresa
+        description: Codigo da empresa onde se tem o vínculo, caso o vínculo seja
+          associado a uma empresa. Caso não fica em branco.
+      - name: data_homologacao_aposentadoria
+        description: Data da homologação da aposentadoria. A homologação é feita pelo
+          TCM, para verificar a legalidade da aposentadoria.

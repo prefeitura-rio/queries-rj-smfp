@@ -41,6 +41,7 @@ def dump_metadata_into_schema_yaml(
     Dumps the metadata into the schema.yaml file.
     """
     schema_yaml_path = f"models/{dataset_id}/schema.yml"
+    Path(schema_yaml_path).parent.mkdir(parents=True, exist_ok=True)
 
     schema = (
         load_metadata_file(schema_yaml_path)
