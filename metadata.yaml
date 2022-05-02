@@ -1,5 +1,5 @@
 models:
-  administracao_recursos_humanos_ergon:
+  administracao_recursos_humanos_ergon: 
     cargo:
       spreadsheet_id: "1gAXVDwLldxye8PbdKSeTAIWsoBFit01i"
     categoria:
