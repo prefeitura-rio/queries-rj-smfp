@@ -1,3 +1,13 @@
+{{
+    config(
+        materialized='incremental',
+        partition_by={
+            "field": "data_particao",
+            "data_type": "date",
+            "granularity": "month",
+        }
+    )
+}}
 SELECT 
     SAFE_CAST(REGEXP_REPLACE(lancamento, r'\.0$', '') AS STRING) AS id_lancamento,
     SAFE_CAST(mes_ano AS DATE) AS data_folha,
@@ -31,4 +41,12 @@ SELECT
     SAFE_CAST(cpf AS STRING) AS cpf,
     SAFE_CAST(REGEXP_REPLACE(flex_campo_05, r'\.0$', '') AS STRING) AS id_lotacao,
     SAFE_CAST(REGEXP_REPLACE(jornada, r'\.0$', '') AS STRING) AS id_jornada,
+    SAFE_CAST(DATE_TRUNC(DATE(data_particao), month) AS DATE) data_particao,
 FROM rj-smfp.administracao_recursos_humanos_ergon_staging.fita_banco AS t
+
+{% if is_incremental() %}
+    -- TODO implement incremental with unique keys to every data_particao, replace the hole month 
+    -- this filter will only be applied on an incremental run
+    WHERE data_particao > (SELECT max(data_particao) FROM {{ this }})
+
+{% endif %}
