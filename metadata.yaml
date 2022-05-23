@@ -4,12 +4,12 @@ models:
       spreadsheet_id: "1gAXVDwLldxye8PbdKSeTAIWsoBFit01i"
     categoria:
       spreadsheet_id: "1l3LemudEq6l6tEc11la6tA4X98viZIOy"
-    # empresa:
-    #   spreadsheet_id: "1xq2TSLwT0i8sTpkFdnRvUuBwQHabiJAE"
+    empresa:
+      spreadsheet_id: "1xq2TSLwT0i8sTpkFdnRvUuBwQHabiJAE"
     fita_banco:
       spreadsheet_id: "1y3stE3hCiWYlbZf2LAWPZh-czfasDruE"
-    # folha_empresa:
-    #   spreadsheet_id: "14y2HXmdJZ9MENeRzIR4YDk6GX8KdzEzx"
+    folha_empresa:
+      spreadsheet_id: "14y2HXmdJZ9MENeRzIR4YDk6GX8KdzEzx"
     forma_provimento:
       spreadsheet_id: "1K4RsAttwXU69liZxHe_bsyJcLvZe-psD"
     funcionario:
@@ -30,12 +30,21 @@ models:
       spreadsheet_id: "1OwLujJ4ANW4vQqlW4so8uZN7piosXPQa"
     setor:
       spreadsheet_id: "16bxq_nEOft8nfzoscdYHzX4hU-CDZauZ"
-    # tipo_folha:
-    #   spreadsheet_id: "1Cv1xJaTbyiNAe-vpAgwCC0p1UcP-e4vF"
+    tipo_folha:
+      spreadsheet_id: "1Cv1xJaTbyiNAe-vpAgwCC0p1UcP-e4vF"
     tipo_orgao:
       spreadsheet_id: "1BP9JD5IND3YRao7myoowiJXgvcjdxYha"
     tipo_vinculo:
       spreadsheet_id: "1e5AinHzOLsbwTBzotUdzEYIBwg-jVa3-"
     vinculo:
       spreadsheet_id: "1FjQlZyVS3fRQOQdr5bNvd6iI1Am-fRg1"
-
+  
+  dados_mestres:
+    bairro:
+      spreadsheet_id: "1_buFiOYWxkkYed7wUw4imdFUvGip6RxI"
+    logradouro:
+      spreadsheet_id: "1SrWMDLAL0eB4W1lfkHR0eBRMaEbdLBlA"
+  
+  administracao_servicos_publicos_1746:
+    chamado:
+      spreadsheet_id: 1n72MIA3xfJ1ZJPDH0uFZqZts6jXqDxKj
