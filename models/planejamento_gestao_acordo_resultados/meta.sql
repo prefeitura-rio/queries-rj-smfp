@@ -13,7 +13,7 @@ SELECT
     SAFE_CAST(orgaoID AS STRING) id_orgao,
     SAFE_CAST(orgao AS STRING) orgao,
     SAFE_CAST(SiglaOrgao AS STRING)	sigla_orgao,
-    SAFE_CAST(UnidadedeMedida AS STRING) unidade_medida,
+    SAFE_CAST(unidade_de_medida AS STRING) unidade_medida,
     SAFE_CAST(metaMaeID AS STRING) numero_meta_mae,
     SAFE_CAST(AreaResultado AS STRING) area_resultado,
     SAFE_CAST(TipoMeta AS STRING) tipo,
