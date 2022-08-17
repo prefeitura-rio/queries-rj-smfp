@@ -32,3 +32,4 @@ SELECT
     SAFE_CAST(novembro AS FLOAT64) novembro,
     SAFE_CAST(dezembro AS FLOAT64) dezembro
 FROM `planejamento_gestao_acordo_resultados_staging.meta`
+    WHERE painel = 'EGPRio'
