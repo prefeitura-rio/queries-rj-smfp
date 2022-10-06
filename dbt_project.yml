@@ -44,3 +44,6 @@ models:
     planejamento_gestao_acordo_resultados:
       +materialized: table # Materialization type (view, table or incremental)
       +schema: planejamento_gestao_acordo_resultados # Overrides the default schema (defaults to what is set on profiles.yml)
+    planejamento_gestao_dashboard_metas:
+      +materialized: table # Materialization type (view, table or incremental)
+      +schema: planejamento_gestao_dashboard_metas # Overrides the default schema (defaults to what is set on profiles.yml)
