@@ -5,3 +5,4 @@ SELECT
     SAFE_CAST(mes AS INT64) as mes,
     SAFE_CAST(corChance AS STRING) as cor_chance
 FROM `planejamento_gestao_acordo_resultados_staging.chance`
+    WHERE painel = 'EGPRio'

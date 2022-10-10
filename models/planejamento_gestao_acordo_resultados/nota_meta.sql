@@ -4,3 +4,4 @@ SELECT
     SAFE_CAST(mes AS INT64) as mes,
     SAFE_CAST(valor AS INT64) as valor
 FROM `planejamento_gestao_acordo_resultados_staging.nota_meta`
+    WHERE painel = 'EGPRio'

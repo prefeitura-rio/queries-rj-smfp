@@ -7,3 +7,4 @@ SELECT
     SAFE_CAST(usuarioRegistroID AS STRING) as numero_analista,
     SAFE_CAST(ordem as STRING) as ordem
 FROM `planejamento_gestao_acordo_resultados_staging.comentario`
+    WHERE painel = 'EGPRio'
