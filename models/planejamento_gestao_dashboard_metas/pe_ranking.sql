@@ -227,12 +227,11 @@ pe_ranking as (
     _2024,
     _2025,
     SAFE_CAST(REPLACE(`rj-smfp.planejamento_gestao_dashboard_metas_staging`.tradutor_data(data_valor), "_", "-") AS DATE FORMAT 'MON-YY') data_valor,
-    valor,
     SAFE_CAST(REPLACE(REPLACE(valor, "º", ""), "ª", "") AS INT64) valor
   FROM pe_valores
   WHERE tipo_meta = 'Ranking'
 )
 
-SELECT * FROM pe_ranking
+select * from pe_ranking
 
 
