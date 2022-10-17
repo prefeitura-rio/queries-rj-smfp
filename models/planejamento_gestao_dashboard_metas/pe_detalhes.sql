@@ -44,7 +44,7 @@ WITH pe_geral AS (
     SAFE_CAST(preenchimento_atualizado_em AS STRING) preenchimento_atualizado_em,
     SAFE_CAST(observacoes AS STRING) observacoes,
     SAFE_CAST(ultimo_resultado AS STRING) ultimo_resultado,
-    SAFE_CAST(data_referencia_resultado AS DATE) data_referencia_resultado,
+    SAFE_CAST(`rj-smfp.planejamento_gestao_dashboard_metas_staging`.tradutor_data(LOWER(data_referencia_resultado)) AS DATE FORMAT 'MON-YY') data_referencia_resultado,
     SAFE_CAST(comentarios_da_meta AS STRING) comentarios_da_meta,
     SAFE_CAST(resumo_executivo AS STRING) resumo_executivo,
     SAFE_CAST(tendencia_cumprimento_meta_2021 AS STRING) tendencia_cumprimento_meta_2021,
@@ -122,7 +122,7 @@ WITH pe_geral AS (
     SAFE_CAST(descricao_meta_desdobrada AS STRING) descricao_meta_desdobrada,
     SAFE_CAST(indicador_dashboard_prefeito AS STRING) indicador_dashboard_prefeito,
     SAFE_CAST(tipo_meta AS STRING) tipo_meta,
-    SAFE_CAST(casas_decimais AS INT64) casas_decimais,
+    SAFE_CAST(SAFE_CAST(casas_decimais AS FLOAT64) AS INT64) casas_decimais,
     SAFE_CAST(meta1 AS STRING) valor_meta_final,
     SAFE_CAST(ano_meta_desdobrada AS INT64) ano_meta_desdobrada,
     SAFE_CAST(usa_valor_de_referencia_para_calculo_do_resultado_celula_dn AS STRING) usa_valor_de_referencia_para_calculo_do_resultado_celula_dn,
@@ -240,6 +240,43 @@ SELECT
   andamento_de_projetos_prioritarios_ligados_a_meta_projeto_3,
   andamento_de_projetos_prioritarios_ligados_a_meta_projeto_4,
   andamento_de_projetos_prioritarios_ligados_a_meta_projeto_5
-FROM pe_geral)
+FROM pe_geral
+WHERE codigo_meta IS NOT NULL)
 
-SELECT * FROM pe_detalhes
+,pe_tendencia_0 as ( 
+SELECT
+  origem,
+  orgao_responsavel,
+  codigo_meta,                                
+  MIN(CASE WHEN tendencia_cumprimento_meta_2022 = "Cumprida" then 8
+    WHEN tendencia_cumprimento_meta_2022 = "Cumprida parcialmente" then 2
+    WHEN tendencia_cumprimento_meta_2022 = "Não cumprida" then 1
+    WHEN tendencia_cumprimento_meta_2022 = "Tendência de cumprir" then 6
+    WHEN tendencia_cumprimento_meta_2022 = "Tendência de cumprir parcialmente" then 5
+    WHEN tendencia_cumprimento_meta_2022 = "Tendência de não cumprir" then 4
+    WHEN tendencia_cumprimento_meta_2022 = "Indefinida" then 3
+    WHEN tendencia_cumprimento_meta_2022 = "Não se aplica" or tendencia_cumprimento_meta_2022 = "Não" then 7
+    ELSE 999 END) tendencia_numero_pe,
+FROM pe_geral
+WHERE codigo_meta != "nan"
+GROUP BY origem, orgao_responsavel, codigo_meta
+ORDER BY tendencia_numero_pe DESC
+)
+
+SELECT
+  pd.*,
+  tendencia_numero_pe,
+  CASE 
+    WHEN tendencia_numero_pe = 1 THEN "Não cumprida"
+    WHEN tendencia_numero_pe = 2 THEN "Cumprida parcialmente"
+    WHEN tendencia_numero_pe = 3 THEN "Indefinida"
+    WHEN tendencia_numero_pe = 4 THEN "Atraso grave"
+    WHEN tendencia_numero_pe = 5 THEN "Atraso Recuperável"
+    WHEN tendencia_numero_pe = 6 THEN "Andamento Satisfatório"
+    WHEN tendencia_numero_pe = 7 THEN "Sem informações/Não se aplica"
+    WHEN tendencia_numero_pe = 8 THEN "Cumprida"
+    ELSE "VALOR NÃO ENCONTRADO" END tendencia_pe
+FROM pe_detalhes as pd
+LEFT JOIN pe_tendencia_0 as pt
+  ON pd.codigo_meta = pt.codigo_meta AND pd.orgao_responsavel = pt.orgao_responsavel
+ORDER BY origem, orgao_responsavel, codigo_meta

@@ -232,6 +232,6 @@ pe_textual as (
   WHERE tipo_meta = 'Textual'
 )
 
-SELECT * FROM pe_textual
+select * from pe_textual
 
 
