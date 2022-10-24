@@ -5,7 +5,7 @@
     tipo_meta,
     data_valor,
     valor
-  FROM {{ ref('pe_numerico') }}
+  FROM `rj-smfp.planejamento_gestao_dashboard_metas.pe_numerico`
   ORDER BY id_meta_secretaria, data_valor
   )
 
@@ -16,7 +16,7 @@
     ar_unidade_medida,
     data_valor,
     valor
-    FROM {{ ref('ar_valores') }}
+    FROM `rj-smfp.planejamento_gestao_dashboard_metas.ar_valores`
     WHERE ar_unidade_medida = 'Numérico'
   )
   

@@ -176,11 +176,26 @@ SELECT
   valor_referencia,
   data_referencia,
   regionalizavel,
-  _2021,
-  _2022,
-  _2023,
-  _2024,
-  _2025,
+  CASE 
+    WHEN CONTAINS_SUBSTR(_2021, "Sem valor alvo") AND _2021 != "Sem valor alvo" THEN REPLACE(_2021, "Sem valor alvo", "")
+    ELSE _2021
+  END _2021,
+  CASE 
+    WHEN CONTAINS_SUBSTR(_2021, "Sem valor alvo") AND _2022 != "Sem valor alvo" THEN REPLACE(_2022, "Sem valor alvo", "")
+    ELSE _2022
+  END _2022,
+  CASE 
+    WHEN CONTAINS_SUBSTR(_2023, "Sem valor alvo") AND _2023 != "Sem valor alvo" THEN REPLACE(_2023, "Sem valor alvo", "")
+    ELSE _2023
+  END _2023,
+  CASE 
+    WHEN CONTAINS_SUBSTR(_2021, "Sem valor alvo") AND _2024 != "Sem valor alvo" THEN REPLACE(_2024, "Sem valor alvo", "")
+    ELSE _2024
+  END _2024,
+  CASE 
+    WHEN CONTAINS_SUBSTR(_2025, "Sem valor alvo") AND _2025 != "Sem valor alvo" THEN REPLACE(_2025, "Sem valor alvo", "")
+    ELSE _2025
+  END _2025,
   meta_validada_pelo_prefeito,
   meta_global_alinhada_com_mais_de_um_tema_transversal,
   se_a_resposta_for_sim_na_coluna_anterior_qualis_temas,
@@ -279,4 +294,5 @@ SELECT
 FROM pe_detalhes as pd
 LEFT JOIN pe_tendencia_0 as pt
   ON pd.codigo_meta = pt.codigo_meta AND pd.orgao_responsavel = pt.orgao_responsavel
+WHERE id_meta_secretaria != "nan-nan" --AND id_meta_secretaria != 'M56-SEOP'
 ORDER BY origem, orgao_responsavel, codigo_meta
