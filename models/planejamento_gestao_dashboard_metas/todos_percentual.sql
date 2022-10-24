@@ -45,7 +45,7 @@
   SELECT 
     tv.*,
     td.id_detalhamento,
-    td.dashboard_meta_detalhamento,
+    td.dashboard_detalhamento_objetivo,
     td.dashboard_descricao,
     td.dashboard_resumo
   FROM todos_percentual as tv
