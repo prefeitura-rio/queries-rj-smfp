@@ -45,7 +45,7 @@ SELECT
   ped.meta as pe_descricao_meta,
   ped.comentarios_da_meta as pe_comentarios_da_meta,
   ped.resumo_executivo as pe_resumo_executivo,
-FROM `rj-smfp.planejamento_gestao_dashboard_metas.ar_detalhes` as ard
+FROM {{ ref('ar_detalhes') }} as ard
 LEFT JOIN (
   SELECT 
     chave_meta_pe,
@@ -55,7 +55,7 @@ LEFT JOIN (
   GROUP BY chave_meta_pe
   ) as rm
   ON ard.id_meta = rm.chave_meta_ar_egpweb
-LEFT JOIN `rj-smfp.planejamento_gestao_dashboard_metas.pe_detalhes` as ped
+LEFT JOIN {{ ref('pe_detalhes') }} as ped
   ON rm.chave_meta_pe = ped.codigo_meta_desdobrada AND ard.orgao_sigla = ped.orgao_responsavel
 ORDER BY pe_tipo_meta DESC
 )
@@ -103,7 +103,7 @@ ORDER BY pe_tipo_meta DESC
       WHEN ar_unidade_medida = "Textual" THEN "Meta entregue"
       ELSE SAFE_CAST(dezembro AS STRING)
       END as ar_objetivo_2022
-  FROM `rj-smfp.planejamento_gestao_dashboard_metas.pe_detalhes` as ped
+  FROM {{ ref('pe_detalhes') }} as ped
   LEFT JOIN (
   SELECT 
     chave_meta_pe,
@@ -113,7 +113,7 @@ ORDER BY pe_tipo_meta DESC
   GROUP BY chave_meta_pe
   ) as rm
   ON rm.chave_meta_pe = ped.codigo_meta_desdobrada
-  LEFT JOIN `rj-smfp.planejamento_gestao_dashboard_metas.ar_detalhes` as ard
+  LEFT JOIN {{ ref('ar_detalhes') }} as ard
   ON rm.chave_meta_ar_egpweb = ard.id_meta AND ard.orgao_sigla = ped.orgao_responsavel
 )
 
@@ -242,7 +242,7 @@ LEFT JOIN (
   SELECT DISTINCT
     orgao_sigla,
     CASE WHEN ordem_secretariado_e_relatorios IS NULL THEN 999 ELSE CAST(CAST(ordem_secretariado_e_relatorios AS FLOAT64) AS INT64) END ordenacao_orgaos 
-  FROM `rj-smfp.planejamento_gestao_dashboard_metas.orgaos` 
+  FROM {{ ref('orgaos') }} 
 ) AS oo
   ON tj.orgao_sigla = oo.orgao_sigla
 LEFT JOIN (SELECT chave_meta_ar_egpweb, MIN(ordem_meta_no_orgao) as ordem_meta_ar FROM `rj-smfp.planejamento_gestao_dashboard_metas_staging.relacao_metas` group by chave_meta_ar_egpweb) as rm
@@ -252,6 +252,11 @@ LEFT JOIN (SELECT chave_meta_ar_egpweb, MIN(ordem_meta_no_orgao) as ordem_meta_a
 SELECT
   id_meta_principal,
   id_meta_relacionada,
+  CASE
+    WHEN id_meta_relacionada IS NULL THEN id_meta_principal
+    WHEN origem_meta = "Plano Estratégico" THEN CONCAT(id_meta_principal, " - ", id_meta_relacionada)
+    WHEN origem_meta = "Acordo de Resultados" THEN CONCAT(id_meta_relacionada, " - ", id_meta_principal)
+  END id_detalhamento,
   id_meta_mae,
   tendencia_meta_mae,
   origem_meta,

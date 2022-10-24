@@ -41,7 +41,7 @@ with ar_valores as (
     ON i.id_meta = com.id_camada AND i.ano = com.ano AND i.mes = com.mes
   FULL JOIN (SELECT * FROM `rj-smfp.planejamento_gestao_acordo_resultados.chance` WHERE indice_camada = "1") as ch
     ON i.id_meta = ch.id_camada AND i.ano = ch.ano AND i.mes = ch.mes
-  INNER JOIN `rj-smfp.planejamento_gestao_dashboard_metas.ar_detalhes` as detalhes
+  INNER JOIN {{ ref('ar_detalhes') }} as detalhes
     ON i.id_meta = detalhes.id_meta
   ORDER BY i.id_meta, ano, mes
 )
