@@ -44,7 +44,10 @@
 
   SELECT 
     tv.*,
-    td.id_detalhamento
+    td.id_detalhamento,
+    td.dashboard_meta_detalhamento,
+    td.dashboard_descricao,
+    td.dashboard_resumo
   FROM todos_percentual as tv
   LEFT JOIN {{ ref('todos_detalhes') }} as td
     ON tv.id_meta = td.id_meta_principal
