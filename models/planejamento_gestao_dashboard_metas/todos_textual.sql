@@ -5,7 +5,7 @@
     tipo_meta,
     data_valor,
     valor
-  FROM {{ ref('pe_textual') }}
+  FROM `rj-smfp.planejamento_gestao_dashboard_metas.pe_textual`
   ORDER BY id_meta_secretaria, data_valor
   )
 
@@ -20,7 +20,7 @@
       WHEN valor = 0 THEN "Não Entregue"
       ELSE "Não identificado"
       END valor
-    FROM {{ ref('ar_valores') }}
+    FROM `rj-smfp.planejamento_gestao_dashboard_metas.ar_valores`
     WHERE ar_unidade_medida = 'Textual' AND data_valor <= CURRENT_DATE()
   )
   

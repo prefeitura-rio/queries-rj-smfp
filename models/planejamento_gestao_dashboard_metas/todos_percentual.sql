@@ -4,8 +4,11 @@
     id_meta_secretaria,
     tipo_meta,
     data_valor,
-    valor
-  FROM {{ ref('pe_porcentagem') }}
+    CASE 
+    WHEN IS_NAN(valor) THEN NULL
+    ELSE valor 
+    END valor 
+  FROM `rj-smfp.planejamento_gestao_dashboard_metas.pe_porcentagem`
   ORDER BY id_meta_secretaria, data_valor
   )
 
@@ -15,8 +18,8 @@
     id_meta,
     ar_unidade_medida,
     data_valor,
-    valor
-    FROM {{ ref('ar_valores') }}
+    ROUND(valor/100,4) as valor
+    FROM `rj-smfp.planejamento_gestao_dashboard_metas.ar_valores`
     WHERE ar_unidade_medida = 'Percentual'
   )
   
