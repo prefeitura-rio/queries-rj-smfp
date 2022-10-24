@@ -5,7 +5,7 @@
     tipo_meta,
     data_valor,
     valor
-  FROM `rj-smfp.planejamento_gestao_dashboard_metas.pe_numerico`
+  FROM {{ ref('pe_numerico') }}
   ORDER BY id_meta_secretaria, data_valor
   )
 
@@ -16,7 +16,7 @@
     ar_unidade_medida,
     data_valor,
     valor
-    FROM `rj-smfp.planejamento_gestao_dashboard_metas.ar_valores`
+    FROM {{ ref('ar_valores') }}
     WHERE ar_unidade_medida = 'Numérico'
   )
   
@@ -39,5 +39,10 @@
     valor
   FROM ar_numerico)
 
-  SELECT * FROM todos_numerico
+  SELECT 
+    tv.*,
+    td.id_detalhamento, 
+  FROM todos_numerico as tv
+  LEFT JOIN {{ ref('todos_detalhes') }} as td
+    ON tv.id_meta = td.id_meta_principal
   ORDER BY origem, id_meta, data_valor

@@ -5,7 +5,7 @@
     tipo_meta,
     data_valor,
     valor
-  FROM `rj-smfp.planejamento_gestao_dashboard_metas.pe_textual`
+  FROM {{ ref('pe_textual') }}
   ORDER BY id_meta_secretaria, data_valor
   )
 
@@ -20,7 +20,7 @@
       WHEN valor = 0 THEN "Não Entregue"
       ELSE "Não identificado"
       END valor
-    FROM `rj-smfp.planejamento_gestao_dashboard_metas.ar_valores`
+    FROM {{ ref('ar_valores') }}
     WHERE ar_unidade_medida = 'Textual' AND data_valor <= CURRENT_DATE()
   )
   
@@ -43,5 +43,10 @@
     valor
   FROM ar_textual)
 
-  SELECT * FROM todos_textual
+  SELECT 
+    tv.*,
+    td.id_detalhamento 
+  FROM todos_textual as tv
+  LEFT JOIN {{ ref('todos_detalhes') }} as td
+    ON tv.id_meta = td.id_meta_principal
   ORDER BY origem, id_meta, data_valor

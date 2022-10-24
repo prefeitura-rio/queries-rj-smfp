@@ -5,7 +5,7 @@
     tipo_meta,
     data_valor,
     valor
-  FROM `rj-smfp.planejamento_gestao_dashboard_metas.pe_ranking`
+  FROM {{ ref('pe_ranking') }}
   ORDER BY id_meta_secretaria, data_valor
   )
 
@@ -16,7 +16,7 @@
     ar_unidade_medida,
     data_valor,
     valor
-    FROM `rj-smfp.planejamento_gestao_dashboard_metas.ar_valores`
+    FROM {{ ref('ar_valores') }}
     WHERE ar_unidade_medida = 'Ranking'
   )
   
@@ -39,5 +39,10 @@
     valor
   FROM ar_ranking)
 
-  SELECT * FROM todos_ranking
+  SELECT 
+    tv.*,
+    td.id_detalhamento 
+  FROM todos_ranking as tv
+  LEFT JOIN {{ ref('todos_detalhes') }} as td
+    ON tv.id_meta = td.id_meta_principal
   ORDER BY origem, id_meta, data_valor

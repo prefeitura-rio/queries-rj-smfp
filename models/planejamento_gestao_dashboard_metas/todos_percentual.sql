@@ -8,7 +8,7 @@
     WHEN IS_NAN(valor) THEN NULL
     ELSE valor 
     END valor 
-  FROM `rj-smfp.planejamento_gestao_dashboard_metas.pe_porcentagem`
+  FROM {{ ref('pe_porcentagem') }}
   ORDER BY id_meta_secretaria, data_valor
   )
 
@@ -19,7 +19,7 @@
     ar_unidade_medida,
     data_valor,
     ROUND(valor/100,4) as valor
-    FROM `rj-smfp.planejamento_gestao_dashboard_metas.ar_valores`
+    FROM {{ ref('ar_valores') }}
     WHERE ar_unidade_medida = 'Percentual'
   )
   
@@ -42,5 +42,10 @@
     valor
   FROM ar_percentual)
 
-  SELECT * FROM todos_percentual
+  SELECT 
+    tv.*,
+    td.id_detalhamento
+  FROM todos_percentual as tv
+  LEFT JOIN {{ ref('todos_detalhes') }} as td
+    ON tv.id_meta = td.id_meta_principal
   ORDER BY origem, id_meta, data_valor
