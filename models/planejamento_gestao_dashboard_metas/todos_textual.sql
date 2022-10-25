@@ -45,7 +45,11 @@
 
   SELECT 
     tv.*,
-    td.id_detalhamento 
+    td.id_detalhamento,
+    td.dashboard_detalhamento_objetivo,
+    td.dashboard_descricao,
+    td.dashboard_resumo,
+    td.dashboard_tema 
   FROM todos_textual as tv
   LEFT JOIN {{ ref('todos_detalhes') }} as td
     ON tv.id_meta = td.id_meta_principal
