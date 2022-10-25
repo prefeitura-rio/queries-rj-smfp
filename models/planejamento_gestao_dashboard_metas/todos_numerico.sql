@@ -45,7 +45,17 @@
     td.dashboard_detalhamento_objetivo,
     td.dashboard_descricao,
     td.dashboard_resumo,
-    td.dashboard_tema 
+    td.dashboard_tema,
+    CASE
+      WHEN tv.origem = "Acordo de Resultados" THEN td.dashboard_status_ar
+      WHEN tv.origem = "Plano Estratégico" THEN dashboard_status_pe
+      ELSE NULL
+    END status_detalhamento,
+    CASE
+      WHEN tv.origem = "Acordo de Resultados" THEN td.dashboard_cor_fonte_ar
+      WHEN tv.origem = "Plano Estratégico" THEN td.dashboard_cor_fonte_pe
+      ELSE NULL
+    END cor_status_detalhamento 
   FROM todos_numerico as tv
   LEFT JOIN {{ ref('todos_detalhes') }} as td
     ON tv.id_meta = td.id_meta_principal
