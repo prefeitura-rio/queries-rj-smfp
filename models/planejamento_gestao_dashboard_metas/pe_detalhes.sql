@@ -261,7 +261,7 @@ WHERE codigo_meta IS NOT NULL)
 ,pe_tendencia_0 as ( 
 SELECT
   origem,
-  orgao_responsavel,
+  --orgao_responsavel,
   codigo_meta,                                
   MIN(CASE WHEN tendencia_cumprimento_meta_2022 = "Cumprida" then 8
     WHEN tendencia_cumprimento_meta_2022 = "Cumprida parcialmente" then 2
@@ -274,7 +274,7 @@ SELECT
     ELSE 999 END) tendencia_numero_pe,
 FROM pe_geral
 WHERE codigo_meta != "nan"
-GROUP BY origem, orgao_responsavel, codigo_meta
+GROUP BY origem, codigo_meta
 ORDER BY tendencia_numero_pe DESC
 )
 
@@ -293,6 +293,6 @@ SELECT
     ELSE "VALOR NÃO ENCONTRADO" END tendencia_pe
 FROM pe_detalhes as pd
 LEFT JOIN pe_tendencia_0 as pt
-  ON pd.codigo_meta = pt.codigo_meta AND pd.orgao_responsavel = pt.orgao_responsavel
+  ON pd.codigo_meta = pt.codigo_meta --AND pd.orgao_responsavel = pt.orgao_responsavel
 WHERE id_meta_secretaria != "nan-nan" --AND id_meta_secretaria != 'M56-SEOP'
 ORDER BY origem, orgao_responsavel, codigo_meta
