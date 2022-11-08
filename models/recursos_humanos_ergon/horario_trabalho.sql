@@ -6,4 +6,4 @@ SELECT
     SAFE_CAST(carga_hr_semana AS STRING) AS carga_horaria_semana,
     SAFE_CAST(carga_hr_dia AS STRING) AS carga_horaria_dia,
     SAFE_CAST(REGEXP_REPLACE(id_reg, r'\.0$', '') AS STRING) AS id_registro,
-FROM rj-smfp.administracao_recursos_humanos_ergon_staging.horario_trabalho AS t
+FROM rj-smfp.recursos_humanos_ergon_staging.horario_trabalho AS t

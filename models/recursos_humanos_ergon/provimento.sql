@@ -11,4 +11,4 @@ SELECT
     SAFE_CAST(obs AS STRING) AS observacoes,
     SAFE_CAST(flex_campo_03 AS STRING) AS regime_horas,
     SAFE_CAST(emp_codigo AS STRING) AS empresa_vinculo,
-FROM rj-smfp.administracao_recursos_humanos_ergon_staging.provimento AS t
+FROM rj-smfp.recursos_humanos_ergon_staging.provimento AS t

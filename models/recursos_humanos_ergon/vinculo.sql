@@ -40,4 +40,4 @@ SELECT
     SAFE_CAST(flex_campo_18 AS STRING) AS cota,
     SAFE_CAST(REGEXP_REPLACE(emp_codigo, r'\.0$', '') AS STRING) AS id_empresa,
     SAFE_CAST(dt_homolog AS DATE) AS data_homologacao_aposentadoria,
-FROM rj-smfp.administracao_recursos_humanos_ergon_staging.vinculo AS t
+FROM rj-smfp.recursos_humanos_ergon_staging.vinculo AS t

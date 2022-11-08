@@ -10,4 +10,4 @@ SELECT
     SAFE_CAST(REGEXP_REPLACE(flex_campo_02, r'\.0$', '') AS STRING) AS id_empresa_prevrio,
     SAFE_CAST(REGEXP_REPLACE(flex_campo_05, r'\.0$', '') AS STRING) AS id_secretaria,
     SAFE_CAST(extinto AS STRING) AS extinto,
-FROM rj-smfp.administracao_recursos_humanos_ergon_staging.setor AS t
+FROM rj-smfp.recursos_humanos_ergon_staging.setor AS t

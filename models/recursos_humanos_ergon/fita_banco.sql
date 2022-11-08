@@ -42,7 +42,7 @@ SELECT
     SAFE_CAST(REGEXP_REPLACE(flex_campo_05, r'\.0$', '') AS STRING) AS id_lotacao,
     SAFE_CAST(REGEXP_REPLACE(jornada, r'\.0$', '') AS STRING) AS id_jornada,
     SAFE_CAST(data_particao AS DATE) data_particao,
-    FROM rj-smfp.administracao_recursos_humanos_ergon_staging.fita_banco AS t
+    FROM rj-smfp.recursos_humanos_ergon_staging.fita_banco AS t
 WHERE
     data_particao < CURRENT_DATE('America/Sao_Paulo')
 

@@ -1,5 +1,5 @@
 {
-    "administracao_recursos_humanos_ergon": {
+    "recursos_humanos_ergon": {
         "jornada": {
             "title": "TODO_TITLE_PREFIX: Jornada",
             "short_description": "Tipos de jornadas existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro.",

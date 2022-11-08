@@ -113,4 +113,4 @@ SELECT
     SAFE_CAST(flex_campo_23 AS STRING) AS login_instagram,
     SAFE_CAST(flex_campo_24 AS STRING) AS login_linkedin,
     SAFE_CAST(flex_campo_25 AS STRING) AS login_myspace,
-FROM rj-smfp.administracao_recursos_humanos_ergon_staging.funcionario AS t
+FROM rj-smfp.recursos_humanos_ergon_staging.funcionario AS t
