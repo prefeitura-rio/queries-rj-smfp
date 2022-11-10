@@ -147,15 +147,21 @@ SELECT
   pe_tendencia_meta_desdobrada        as dashboard_status_pe,
   ar_tendencia                        as dashboard_status_ar,
   CASE 
-    WHEN ar_tendencia = "Andamento Satisfatório" or ar_tendencia = "Cumprida" then "#005A38" 
-    WHEN ar_tendencia = "Atraso Recuperável" or ar_tendencia = "Cumprida parcialmente" then "#ABAD67" 
-    WHEN ar_tendencia = "Atraso grave" or ar_tendencia = "Não cumprida" then "#BD443F" 
+    WHEN ar_tendencia = "Cumprida" then "#005A38"
+    WHEN ar_tendencia = "Andamento Satisfatório" then "#62C26A"
+    WHEN ar_tendencia = "Atraso Recuperável" then "#E9CE56"
+    WHEN ar_tendencia = "Cumprida parcialmente" then "#ABAD67" 
+    WHEN ar_tendencia = "Atraso grave" then "#E2843C"
+    WHEN ar_tendencia = "Não cumprida" then "#BD443F" 
     ELSE "#4F4F4F"
     END                               as dashboard_cor_fonte_ar,
   CASE 
-    WHEN pe_tendencia_meta_desdobrada = "Andamento Satisfatório" or pe_tendencia_meta_desdobrada = "Cumprida" then "#005A38" 
-    WHEN pe_tendencia_meta_desdobrada = "Atraso Recuperável" or pe_tendencia_meta_desdobrada = "Cumprida parcialmente" then "#ABAD67" 
-    WHEN pe_tendencia_meta_desdobrada = "Atraso grave" or pe_tendencia_meta_desdobrada = "Não cumprida" then "#BD443F" 
+    WHEN pe_tendencia_meta_desdobrada = "Cumprida" then "#005A38"
+    WHEN pe_tendencia_meta_desdobrada = "Andamento Satisfatório" then "#62C26A"
+    WHEN pe_tendencia_meta_desdobrada = "Atraso Recuperável" then "#E9CE56"
+    WHEN pe_tendencia_meta_desdobrada = "Cumprida parcialmente" then "#ABAD67" 
+    WHEN pe_tendencia_meta_desdobrada = "Atraso grave" then "#E2843C"
+    WHEN pe_tendencia_meta_desdobrada = "Não cumprida" then "#BD443F" 
     ELSE "#4F4F4F"
     END                               as dashboard_cor_fonte_pe,
   ar_nome_meta                        as dashboard_descricao,
@@ -197,15 +203,21 @@ SELECT
   pe_tendencia_meta_desdobrada        as dashboard_status_pe,
   ar_tendencia                        as dashboard_status_ar,
   CASE 
-    WHEN ar_tendencia = "Andamento Satisfatório" or ar_tendencia = "Cumprida" then "#005A38" 
-    WHEN ar_tendencia = "Atraso Recuperável" or ar_tendencia = "Cumprida parcialmente" then "#ABAD67" 
-    WHEN ar_tendencia = "Atraso grave" or ar_tendencia = "Não cumprida" then "#BD443F" 
+    WHEN ar_tendencia = "Cumprida" then "#005A38"
+    WHEN ar_tendencia = "Andamento Satisfatório" then "#62C26A"
+    WHEN ar_tendencia = "Atraso Recuperável" then "#E9CE56"
+    WHEN ar_tendencia = "Cumprida parcialmente" then "#ABAD67" 
+    WHEN ar_tendencia = "Atraso grave" then "#E2843C"
+    WHEN ar_tendencia = "Não cumprida" then "#BD443F" 
     ELSE "#4F4F4F"
     END                               as dashboard_cor_fonte_ar,
   CASE 
-    WHEN pe_tendencia_meta_desdobrada = "Andamento Satisfatório" or pe_tendencia_meta_desdobrada = "Cumprida" then "#005A38" 
-    WHEN pe_tendencia_meta_desdobrada = "Atraso Recuperável" or pe_tendencia_meta_desdobrada = "Cumprida parcialmente" then "#ABAD67" 
-    WHEN pe_tendencia_meta_desdobrada = "Atraso grave" or pe_tendencia_meta_desdobrada = "Não cumprida" then "#BD443F" 
+    WHEN pe_tendencia_meta_desdobrada = "Cumprida" then "#005A38"
+    WHEN pe_tendencia_meta_desdobrada = "Andamento Satisfatório" then "#62C26A"
+    WHEN pe_tendencia_meta_desdobrada = "Atraso Recuperável" then "#E9CE56"
+    WHEN pe_tendencia_meta_desdobrada = "Cumprida parcialmente" then "#ABAD67" 
+    WHEN pe_tendencia_meta_desdobrada = "Atraso grave" then "#E2843C"
+    WHEN pe_tendencia_meta_desdobrada = "Não cumprida" then "#BD443F" 
     ELSE "#4F4F4F"
     END                               as dashboard_cor_fonte_pe,
   CASE 
