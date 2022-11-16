@@ -118,7 +118,6 @@ WITH pe_geral AS (
     SAFE_CAST(g1 AS STRING) g1,
     SAFE_CAST(folha AS STRING) folha,
     SAFE_CAST(texto_o_globo AS STRING) texto_o_globo,
-    CASE WHEN ar = "S" then TRUE ELSE FALSE END ar,
     SAFE_CAST(descricao_meta_desdobrada AS STRING) descricao_meta_desdobrada,
     SAFE_CAST(indicador_dashboard_prefeito AS STRING) indicador_dashboard_prefeito,
     SAFE_CAST(tipo_meta AS STRING) tipo_meta,
@@ -239,7 +238,6 @@ SELECT
   g1
   folha,
   texto_o_globo,
-  ar
   descricao_meta_desdobrada,
   indicador_dashboard_prefeito,
   tipo_meta,
