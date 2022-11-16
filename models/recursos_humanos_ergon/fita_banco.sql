@@ -28,7 +28,7 @@ SELECT
     SAFE_CAST(REGEXP_REPLACE(agencia, r'\.0$', '') AS INT64) AS agencia_banco,
     SAFE_CAST(REGEXP_REPLACE(banco, r'\.0$', '') AS INT64) AS banco,
     SAFE_CAST(REGEXP_REPLACE(conta, r'\.0$', '') AS INT64) AS conta_banco,
-    SAFE_CAST(cargo AS STRING) AS cargo,
+    SAFE_CAST(REGEXP_REPLACE(cargo, r'\.0$', '') AS STRING) AS cargo,
     SAFE_CAST(subcategoria AS STRING) AS cargo_subcategoria,
     SAFE_CAST(REGEXP_REPLACE(referencia, r'\.0$', '') AS STRING) AS id_referencia,
     SAFE_CAST(funcao AS STRING) AS funcao,
