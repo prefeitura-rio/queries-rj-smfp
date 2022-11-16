@@ -1,12 +1,9 @@
-with ar_valores as (
+with chance_com_comentario as (
   SELECT 
-    i.id_meta,
-    "Acordo de Resultados" as origem,
-    i.ano,
-    i.mes,
-    SAFE_CAST(CONCAT(i.ano, "-", LPAD(CAST(i.mes AS STRING), 2, "0")) AS DATE FORMAT "YYYY-MM") data_valor,
-    i.valor,
-    nm.valor as nota,
+    COALESCE(ch.id_camada, com.id_camada) as id_meta,
+    COALESCE(ch.ano, com.ano) as ano,
+    COALESCE(ch.mes, com.mes) as mes,
+    SAFE_CAST(CONCAT(COALESCE(ch.ano, com.ano), "-", LPAD(CAST(COALESCE(ch.mes, com.mes) AS STRING), 2, "0")) AS DATE FORMAT "YYYY-MM") data_valor,
     ch.cor_chance as chance_cor,
     CASE  
       WHEN ch.cor_chance = "1" then "Indefinida" 
@@ -28,29 +25,83 @@ with ar_valores as (
       as tendencia_numero_ar,
     com.id_camada as ordem_comentario,
     com.comentario as comentario,
-    CONCAT(i.ano, "-", LPAD(CAST(i.mes AS STRING), 2, "0"), ": ", com.comentario) as comentario_datado
+    CONCAT(COALESCE(ch.ano, com.ano), "-", LPAD(CAST(COALESCE(ch.mes, com.mes) AS STRING), 2, "0"), ": ", com.comentario) as comentario_datado
+  FROM (SELECT * FROM `rj-smfp.planejamento_gestao_acordo_resultados.comentario`) as com
+  FULL JOIN (SELECT * FROM `rj-smfp.planejamento_gestao_acordo_resultados.chance` WHERE indice_camada = "1") as ch
+    ON com.id_camada = ch.id_camada AND com.ano = ch.ano AND com.mes = ch.mes
+)
+
+, indicador_com_nota as (
+  SELECT 
+    COALESCE(i.id_meta, nm.id_meta) as id_meta,
+    COALESCE(i.ano, nm.ano) as ano,
+    COALESCE(i.mes, nm.mes) as mes,
+    SAFE_CAST(CONCAT(COALESCE(i.ano, nm.ano), "-", LPAD(CAST(COALESCE(i.mes, nm.mes) AS STRING), 2, "0")) AS DATE FORMAT "YYYY-MM") data_valor,
+    i.valor,
+    nm.valor as nota,
   FROM `rj-smfp.planejamento_gestao_acordo_resultados.indicador` as i
   FULL JOIN `rj-smfp.planejamento_gestao_acordo_resultados.nota_meta` as nm
     ON i.id_meta = nm.id_meta AND i.ano = nm.ano AND i.mes = nm.mes
-  FULL JOIN (SELECT * FROM `rj-smfp.planejamento_gestao_acordo_resultados.comentario`) as com
-    ON i.id_meta = com.id_camada AND i.ano = com.ano AND i.mes = com.mes
-  FULL JOIN (SELECT * FROM `rj-smfp.planejamento_gestao_acordo_resultados.chance` WHERE indice_camada = "1") as ch
-    ON i.id_meta = ch.id_camada AND i.ano = ch.ano AND i.mes = ch.mes
-  ORDER BY i.id_meta, ano, mes
+)
+
+, ar_valores as (
+  SELECT 
+    COALESCE(icn.id_meta, cc.id_meta) as id_meta,
+    "Acordo de Resultados" as origem,
+    COALESCE(icn.ano, cc.ano) as ano,
+    COALESCE(icn.mes, cc.mes) as mes,
+    COALESCE(icn.data_valor, cc.data_valor) as data_valor,
+    icn.valor,
+    icn.valor as nota,
+    cc.chance_cor,
+    cc.tendencia_ar,
+    cc.tendencia_numero_ar,
+    cc.ordem_comentario,
+    cc.comentario,
+    cc.comentario_datado
+  FROM indicador_com_nota as icn
+  FULL JOIN chance_com_comentario as cc
+    ON icn.id_meta = cc.id_meta AND icn.ano = cc.ano AND icn.mes = cc.mes
+  ORDER BY id_meta, ano, mes
+)
+
+, ultimo_valor AS (
+  SELECT DISTINCT
+    ar.origem,
+    ar.id_meta,
+    ar.data_valor as ar_data_referencia_ultimo_resultado,
+    ar.valor as ar_ultimo_resultado
+  FROM ar_valores as ar
+  INNER JOIN (SELECT id_meta, MAX(data_valor) data_valor FROM ar_valores WHERE data_valor <= CURRENT_DATE() AND valor IS NOT NULL GROUP BY id_meta) as max_date
+    ON ar.id_meta = max_date.id_meta AND ar.data_valor = max_date.data_valor
+)
+
+, ultima_tendencia AS (
+  SELECT DISTINCT
+    ar.origem,
+    ar.id_meta,
+    ar.data_valor as ar_data_referencia_ultima_tendencia,
+    ar.tendencia_numero_ar,
+    ar.tendencia_ar,
+  FROM ar_valores as ar
+  INNER JOIN (SELECT id_meta, MAX(data_valor) data_valor FROM ar_valores 
+                WHERE data_valor <= CURRENT_DATE() AND tendencia_ar != "Sem informações/Não se aplica" AND tendencia_ar IS NOT NULL
+              GROUP BY id_meta) as max_date
+    ON ar.id_meta = max_date.id_meta AND ar.data_valor = max_date.data_valor
 )
 
 , ar_tendencia_1 AS (
   SELECT DISTINCT
-    ar.origem,
-    ar.id_meta,
-    ar.tendencia_numero_ar,
-    ar.tendencia_ar,
-    ar.data_valor as ar_data_referencia_ultimo_resultado,
-    ar.valor as ar_ultimo_resultado
-  FROM ar_valores as ar
-  INNER JOIN (SELECT id_meta, MAX(data_valor) data_valor FROM ar_valores WHERE data_valor <= CURRENT_DATE() GROUP BY id_meta) as max_date
-    ON ar.id_meta = max_date.id_meta AND ar.data_valor = max_date.data_valor
-  ORDER BY id_meta
+    COALESCE(uv.origem, ut.origem) as origem,
+    COALESCE(uv.id_meta, ut.id_meta) as id_meta,
+    ut.tendencia_numero_ar,
+    ut.tendencia_ar,
+    -- GREATEST(uv.ar_data_referencia_ultimo_resultado, ut.ar_data_referencia_ultima_tendencia) as ar_data_referencia_ultimo_resultado,
+    uv.ar_data_referencia_ultimo_resultado,
+    uv.ar_ultimo_resultado as ar_ultimo_resultado
+  FROM ultimo_valor as uv
+  FULL JOIN ultima_tendencia as ut
+    ON uv.origem = ut.origem AND uv.id_meta = ut.id_meta
 )
 
 , ar_detalhes as (
@@ -67,7 +118,8 @@ with ar_valores as (
     END orgao_sigla,
   `rj-smfp.planejamento_gestao_dashboard_metas_staging`.tradutor_unidade_medida(meta.unidade_medida) ar_unidade_medida,
   meta.orgao,
-  arp.descricao_meta_ar_2022 as descricao_planilha,
+  arp.chave_meta_ar_2022,
+  arp.descricao_meta_ar_2022_desdobrada as descricao_planilha,
   meta.descricao,
   meta.observacao,
   meta.ordem,

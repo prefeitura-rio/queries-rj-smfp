@@ -386,5 +386,13 @@ SELECT
   "Cumprida parcialmente" AS tendencia_pe
 )
 
-SELECT * FROM pe_detalhes_final
+SELECT 
+  *, 
+  CONCAT(
+    "Meta para 2021: ", _2021, "\n",
+    "Meta para 2022: ", _2022, "\n",
+    "Meta para 2023: ", _2023, "\n",
+    "Meta para 2024: ", _2024
+  ) pe_desdobramento_anual_da_meta
+FROM pe_detalhes_final
 ORDER BY origem, orgao_responsavel, codigo_meta

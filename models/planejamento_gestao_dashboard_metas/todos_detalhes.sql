@@ -38,13 +38,14 @@ SELECT
   ped._2022 as pe_objetivo_2022,
   ped.ultimo_resultado as pe_ultimo_resultado,
   ped.data_referencia_resultado as pe_data_referencia_ultimo_resultado,
-  ped.indicador_dashboard_prefeito as pe_nome_meta,
+  ped.descricao_meta_desdobrada as pe_nome_meta,
   ped.cor_fonte as pe_cor_fonte,
   ped.pe_tendencia_normalizada as pe_tendencia_meta_desdobrada,
   ped.tema_transversal as pe_tema_transversal,
   ped.meta as pe_descricao_meta,
   ped.comentarios_da_meta as pe_comentarios_da_meta,
   ped.resumo_executivo as pe_resumo_executivo,
+  ped.pe_desdobramento_anual_da_meta,
 FROM {{ ref('ar_detalhes') }} as ard
 LEFT JOIN (
   SELECT 
@@ -74,13 +75,14 @@ ORDER BY pe_tipo_meta DESC
     ped._2022 as pe_objetivo_2022,
     ped.ultimo_resultado as pe_ultimo_resultado,
     ped.data_referencia_resultado as pe_data_referencia_ultimo_resultado,
-    ped.indicador_dashboard_prefeito as pe_nome_meta,
+    ped.descricao_meta_desdobrada as pe_nome_meta,
     ped.cor_fonte as pe_cor_fonte,
     ped.pe_tendencia_normalizada as pe_tendencia_meta_desdobrada,
     ped.meta as pe_descricao_meta,
     ped.tema_transversal as pe_tema_transversal,
     ped.comentarios_da_meta as pe_comentarios_da_meta,
     ped.resumo_executivo as pe_resumo_executivo,
+    ped.pe_desdobramento_anual_da_meta,
     ard.id_meta_mae,
     ard.pior_tendencia_meta_mae,
     ard.ar_data_referencia_ultimo_resultado,
@@ -169,7 +171,8 @@ SELECT
   ar_resumo_comentarios               as dashboard_comentarios,
   "ACORDO DE RESULTADOS"              as dashboard_tema,
   ar_objetivo_2022                    as dashboard_detalhamento_objetivo,
-  ar_tipo_meta                        as tipo_meta
+  ar_tipo_meta                        as tipo_meta,
+  NULL                                as desdobramento_anual_da_meta,
 FROM ar_com_pe
 
 UNION ALL 
@@ -228,7 +231,8 @@ SELECT
   pe_comentarios_da_meta              as dashboard_comentarios,
   pe_tema_transversal                 as dashboard_tema,
   pe_objetivo_2022                    as dashboard_detalhamento_objetivo,
-  pe_tipo_meta                        as tipo_meta
+  pe_tipo_meta                        as tipo_meta,
+  pe_desdobramento_anual_da_meta      as desdobramento_anual_da_meta,
 FROM pe_com_ar
 )
 
@@ -289,6 +293,7 @@ SELECT
   dashboard_tema,
   dashboard_detalhamento_objetivo,
   tipo_meta,
+  desdobramento_anual_da_meta,
   (ROW_NUMBER() OVER (ORDER BY 
     ordenacao_orgaos, 
     ordenacao_origem, 
