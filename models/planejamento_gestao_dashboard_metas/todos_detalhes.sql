@@ -46,7 +46,9 @@ SELECT
   ped.comentarios_da_meta as pe_comentarios_da_meta,
   ped.resumo_executivo as pe_resumo_executivo,
   ped.pe_desdobramento_anual_da_meta,
+  ped.codigo_meta_desdobrada as pe_codigo_meta_desdobrada,
 FROM {{ ref('ar_detalhes') }} as ard
+--FROM rj-smfp.planejamento_gestao_dashboard_metas.ar_detalhes as ard
 LEFT JOIN (
   SELECT 
     chave_meta_pe,
@@ -57,6 +59,7 @@ LEFT JOIN (
   ) as rm
   ON ard.id_meta = rm.chave_meta_ar_egpweb
 LEFT JOIN {{ ref('pe_detalhes') }} as ped
+--LEFT JOIN rj-smfp.planejamento_gestao_dashboard_metas.pe_detalhes as ped
   ON rm.chave_meta_pe = ped.codigo_meta_desdobrada AND ard.orgao_sigla = ped.orgao_responsavel
 ORDER BY pe_tipo_meta DESC
 )
@@ -83,6 +86,7 @@ ORDER BY pe_tipo_meta DESC
     ped.comentarios_da_meta as pe_comentarios_da_meta,
     ped.resumo_executivo as pe_resumo_executivo,
     ped.pe_desdobramento_anual_da_meta,
+    ped.codigo_meta_desdobrada as pe_codigo_meta_desdobrada,
     ard.id_meta_mae,
     ard.pior_tendencia_meta_mae,
     ard.ar_data_referencia_ultimo_resultado,
@@ -106,6 +110,7 @@ ORDER BY pe_tipo_meta DESC
       ELSE SAFE_CAST(dezembro AS STRING)
       END as ar_objetivo_2022
   FROM {{ ref('pe_detalhes') }} as ped
+  --FROM rj-smfp.planejamento_gestao_dashboard_metas.pe_detalhes as ped
   LEFT JOIN (
   SELECT 
     chave_meta_pe,
@@ -116,6 +121,7 @@ ORDER BY pe_tipo_meta DESC
   ) as rm
   ON rm.chave_meta_pe = ped.codigo_meta_desdobrada
   LEFT JOIN {{ ref('ar_detalhes') }} as ard
+  --LEFT JOIN rj-smfp.planejamento_gestao_dashboard_metas.ar_detalhes as ard
   ON rm.chave_meta_ar_egpweb = ard.id_meta AND ard.orgao_sigla = ped.orgao_responsavel
 )
 
@@ -173,6 +179,7 @@ SELECT
   ar_objetivo_2022                    as dashboard_detalhamento_objetivo,
   ar_tipo_meta                        as tipo_meta,
   NULL                                as desdobramento_anual_da_meta,
+  pe_codigo_meta_desdobrada           as pe_codigo_meta_desdobrada
 FROM ar_com_pe
 
 UNION ALL 
@@ -233,6 +240,7 @@ SELECT
   pe_objetivo_2022                    as dashboard_detalhamento_objetivo,
   pe_tipo_meta                        as tipo_meta,
   pe_desdobramento_anual_da_meta      as desdobramento_anual_da_meta,
+  pe_codigo_meta_desdobrada           as pe_codigo_meta_desdobrada
 FROM pe_com_ar
 )
 
@@ -247,8 +255,11 @@ SELECT
   oo.ordenacao_orgaos,
   CASE 
     WHEN tj.origem_meta = "Plano Estratégico" THEN 1
+    -- WHEN rel_ind.colocar_logo_abaixo IS TRUE THEN 1
     ELSE 2 
   END ordenacao_origem,
+  rel_ind.colocar_logo_abaixo,
+  rel_ind.chave_meta_pe as codigo_pe_relacao_indireta,
   CASE 
     WHEN rm.ordem_meta_ar IS NULL THEN "9999" 
     ELSE rm.ordem_meta_ar 
@@ -259,10 +270,20 @@ LEFT JOIN (
     orgao_sigla,
     CASE WHEN ordem_secretariado_e_relatorios IS NULL THEN 999 ELSE CAST(CAST(ordem_secretariado_e_relatorios AS FLOAT64) AS INT64) END ordenacao_orgaos 
   FROM {{ ref('orgaos') }} 
+  --FROM rj-smfp.planejamento_gestao_dashboard_metas.orgaos
 ) AS oo
   ON tj.orgao_sigla = oo.orgao_sigla
-LEFT JOIN (SELECT chave_meta_ar_egpweb, MIN(ordem_meta_no_orgao) as ordem_meta_ar FROM `rj-smfp.planejamento_gestao_dashboard_metas_staging.relacao_metas` group by chave_meta_ar_egpweb) as rm
-    ON tj.id_meta_principal = rm.chave_meta_ar_egpweb
+LEFT JOIN (SELECT 
+    chave_meta_ar_egpweb,
+    chave_meta_pe,
+    CASE
+      WHEN relacao_entre_indicadores = "2 - Direta (Outro indicador)" THEN TRUE
+      ELSE FALSE
+    END as colocar_logo_abaixo
+  FROM `rj-smfp.planejamento_gestao_dashboard_metas_staging.relacao_metas`) as rel_ind
+    ON tj.id_meta_principal = rel_ind.chave_meta_ar_egpweb
+LEFT JOIN (SELECT codigo_egpweb, MIN(nod) as ordem_meta_ar FROM `rj-smfp.planejamento_gestao_dashboard_metas_staging.metas_acordo_resultados_ordenacao` group by codigo_egpweb) as rm
+    ON tj.id_meta_principal = SAFE_CAST(SAFE_CAST(rm.codigo_egpweb AS FLOAT64) AS STRING)
 )
 
 SELECT
@@ -299,5 +320,16 @@ SELECT
     ordenacao_origem, 
     CASE WHEN origem_meta = "Plano Estratégico" THEN id_meta_principal
     ELSE ordem_meta_ar END)) ordenacao_final
+  -- CASE 
+  --     WHEN origem_meta = "Plano Estratégico" THEN pe_codigo_meta_desdobrada
+  --     WHEN colocar_logo_abaixo IS TRUE THEN CONCAT(codigo_pe_relacao_indireta, "1")
+  --   ELSE ordem_meta_ar END ordem_codigos,
+  -- (ROW_NUMBER() OVER (ORDER BY 
+  --   ordenacao_orgaos, 
+  --   ordenacao_origem, 
+    -- CASE 
+    --   WHEN origem_meta = "Plano Estratégico" THEN pe_codigo_meta_desdobrada
+    --   WHEN colocar_logo_abaixo IS TRUE THEN CONCAT(codigo_pe_relacao_indireta, "1")
+    -- ELSE ordem_meta_ar END)) ordenacao_final
 FROM todos_ordenados
 ORDER BY ordenacao_final
