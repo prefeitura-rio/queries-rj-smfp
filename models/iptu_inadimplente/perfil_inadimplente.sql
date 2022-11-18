@@ -1,0 +1,1 @@
+SELECT * FROM `rj-smfp.iptu_inadimplentes_staging.perfil_inadimplente`
