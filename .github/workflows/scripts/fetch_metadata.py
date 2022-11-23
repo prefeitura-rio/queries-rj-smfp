@@ -66,12 +66,12 @@ def fetch_metadata(initial_dict: dict) -> dict:
     # Iterate over datasets
     for dataset_id in initial_dict:
         # Get the title prefix for the dataset
-        data = custom_fetch(f"https://meta.dados.rio/api/datasets/?name={dataset_id}")
+        data = custom_fetch(f"https://meta.dados.rio/api/datasets/?project=rj-smfp&name={dataset_id}")
         title_prefix = data["title_prefix"]
         # Iterate over datasets' tables
         for table_id in initial_dict[dataset_id]:
             # Fetch metadata from meta.dados.rio
-            url = f"https://meta.dados.rio/api/tables/?dataset={dataset_id}&name={table_id}"
+            url = f"https://meta.dados.rio/api/tables/?project=rj-smfp&dataset={dataset_id}&name={table_id}"
             response = requests.get(url)
             # Asserts that the response is ok
             response.raise_for_status()
