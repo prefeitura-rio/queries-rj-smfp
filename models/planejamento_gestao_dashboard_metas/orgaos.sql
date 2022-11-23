@@ -26,4 +26,4 @@ FULL OUTER JOIN orgao_ar
 ORDER BY orgao_sigla
 )
 
-SELECT DISTINCT * FROM orgao_todos
+SELECT DISTINCT * FROM orgao_todos --orgaos
