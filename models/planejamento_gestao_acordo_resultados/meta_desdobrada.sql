@@ -22,16 +22,16 @@ SAFE_CAST(resultado AS STRING) as resultado,
 SAFE_CAST(ref_chance_meta_desdobrada AS DATE) as referencia_chance_meta_desdobrada, 
 SAFE_CAST(chance_meta_desdobrada AS INT64) as chance_meta_desdobrada,
 SAFE_CAST(ref_resultado2_performance AS DATE) as referencia_resultado_orgao_2,
-SAFE_CAST(resultado2_performance AS string) as resultado_orgao_2
-SAFE_CAST(ref_chance2_performance AS DATE) as referencia_chance_meta_desdobrada_orgao_2
-SAFE_CAST(chance2_performance AS INT64) as chance_meta_desdobrada_orgao_2
-SAFE_CAST(resultado_orgao1 AS STRING) as resultado_completo_orgao_1
-SAFE_CAST(resultado_orgao2_performance AS STRING) as resultado_completo_orgao_2
-SAFE_CAST(caso_chance AS INT64) as caso_chance_orgao_1
-SAFE_CAST(caso_chance_orgao_2_performance AS INT64) as caso_chance_orgao_2
-SAFE_CAST(pior_caso_chance AS INT64) as pior_caso_chance
-SAFE_CAST(cor_chance_meta AS INT64) as chance_meta_orgao_1
-SAFE_CAST(cor_chance_meta_orgao_2 AS INT64) as chance_meta_orgao_2
-SAFE_CAST(resultado_performance_prefeito AS BOOL) as resultado_peformance_orgao_1
+SAFE_CAST(resultado2_performance AS string) as resultado_orgao_2,
+SAFE_CAST(ref_chance2_performance AS DATE) as referencia_chance_meta_desdobrada_orgao_2,
+SAFE_CAST(chance2_performance AS INT64) as chance_meta_desdobrada_orgao_2,
+SAFE_CAST(resultado_orgao1 AS STRING) as resultado_completo_orgao_1,
+SAFE_CAST(resultado_orgao2_performance AS STRING) as resultado_completo_orgao_2,
+SAFE_CAST(caso_chance AS INT64) as caso_chance_orgao_1,
+SAFE_CAST(caso_chance_orgao_2_performance AS INT64) as caso_chance_orgao_2,
+SAFE_CAST(pior_caso_chance AS INT64) as pior_caso_chance,
+SAFE_CAST(cor_chance_meta AS INT64) as chance_meta_orgao_1,
+SAFE_CAST(cor_chance_meta_orgao_2 AS INT64) as chance_meta_orgao_2,
+SAFE_CAST(resultado_performance_prefeito AS BOOL) as resultado_peformance_orgao_1,
 SAFE_CAST(resultado_performance2_prefeito AS BOOL) as resultado_performance_orgao_2
 FROM `planejamento_gestao_acordo_resultados_staging.meta_desdobrada`
