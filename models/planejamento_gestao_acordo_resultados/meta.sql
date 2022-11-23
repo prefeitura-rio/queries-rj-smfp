@@ -1,3 +1,4 @@
+--meta
 SELECT
     SAFE_CAST(metaID AS STRING)	id_meta,
     SAFE_CAST(descricao AS STRING) descricao,
