@@ -13,9 +13,9 @@
             "categories": [],
             "columns": []
         },
-        "ar_detalhes": {
-            "title": "Dashboard de Metas: AR Detalhes",
-            "short_description": "Tabela auxiliar com detalhes das metas do Acordo de Resultados.",
+        "pe_detalhes": {
+            "title": "Dashboard de Metas: PE Detalhes",
+            "short_description": "Tabela auxiliar com detalhes das metas do Plano Estratégico.",
             "long_description": ".",
             "update_frequency": "Diário",
             "temporal_coverage": ".",
@@ -39,35 +39,22 @@
             "categories": [],
             "columns": []
         },
-        "pe_numerico": {
-            "title": "Dashboard de Metas: PE Numérico",
-            "short_description": "Tabela auxiliar com valores das metas numéricas do Plano Estratégico.",
-            "long_description": ".",
-            "update_frequency": "Diário",
-            "temporal_coverage": ".",
-            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
-            "publisher_name": "Bruno Almeida",
-            "publisher_email": "brunodepauloalmeida@gmail.com",
-            "tags": [],
-            "categories": [],
-            "columns": []
-        },
-        "pe_detalhes": {
-            "title": "Dashboard de Metas: PE Detalhes",
-            "short_description": "Tabela auxiliar com detalhes das metas do Plano Estratégico.",
-            "long_description": ".",
-            "update_frequency": "Diário",
-            "temporal_coverage": ".",
-            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
-            "publisher_name": "Bruno Almeida",
-            "publisher_email": "brunodepauloalmeida@gmail.com",
-            "tags": [],
-            "categories": [],
-            "columns": []
-        },
         "todos_detalhes": {
             "title": "Dashboard de Metas: Todos Detalhes",
             "short_description": "Tabela final com detalhes das metas do Plano Estratégico e do Acordo de Resultados.",
+            "long_description": ".",
+            "update_frequency": "Diário",
+            "temporal_coverage": ".",
+            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
+            "publisher_name": "Bruno Almeida",
+            "publisher_email": "brunodepauloalmeida@gmail.com",
+            "tags": [],
+            "categories": [],
+            "columns": []
+        },
+        "pe_numerico": {
+            "title": "Dashboard de Metas: PE Numérico",
+            "short_description": "Tabela auxiliar com valores das metas numéricas do Plano Estratégico.",
             "long_description": ".",
             "update_frequency": "Diário",
             "temporal_coverage": ".",
@@ -91,22 +78,9 @@
             "categories": [],
             "columns": []
         },
-        "ar_valores": {
-            "title": "Dashboard de Metas: AR Valores",
-            "short_description": "Tabela auxiliar com valores das metas do Acordo de Resultados.",
-            "long_description": ".",
-            "update_frequency": "Diário",
-            "temporal_coverage": ".",
-            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
-            "publisher_name": "Bruno Almeida",
-            "publisher_email": "brunodepauloalmeida@gmail.com",
-            "tags": [],
-            "categories": [],
-            "columns": []
-        },
-        "pe_porcentagem": {
-            "title": "Dashboard de Metas: PE Percentual",
-            "short_description": "Tabela auxiliar com valores das metas percentuais do Plano Estratégico.",
+        "todos_percentual": {
+            "title": "Dashboard de Metas: Todos Percentual",
+            "short_description": "Tabela final com valores das metas percentual do Plano Estratégico e do Acordo de Resultados.",
             "long_description": ".",
             "update_frequency": "Diário",
             "temporal_coverage": ".",
@@ -130,22 +104,9 @@
             "categories": [],
             "columns": []
         },
-        "todos_percentual": {
-            "title": "Dashboard de Metas: Todos Percentual",
-            "short_description": "Tabela final com valores das metas percentual do Plano Estratégico e do Acordo de Resultados.",
-            "long_description": ".",
-            "update_frequency": "Diário",
-            "temporal_coverage": ".",
-            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
-            "publisher_name": "Bruno Almeida",
-            "publisher_email": "brunodepauloalmeida@gmail.com",
-            "tags": [],
-            "categories": [],
-            "columns": []
-        },
-        "todos_textual": {
-            "title": "Dashboard de Metas: Todos Textual",
-            "short_description": "Tabela final com valores das metas textuais do Plano Estratégico e do Acordo de Resultados.",
+        "ar_valores": {
+            "title": "Dashboard de Metas: AR Valores",
+            "short_description": "Tabela auxiliar com valores das metas do Acordo de Resultados.",
             "long_description": ".",
             "update_frequency": "Diário",
             "temporal_coverage": ".",
@@ -168,428 +129,43 @@
             "tags": [],
             "categories": [],
             "columns": []
-        }
-    },
-    "iptu_inadimplentes": {
-        "perfil_inadimplente": {
-            "title": "Inadimplentes do IPTU: Perfil dos inadimplentes",
-            "short_description": "Perfil de inadimplentes do IPTU",
-            "long_description": "Perfil de inadimplentes do IPTU",
-            "update_frequency": "Semanal",
-            "temporal_coverage": "Indefinido",
-            "data_owner": "Indefinido",
-            "publisher_name": "Indefinido",
-            "publisher_email": "indefinido@mail.com",
+        },
+        "ar_detalhes": {
+            "title": "Dashboard de Metas: AR Detalhes",
+            "short_description": "Tabela auxiliar com detalhes das metas do Acordo de Resultados.",
+            "long_description": ".",
+            "update_frequency": "Diário",
+            "temporal_coverage": ".",
+            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
+            "publisher_name": "Bruno Almeida",
+            "publisher_email": "brunodepauloalmeida@gmail.com",
             "tags": [],
             "categories": [],
-            "columns": [
-                {
-                    "name": "ano_competencia",
-                    "description": "Ano da competência"
-                },
-                {
-                    "name": "valor_lancado",
-                    "description": "Valor de IPTU lançado para a inscrição imobiliária"
-                },
-                {
-                    "name": "valor_pago",
-                    "description": "Valor de IPTU pago para a inscrição imobiliária"
-                },
-                {
-                    "name": "valor_devido",
-                    "description": "Valor de IPTU devido para a inscrição imobiliária"
-                },
-                {
-                    "name": "tipo_guia",
-                    "description": "Tipo de guia da inscrição imobiliária"
-                },
-                {
-                    "name": "bairro",
-                    "description": "Bairro da inscrição imobiliária"
-                },
-                {
-                    "name": "status_lancamento_iptu",
-                    "description": "Situação do lançamento do IPTU"
-                },
-                {
-                    "name": "area_planejamento",
-                    "description": "Área de planejamento da cidade"
-                },
-                {
-                    "name": "zona_cidade",
-                    "description": "Zona da cidade"
-                },
-                {
-                    "name": "regiao_administrativa",
-                    "description": "Região administrativa da cidade"
-                },
-                {
-                    "name": "regiao_fiscal",
-                    "description": "Região fiscal da cidade"
-                },
-                {
-                    "name": "ano_construcao_imovel",
-                    "description": "Ano de construção do imóvel"
-                },
-                {
-                    "name": "situacao_terreno",
-                    "description": "Situação do terreno"
-                },
-                {
-                    "name": "tipologia",
-                    "description": "Tipologia do terreno"
-                },
-                {
-                    "name": "utilizacao_principal",
-                    "description": "Utilização principal do imóvel"
-                },
-                {
-                    "name": "area_tributada_nao_residencial",
-                    "description": "Área tributada não residencial do imóvel"
-                },
-                {
-                    "name": "area_tributada_residencial",
-                    "description": "Área tributada residencial do imóvel"
-                },
-                {
-                    "name": "area_tributada_territorial",
-                    "description": "Área tributada territorial do imóvel"
-                },
-                {
-                    "name": "area_terreno",
-                    "description": "Área total do terreno"
-                },
-                {
-                    "name": "valor_isento_iptu",
-                    "description": "Valor isento de IPTU"
-                },
-                {
-                    "name": "tributacao",
-                    "description": "Tributação da inscrição imobiliária"
-                },
-                {
-                    "name": "area_residencial",
-                    "description": "Área residencial do imóvel"
-                },
-                {
-                    "name": "area_nao_residencial",
-                    "description": "Área não residencial do imóvel"
-                },
-                {
-                    "name": "inscricao_imobiliaria",
-                    "description": "Inscrição imobiliária do imóvel"
-                }
-            ]
-        }
-    },
-    "recursos_humanos_ergon": {
-        "provimento": {
-            "title": "TODO_TITLE_PREFIX: Provimento",
-            "short_description": "Eventos relacionados aos vínculos funcionais tanto com a administração direta como indireta da prefeitura do Rio de Janeiro.",
-            "long_description": "Eventos relacionados aos vínculos funcionais tanto com a administração direta como indireta da prefeitura do Rio de Janeiro. \r\nUm provimento pode ser uma progressão, mudança de lotação, mudança de vencimento (referência) etc. Um provimento é um evento na situação funcional do vínculo.",
-            "update_frequency": "Semanal",
-            "temporal_coverage": "Até data corrente",
-            "data_owner": "SMFP/SUBGCC/CGRH",
-            "publisher_name": "Anderson Ferraz Carneiro",
-            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
-            "tags": [
-                "cargo",
-                "administração pública",
-                "recursos humanos",
-                "funcionário",
-                "ERGON"
-            ],
-            "categories": [
-                "48df9fb6643d477bb1bb7bf595915a23"
-            ],
             "columns": []
         },
-        "regime_juridico": {
-            "title": "TODO_TITLE_PREFIX: Regime Juridico",
-            "short_description": "Tipos de regimes jurídicos existentes entre os vínculos de funcionários e a administração direta ou indireta da prefeitura do Rio de Janeiro.",
-            "long_description": "Tipos de regimes jurídicos existentes entre os vínculos de funcionários e a administração direta ou indireta da prefeitura do Rio de Janeiro.",
-            "update_frequency": "Nunca",
-            "temporal_coverage": "Até data corrente",
-            "data_owner": "SMFP/SUBGCC/CGRH",
-            "publisher_name": "Anderson Ferraz Carneiro",
-            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
-            "tags": [
-                "administração pública",
-                "recursos humanos",
-                "órgão",
-                "empresa",
-                "ERGON"
-            ],
-            "categories": [],
-            "columns": []
-        },
-        "horario_trabalho": {
-            "title": "TODO_TITLE_PREFIX: Horário",
-            "short_description": "Horários possíveis para funcionários da administração direta da prefeitura do Rio de Janeiro.",
-            "long_description": "Horários possíveis para funcionários da administração direta da prefeitura do Rio de Janeiro (ainda não tem dados disponibilizados) (esperado colocação também da administração indireta).",
-            "update_frequency": "Nunca",
-            "temporal_coverage": "Até data corrente",
-            "data_owner": "SMFP/SUBGCC/CGRH",
-            "publisher_name": "Anderson Ferraz Carneiro",
-            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
-            "tags": [
-                "administração pública",
-                "recursos humanos",
-                "funcionário",
-                "órgão",
-                "empresa",
-                "ERGON"
-            ],
-            "categories": [
-                "48df9fb6643d477bb1bb7bf595915a23"
-            ],
-            "columns": []
-        },
-        "matricula": {
-            "title": "TODO_TITLE_PREFIX: Matricula",
-            "short_description": "Matrículas dadas pela prefeitura do Rio de Janeiro para pessoas que devem receber pagamento",
-            "long_description": "Matrículas dadas pela prefeitura do Rio de Janeiro para pessoas que devem receber pagamento ou para pessoas em outros casos de interesse da prefeitura do Rio de Janeiro",
+        "pe_porcentagem": {
+            "title": "Dashboard de Metas: PE Percentual",
+            "short_description": "Tabela auxiliar com valores das metas percentuais do Plano Estratégico.",
+            "long_description": ".",
             "update_frequency": "Diário",
-            "temporal_coverage": "Até data corrente",
-            "data_owner": "SMFP/SUBGCC/CGRH",
-            "publisher_name": "Anderson Ferraz Carneiro",
-            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
-            "tags": [
-                "administração pública",
-                "recursos humanos",
-                "funcionário",
-                "ERGON"
-            ],
-            "categories": [
-                "48df9fb6643d477bb1bb7bf595915a23"
-            ],
-            "columns": []
-        },
-        "fita_banco": {
-            "title": "TODO_TITLE_PREFIX: Fita de pagamento enviada para o Tesouro Municipal",
-            "short_description": "Fitas enviadas para o tesouro municipal.",
-            "long_description": "Fitas enviadas para o tesouro municipal contendo informações sobre pagamentos a serem feitos a funcionários tanto pela administração direta quanto indireta.",
-            "update_frequency": "Mensal",
-            "temporal_coverage": "Até data corrente",
-            "data_owner": "SMFP/SUBGCC/CGRH",
-            "publisher_name": "Anderson Ferraz Carneiro",
-            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
-            "tags": [
-                "administração pública",
-                "SMA",
-                "recursos humanos",
-                "funcionário",
-                "ERGON"
-            ],
+            "temporal_coverage": ".",
+            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
+            "publisher_name": "Bruno Almeida",
+            "publisher_email": "brunodepauloalmeida@gmail.com",
+            "tags": [],
             "categories": [],
             "columns": []
         },
-        "cargo": {
-            "title": "TODO_TITLE_PREFIX: Não informado",
-            "short_description": "Tipos de cargos existentes na administração direta ou indireta da PCRJ.",
-            "long_description": "Tipos de cargos existentes na administração direta ou indireta da PCRJ. Não entram os tipos de cargos em comissão.",
-            "update_frequency": "Nunca",
-            "temporal_coverage": "Não informado",
-            "data_owner": "Não informado",
-            "publisher_name": "Não informado",
-            "publisher_email": "nao.informado@gmail.com",
-            "tags": [
-                "cargo",
-                "administração pública",
-                "SMA",
-                "recursos humanos",
-                "funcionário",
-                "ERGON"
-            ],
-            "categories": [],
-            "columns": []
-        },
-        "funcionario": {
-            "title": "TODO_TITLE_PREFIX: Não informado",
-            "short_description": "Pessoas físicas que precisam ter suas informações guardadas pela prefeitura para algum controle, como controle de pagamento, de frequência ou de lotação.",
-            "long_description": "Pessoas físicas que precisam ter suas informações guardadas pela prefeitura para algum controle, como controle de pagamento, de frequência ou de lotação. Em geral são pessoas que entram ou entraram em alguma folha de pagamento da prefeitura do Rio de Janeiro, sendo funcionário ou não, prestando serviço ou não (ex. pensionista previdenciário).",
-            "update_frequency": "Não informado",
-            "temporal_coverage": "Não informado",
-            "data_owner": "Não informado",
-            "publisher_name": "Não informado",
-            "publisher_email": "nao.informado@gmail.com",
-            "tags": [
-                "administração pública",
-                "recursos humanos",
-                "funcionário",
-                "ERGON"
-            ],
-            "categories": [],
-            "columns": []
-        },
-        "categoria": {
-            "title": "TODO_TITLE_PREFIX: Categoria",
-            "short_description": "Categorias existentes na administração direta ou indireta da Prefeitura do Rio de Janeiro.",
-            "long_description": "Categorias existentes na administração direta ou indireta da Prefeitura do Rio de Janeiro. \r\nExemplo: Educação, saúde etc. Categoria é um conjunto de cargos.",
-            "update_frequency": "Anual",
-            "temporal_coverage": "Até data corrente",
-            "data_owner": "SMFP/SUBGCC/CGRH",
-            "publisher_name": "Anderson Ferraz Carneiro",
-            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
-            "tags": [
-                "administração pública",
-                "SMA",
-                "recursos humanos",
-                "funcionário",
-                "categoria",
-                "ERGON"
-            ],
-            "categories": [],
-            "columns": []
-        },
-        "forma_provimento": {
-            "title": "TODO_TITLE_PREFIX: Forma de Provimento",
-            "short_description": "Formas de provimentos possiveis tanto na administração direta como indireta da prefeitura do Rio de Janeiro.",
-            "long_description": "Formas de provimentos possíveis tanto na administração direta como indireta da prefeitura do Rio de Janeiro. O provimento é a investidura em um cargo público.",
-            "update_frequency": "Semanal",
-            "temporal_coverage": "Até data corrente",
-            "data_owner": "SMFP/SUBGCC/CGRH",
-            "publisher_name": "Anderson Ferraz Carneiro",
-            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
-            "tags": [
-                "cargo",
-                "administração pública",
-                "SMA",
-                "recursos humanos",
-                "funcionário",
-                "ERGON"
-            ],
-            "categories": [],
-            "columns": []
-        },
-        "vinculo": {
-            "title": "TODO_TITLE_PREFIX: Vínculos de Pagamento",
-            "short_description": "Vínculos de pagamento ( em geral empregatícios ), tanto antigos como atuais, da administração direta e indireta da prefeitura do Rio de Janeiro.",
-            "long_description": "Vínculos de pagamento ( em geral empregatícios ), tanto antigos como atuais, da administração direta e indireta da prefeitura do Rio de Janeiro. Um vínculo, em geral, está associado a uma matrícula. Uma pessoa pode ter vários vínculos com a prefeitura.",
-            "update_frequency": "Mensal",
-            "temporal_coverage": "Até data corrente",
-            "data_owner": "SMFP/SUBGCC/CGRH",
-            "publisher_name": "Anderson Ferraz Carneiro",
-            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
-            "tags": [
-                "cargo",
-                "administração pública",
-                "recursos humanos",
-                "funcionário",
-                "ERGON"
-            ],
-            "categories": [],
-            "columns": []
-        },
-        "tipo_orgao": {
-            "title": "TODO_TITLE_PREFIX: Tipo de Orgão",
-            "short_description": "Tipos de órgãos tanto da administração direta como indireta da prefeitura do Rio de Janeiro.",
-            "long_description": "Tipos de órgãos tanto da administração direta como indireta da prefeitura do Rio de Janeiro.",
-            "update_frequency": "Nunca",
-            "temporal_coverage": "Até data corrente",
-            "data_owner": "SMFP/SUBGCC/CGRH",
-            "publisher_name": "Anderson Ferraz Carneiro",
-            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
-            "tags": [
-                "administração pública",
-                "órgão",
-                "ERGON"
-            ],
-            "categories": [],
-            "columns": []
-        },
-        "tipo_vinculo": {
-            "title": "TODO_TITLE_PREFIX: Tipo de Vinculo",
-            "short_description": "Tipos de vínculos existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro.",
-            "long_description": "Tipos de vínculos existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro.",
-            "update_frequency": "Anual",
-            "temporal_coverage": "Até data corrente",
-            "data_owner": "SMFP/SUBGCC/CGRH",
-            "publisher_name": "Anderson Ferraz Carneiro",
-            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
-            "tags": [
-                "cargo",
-                "administração pública",
-                "recursos humanos",
-                "funcionário",
-                "ERGON"
-            ],
-            "categories": [],
-            "columns": []
-        },
-        "orgaos_externos": {
-            "title": "TODO_TITLE_PREFIX: Órgaos Externos",
-            "short_description": "Órgãos de outros entes federativos que não da prefeitura do Rio de Janeiro mas que são de interesse da prefeitura do Rio de Janeiro.",
-            "long_description": "Órgãos de outros entes federativos que não da prefeitura do Rio de Janeiro mas que são de interesse da prefeitura do Rio de Janeiro.\r\nUsada, geralmente, para documentar a origem de servidores cedidos à prefeitura do Rio de Janeiro.",
-            "update_frequency": "Anual",
-            "temporal_coverage": "Até data corrente",
-            "data_owner": "SMFP/SUBGCC/CGRH",
-            "publisher_name": "Anderson Ferraz Carneiro",
-            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
-            "tags": [
-                "administração pública",
-                "órgão",
-                "ERGON"
-            ],
-            "categories": [],
-            "columns": []
-        },
-        "orgaos_regime_juridico": {
-            "title": "TODO_TITLE_PREFIX: Regimes Jurídicos",
-            "short_description": "Regimes jurídicos da prefeitura do Rio de Janeiro.",
-            "long_description": "Regimes jurídicos que podem ser aceitos para contratação de funcionários nos órgãos da administração direta ou indireta da prefeitura do Rio de Janeiro assim como outras empresas de interesse da prefeitura do Rio de Janeiro.",
-            "update_frequency": "Nunca",
-            "temporal_coverage": "Até data corrente",
-            "data_owner": "SMFP/SUBGCC/CGRH",
-            "publisher_name": "Anderson Ferraz Carneiro",
-            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
-            "tags": [
-                "administração pública",
-                "recursos humanos",
-                "funcionário",
-                "órgão",
-                "ERGON"
-            ],
-            "categories": [
-                "48df9fb6643d477bb1bb7bf595915a23"
-            ],
-            "columns": []
-        },
-        "jornada": {
-            "title": "TODO_TITLE_PREFIX: Jornada",
-            "short_description": "Tipos de jornadas existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro.",
-            "long_description": "Tipos de jornadas existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro. Jornada é a carga horária semanal.",
-            "update_frequency": "Anual",
-            "temporal_coverage": "Até data corrente",
-            "data_owner": "SMFP/SUBGCC/CGRH",
-            "publisher_name": "Anderson Ferraz Carneiro",
-            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
-            "tags": [
-                "administração pública",
-                "recursos humanos",
-                "funcionário",
-                "ERGON"
-            ],
-            "categories": [],
-            "columns": []
-        },
-        "setor": {
-            "title": "TODO_TITLE_PREFIX: Setor",
-            "short_description": "Setores existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro.",
-            "long_description": "Setores existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro.\r\nOs setores são os mesmos do SICI.",
-            "update_frequency": "Anual",
-            "temporal_coverage": "Até data corrente",
-            "data_owner": "SMFP/SUBGCC/CGRH",
-            "publisher_name": "Anderson Ferraz Carneiro",
-            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
-            "tags": [
-                "administração pública",
-                "recursos humanos",
-                "funcionário",
-                "órgão",
-                "empresa",
-                "ERGON"
-            ],
+        "todos_textual": {
+            "title": "Dashboard de Metas: Todos Textual",
+            "short_description": "Tabela final com valores das metas textuais do Plano Estratégico e do Acordo de Resultados.",
+            "long_description": ".",
+            "update_frequency": "Diário",
+            "temporal_coverage": ".",
+            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
+            "publisher_name": "Bruno Almeida",
+            "publisher_email": "brunodepauloalmeida@gmail.com",
+            "tags": [],
             "categories": [],
             "columns": []
         }
@@ -640,118 +216,6 @@
                 {
                     "name": "ordem",
                     "description": "Ordem do comentário. Pode haver mais de um comentário para uma mesma meta em um mesmo período (ano e mês)."
-                }
-            ]
-        },
-        "nota_meta": {
-            "title": "Acordo de Resultados: Notas das Metas",
-            "short_description": "Notas que indicam o andamento do atingimento das metas.",
-            "long_description": "Nota dada pela prefeitura para o que foi alcançado por um órgão para determinado identificador de meta. Uma meta pode ter vários identificadores, um para cada indicador associado a ela.",
-            "update_frequency": "Mensal",
-            "temporal_coverage": "Desde 2022 até a data corrente.",
-            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
-            "publisher_name": "Bruno Almeida",
-            "publisher_email": "brunodepauloalmeida@gmail.com",
-            "tags": [
-                "administração pública",
-                "acordo de resultados",
-                "EGP Rio"
-            ],
-            "categories": [
-                "48df9fb6643d477bb1bb7bf595915a23"
-            ],
-            "columns": [
-                {
-                    "name": "id_meta",
-                    "description": "Identificador da meta para a qual a nota foi dada. Existe um identificador para cada meta, por órgão e por indicador."
-                },
-                {
-                    "name": "ano",
-                    "description": "Ano para o qual a nota foi dada."
-                },
-                {
-                    "name": "mes",
-                    "description": "Mês para o qual a nota foi dada."
-                },
-                {
-                    "name": "valor",
-                    "description": "Valor da nota."
-                }
-            ]
-        },
-        "indicador": {
-            "title": "Acordo de Resultados: Indicador",
-            "short_description": "Indicadores que medem o atingimento das metas.",
-            "long_description": "Indicadores, apurados mensalmente, que servem para medir o quanto foi alcançado das metas dos acordos de resultados.",
-            "update_frequency": "Mensal",
-            "temporal_coverage": "Desde 2022 até a data corrente.",
-            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
-            "publisher_name": "Bruno Almeida",
-            "publisher_email": "brunodepauloalmeida@gmail.com",
-            "tags": [
-                "administração pública",
-                "acordo de resultados",
-                "EGP Rio"
-            ],
-            "categories": [
-                "48df9fb6643d477bb1bb7bf595915a23"
-            ],
-            "columns": [
-                {
-                    "name": "id_meta",
-                    "description": "Código identificador da meta medida pelo indicador."
-                },
-                {
-                    "name": "ano",
-                    "description": "Ano de aferição do indicador."
-                },
-                {
-                    "name": "mes",
-                    "description": "Mês de aferição do indicador."
-                },
-                {
-                    "name": "valor",
-                    "description": "Valor alcançado pelo indicador no mês. Pode ser um dado número, um percentual ou uma sinalização indicando que foi entregue ou não."
-                }
-            ]
-        },
-        "chance": {
-            "title": "Acordo de Resultados: Chance",
-            "short_description": "Chance de atingimento das metas.",
-            "long_description": "Chance, avaliada pelo analista de gestão de projetos, em determinado mês, de atingimento de meta de Acordo de Resultados.",
-            "update_frequency": "Mensal",
-            "temporal_coverage": "Desde 2013 até a data corrente.",
-            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
-            "publisher_name": "Bruno Almeida",
-            "publisher_email": "brunodepauloalmeida@gmail.com",
-            "tags": [
-                "administração pública",
-                "acordo de resultados",
-                "EGP Rio"
-            ],
-            "categories": [
-                "48df9fb6643d477bb1bb7bf595915a23"
-            ],
-            "columns": [
-                {
-                    "name": "id_camada",
-                    "description": "Código identificador da meta, do órgão ou da área de resultado dependendo do atributo indice_camada."
-                },
-                {
-                    "name": "indice_camada",
-                    "description": "Nos diz a quem está associada a chance.  1 - Uma meta, 2 - Todas as metas de um órgão."
-                },
-                {
-                    "name": "ano",
-                    "description": "Ano do indicador para o qual foi avaliada a chance."
-                },
-                {
-                    "name": "mes",
-                    "description": "Mês do indicador para o qual foi avaliada a chance."
-                },
-                {
-                    "name": "cor_chance",
-                    "description": "Diz qual a tendência de cumprimento da meta, de acordo com a seguinte tradução:\r\nse ch.cor_chance = '1' então 'Indefinida\"', \r\nse ch.cor_chance = '2' então 'Não cumprida',\r\nse ch.cor_chance = '3' então 'Atraso grave',\r\nse ch.cor_chance = '4' então 'Atraso Recuperável',\r\nse ch.cor_chance = '5' então 'Andamento Satisfatório',\r\nse ch.cor_chance = '6' então 'Cumprida'."
                 }
             ]
         },
@@ -900,6 +364,542 @@
                 {
                     "name": "dezembro",
                     "description": "Desdobramento da meta no mês de dezembro. Objetiva registrar o valor planejado, do indicador, no mês para fins de acompanhamento mensal da mesma."
+                }
+            ]
+        },
+        "chance": {
+            "title": "Acordo de Resultados: Chance",
+            "short_description": "Chance de atingimento das metas.",
+            "long_description": "Chance, avaliada pelo analista de gestão de projetos, em determinado mês, de atingimento de meta de Acordo de Resultados.",
+            "update_frequency": "Mensal",
+            "temporal_coverage": "Desde 2013 até a data corrente.",
+            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
+            "publisher_name": "Bruno Almeida",
+            "publisher_email": "brunodepauloalmeida@gmail.com",
+            "tags": [
+                "administração pública",
+                "acordo de resultados",
+                "EGP Rio"
+            ],
+            "categories": [
+                "48df9fb6643d477bb1bb7bf595915a23"
+            ],
+            "columns": [
+                {
+                    "name": "id_camada",
+                    "description": "Código identificador da meta, do órgão ou da área de resultado dependendo do atributo indice_camada."
+                },
+                {
+                    "name": "indice_camada",
+                    "description": "Nos diz a quem está associada a chance.  1 - Uma meta, 2 - Todas as metas de um órgão."
+                },
+                {
+                    "name": "ano",
+                    "description": "Ano do indicador para o qual foi avaliada a chance."
+                },
+                {
+                    "name": "mes",
+                    "description": "Mês do indicador para o qual foi avaliada a chance."
+                },
+                {
+                    "name": "cor_chance",
+                    "description": "Diz qual a tendência de cumprimento da meta, de acordo com a seguinte tradução:\r\nse ch.cor_chance = '1' então 'Indefinida\"', \r\nse ch.cor_chance = '2' então 'Não cumprida',\r\nse ch.cor_chance = '3' então 'Atraso grave',\r\nse ch.cor_chance = '4' então 'Atraso Recuperável',\r\nse ch.cor_chance = '5' então 'Andamento Satisfatório',\r\nse ch.cor_chance = '6' então 'Cumprida'."
+                }
+            ]
+        },
+        "nota_meta": {
+            "title": "Acordo de Resultados: Notas das Metas",
+            "short_description": "Notas que indicam o andamento do atingimento das metas.",
+            "long_description": "Nota dada pela prefeitura para o que foi alcançado por um órgão para determinado identificador de meta. Uma meta pode ter vários identificadores, um para cada indicador associado a ela.",
+            "update_frequency": "Mensal",
+            "temporal_coverage": "Desde 2022 até a data corrente.",
+            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
+            "publisher_name": "Bruno Almeida",
+            "publisher_email": "brunodepauloalmeida@gmail.com",
+            "tags": [
+                "administração pública",
+                "acordo de resultados",
+                "EGP Rio"
+            ],
+            "categories": [
+                "48df9fb6643d477bb1bb7bf595915a23"
+            ],
+            "columns": [
+                {
+                    "name": "id_meta",
+                    "description": "Identificador da meta para a qual a nota foi dada. Existe um identificador para cada meta, por órgão e por indicador."
+                },
+                {
+                    "name": "ano",
+                    "description": "Ano para o qual a nota foi dada."
+                },
+                {
+                    "name": "mes",
+                    "description": "Mês para o qual a nota foi dada."
+                },
+                {
+                    "name": "valor",
+                    "description": "Valor da nota."
+                }
+            ]
+        },
+        "indicador": {
+            "title": "Acordo de Resultados: Indicador",
+            "short_description": "Indicadores que medem o atingimento das metas.",
+            "long_description": "Indicadores, apurados mensalmente, que servem para medir o quanto foi alcançado das metas dos acordos de resultados.",
+            "update_frequency": "Mensal",
+            "temporal_coverage": "Desde 2022 até a data corrente.",
+            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
+            "publisher_name": "Bruno Almeida",
+            "publisher_email": "brunodepauloalmeida@gmail.com",
+            "tags": [
+                "administração pública",
+                "acordo de resultados",
+                "EGP Rio"
+            ],
+            "categories": [
+                "48df9fb6643d477bb1bb7bf595915a23"
+            ],
+            "columns": [
+                {
+                    "name": "id_meta",
+                    "description": "Código identificador da meta medida pelo indicador."
+                },
+                {
+                    "name": "ano",
+                    "description": "Ano de aferição do indicador."
+                },
+                {
+                    "name": "mes",
+                    "description": "Mês de aferição do indicador."
+                },
+                {
+                    "name": "valor",
+                    "description": "Valor alcançado pelo indicador no mês. Pode ser um dado número, um percentual ou uma sinalização indicando que foi entregue ou não."
+                }
+            ]
+        }
+    },
+    "recursos_humanos_ergon": {
+        "orgaos_regime_juridico": {
+            "title": "TODO_TITLE_PREFIX: Regimes Jurídicos",
+            "short_description": "Regimes jurídicos da prefeitura do Rio de Janeiro.",
+            "long_description": "Regimes jurídicos que podem ser aceitos para contratação de funcionários nos órgãos da administração direta ou indireta da prefeitura do Rio de Janeiro assim como outras empresas de interesse da prefeitura do Rio de Janeiro.",
+            "update_frequency": "Nunca",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "administração pública",
+                "recursos humanos",
+                "funcionário",
+                "órgão",
+                "ERGON"
+            ],
+            "categories": [
+                "48df9fb6643d477bb1bb7bf595915a23"
+            ],
+            "columns": []
+        },
+        "forma_provimento": {
+            "title": "TODO_TITLE_PREFIX: Forma de Provimento",
+            "short_description": "Formas de provimentos possiveis tanto na administração direta como indireta da prefeitura do Rio de Janeiro.",
+            "long_description": "Formas de provimentos possíveis tanto na administração direta como indireta da prefeitura do Rio de Janeiro. O provimento é a investidura em um cargo público.",
+            "update_frequency": "Semanal",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "cargo",
+                "administração pública",
+                "SMA",
+                "recursos humanos",
+                "funcionário",
+                "ERGON"
+            ],
+            "categories": [],
+            "columns": []
+        },
+        "fita_banco": {
+            "title": "TODO_TITLE_PREFIX: Fita de pagamento enviada para o Tesouro Municipal",
+            "short_description": "Fitas enviadas para o tesouro municipal.",
+            "long_description": "Fitas enviadas para o tesouro municipal contendo informações sobre pagamentos a serem feitos a funcionários tanto pela administração direta quanto indireta.",
+            "update_frequency": "Mensal",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "administração pública",
+                "SMA",
+                "recursos humanos",
+                "funcionário",
+                "ERGON"
+            ],
+            "categories": [],
+            "columns": []
+        },
+        "tipo_orgao": {
+            "title": "TODO_TITLE_PREFIX: Tipo de Orgão",
+            "short_description": "Tipos de órgãos tanto da administração direta como indireta da prefeitura do Rio de Janeiro.",
+            "long_description": "Tipos de órgãos tanto da administração direta como indireta da prefeitura do Rio de Janeiro.",
+            "update_frequency": "Nunca",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "administração pública",
+                "órgão",
+                "ERGON"
+            ],
+            "categories": [],
+            "columns": []
+        },
+        "categoria": {
+            "title": "TODO_TITLE_PREFIX: Categoria",
+            "short_description": "Categorias existentes na administração direta ou indireta da Prefeitura do Rio de Janeiro.",
+            "long_description": "Categorias existentes na administração direta ou indireta da Prefeitura do Rio de Janeiro. \r\nExemplo: Educação, saúde etc. Categoria é um conjunto de cargos.",
+            "update_frequency": "Anual",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "administração pública",
+                "SMA",
+                "recursos humanos",
+                "funcionário",
+                "categoria",
+                "ERGON"
+            ],
+            "categories": [],
+            "columns": []
+        },
+        "setor": {
+            "title": "TODO_TITLE_PREFIX: Setor",
+            "short_description": "Setores existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro.",
+            "long_description": "Setores existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro.\r\nOs setores são os mesmos do SICI.",
+            "update_frequency": "Anual",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "administração pública",
+                "recursos humanos",
+                "funcionário",
+                "órgão",
+                "empresa",
+                "ERGON"
+            ],
+            "categories": [],
+            "columns": []
+        },
+        "vinculo": {
+            "title": "TODO_TITLE_PREFIX: Vínculos de Pagamento",
+            "short_description": "Vínculos de pagamento ( em geral empregatícios ), tanto antigos como atuais, da administração direta e indireta da prefeitura do Rio de Janeiro.",
+            "long_description": "Vínculos de pagamento ( em geral empregatícios ), tanto antigos como atuais, da administração direta e indireta da prefeitura do Rio de Janeiro. Um vínculo, em geral, está associado a uma matrícula. Uma pessoa pode ter vários vínculos com a prefeitura.",
+            "update_frequency": "Mensal",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "cargo",
+                "administração pública",
+                "recursos humanos",
+                "funcionário",
+                "ERGON"
+            ],
+            "categories": [],
+            "columns": []
+        },
+        "horario_trabalho": {
+            "title": "TODO_TITLE_PREFIX: Horário",
+            "short_description": "Horários possíveis para funcionários da administração direta da prefeitura do Rio de Janeiro.",
+            "long_description": "Horários possíveis para funcionários da administração direta da prefeitura do Rio de Janeiro (ainda não tem dados disponibilizados) (esperado colocação também da administração indireta).",
+            "update_frequency": "Nunca",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "administração pública",
+                "recursos humanos",
+                "funcionário",
+                "órgão",
+                "empresa",
+                "ERGON"
+            ],
+            "categories": [
+                "48df9fb6643d477bb1bb7bf595915a23"
+            ],
+            "columns": []
+        },
+        "jornada": {
+            "title": "TODO_TITLE_PREFIX: Jornada",
+            "short_description": "Tipos de jornadas existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro.",
+            "long_description": "Tipos de jornadas existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro. Jornada é a carga horária semanal.",
+            "update_frequency": "Anual",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "administração pública",
+                "recursos humanos",
+                "funcionário",
+                "ERGON"
+            ],
+            "categories": [],
+            "columns": []
+        },
+        "funcionario": {
+            "title": "TODO_TITLE_PREFIX: Não informado",
+            "short_description": "Pessoas físicas que precisam ter suas informações guardadas pela prefeitura para algum controle, como controle de pagamento, de frequência ou de lotação.",
+            "long_description": "Pessoas físicas que precisam ter suas informações guardadas pela prefeitura para algum controle, como controle de pagamento, de frequência ou de lotação. Em geral são pessoas que entram ou entraram em alguma folha de pagamento da prefeitura do Rio de Janeiro, sendo funcionário ou não, prestando serviço ou não (ex. pensionista previdenciário).",
+            "update_frequency": "Não informado",
+            "temporal_coverage": "Não informado",
+            "data_owner": "Não informado",
+            "publisher_name": "Não informado",
+            "publisher_email": "nao.informado@gmail.com",
+            "tags": [
+                "administração pública",
+                "recursos humanos",
+                "funcionário",
+                "ERGON"
+            ],
+            "categories": [],
+            "columns": []
+        },
+        "regime_juridico": {
+            "title": "TODO_TITLE_PREFIX: Regime Juridico",
+            "short_description": "Tipos de regimes jurídicos existentes entre os vínculos de funcionários e a administração direta ou indireta da prefeitura do Rio de Janeiro.",
+            "long_description": "Tipos de regimes jurídicos existentes entre os vínculos de funcionários e a administração direta ou indireta da prefeitura do Rio de Janeiro.",
+            "update_frequency": "Nunca",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "administração pública",
+                "recursos humanos",
+                "órgão",
+                "empresa",
+                "ERGON"
+            ],
+            "categories": [],
+            "columns": []
+        },
+        "cargo": {
+            "title": "TODO_TITLE_PREFIX: Não informado",
+            "short_description": "Tipos de cargos existentes na administração direta ou indireta da PCRJ.",
+            "long_description": "Tipos de cargos existentes na administração direta ou indireta da PCRJ. Não entram os tipos de cargos em comissão.",
+            "update_frequency": "Nunca",
+            "temporal_coverage": "Não informado",
+            "data_owner": "Não informado",
+            "publisher_name": "Não informado",
+            "publisher_email": "nao.informado@gmail.com",
+            "tags": [
+                "cargo",
+                "administração pública",
+                "SMA",
+                "recursos humanos",
+                "funcionário",
+                "ERGON"
+            ],
+            "categories": [],
+            "columns": []
+        },
+        "orgaos_externos": {
+            "title": "TODO_TITLE_PREFIX: Órgaos Externos",
+            "short_description": "Órgãos de outros entes federativos que não da prefeitura do Rio de Janeiro mas que são de interesse da prefeitura do Rio de Janeiro.",
+            "long_description": "Órgãos de outros entes federativos que não da prefeitura do Rio de Janeiro mas que são de interesse da prefeitura do Rio de Janeiro.\r\nUsada, geralmente, para documentar a origem de servidores cedidos à prefeitura do Rio de Janeiro.",
+            "update_frequency": "Anual",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "administração pública",
+                "órgão",
+                "ERGON"
+            ],
+            "categories": [],
+            "columns": []
+        },
+        "provimento": {
+            "title": "TODO_TITLE_PREFIX: Provimento",
+            "short_description": "Eventos relacionados aos vínculos funcionais tanto com a administração direta como indireta da prefeitura do Rio de Janeiro.",
+            "long_description": "Eventos relacionados aos vínculos funcionais tanto com a administração direta como indireta da prefeitura do Rio de Janeiro. \r\nUm provimento pode ser uma progressão, mudança de lotação, mudança de vencimento (referência) etc. Um provimento é um evento na situação funcional do vínculo.",
+            "update_frequency": "Semanal",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "cargo",
+                "administração pública",
+                "recursos humanos",
+                "funcionário",
+                "ERGON"
+            ],
+            "categories": [
+                "48df9fb6643d477bb1bb7bf595915a23"
+            ],
+            "columns": []
+        },
+        "matricula": {
+            "title": "TODO_TITLE_PREFIX: Matricula",
+            "short_description": "Matrículas dadas pela prefeitura do Rio de Janeiro para pessoas que devem receber pagamento",
+            "long_description": "Matrículas dadas pela prefeitura do Rio de Janeiro para pessoas que devem receber pagamento ou para pessoas em outros casos de interesse da prefeitura do Rio de Janeiro",
+            "update_frequency": "Diário",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "administração pública",
+                "recursos humanos",
+                "funcionário",
+                "ERGON"
+            ],
+            "categories": [
+                "48df9fb6643d477bb1bb7bf595915a23"
+            ],
+            "columns": []
+        },
+        "tipo_vinculo": {
+            "title": "TODO_TITLE_PREFIX: Tipo de Vinculo",
+            "short_description": "Tipos de vínculos existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro.",
+            "long_description": "Tipos de vínculos existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro.",
+            "update_frequency": "Anual",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "cargo",
+                "administração pública",
+                "recursos humanos",
+                "funcionário",
+                "ERGON"
+            ],
+            "categories": [],
+            "columns": []
+        }
+    },
+    "iptu_inadimplentes": {
+        "perfil_inadimplente": {
+            "title": "Inadimplentes do IPTU: Perfil dos inadimplentes",
+            "short_description": "Perfil de inadimplentes do IPTU",
+            "long_description": "Perfil de inadimplentes do IPTU",
+            "update_frequency": "Semanal",
+            "temporal_coverage": "Indefinido",
+            "data_owner": "Indefinido",
+            "publisher_name": "Indefinido",
+            "publisher_email": "indefinido@mail.com",
+            "tags": [],
+            "categories": [],
+            "columns": [
+                {
+                    "name": "ano_competencia",
+                    "description": "Ano da competência"
+                },
+                {
+                    "name": "valor_lancado",
+                    "description": "Valor de IPTU lançado para a inscrição imobiliária"
+                },
+                {
+                    "name": "valor_pago",
+                    "description": "Valor de IPTU pago para a inscrição imobiliária"
+                },
+                {
+                    "name": "valor_devido",
+                    "description": "Valor de IPTU devido para a inscrição imobiliária"
+                },
+                {
+                    "name": "tipo_guia",
+                    "description": "Tipo de guia da inscrição imobiliária"
+                },
+                {
+                    "name": "bairro",
+                    "description": "Bairro da inscrição imobiliária"
+                },
+                {
+                    "name": "status_lancamento_iptu",
+                    "description": "Situação do lançamento do IPTU"
+                },
+                {
+                    "name": "area_planejamento",
+                    "description": "Área de planejamento da cidade"
+                },
+                {
+                    "name": "zona_cidade",
+                    "description": "Zona da cidade"
+                },
+                {
+                    "name": "regiao_administrativa",
+                    "description": "Região administrativa da cidade"
+                },
+                {
+                    "name": "regiao_fiscal",
+                    "description": "Região fiscal da cidade"
+                },
+                {
+                    "name": "ano_construcao_imovel",
+                    "description": "Ano de construção do imóvel"
+                },
+                {
+                    "name": "situacao_terreno",
+                    "description": "Situação do terreno"
+                },
+                {
+                    "name": "tipologia",
+                    "description": "Tipologia do terreno"
+                },
+                {
+                    "name": "utilizacao_principal",
+                    "description": "Utilização principal do imóvel"
+                },
+                {
+                    "name": "area_tributada_nao_residencial",
+                    "description": "Área tributada não residencial do imóvel"
+                },
+                {
+                    "name": "area_tributada_residencial",
+                    "description": "Área tributada residencial do imóvel"
+                },
+                {
+                    "name": "area_tributada_territorial",
+                    "description": "Área tributada territorial do imóvel"
+                },
+                {
+                    "name": "area_terreno",
+                    "description": "Área total do terreno"
+                },
+                {
+                    "name": "valor_isento_iptu",
+                    "description": "Valor isento de IPTU"
+                },
+                {
+                    "name": "tributacao",
+                    "description": "Tributação da inscrição imobiliária"
+                },
+                {
+                    "name": "area_residencial",
+                    "description": "Área residencial do imóvel"
+                },
+                {
+                    "name": "area_nao_residencial",
+                    "description": "Área não residencial do imóvel"
+                },
+                {
+                    "name": "inscricao_imobiliaria",
+                    "description": "Inscrição imobiliária do imóvel"
                 }
             ]
         }

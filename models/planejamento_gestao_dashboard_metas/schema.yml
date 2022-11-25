@@ -6,7 +6,7 @@ models :
       \ e Planejamento (SMFP)\n**Publicado por**: Bruno Almeida\n**Publicado por (email)**:\
       \ brunodepauloalmeida@gmail.com\n"
     columns: []
-  - name: ar_detalhes
+  - name: pe_detalhes
     description: "**Descrição**: .\n**Frequência de atualização**: Diário\n**Cobertura\
       \ temporal**: .\n**Órgão gestor dos dados**: Secretaria Municipal de Fazenda\
       \ e Planejamento (SMFP)\n**Publicado por**: Bruno Almeida\n**Publicado por (email)**:\
@@ -18,19 +18,13 @@ models :
       \ e Planejamento (SMFP)\n**Publicado por**: Bruno Almeida\n**Publicado por (email)**:\
       \ brunodepauloalmeida@gmail.com\n"
     columns: []
-  - name: pe_numerico
-    description: "**Descrição**: .\n**Frequência de atualização**: Diário\n**Cobertura\
-      \ temporal**: .\n**Órgão gestor dos dados**: Secretaria Municipal de Fazenda\
-      \ e Planejamento (SMFP)\n**Publicado por**: Bruno Almeida\n**Publicado por (email)**:\
-      \ brunodepauloalmeida@gmail.com\n"
-    columns: []
-  - name: pe_detalhes
-    description: "**Descrição**: .\n**Frequência de atualização**: Diário\n**Cobertura\
-      \ temporal**: .\n**Órgão gestor dos dados**: Secretaria Municipal de Fazenda\
-      \ e Planejamento (SMFP)\n**Publicado por**: Bruno Almeida\n**Publicado por (email)**:\
-      \ brunodepauloalmeida@gmail.com\n"
-    columns: []
   - name: todos_detalhes
+    description: "**Descrição**: .\n**Frequência de atualização**: Diário\n**Cobertura\
+      \ temporal**: .\n**Órgão gestor dos dados**: Secretaria Municipal de Fazenda\
+      \ e Planejamento (SMFP)\n**Publicado por**: Bruno Almeida\n**Publicado por (email)**:\
+      \ brunodepauloalmeida@gmail.com\n"
+    columns: []
+  - name: pe_numerico
     description: "**Descrição**: .\n**Frequência de atualização**: Diário\n**Cobertura\
       \ temporal**: .\n**Órgão gestor dos dados**: Secretaria Municipal de Fazenda\
       \ e Planejamento (SMFP)\n**Publicado por**: Bruno Almeida\n**Publicado por (email)**:\
@@ -42,13 +36,7 @@ models :
       \ e Planejamento (SMFP)\n**Publicado por**: Bruno Almeida\n**Publicado por (email)**:\
       \ brunodepauloalmeida@gmail.com\n"
     columns: []
-  - name: ar_valores
-    description: "**Descrição**: .\n**Frequência de atualização**: Diário\n**Cobertura\
-      \ temporal**: .\n**Órgão gestor dos dados**: Secretaria Municipal de Fazenda\
-      \ e Planejamento (SMFP)\n**Publicado por**: Bruno Almeida\n**Publicado por (email)**:\
-      \ brunodepauloalmeida@gmail.com\n"
-    columns: []
-  - name: pe_porcentagem
+  - name: todos_percentual
     description: "**Descrição**: .\n**Frequência de atualização**: Diário\n**Cobertura\
       \ temporal**: .\n**Órgão gestor dos dados**: Secretaria Municipal de Fazenda\
       \ e Planejamento (SMFP)\n**Publicado por**: Bruno Almeida\n**Publicado por (email)**:\
@@ -60,13 +48,7 @@ models :
       \ e Planejamento (SMFP)\n**Publicado por**: Bruno Almeida\n**Publicado por (email)**:\
       \ brunodepauloalmeida@gmail.com\n"
     columns: []
-  - name: todos_percentual
-    description: "**Descrição**: .\n**Frequência de atualização**: Diário\n**Cobertura\
-      \ temporal**: .\n**Órgão gestor dos dados**: Secretaria Municipal de Fazenda\
-      \ e Planejamento (SMFP)\n**Publicado por**: Bruno Almeida\n**Publicado por (email)**:\
-      \ brunodepauloalmeida@gmail.com\n"
-    columns: []
-  - name: todos_textual
+  - name: ar_valores
     description: "**Descrição**: .\n**Frequência de atualização**: Diário\n**Cobertura\
       \ temporal**: .\n**Órgão gestor dos dados**: Secretaria Municipal de Fazenda\
       \ e Planejamento (SMFP)\n**Publicado por**: Bruno Almeida\n**Publicado por (email)**:\
@@ -78,4 +60,22 @@ models :
       **Cobertura temporal**: .\n**Órgão gestor dos dados**: Secretaria Municipal\
       \ de Fazenda e Planejamento (SMFP)\n**Publicado por**: Bruno Almeida\n**Publicado\
       \ por (email)**: brunodepauloalmeida@gmail.com\n"
+    columns: []
+  - name: ar_detalhes
+    description: "**Descrição**: .\n**Frequência de atualização**: Diário\n**Cobertura\
+      \ temporal**: .\n**Órgão gestor dos dados**: Secretaria Municipal de Fazenda\
+      \ e Planejamento (SMFP)\n**Publicado por**: Bruno Almeida\n**Publicado por (email)**:\
+      \ brunodepauloalmeida@gmail.com\n"
+    columns: []
+  - name: pe_porcentagem
+    description: "**Descrição**: .\n**Frequência de atualização**: Diário\n**Cobertura\
+      \ temporal**: .\n**Órgão gestor dos dados**: Secretaria Municipal de Fazenda\
+      \ e Planejamento (SMFP)\n**Publicado por**: Bruno Almeida\n**Publicado por (email)**:\
+      \ brunodepauloalmeida@gmail.com\n"
+    columns: []
+  - name: todos_textual
+    description: "**Descrição**: .\n**Frequência de atualização**: Diário\n**Cobertura\
+      \ temporal**: .\n**Órgão gestor dos dados**: Secretaria Municipal de Fazenda\
+      \ e Planejamento (SMFP)\n**Publicado por**: Bruno Almeida\n**Publicado por (email)**:\
+      \ brunodepauloalmeida@gmail.com\n"
     columns: []

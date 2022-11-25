@@ -1,20 +1,56 @@
 version: 2
 models :
-  - name: provimento
-    description: "**Descrição**: Eventos relacionados aos vínculos funcionais tanto\
-      \ com a administração direta como indireta da prefeitura do Rio de Janeiro.\
-      \ \r\nUm provimento pode ser uma progressão, mudança de lotação, mudança de\
-      \ vencimento (referência) etc. Um provimento é um evento na situação funcional\
-      \ do vínculo.\n**Frequência de atualização**: Semanal\n**Cobertura temporal**:\
+  - name: orgaos_regime_juridico
+    description: "**Descrição**: Regimes jurídicos que podem ser aceitos para contratação\
+      \ de funcionários nos órgãos da administração direta ou indireta da prefeitura\
+      \ do Rio de Janeiro assim como outras empresas de interesse da prefeitura do\
+      \ Rio de Janeiro.\n**Frequência de atualização**: Nunca\n**Cobertura temporal**:\
       \ Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n**Publicado\
       \ por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
     columns: []
-  - name: regime_juridico
-    description: "**Descrição**: Tipos de regimes jurídicos existentes entre os vínculos\
-      \ de funcionários e a administração direta ou indireta da prefeitura do Rio\
-      \ de Janeiro.\n**Frequência de atualização**: Nunca\n**Cobertura temporal**:\
-      \ Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n**Publicado\
-      \ por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
+  - name: forma_provimento
+    description: "**Descrição**: Formas de provimentos possíveis tanto na administração\
+      \ direta como indireta da prefeitura do Rio de Janeiro. O provimento é a investidura\
+      \ em um cargo público.\n**Frequência de atualização**: Semanal\n**Cobertura\
+      \ temporal**: Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n\
+      **Publicado por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
+    columns: []
+  - name: fita_banco
+    description: "**Descrição**: Fitas enviadas para o tesouro municipal contendo\
+      \ informações sobre pagamentos a serem feitos a funcionários tanto pela administração\
+      \ direta quanto indireta.\n**Frequência de atualização**: Mensal\n**Cobertura\
+      \ temporal**: Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n\
+      **Publicado por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
+    columns: []
+  - name: tipo_orgao
+    description: "**Descrição**: Tipos de órgãos tanto da administração direta como\
+      \ indireta da prefeitura do Rio de Janeiro.\n**Frequência de atualização**:\
+      \ Nunca\n**Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**:\
+      \ SMFP/SUBGCC/CGRH\n**Publicado por**: Anderson Ferraz Carneiro\n**Publicado\
+      \ por (email)**: anderson.carneiro@rio.rj.gov.br\n"
+    columns: []
+  - name: categoria
+    description: "**Descrição**: Categorias existentes na administração direta ou\
+      \ indireta da Prefeitura do Rio de Janeiro. \r\nExemplo: Educação, saúde etc.\
+      \ Categoria é um conjunto de cargos.\n**Frequência de atualização**: Anual\n\
+      **Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n\
+      **Publicado por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
+    columns: []
+  - name: setor
+    description: "**Descrição**: Setores existentes tanto na administração direta\
+      \ como indireta da prefeitura do Rio de Janeiro.\r\nOs setores são os mesmos\
+      \ do SICI.\n**Frequência de atualização**: Anual\n**Cobertura temporal**: Até\
+      \ data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n**Publicado por**:\
+      \ Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
+    columns: []
+  - name: vinculo
+    description: "**Descrição**: Vínculos de pagamento ( em geral empregatícios ),\
+      \ tanto antigos como atuais, da administração direta e indireta da prefeitura\
+      \ do Rio de Janeiro. Um vínculo, em geral, está associado a uma matrícula. Uma\
+      \ pessoa pode ter vários vínculos com a prefeitura.\n**Frequência de atualização**:\
+      \ Mensal\n**Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**:\
+      \ SMFP/SUBGCC/CGRH\n**Publicado por**: Anderson Ferraz Carneiro\n**Publicado\
+      \ por (email)**: anderson.carneiro@rio.rj.gov.br\n"
     columns: []
   - name: horario_trabalho
     description: "**Descrição**: Horários possíveis para funcionários da administração\
@@ -24,27 +60,12 @@ models :
       \ SMFP/SUBGCC/CGRH\n**Publicado por**: Anderson Ferraz Carneiro\n**Publicado\
       \ por (email)**: anderson.carneiro@rio.rj.gov.br\n"
     columns: []
-  - name: matricula
-    description: "**Descrição**: Matrículas dadas pela prefeitura do Rio de Janeiro\
-      \ para pessoas que devem receber pagamento ou para pessoas em outros casos de\
-      \ interesse da prefeitura do Rio de Janeiro\n**Frequência de atualização**:\
-      \ Diário\n**Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**:\
-      \ SMFP/SUBGCC/CGRH\n**Publicado por**: Anderson Ferraz Carneiro\n**Publicado\
-      \ por (email)**: anderson.carneiro@rio.rj.gov.br\n"
-    columns: []
-  - name: fita_banco
-    description: "**Descrição**: Fitas enviadas para o tesouro municipal contendo\
-      \ informações sobre pagamentos a serem feitos a funcionários tanto pela administração\
-      \ direta quanto indireta.\n**Frequência de atualização**: Mensal\n**Cobertura\
-      \ temporal**: Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n\
-      **Publicado por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
-    columns: []
-  - name: cargo
-    description: "**Descrição**: Tipos de cargos existentes na administração direta\
-      \ ou indireta da PCRJ. Não entram os tipos de cargos em comissão.\n**Frequência\
-      \ de atualização**: Nunca\n**Cobertura temporal**: Não informado\n**Órgão gestor\
-      \ dos dados**: Não informado\n**Publicado por**: Não informado\n**Publicado\
-      \ por (email)**: nao.informado@gmail.com\n"
+  - name: jornada
+    description: "**Descrição**: Tipos de jornadas existentes tanto na administração\
+      \ direta como indireta da prefeitura do Rio de Janeiro. Jornada é a carga horária\
+      \ semanal.\n**Frequência de atualização**: Anual\n**Cobertura temporal**: Até\
+      \ data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n**Publicado por**:\
+      \ Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
     columns: []
   - name: funcionario
     description: "**Descrição**: Pessoas físicas que precisam ter suas informações\
@@ -56,42 +77,19 @@ models :
       \ gestor dos dados**: Não informado\n**Publicado por**: Não informado\n**Publicado\
       \ por (email)**: nao.informado@gmail.com\n"
     columns: []
-  - name: categoria
-    description: "**Descrição**: Categorias existentes na administração direta ou\
-      \ indireta da Prefeitura do Rio de Janeiro. \r\nExemplo: Educação, saúde etc.\
-      \ Categoria é um conjunto de cargos.\n**Frequência de atualização**: Anual\n\
-      **Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n\
-      **Publicado por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
+  - name: regime_juridico
+    description: "**Descrição**: Tipos de regimes jurídicos existentes entre os vínculos\
+      \ de funcionários e a administração direta ou indireta da prefeitura do Rio\
+      \ de Janeiro.\n**Frequência de atualização**: Nunca\n**Cobertura temporal**:\
+      \ Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n**Publicado\
+      \ por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
     columns: []
-  - name: forma_provimento
-    description: "**Descrição**: Formas de provimentos possíveis tanto na administração\
-      \ direta como indireta da prefeitura do Rio de Janeiro. O provimento é a investidura\
-      \ em um cargo público.\n**Frequência de atualização**: Semanal\n**Cobertura\
-      \ temporal**: Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n\
-      **Publicado por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
-    columns: []
-  - name: vinculo
-    description: "**Descrição**: Vínculos de pagamento ( em geral empregatícios ),\
-      \ tanto antigos como atuais, da administração direta e indireta da prefeitura\
-      \ do Rio de Janeiro. Um vínculo, em geral, está associado a uma matrícula. Uma\
-      \ pessoa pode ter vários vínculos com a prefeitura.\n**Frequência de atualização**:\
-      \ Mensal\n**Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**:\
-      \ SMFP/SUBGCC/CGRH\n**Publicado por**: Anderson Ferraz Carneiro\n**Publicado\
-      \ por (email)**: anderson.carneiro@rio.rj.gov.br\n"
-    columns: []
-  - name: tipo_orgao
-    description: "**Descrição**: Tipos de órgãos tanto da administração direta como\
-      \ indireta da prefeitura do Rio de Janeiro.\n**Frequência de atualização**:\
-      \ Nunca\n**Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**:\
-      \ SMFP/SUBGCC/CGRH\n**Publicado por**: Anderson Ferraz Carneiro\n**Publicado\
-      \ por (email)**: anderson.carneiro@rio.rj.gov.br\n"
-    columns: []
-  - name: tipo_vinculo
-    description: "**Descrição**: Tipos de vínculos existentes tanto na administração\
-      \ direta como indireta da prefeitura do Rio de Janeiro.\n**Frequência de atualização**:\
-      \ Anual\n**Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**:\
-      \ SMFP/SUBGCC/CGRH\n**Publicado por**: Anderson Ferraz Carneiro\n**Publicado\
-      \ por (email)**: anderson.carneiro@rio.rj.gov.br\n"
+  - name: cargo
+    description: "**Descrição**: Tipos de cargos existentes na administração direta\
+      \ ou indireta da PCRJ. Não entram os tipos de cargos em comissão.\n**Frequência\
+      \ de atualização**: Nunca\n**Cobertura temporal**: Não informado\n**Órgão gestor\
+      \ dos dados**: Não informado\n**Publicado por**: Não informado\n**Publicado\
+      \ por (email)**: nao.informado@gmail.com\n"
     columns: []
   - name: orgaos_externos
     description: "**Descrição**: Órgãos de outros entes federativos que não da prefeitura\
@@ -101,25 +99,27 @@ models :
       \ Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n**Publicado\
       \ por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
     columns: []
-  - name: orgaos_regime_juridico
-    description: "**Descrição**: Regimes jurídicos que podem ser aceitos para contratação\
-      \ de funcionários nos órgãos da administração direta ou indireta da prefeitura\
-      \ do Rio de Janeiro assim como outras empresas de interesse da prefeitura do\
-      \ Rio de Janeiro.\n**Frequência de atualização**: Nunca\n**Cobertura temporal**:\
+  - name: provimento
+    description: "**Descrição**: Eventos relacionados aos vínculos funcionais tanto\
+      \ com a administração direta como indireta da prefeitura do Rio de Janeiro.\
+      \ \r\nUm provimento pode ser uma progressão, mudança de lotação, mudança de\
+      \ vencimento (referência) etc. Um provimento é um evento na situação funcional\
+      \ do vínculo.\n**Frequência de atualização**: Semanal\n**Cobertura temporal**:\
       \ Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n**Publicado\
       \ por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
     columns: []
-  - name: jornada
-    description: "**Descrição**: Tipos de jornadas existentes tanto na administração\
-      \ direta como indireta da prefeitura do Rio de Janeiro. Jornada é a carga horária\
-      \ semanal.\n**Frequência de atualização**: Anual\n**Cobertura temporal**: Até\
-      \ data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n**Publicado por**:\
-      \ Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
+  - name: matricula
+    description: "**Descrição**: Matrículas dadas pela prefeitura do Rio de Janeiro\
+      \ para pessoas que devem receber pagamento ou para pessoas em outros casos de\
+      \ interesse da prefeitura do Rio de Janeiro\n**Frequência de atualização**:\
+      \ Diário\n**Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**:\
+      \ SMFP/SUBGCC/CGRH\n**Publicado por**: Anderson Ferraz Carneiro\n**Publicado\
+      \ por (email)**: anderson.carneiro@rio.rj.gov.br\n"
     columns: []
-  - name: setor
-    description: "**Descrição**: Setores existentes tanto na administração direta\
-      \ como indireta da prefeitura do Rio de Janeiro.\r\nOs setores são os mesmos\
-      \ do SICI.\n**Frequência de atualização**: Anual\n**Cobertura temporal**: Até\
-      \ data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n**Publicado por**:\
-      \ Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
+  - name: tipo_vinculo
+    description: "**Descrição**: Tipos de vínculos existentes tanto na administração\
+      \ direta como indireta da prefeitura do Rio de Janeiro.\n**Frequência de atualização**:\
+      \ Anual\n**Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**:\
+      \ SMFP/SUBGCC/CGRH\n**Publicado por**: Anderson Ferraz Carneiro\n**Publicado\
+      \ por (email)**: anderson.carneiro@rio.rj.gov.br\n"
     columns: []
