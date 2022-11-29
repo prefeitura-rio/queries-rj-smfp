@@ -1,22 +1,3 @@
-CREATE TEMP FUNCTION remove_accents(word STRING) AS
-((
-  WITH lookups AS (
-    SELECT 
-    'ã,ç,æ,œ,á,é,í,ó,ú,à,è,ì,ò,ù,ä,ë,ï,ö,ü,ÿ,â,ê,î,ô,û,å,ø,Ø,Å,Á,À,Â,Ä,È,É,Ê,Ë,Í,Î,Ï,Ì,Ò,Ó,Ô,Ö,Ú,Ù,Û,Ü,Ÿ,Ç,Æ,Œ,ñ' AS accents,
-    'a,c,ae,oe,a,e,i,o,u,a,e,i,o,u,a,e,i,o,u,y,a,e,i,o,u,a,o,O,A,A,A,A,A,E,E,E,E,I,I,I,I,O,O,O,O,U,U,U,U,Y,C,AE,OE,n' AS latins
-  ),
-  pairs AS (
-    SELECT accent, latin FROM lookups, 
-      UNNEST(SPLIT(accents)) AS accent WITH OFFSET AS p1, 
-      UNNEST(SPLIT(latins)) AS latin WITH OFFSET AS p2
-    WHERE p1 = p2
-  )
-  SELECT STRING_AGG(IFNULL(latin, char), '')
-  FROM UNNEST(SPLIT(word, '')) char
-  LEFT JOIN pairs
-  ON char = accent
-));
-
 WITH first_level_treatment AS (
     SELECT
         SAFE_CAST(exercicio AS INT64) ano_competencia,
@@ -80,4 +61,4 @@ SELECT
     iptu.inscricao_imobiliaria,
 FROM first_level_treatment as iptu
 LEFT JOIN `rj-escritorio-dev.dados_mestres.bairro` as b
-  ON LOWER(TRIM(iptu.bairro)) = remove_accents(LOWER(TRIM(b.nome)))
+  ON LOWER(TRIM(iptu.bairro)) = `rj-smfp.iptu_inadimplentes_staging`.remove_accents(LOWER(TRIM(b.nome)))
