@@ -60,5 +60,5 @@ SELECT
     iptu.area_nao_residencial,
     iptu.inscricao_imobiliaria,
 FROM first_level_treatment as iptu
-LEFT JOIN `rj-escritorio-dev.dados_mestres.bairro` as b
+LEFT JOIN `datario.dados_mestres.bairro` as b
   ON LOWER(TRIM(iptu.bairro)) = `rj-smfp.iptu_inadimplentes_staging`.remove_accents(LOWER(TRIM(b.nome)))
