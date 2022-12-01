@@ -1,6 +1,6 @@
 WITH first_level_treatment AS (
     SELECT
-        SAFE_CAST(SAFE_CAST(SAFE_CAST(exercicio AS INT64) AS STRING) AS DATE FORMAT 'YYYY') ano_competencia,
+        SAFE_CAST(exercicio AS INT64) ano_competencia,
         SAFE_CAST(valor_lancado AS FLOAT64) valor_lancado,
         SAFE_CAST(valor_pago AS FLOAT64) valor_pago,
         SAFE_CAST(valor_devido AS FLOAT64) valor_devido,
