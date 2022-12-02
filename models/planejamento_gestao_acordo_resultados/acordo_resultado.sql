@@ -3,7 +3,7 @@ SELECT
     SAFE_CAST(orgao AS STRING) as orgao,
     SAFE_CAST(orgaoegpweb AS STRING) as orgaoegpweb,
     SAFE_CAST(tipo_acordo AS STRING) as tipo_acordo,
-    data_publicacao as publicacao,
+    SAFE_CAST(SAFE_CAST(data_publicacao AS STRING) AS DATE FORMAT 'DD/MM/YYYY') as publicacao,
     SAFE_CAST(data_assinatura AS DATE) as assinatura,
     SAFE_CAST(data_resultado AS DATE FORMAT 'DD/MM/YYYY') as resultado,
     SAFE_CAST(bateu_acordo AS BOOL) as cumpriu_acordo,
