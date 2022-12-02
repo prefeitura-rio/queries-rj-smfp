@@ -1,8 +1,7 @@
 SELECT
     SAFE_CAST(ano AS INT64) as ano,
-    SAFE_CAST(codchance AS INT64) as codigo_chance,
-    SAFE_CAST(corchance AS STRING) as cor_chance,
-    SAFE_CAST(descricao_ar AS STRING) as legenda_chance_ar,    
-    SAFE_CAST(descricao_unificada_pe_ar AS STRING) as legenda_chance_uificada,
-    SAFE_CAST(caso AS INT64) as caso
-FROM `planejamento_gestao_acordo_resultados_staging.avaliacao_meta`
+    SAFE_CAST(orgao AS STRING) as orgao,
+    SAFE_CAST(REPLACE(estimativa, ',', '.') AS FLOAT64) as estimativa_premiacao,
+    SAFE_CAST(anofolha AS INT64) as ano_referencia,
+    SAFE_CAST(dataestimativa AS DATE FORMAT 'DD/MM/YYYY') as data_estimativa
+FROM `planejamento_gestao_acordo_resultados_staging.estimativa_premiacao`

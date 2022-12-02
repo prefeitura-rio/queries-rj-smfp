@@ -17,21 +17,21 @@ SAFE_CAST(indicacao_para_auditoria_pela_cgm AS STRING) as indicacao_auditoria,
 SAFE_CAST(gerencia AS STRING) as gerencia,
 SAFE_CAST(chave_meta_ar AS STRING) as chave_meta,
 SAFE_CAST(codigo_metaar AS STRING) as codigo_meta_ar,
-SAFE_CAST(ref_resultado AS INT64) as referencia_resultado,
+SAFE_CAST(SAFE_CAST(ref_resultado AS FLOAT64) AS INT64) as referencia_resultado,
 SAFE_CAST(resultado AS STRING) as resultado,
 SAFE_CAST(ref_chance_meta_desdobrada AS INT64) as referencia_chance_meta_desdobrada, 
 SAFE_CAST(chance_meta_desdobrada AS INT64) as chance_meta_desdobrada,
 SAFE_CAST(ref_resultado2_performance AS INT64) as referencia_resultado_orgao2,
-SAFE_CAST(resultado2_performance AS STRING) as resultado_orgao2
-SAFE_CAST(ref_chance2_performance AS INT64) as referencia_chance_meta_desdobrada_orgao2
-SAFE_CAST(chance2_performance AS INT64) as chance_meta_desdobrada_orgao2
-SAFE_CAST(resultado_orgao1 AS STRING) as resultado_completo_orgao1
-SAFE_CAST(resultado_orgao2_performance AS STRING) as resultado_completo_orgao2
-SAFE_CAST(caso_chance AS INT64) as caso_chance_orgao1
-SAFE_CAST(caso_chance_orgao_2_performance AS INT64) as caso_chance_orgao2
-SAFE_CAST(pior_caso_chance AS INT64) as pior_caso_chance
-SAFE_CAST(cor_chance_meta AS INT64) as chance_meta_orgao1
-SAFE_CAST(cor_chance_meta_orgao_2 AS INT64) as chance_meta_orgao2
-SAFE_CAST(resultado_performance_prefeito AS BOOL) as resultado_peformance_orgao1
+SAFE_CAST(resultado2_performance AS STRING) as resultado_orgao2,
+SAFE_CAST(ref_chance2_performance AS INT64) as referencia_chance_meta_desdobrada_orgao2,
+SAFE_CAST(chance2_performance AS INT64) as chance_meta_desdobrada_orgao2,
+SAFE_CAST(resultado_orgao1 AS STRING) as resultado_completo_orgao1,
+SAFE_CAST(resultado_orgao2_performance AS STRING) as resultado_completo_orgao2,
+SAFE_CAST(caso_chance AS INT64) as caso_chance_orgao1,
+SAFE_CAST(caso_chance_orgao_2_performance AS INT64) as caso_chance_orgao2,
+SAFE_CAST(pior_caso_chance AS INT64) as pior_caso_chance,
+SAFE_CAST(cor_chance_meta AS INT64) as chance_meta_orgao1,
+SAFE_CAST(cor_chance_meta_orgao_2 AS INT64) as chance_meta_orgao2,
+SAFE_CAST(resultado_performance_prefeito AS BOOL) as resultado_peformance_orgao1,
 SAFE_CAST(resultado_performance2_prefeito AS BOOL) as resultado_performance_orgao2
 FROM `planejamento_gestao_acordo_resultados_staging.meta_desdobrada`

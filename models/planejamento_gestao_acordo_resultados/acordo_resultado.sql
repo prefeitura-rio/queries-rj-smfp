@@ -6,7 +6,13 @@ SELECT
     SAFE_CAST(SAFE_CAST(data_publicacao AS STRING) AS DATE FORMAT 'DD/MM/YYYY') as publicacao,
     SAFE_CAST(data_assinatura AS DATE) as assinatura,
     SAFE_CAST(data_resultado AS DATE FORMAT 'DD/MM/YYYY') as resultado,
-    SAFE_CAST(bateu_acordo AS BOOL) as cumpriu_acordo,
+    CASE
+        WHEN bateu_acordo = "TRUE" THEN TRUE
+        WHEN bateu_acordo = "FALSE" THEN FALSE 
+        WHEN bateu_acordo = "VERDADEIRO" THEN TRUE
+        WHEN bateu_acordo = "FALSO" THEN FALSE
+        ELSE NULL         
+    END as cumpriu_acordo,
     SAFE_CAST(REPLACE(nota_final, ",", ".") AS FLOAT64) as nota_final,
     SAFE_CAST(bonus_final AS FLOAT64) as bonus_final,
     SAFE_CAST(valor_estimado_bonus AS FLOAT64) valor_estimado_bonus
