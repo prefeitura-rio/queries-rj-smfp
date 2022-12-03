@@ -7,7 +7,7 @@ SELECT
         WHEN performance = "VERDADEIRO" THEN TRUE
         WHEN performance = "FALSO" THEN FALSE
         ELSE NULL         
-    END as performance,
+    END as indicador_performance,
     SAFE_CAST(SAFE_CAST(ano_pagamento AS FLOAT64) AS INT64) as ano_pagamento,
     SAFE_CAST(justificativa_da_falta_de_pagamento AS STRING) as justificativa_pagamento,
     SAFE_CAST(REPLACE(nota_minima_para_bonificacao, ",", ".") AS FLOAT64) as nota_minima_bonificacao,
