@@ -12,5 +12,5 @@ SELECT
     SAFE_CAST(recomendacao_egp AS STRING) as recomendacao_egp,
     SAFE_CAST(avaliacao_egp AS BOOL) as avaliacao_egp,
     SAFE_CAST(SAFE_CAST(tipo_do_recurso AS FLOAT64) AS INT64) as tipo_recurso,
-    SAFE_CAST(decisao_do_prefeito AS BOOL) as decisao_recurso
+    SAFE_CAST(decisao_do_prefeito AS BOOL) as indicador_decisao_recurso
 FROM `planejamento_gestao_acordo_resultados_staging.recurso`
