@@ -435,25 +435,10 @@
                 "funcionário",
                 "ERGON"
             ],
-            "categories": [],
-            "columns": [
-                {
-                    "name": "sigla",
-                    "description": "Sigla da jornada. Ex. 40 horas."
-                },
-                {
-                    "name": "nome",
-                    "description": "Nome da jornada. Ex. 40 horas semanais."
-                },
-                {
-                    "name": "horas_semana",
-                    "description": "Número de horas semanais da jornada."
-                },
-                {
-                    "name": "horas_mes",
-                    "description": "Número de horas mensais da jornada."
-                }
-            ]
+            "categories": [
+                "48df9fb6643d477bb1bb7bf595915a23"
+            ],
+            "columns": []
         },
         "frequencias": {
             "title": "TODO_TITLE_PREFIX: frequencias",
@@ -589,36 +574,26 @@
                 "ERGON"
             ],
             "categories": [],
-            "columns": [
-                {
-                    "name": "id_cargo",
-                    "description": "Código dado pela prefeitura do Rio de Janeiro ao tipo de cargo."
-                },
-                {
-                    "name": "nome",
-                    "description": "Nome do tipo de cargo. Ex. Analista de Sistemas."
-                },
-                {
-                    "name": "categoria",
-                    "description": "Categoria do tipo de cargo. Exemplo: Educação, saúde etc. Categoria é um conjunto de cargos."
-                },
-                {
-                    "name": "subcategoria",
-                    "description": "Subcategoria do tipo de cargo. É uma subdivisão da categoria. Ex. Apoio, Geral, lotados na saúde."
-                },
-                {
-                    "name": "tipo_controle_vaga",
-                    "description": "Tipo de controle de vaga: Livre (não existe controle de vagas no ERGON), Quadro (O ERGON controla o número máximo de vagas no cargo) ou Numerada."
-                },
-                {
-                    "name": "escolaridade",
-                    "description": "Escolaridade minima exigida para o tipo de cargo."
-                },
-                {
-                    "name": "aglutinador",
-                    "description": "Todos cadastrados com N."
-                }
-            ]
+            "columns": []
+        },
+        "fita_banco": {
+            "title": "TODO_TITLE_PREFIX: Fita de pagamento enviada para o Tesouro Municipal",
+            "short_description": "Fitas enviadas para o tesouro municipal.",
+            "long_description": "Fitas enviadas para o tesouro municipal contendo informações sobre pagamentos a serem feitos a funcionários tanto pela administração direta quanto indireta.",
+            "update_frequency": "Mensal",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "administração pública",
+                "SMA",
+                "recursos humanos",
+                "funcionário",
+                "ERGON"
+            ],
+            "categories": [],
+            "columns": []
         },
         "tipo_orgao": {
             "title": "TODO_TITLE_PREFIX: Tipo de Orgão",
@@ -664,33 +639,12 @@
                 "ERGON"
             ],
             "categories": [],
-            "columns": [
-                {
-                    "name": "sigla",
-                    "description": "Sigla da forma de provimento. Ex. 01."
-                },
-                {
-                    "name": "nome",
-                    "description": "Nome da forma de provimento. Ex. NOMEACAO OU PROVIMENTO (relativo a sigla 01)."
-                },
-                {
-                    "name": "inativo",
-                    "description": "Booleano que indica que a forma de provimento é válida para funcionários inativos."
-                },
-                {
-                    "name": "primeiro_provimento",
-                    "description": "Booleano que indica se a forma de provimento pode ser um primeiro tipo de provimento ( quando se entra na prefeitura )."
-                },
-                {
-                    "name": "ativo",
-                    "description": "Booleano que indica que a forma de provimento é válida para funcionários ativos."
-                }
-            ]
+            "columns": []
         },
-        "tipo_vinculo": {
-            "title": "TODO_TITLE_PREFIX: Tipo de Vinculo",
-            "short_description": "Tipos de vínculos existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro.",
-            "long_description": "Tipos de vínculos existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro.",
+        "categoria": {
+            "title": "TODO_TITLE_PREFIX: Categoria",
+            "short_description": "Categorias existentes na administração direta ou indireta da Prefeitura do Rio de Janeiro.",
+            "long_description": "Categorias existentes na administração direta ou indireta da Prefeitura do Rio de Janeiro. \r\nExemplo: Educação, saúde etc. Categoria é um conjunto de cargos.",
             "update_frequency": "Anual",
             "temporal_coverage": "Até data corrente",
             "data_owner": "SMFP/SUBGCC/CGRH",
@@ -704,16 +658,7 @@
                 "ERGON"
             ],
             "categories": [],
-            "columns": [
-                {
-                    "name": "sigla",
-                    "description": "Sigla do tipo de vínculo. Ex. A DISPOSICAO-CLT."
-                },
-                {
-                    "name": "nome",
-                    "description": "Nome do tipo de vínculo. Ex. A DISPOSICAO DA PREFEITURA-CLT."
-                }
-            ]
+            "columns": []
         },
         "fita_banco": {
             "title": "TODO_TITLE_PREFIX: Fita de pagamento enviada para o Tesouro Municipal",
@@ -2187,36 +2132,43 @@
             "categories": [
                 "48df9fb6643d477bb1bb7bf595915a23"
             ],
-            "columns": [
-                {
-                    "name": "id_horario",
-                    "description": "Identificador do horário na base de dados."
-                },
-                {
-                    "name": "descricao",
-                    "description": "Descrição do horário. Neste atributo deve constar o horário de entrada, de almoço e de saída relativos a todos os dias da semana."
-                },
-                {
-                    "name": "publicacao_diario_oficial",
-                    "description": "Publicação em diário oficial autorizando o horário."
-                },
-                {
-                    "name": "carga_horaria_mes",
-                    "description": "Carga mensal em horas do horário."
-                },
-                {
-                    "name": "carga_horaria_semana",
-                    "description": "Carga semanal em horas do horário."
-                },
-                {
-                    "name": "carga_horaria_dia",
-                    "description": "Carga diária em horas do horário."
-                },
-                {
-                    "name": "id_registro",
-                    "description": "Identificação do Registro"
-                }
-            ]
+            "columns": []
+        },
+        "jornada": {
+            "title": "TODO_TITLE_PREFIX: Jornada",
+            "short_description": "Tipos de jornadas existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro.",
+            "long_description": "Tipos de jornadas existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro. Jornada é a carga horária semanal.",
+            "update_frequency": "Anual",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "administração pública",
+                "recursos humanos",
+                "funcionário",
+                "ERGON"
+            ],
+            "categories": [],
+            "columns": []
+        },
+        "funcionario": {
+            "title": "TODO_TITLE_PREFIX: Não informado",
+            "short_description": "Pessoas físicas que precisam ter suas informações guardadas pela prefeitura para algum controle, como controle de pagamento, de frequência ou de lotação.",
+            "long_description": "Pessoas físicas que precisam ter suas informações guardadas pela prefeitura para algum controle, como controle de pagamento, de frequência ou de lotação. Em geral são pessoas que entram ou entraram em alguma folha de pagamento da prefeitura do Rio de Janeiro, sendo funcionário ou não, prestando serviço ou não (ex. pensionista previdenciário).",
+            "update_frequency": "Não informado",
+            "temporal_coverage": "Não informado",
+            "data_owner": "Não informado",
+            "publisher_name": "Não informado",
+            "publisher_email": "nao.informado@gmail.com",
+            "tags": [
+                "administração pública",
+                "recursos humanos",
+                "funcionário",
+                "ERGON"
+            ],
+            "categories": [],
+            "columns": []
         },
         "regime_juridico": {
             "title": "TODO_TITLE_PREFIX: Regime Juridico",
@@ -2235,14 +2187,214 @@
                 "ERGON"
             ],
             "categories": [],
+            "columns": []
+        },
+        "cargo": {
+            "title": "TODO_TITLE_PREFIX: Não informado",
+            "short_description": "Tipos de cargos existentes na administração direta ou indireta da PCRJ.",
+            "long_description": "Tipos de cargos existentes na administração direta ou indireta da PCRJ. Não entram os tipos de cargos em comissão.",
+            "update_frequency": "Nunca",
+            "temporal_coverage": "Não informado",
+            "data_owner": "Não informado",
+            "publisher_name": "Não informado",
+            "publisher_email": "nao.informado@gmail.com",
+            "tags": [
+                "cargo",
+                "administração pública",
+                "SMA",
+                "recursos humanos",
+                "funcionário",
+                "ERGON"
+            ],
+            "categories": [],
+            "columns": []
+        },
+        "orgaos_externos": {
+            "title": "TODO_TITLE_PREFIX: Órgaos Externos",
+            "short_description": "Órgãos de outros entes federativos que não da prefeitura do Rio de Janeiro mas que são de interesse da prefeitura do Rio de Janeiro.",
+            "long_description": "Órgãos de outros entes federativos que não da prefeitura do Rio de Janeiro mas que são de interesse da prefeitura do Rio de Janeiro.\r\nUsada, geralmente, para documentar a origem de servidores cedidos à prefeitura do Rio de Janeiro.",
+            "update_frequency": "Anual",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "administração pública",
+                "órgão",
+                "ERGON"
+            ],
+            "categories": [],
+            "columns": []
+        },
+        "provimento": {
+            "title": "TODO_TITLE_PREFIX: Provimento",
+            "short_description": "Eventos relacionados aos vínculos funcionais tanto com a administração direta como indireta da prefeitura do Rio de Janeiro.",
+            "long_description": "Eventos relacionados aos vínculos funcionais tanto com a administração direta como indireta da prefeitura do Rio de Janeiro. \r\nUm provimento pode ser uma progressão, mudança de lotação, mudança de vencimento (referência) etc. Um provimento é um evento na situação funcional do vínculo.",
+            "update_frequency": "Semanal",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "cargo",
+                "administração pública",
+                "recursos humanos",
+                "funcionário",
+                "ERGON"
+            ],
+            "categories": [
+                "48df9fb6643d477bb1bb7bf595915a23"
+            ],
+            "columns": []
+        },
+        "matricula": {
+            "title": "TODO_TITLE_PREFIX: Matricula",
+            "short_description": "Matrículas dadas pela prefeitura do Rio de Janeiro para pessoas que devem receber pagamento",
+            "long_description": "Matrículas dadas pela prefeitura do Rio de Janeiro para pessoas que devem receber pagamento ou para pessoas em outros casos de interesse da prefeitura do Rio de Janeiro",
+            "update_frequency": "Diário",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "administração pública",
+                "recursos humanos",
+                "funcionário",
+                "ERGON"
+            ],
+            "categories": [
+                "48df9fb6643d477bb1bb7bf595915a23"
+            ],
+            "columns": []
+        },
+        "tipo_vinculo": {
+            "title": "TODO_TITLE_PREFIX: Tipo de Vinculo",
+            "short_description": "Tipos de vínculos existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro.",
+            "long_description": "Tipos de vínculos existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro.",
+            "update_frequency": "Anual",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "cargo",
+                "administração pública",
+                "recursos humanos",
+                "funcionário",
+                "ERGON"
+            ],
+            "categories": [],
+            "columns": []
+        }
+    },
+    "iptu_inadimplentes": {
+        "perfil_inadimplente": {
+            "title": "Inadimplentes do IPTU: Perfil dos inadimplentes",
+            "short_description": "Perfil de inadimplentes do IPTU",
+            "long_description": "Perfil de inadimplentes do IPTU",
+            "update_frequency": "Semanal",
+            "temporal_coverage": "Indefinido",
+            "data_owner": "Indefinido",
+            "publisher_name": "Indefinido",
+            "publisher_email": "indefinido@mail.com",
+            "tags": [],
+            "categories": [],
             "columns": [
                 {
-                    "name": "sigla",
-                    "description": "Sigla do regime jurídico. Ex. CLT, EFETIVO etc"
+                    "name": "ano_competencia",
+                    "description": "Ano da competência"
                 },
                 {
-                    "name": "nome",
-                    "description": "Nome do regime jurídico. Ex. Celetista, estatutário."
+                    "name": "valor_lancado",
+                    "description": "Valor de IPTU lançado para a inscrição imobiliária"
+                },
+                {
+                    "name": "valor_pago",
+                    "description": "Valor de IPTU pago para a inscrição imobiliária"
+                },
+                {
+                    "name": "valor_devido",
+                    "description": "Valor de IPTU devido para a inscrição imobiliária"
+                },
+                {
+                    "name": "tipo_guia",
+                    "description": "Tipo de guia da inscrição imobiliária"
+                },
+                {
+                    "name": "bairro",
+                    "description": "Bairro da inscrição imobiliária"
+                },
+                {
+                    "name": "status_lancamento_iptu",
+                    "description": "Situação do lançamento do IPTU"
+                },
+                {
+                    "name": "area_planejamento",
+                    "description": "Área de planejamento da cidade"
+                },
+                {
+                    "name": "zona_cidade",
+                    "description": "Zona da cidade"
+                },
+                {
+                    "name": "regiao_administrativa",
+                    "description": "Região administrativa da cidade"
+                },
+                {
+                    "name": "regiao_fiscal",
+                    "description": "Região fiscal da cidade"
+                },
+                {
+                    "name": "ano_construcao_imovel",
+                    "description": "Ano de construção do imóvel"
+                },
+                {
+                    "name": "situacao_terreno",
+                    "description": "Situação do terreno"
+                },
+                {
+                    "name": "tipologia",
+                    "description": "Tipologia do terreno"
+                },
+                {
+                    "name": "utilizacao_principal",
+                    "description": "Utilização principal do imóvel"
+                },
+                {
+                    "name": "area_tributada_nao_residencial",
+                    "description": "Área tributada não residencial do imóvel"
+                },
+                {
+                    "name": "area_tributada_residencial",
+                    "description": "Área tributada residencial do imóvel"
+                },
+                {
+                    "name": "area_tributada_territorial",
+                    "description": "Área tributada territorial do imóvel"
+                },
+                {
+                    "name": "area_terreno",
+                    "description": "Área total do terreno"
+                },
+                {
+                    "name": "valor_isento_iptu",
+                    "description": "Valor isento de IPTU"
+                },
+                {
+                    "name": "tributacao",
+                    "description": "Tributação da inscrição imobiliária"
+                },
+                {
+                    "name": "area_residencial",
+                    "description": "Área residencial do imóvel"
+                },
+                {
+                    "name": "area_nao_residencial",
+                    "description": "Área não residencial do imóvel"
+                },
+                {
+                    "name": "inscricao_imobiliaria",
+                    "description": "Inscrição imobiliária do imóvel"
                 }
             ]
         },

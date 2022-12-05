@@ -97,6 +97,7 @@ with chance_com_comentario as (
     ut.tendencia_numero_ar,
     ut.tendencia_ar,
     -- GREATEST(uv.ar_data_referencia_ultimo_resultado, ut.ar_data_referencia_ultima_tendencia) as ar_data_referencia_ultimo_resultado,
+    ut.ar_data_referencia_ultima_tendencia,
     uv.ar_data_referencia_ultimo_resultado,
     uv.ar_ultimo_resultado as ar_ultimo_resultado
   FROM ultimo_valor as uv
@@ -160,6 +161,7 @@ SELECT
   ard.orgao_sigla,
   ard.id_meta,
   ard.id_meta_mae,
+  ar_data_referencia_ultima_tendencia,
   ar_data_referencia_ultimo_resultado,
   ar_ultimo_resultado,
   art1.tendencia_numero_ar,
@@ -190,7 +192,7 @@ INNER JOIN ar_detalhes as ard
 SELECT distinct
   CASE 
     WHEN ard.tipo != "Performance" THEN it.ar_data_referencia_ultimo_resultado
-    ELSE DATE_TRUNC(CURRENT_DATE(), WEEK(THURSDAY))
+    ELSE it.ar_data_referencia_ultima_tendencia
     END ar_data_referencia_ultimo_resultado,
   it.ar_ultimo_resultado,
   CASE 

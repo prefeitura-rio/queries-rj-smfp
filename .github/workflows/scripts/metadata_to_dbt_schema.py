@@ -23,7 +23,6 @@ def dump_metadata_into_schema_yaml(
         if Path(schema_yaml_path).exists()
         else {"version": 2, "models": []}
     )
-
     if schema is None:
         schema = {"version": 2, "models": []}
 
@@ -42,7 +41,6 @@ def dump_metadata_into_schema_yaml(
 def format_table_description(table_info: dict) -> str:
     """
     Formats the table description.
-
     Input format:
     {
         "title": "some-title-here",
@@ -65,7 +63,6 @@ def format_table_description(table_info: dict) -> str:
             ...
         ]
     }
-
     Output format:
     **Descrição**: some long description here
     **Frequência de atualização**: some update frequency here
