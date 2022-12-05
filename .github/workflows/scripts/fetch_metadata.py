@@ -119,7 +119,7 @@ def fetch_metadata(initial_dict: dict) -> dict:
                     f"There is more than one table with the name {table_id} in the dataset {dataset_id}."
                 )
             else:
-                raise Exception(
+                print(
                     f"There is no table with the name {table_id} in the dataset {dataset_id}."
                 )
 

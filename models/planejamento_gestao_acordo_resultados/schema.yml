@@ -1,5 +1,91 @@
 version: 2
 models :
+  - name: perfil_inadimplente
+    description: "**Descrição**: Perfil de inadimplentes do IPTU\n**Frequência de\
+      \ atualização**: Semanal\n**Cobertura temporal**: Indefinido\n**Órgão gestor\
+      \ dos dados**: Indefinido\n**Publicado por**: Indefinido\n**Publicado por (email)**:\
+      \ indefinido@mail.com\n"
+    columns:
+      - name: ano_competencia
+        description: Ano da competência
+      - name: valor_lancado
+        description: Valor de IPTU lançado para a inscrição imobiliária
+      - name: valor_pago
+        description: Valor de IPTU pago para a inscrição imobiliária
+      - name: valor_devido
+        description: Valor de IPTU devido para a inscrição imobiliária
+      - name: tipo_guia
+        description: Tipo de guia da inscrição imobiliária
+      - name: bairro
+        description: Bairro da inscrição imobiliária
+      - name: status_lancamento_iptu
+        description: Situação do lançamento do IPTU
+      - name: area_planejamento
+        description: Área de planejamento da cidade
+      - name: zona_cidade
+        description: Zona da cidade
+      - name: regiao_administrativa
+        description: Região administrativa da cidade
+      - name: regiao_fiscal
+        description: Região fiscal da cidade
+      - name: ano_construcao_imovel
+        description: Ano de construção do imóvel
+      - name: situacao_terreno
+        description: Situação do terreno
+      - name: tipologia
+        description: Tipologia do terreno
+      - name: utilizacao_principal
+        description: Utilização principal do imóvel
+      - name: area_tributada_nao_residencial
+        description: Área tributada não residencial do imóvel
+      - name: area_tributada_residencial
+        description: Área tributada residencial do imóvel
+      - name: area_tributada_territorial
+        description: Área tributada territorial do imóvel
+      - name: area_terreno
+        description: Área total do terreno
+      - name: valor_isento_iptu
+        description: Valor isento de IPTU
+      - name: tributacao
+        description: Tributação da inscrição imobiliária
+      - name: area_residencial
+        description: Área residencial do imóvel
+      - name: area_nao_residencial
+        description: Área não residencial do imóvel
+      - name: inscricao_imobiliaria
+        description: Inscrição imobiliária do imóvel
+  - name: indicador
+    description: "**Descrição**: Indicadores, apurados mensalmente, que servem para\
+      \ medir o quanto foi alcançado das metas dos acordos de resultados.\n**Frequência\
+      \ de atualização**: Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n\
+      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
+      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
+    columns:
+      - name: id_meta
+        description: Código identificador da meta medida pelo indicador.
+      - name: ano
+        description: Ano de aferição do indicador.
+      - name: mes
+        description: Mês de aferição do indicador.
+      - name: valor
+        description: Valor alcançado pelo indicador no mês. Pode ser um dado número,
+          um percentual ou uma sinalização indicando que foi entregue ou não.
+  - name: indicador
+    description: "**Descrição**: Indicadores, apurados mensalmente, que servem para\
+      \ medir o quanto foi alcançado das metas dos acordos de resultados.\n**Frequência\
+      \ de atualização**: Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n\
+      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
+      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
+    columns:
+      - name: id_meta
+        description: Código identificador da meta medida pelo indicador.
+      - name: ano
+        description: Ano de aferição do indicador.
+      - name: mes
+        description: Mês de aferição do indicador.
+      - name: valor
+        description: Valor alcançado pelo indicador no mês. Pode ser um dado número,
+          um percentual ou uma sinalização indicando que foi entregue ou não.
   - name: indicador
     description: "**Descrição**: Indicadores, apurados mensalmente, que servem para\
       \ medir o quanto foi alcançado das metas dos acordos de resultados.\n**Frequência\
@@ -40,6 +126,91 @@ models :
           \ 'Atraso grave',\r\nse ch.cor_chance = '4' então 'Atraso Recuperável',\r\
           \nse ch.cor_chance = '5' então 'Andamento Satisfatório',\r\nse ch.cor_chance\
           \ = '6' então 'Cumprida'."
+  - name: nota_meta
+    description: "**Descrição**: Nota dada pela prefeitura para o que foi alcançado\
+      \ por um órgão para determinado identificador de meta. Uma meta pode ter vários\
+      \ identificadores, um para cada indicador associado a ela.\n**Frequência de\
+      \ atualização**: Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n\
+      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
+      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
+    columns:
+      - name: id_meta
+        description: Identificador da meta para a qual a nota foi dada. Existe um
+          identificador para cada meta, por órgão e por indicador.
+      - name: ano
+        description: Ano para o qual a nota foi dada.
+      - name: mes
+        description: Mês para o qual a nota foi dada.
+      - name: valor
+        description: Valor da nota.
+  - name: nota_meta
+    description: "**Descrição**: Nota dada pela prefeitura para o que foi alcançado\
+      \ por um órgão para determinado identificador de meta. Uma meta pode ter vários\
+      \ identificadores, um para cada indicador associado a ela.\n**Frequência de\
+      \ atualização**: Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n\
+      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
+      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
+    columns:
+      - name: id_meta
+        description: Identificador da meta para a qual a nota foi dada. Existe um
+          identificador para cada meta, por órgão e por indicador.
+      - name: ano
+        description: Ano para o qual a nota foi dada.
+      - name: mes
+        description: Mês para o qual a nota foi dada.
+      - name: valor
+        description: Valor da nota.
+  - name: nota_meta
+    description: "**Descrição**: Nota dada pela prefeitura para o que foi alcançado\
+      \ por um órgão para determinado identificador de meta. Uma meta pode ter vários\
+      \ identificadores, um para cada indicador associado a ela.\n**Frequência de\
+      \ atualização**: Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n\
+      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
+      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
+    columns:
+      - name: id_meta
+        description: Identificador da meta para a qual a nota foi dada. Existe um
+          identificador para cada meta, por órgão e por indicador.
+      - name: ano
+        description: Ano para o qual a nota foi dada.
+      - name: mes
+        description: Mês para o qual a nota foi dada.
+      - name: valor
+        description: Valor da nota.
+  - name: nota_meta
+    description: "**Descrição**: Nota dada pela prefeitura para o que foi alcançado\
+      \ por um órgão para determinado identificador de meta. Uma meta pode ter vários\
+      \ identificadores, um para cada indicador associado a ela.\n**Frequência de\
+      \ atualização**: Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n\
+      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
+      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
+    columns:
+      - name: id_meta
+        description: Identificador da meta para a qual a nota foi dada. Existe um
+          identificador para cada meta, por órgão e por indicador.
+      - name: ano
+        description: Ano para o qual a nota foi dada.
+      - name: mes
+        description: Mês para o qual a nota foi dada.
+      - name: valor
+        description: Valor da nota.
+  - name: nota_meta
+    description: "**Descrição**: Nota dada pela prefeitura para o que foi alcançado\
+      \ por um órgão para determinado identificador de meta. Uma meta pode ter vários\
+      \ identificadores, um para cada indicador associado a ela.\n**Frequência de\
+      \ atualização**: Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n\
+      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
+      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
+    columns:
+      - name: id_meta
+        description: Identificador da meta para a qual a nota foi dada. Existe um
+          identificador para cada meta, por órgão e por indicador.
+      - name: ano
+        description: Ano para o qual a nota foi dada.
+      - name: mes
+        description: Mês para o qual a nota foi dada.
+      - name: valor
+        description: Valor da nota.
   - name: nota_meta
     description: "**Descrição**: Nota dada pela prefeitura para o que foi alcançado\
       \ por um órgão para determinado identificador de meta. Uma meta pode ter vários\

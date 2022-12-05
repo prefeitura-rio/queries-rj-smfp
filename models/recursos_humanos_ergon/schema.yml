@@ -467,25 +467,16 @@ models :
       \ Rio de Janeiro.\n**Frequência de atualização**: Nunca\n**Cobertura temporal**:\
       \ Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n**Publicado\
       \ por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
-    columns: []
-  - name: forma_provimento
-    description: "**Descrição**: Formas de provimentos possíveis tanto na administração\
-      \ direta como indireta da prefeitura do Rio de Janeiro. O provimento é a investidura\
-      \ em um cargo público.\n**Frequência de atualização**: Semanal\n**Cobertura\
-      \ temporal**: Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n\
-      **Publicado por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
-    columns: []
-  - name: fita_banco
-    description: "**Descrição**: Fitas enviadas para o tesouro municipal contendo\
-      \ informações sobre pagamentos a serem feitos a funcionários tanto pela administração\
-      \ direta quanto indireta.\n**Frequência de atualização**: Mensal\n**Cobertura\
-      \ temporal**: Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n\
-      **Publicado por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
-    columns: []
-  - name: tipo_orgao
-    description: "**Descrição**: Tipos de órgãos tanto da administração direta como\
-      \ indireta da prefeitura do Rio de Janeiro.\n**Frequência de atualização**:\
-      \ Nunca\n**Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**:\
+    columns:
+      - name: sigla
+        description: Sigla do regime jurídico. Ex. CLT, EFETIVO etc
+      - name: nome
+        description: Código, dado pela prefeitura do Rio de Janeiro, da empresa.
+  - name: matricula
+    description: "**Descrição**: Matrículas dadas pela prefeitura do Rio de Janeiro\
+      \ para pessoas que devem receber pagamento ou para pessoas em outros casos de\
+      \ interesse da prefeitura do Rio de Janeiro\n**Frequência de atualização**:\
+      \ Diário\n**Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**:\
       \ SMFP/SUBGCC/CGRH\n**Publicado por**: Anderson Ferraz Carneiro\n**Publicado\
       \ por (email)**: anderson.carneiro@rio.rj.gov.br\n"
     columns:
@@ -1067,24 +1058,22 @@ models :
       \ Nunca\n**Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**:\
       \ SMFP/SUBGCC/CGRH\n**Publicado por**: Anderson Ferraz Carneiro\n**Publicado\
       \ por (email)**: anderson.carneiro@rio.rj.gov.br\n"
-    columns: []
-  - name: jornada
-    description: "**Descrição**: Tipos de jornadas existentes tanto na administração\
-      \ direta como indireta da prefeitura do Rio de Janeiro. Jornada é a carga horária\
-      \ semanal.\n**Frequência de atualização**: Anual\n**Cobertura temporal**: Até\
-      \ data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n**Publicado por**:\
-      \ Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
-    columns: []
-  - name: funcionario
-    description: "**Descrição**: Pessoas físicas que precisam ter suas informações\
-      \ guardadas pela prefeitura para algum controle, como controle de pagamento,\
-      \ de frequência ou de lotação. Em geral são pessoas que entram ou entraram em\
-      \ alguma folha de pagamento da prefeitura do Rio de Janeiro, sendo funcionário\
-      \ ou não, prestando serviço ou não (ex. pensionista previdenciário).\n**Frequência\
-      \ de atualização**: Não informado\n**Cobertura temporal**: Não informado\n**Órgão\
-      \ gestor dos dados**: Não informado\n**Publicado por**: Não informado\n**Publicado\
-      \ por (email)**: nao.informado@gmail.com\n"
-    columns: []
+    columns:
+      - name: id_horario
+        description: Identificador do horário na base de dados.
+      - name: descricao
+        description: Descrição do horário. Neste atributo deve constar o horário de
+          entrada, de almoço e de saída relativos a todos os dias da semana.
+      - name: publicacao_diario_oficial
+        description: Publicação em diário oficial autorizando o horário.
+      - name: carga_horaria_mes
+        description: Carga mensal em horas do horário.
+      - name: carga_horaria_semana
+        description: Carga semanal em horas do horário.
+      - name: carga_horaria_dia
+        description: Carga diária em horas do horário.
+      - name: id_registro
+        description: Identificação do Registro
   - name: regime_juridico
     description: "**Descrição**: Tipos de regimes jurídicos existentes entre os vínculos\
       \ de funcionários e a administração direta ou indireta da prefeitura do Rio\

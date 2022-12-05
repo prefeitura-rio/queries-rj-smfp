@@ -132,12 +132,17 @@ if __name__ == "__main__":
         # Iterate over tables
         for table_id in metadata[dataset_id]:
 
-            print(f"  - Table {table_id}")
+            if metadata[dataset_id][table_id].get("columns") is not None:
+                print(f"  - Table {table_id}")
 
-            table_metadata = {
-                "name": table_id,
-                "description": format_table_description(metadata[dataset_id][table_id]),
-                "columns": metadata[dataset_id][table_id]["columns"],
-            }
+                table_metadata = {
+                    "name": table_id,
+                    "description": format_table_description(
+                        metadata[dataset_id][table_id]
+                    ),
+                    "columns": metadata[dataset_id][table_id]["columns"],
+                }
+            else:
+                print(f"No columns for {table_id} in dataset {dataset_id}")
 
             dump_metadata_into_schema_yaml(dataset_id, table_id, table_metadata)
