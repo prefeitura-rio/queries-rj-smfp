@@ -54,180 +54,18 @@ models :
         description: Área não residencial do imóvel
       - name: inscricao_imobiliaria
         description: Inscrição imobiliária do imóvel
-  - name: indicador
-    description: "**Descrição**: Indicadores, apurados mensalmente, que servem para\
-      \ medir o quanto foi alcançado das metas dos acordos de resultados.\n**Frequência\
-      \ de atualização**: Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n\
-      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
-      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
-    columns:
-      - name: id_meta
-        description: Código identificador da meta medida pelo indicador.
-      - name: ano
-        description: Ano de aferição do indicador.
-      - name: mes
-        description: Mês de aferição do indicador.
-      - name: valor
-        description: Valor alcançado pelo indicador no mês. Pode ser um dado número,
-          um percentual ou uma sinalização indicando que foi entregue ou não.
-  - name: indicador
-    description: "**Descrição**: Indicadores, apurados mensalmente, que servem para\
-      \ medir o quanto foi alcançado das metas dos acordos de resultados.\n**Frequência\
-      \ de atualização**: Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n\
-      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
-      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
-    columns:
-      - name: id_meta
-        description: Código identificador da meta medida pelo indicador.
-      - name: ano
-        description: Ano de aferição do indicador.
-      - name: mes
-        description: Mês de aferição do indicador.
-      - name: valor
-        description: Valor alcançado pelo indicador no mês. Pode ser um dado número,
-          um percentual ou uma sinalização indicando que foi entregue ou não.
-  - name: indicador
-    description: "**Descrição**: Indicadores, apurados mensalmente, que servem para\
-      \ medir o quanto foi alcançado das metas dos acordos de resultados.\n**Frequência\
-      \ de atualização**: Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n\
-      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
-      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
-    columns:
-      - name: id_meta
-        description: Código identificador da meta medida pelo indicador.
-      - name: ano
-        description: Ano de aferição do indicador.
-      - name: mes
-        description: Mês de aferição do indicador.
-      - name: valor
-        description: Valor alcançado pelo indicador no mês. Pode ser um dado número,
-          um percentual ou uma sinalização indicando que foi entregue ou não.
-  - name: chance
-    description: "**Descrição**: Chance, avaliada pelo analista de gestão de projetos,\
-      \ em determinado mês, de atingimento de meta de Acordo de Resultados.\n**Frequência\
-      \ de atualização**: Mensal\n**Cobertura temporal**: Desde 2013 até a data corrente.\n\
-      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
-      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
-    columns:
-      - name: id_camada
-        description: Código identificador da meta, do órgão ou da área de resultado
-          dependendo do atributo indice_camada.
-      - name: indice_camada
-        description: Nos diz a quem está associada a chance.  1 - Uma meta, 2 - Todas
-          as metas de um órgão.
-      - name: ano
-        description: Ano do indicador para o qual foi avaliada a chance.
-      - name: mes
-        description: Mês do indicador para o qual foi avaliada a chance.
-      - name: cor_chance
-        description: "Diz qual a tendência de cumprimento da meta, de acordo com a\
-          \ seguinte tradução:\r\nse ch.cor_chance = '1' então 'Indefinida\"', \r\n\
-          se ch.cor_chance = '2' então 'Não cumprida',\r\nse ch.cor_chance = '3' então\
-          \ 'Atraso grave',\r\nse ch.cor_chance = '4' então 'Atraso Recuperável',\r\
-          \nse ch.cor_chance = '5' então 'Andamento Satisfatório',\r\nse ch.cor_chance\
-          \ = '6' então 'Cumprida'."
-  - name: nota_meta
-    description: "**Descrição**: Nota dada pela prefeitura para o que foi alcançado\
-      \ por um órgão para determinado identificador de meta. Uma meta pode ter vários\
-      \ identificadores, um para cada indicador associado a ela.\n**Frequência de\
-      \ atualização**: Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n\
-      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
-      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
-    columns:
-      - name: id_meta
-        description: Identificador da meta para a qual a nota foi dada. Existe um
-          identificador para cada meta, por órgão e por indicador.
-      - name: ano
-        description: Ano para o qual a nota foi dada.
-      - name: mes
-        description: Mês para o qual a nota foi dada.
-      - name: valor
-        description: Valor da nota.
-  - name: nota_meta
-    description: "**Descrição**: Nota dada pela prefeitura para o que foi alcançado\
-      \ por um órgão para determinado identificador de meta. Uma meta pode ter vários\
-      \ identificadores, um para cada indicador associado a ela.\n**Frequência de\
-      \ atualização**: Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n\
-      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
-      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
-    columns:
-      - name: id_meta
-        description: Identificador da meta para a qual a nota foi dada. Existe um
-          identificador para cada meta, por órgão e por indicador.
-      - name: ano
-        description: Ano para o qual a nota foi dada.
-      - name: mes
-        description: Mês para o qual a nota foi dada.
-      - name: valor
-        description: Valor da nota.
-  - name: nota_meta
-    description: "**Descrição**: Nota dada pela prefeitura para o que foi alcançado\
-      \ por um órgão para determinado identificador de meta. Uma meta pode ter vários\
-      \ identificadores, um para cada indicador associado a ela.\n**Frequência de\
-      \ atualização**: Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n\
-      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
-      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
-    columns:
-      - name: id_meta
-        description: Identificador da meta para a qual a nota foi dada. Existe um
-          identificador para cada meta, por órgão e por indicador.
-      - name: ano
-        description: Ano para o qual a nota foi dada.
-      - name: mes
-        description: Mês para o qual a nota foi dada.
-      - name: valor
-        description: Valor da nota.
-  - name: nota_meta
-    description: "**Descrição**: Nota dada pela prefeitura para o que foi alcançado\
-      \ por um órgão para determinado identificador de meta. Uma meta pode ter vários\
-      \ identificadores, um para cada indicador associado a ela.\n**Frequência de\
-      \ atualização**: Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n\
-      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
-      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
-    columns:
-      - name: id_meta
-        description: Identificador da meta para a qual a nota foi dada. Existe um
-          identificador para cada meta, por órgão e por indicador.
-      - name: ano
-        description: Ano para o qual a nota foi dada.
-      - name: mes
-        description: Mês para o qual a nota foi dada.
-      - name: valor
-        description: Valor da nota.
-  - name: nota_meta
-    description: "**Descrição**: Nota dada pela prefeitura para o que foi alcançado\
-      \ por um órgão para determinado identificador de meta. Uma meta pode ter vários\
-      \ identificadores, um para cada indicador associado a ela.\n**Frequência de\
-      \ atualização**: Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n\
-      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
-      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
-    columns:
-      - name: id_meta
-        description: Identificador da meta para a qual a nota foi dada. Existe um
-          identificador para cada meta, por órgão e por indicador.
-      - name: ano
-        description: Ano para o qual a nota foi dada.
-      - name: mes
-        description: Mês para o qual a nota foi dada.
-      - name: valor
-        description: Valor da nota.
-  - name: nota_meta
-    description: "**Descrição**: Nota dada pela prefeitura para o que foi alcançado\
-      \ por um órgão para determinado identificador de meta. Uma meta pode ter vários\
-      \ identificadores, um para cada indicador associado a ela.\n**Frequência de\
-      \ atualização**: Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n\
-      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
-      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
-    columns:
-      - name: id_meta
-        description: Identificador da meta para a qual a nota foi dada. Existe um
-          identificador para cada meta, por órgão e por indicador.
-      - name: ano
-        description: Ano para o qual a nota foi dada.
-      - name: mes
-        description: Mês para o qual a nota foi dada.
-      - name: valor
-        description: Valor da nota.
+  - name: todos_textual
+    description: "**Descrição**: .\n**Frequência de atualização**: Diário\n**Cobertura\
+      \ temporal**: .\n**Órgão gestor dos dados**: Secretaria Municipal de Fazenda\
+      \ e Planejamento (SMFP)\n**Publicado por**: Bruno Almeida\n**Publicado por (email)**:\
+      \ brunodepauloalmeida@gmail.com\n"
+    columns: []
+  - name: todos_textual
+    description: "**Descrição**: .\n**Frequência de atualização**: Diário\n**Cobertura\
+      \ temporal**: .\n**Órgão gestor dos dados**: Secretaria Municipal de Fazenda\
+      \ e Planejamento (SMFP)\n**Publicado por**: Bruno Almeida\n**Publicado por (email)**:\
+      \ brunodepauloalmeida@gmail.com\n"
+    columns: []
   - name: comentario
     description: "**Descrição**: Comentários feitos pelos analistas de gerenciamento\
       \ de projetos e metas sobre as apurações mensais do desempenho dos órgãos para\
@@ -358,3 +196,164 @@ models :
         description: Desdobramento da meta no mês de dezembro. Objetiva registrar
           o valor planejado, do indicador, no mês para fins de acompanhamento mensal
           da mesma.
+  - name: chance
+    description: "**Descrição**: Chance, avaliada pelo analista de gestão de projetos,\
+      \ em determinado mês, de atingimento de meta de Acordo de Resultados.\n**Frequência\
+      \ de atualização**: Mensal\n**Cobertura temporal**: Desde 2013 até a data corrente.\n\
+      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
+      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
+    columns:
+      - name: id_camada
+        description: Código identificador da meta, do órgão ou da área de resultado
+          dependendo do atributo indice_camada.
+      - name: indice_camada
+        description: Nos diz a quem está associada a chance.  1 - Uma meta, 2 - Todas
+          as metas de um órgão.
+      - name: ano
+        description: Ano do indicador para o qual foi avaliada a chance.
+      - name: mes
+        description: Mês do indicador para o qual foi avaliada a chance.
+      - name: cor_chance
+        description: "Diz qual a tendência de cumprimento da meta, de acordo com a\
+          \ seguinte tradução:\r\nse ch.cor_chance = '1' então 'Indefinida\"', \r\n\
+          se ch.cor_chance = '2' então 'Não cumprida',\r\nse ch.cor_chance = '3' então\
+          \ 'Atraso grave',\r\nse ch.cor_chance = '4' então 'Atraso Recuperável',\r\
+          \nse ch.cor_chance = '5' então 'Andamento Satisfatório',\r\nse ch.cor_chance\
+          \ = '6' então 'Cumprida'."
+  - name: chance
+    description: "**Descrição**: Chance, avaliada pelo analista de gestão de projetos,\
+      \ em determinado mês, de atingimento de meta de Acordo de Resultados.\n**Frequência\
+      \ de atualização**: Mensal\n**Cobertura temporal**: Desde 2013 até a data corrente.\n\
+      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
+      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
+    columns:
+      - name: id_camada
+        description: Código identificador da meta, do órgão ou da área de resultado
+          dependendo do atributo indice_camada.
+      - name: indice_camada
+        description: Nos diz a quem está associada a chance.  1 - Uma meta, 2 - Todas
+          as metas de um órgão.
+      - name: ano
+        description: Ano do indicador para o qual foi avaliada a chance.
+      - name: mes
+        description: Mês do indicador para o qual foi avaliada a chance.
+      - name: cor_chance
+        description: "Diz qual a tendência de cumprimento da meta, de acordo com a\
+          \ seguinte tradução:\r\nse ch.cor_chance = '1' então 'Indefinida\"', \r\n\
+          se ch.cor_chance = '2' então 'Não cumprida',\r\nse ch.cor_chance = '3' então\
+          \ 'Atraso grave',\r\nse ch.cor_chance = '4' então 'Atraso Recuperável',\r\
+          \nse ch.cor_chance = '5' então 'Andamento Satisfatório',\r\nse ch.cor_chance\
+          \ = '6' então 'Cumprida'."
+  - name: nota_meta
+    description: "**Descrição**: Nota dada pela prefeitura para o que foi alcançado\
+      \ por um órgão para determinado identificador de meta. Uma meta pode ter vários\
+      \ identificadores, um para cada indicador associado a ela.\n**Frequência de\
+      \ atualização**: Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n\
+      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
+      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
+    columns:
+      - name: id_meta
+        description: Identificador da meta para a qual a nota foi dada. Existe um
+          identificador para cada meta, por órgão e por indicador.
+      - name: ano
+        description: Ano para o qual a nota foi dada.
+      - name: mes
+        description: Mês para o qual a nota foi dada.
+      - name: valor
+        description: Valor da nota.
+  - name: indicador
+    description: "**Descrição**: Indicadores, apurados mensalmente, que servem para\
+      \ medir o quanto foi alcançado das metas dos acordos de resultados.\n**Frequência\
+      \ de atualização**: Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n\
+      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
+      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
+    columns:
+      - name: id_meta
+        description: Código identificador da meta medida pelo indicador.
+      - name: ano
+        description: Ano de aferição do indicador.
+      - name: mes
+        description: Mês de aferição do indicador.
+      - name: valor
+        description: Valor alcançado pelo indicador no mês. Pode ser um dado número,
+          um percentual ou uma sinalização indicando que foi entregue ou não.
+  - name: indicador
+    description: "**Descrição**: Indicadores, apurados mensalmente, que servem para\
+      \ medir o quanto foi alcançado das metas dos acordos de resultados.\n**Frequência\
+      \ de atualização**: Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n\
+      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
+      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
+    columns:
+      - name: id_meta
+        description: Código identificador da meta medida pelo indicador.
+      - name: ano
+        description: Ano de aferição do indicador.
+      - name: mes
+        description: Mês de aferição do indicador.
+      - name: valor
+        description: Valor alcançado pelo indicador no mês. Pode ser um dado número,
+          um percentual ou uma sinalização indicando que foi entregue ou não.
+  - name: indicador
+    description: "**Descrição**: Indicadores, apurados mensalmente, que servem para\
+      \ medir o quanto foi alcançado das metas dos acordos de resultados.\n**Frequência\
+      \ de atualização**: Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n\
+      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
+      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
+    columns:
+      - name: id_meta
+        description: Código identificador da meta medida pelo indicador.
+      - name: ano
+        description: Ano de aferição do indicador.
+      - name: mes
+        description: Mês de aferição do indicador.
+      - name: valor
+        description: Valor alcançado pelo indicador no mês. Pode ser um dado número,
+          um percentual ou uma sinalização indicando que foi entregue ou não.
+  - name: indicador
+    description: "**Descrição**: Indicadores, apurados mensalmente, que servem para\
+      \ medir o quanto foi alcançado das metas dos acordos de resultados.\n**Frequência\
+      \ de atualização**: Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n\
+      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
+      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
+    columns:
+      - name: id_meta
+        description: Código identificador da meta medida pelo indicador.
+      - name: ano
+        description: Ano de aferição do indicador.
+      - name: mes
+        description: Mês de aferição do indicador.
+      - name: valor
+        description: Valor alcançado pelo indicador no mês. Pode ser um dado número,
+          um percentual ou uma sinalização indicando que foi entregue ou não.
+  - name: indicador
+    description: "**Descrição**: Indicadores, apurados mensalmente, que servem para\
+      \ medir o quanto foi alcançado das metas dos acordos de resultados.\n**Frequência\
+      \ de atualização**: Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n\
+      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
+      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
+    columns:
+      - name: id_meta
+        description: Código identificador da meta medida pelo indicador.
+      - name: ano
+        description: Ano de aferição do indicador.
+      - name: mes
+        description: Mês de aferição do indicador.
+      - name: valor
+        description: Valor alcançado pelo indicador no mês. Pode ser um dado número,
+          um percentual ou uma sinalização indicando que foi entregue ou não.
+  - name: indicador
+    description: "**Descrição**: Indicadores, apurados mensalmente, que servem para\
+      \ medir o quanto foi alcançado das metas dos acordos de resultados.\n**Frequência\
+      \ de atualização**: Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n\
+      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n\
+      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
+    columns:
+      - name: id_meta
+        description: Código identificador da meta medida pelo indicador.
+      - name: ano
+        description: Ano de aferição do indicador.
+      - name: mes
+        description: Mês de aferição do indicador.
+      - name: valor
+        description: Valor alcançado pelo indicador no mês. Pode ser um dado número,
+          um percentual ou uma sinalização indicando que foi entregue ou não.
