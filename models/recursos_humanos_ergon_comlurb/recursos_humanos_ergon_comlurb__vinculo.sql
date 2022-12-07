@@ -1,3 +1,6 @@
+{{ 
+    config( alias='vinculo',schema='recursos_humanos_ergon_comlurb') 
+}}
 SELECT 
     SAFE_CAST(DATE(dtini_cessao) AS DATE) AS data_inicio_cessao,
     SAFE_CAST(DATE(dtfim_cessao) AS DATE) AS data_fim_cessao,

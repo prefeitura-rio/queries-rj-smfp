@@ -1,3 +1,6 @@
+{{ 
+    config( alias='cargo',schema='recursos_humanos_ergon_comlurb') 
+}}
 SELECT 
     SAFE_CAST(REGEXP_REPLACE(TRIM(cargo), r'\.0$', '') AS STRING) AS id_cargo,
     SAFE_CAST(TRIM(nome) AS STRING) AS nome,

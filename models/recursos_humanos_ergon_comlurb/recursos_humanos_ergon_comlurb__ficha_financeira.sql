@@ -1,3 +1,6 @@
+{{ 
+    config( alias='ficha_financeira',schema='recursos_humanos_ergon_comlurb') 
+}}
 SELECT 
     SAFE_CAST(REGEXP_REPLACE(TRIM(numfunc), r'\.0$', '') AS STRING) AS id_funcionario,
     SAFE_CAST(REGEXP_REPLACE(TRIM(numvinc), r'\.0$', '') AS STRING) AS id_vinculo,

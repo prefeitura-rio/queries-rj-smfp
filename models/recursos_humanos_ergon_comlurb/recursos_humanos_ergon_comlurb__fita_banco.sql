@@ -1,3 +1,6 @@
+{{ 
+    config( alias='fita_banco',schema='recursos_humanos_ergon_comlurb') 
+}}
 SELECT 
     SAFE_CAST(DATE(dtexerc) AS DATE) AS data_inicio_exercicio,
     SAFE_CAST(DATE(dtaposent) AS DATE) AS data_aposentadoria,

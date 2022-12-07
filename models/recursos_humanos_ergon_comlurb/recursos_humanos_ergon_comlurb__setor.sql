@@ -1,3 +1,6 @@
+{{ 
+    config( alias='setor',schema='recursos_humanos_ergon_comlurb') 
+}}
 SELECT 
     SAFE_CAST(REGEXP_REPLACE(TRIM(setor), r'\.0$', '') AS Não informado) AS id_setor,
     SAFE_CAST(DATE(dtini) AS DATE) AS data_inicio,

@@ -1,3 +1,6 @@
+{{ 
+    config( alias='dependente',schema='recursos_humanos_ergon_comlurb') 
+}}
 SELECT 
     SAFE_CAST(REGEXP_REPLACE(TRIM(num_cert), r'\.0$', '') AS STRING) AS id_certidao_nascimento_casamento,
     SAFE_CAST(TRIM(livro_a_cert) AS STRING) AS numero_livro_nascimento_casamento,
