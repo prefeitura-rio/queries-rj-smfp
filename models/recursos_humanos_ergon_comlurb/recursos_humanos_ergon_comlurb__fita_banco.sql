@@ -1,7 +1,7 @@
 {{ 
     config( 
         alias='fita_banco',
-        schema='recursos_humanos_ergon_comlurb'
+        schema='recursos_humanos_ergon_comlurb',
         materialized='incremental',
         partition_by={
             "field": "data_particao",
