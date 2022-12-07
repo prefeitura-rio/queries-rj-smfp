@@ -1,5 +1,14 @@
 {{ 
-    config( alias='fita_banco',schema='recursos_humanos_ergon_comlurb') 
+    config( 
+        alias='fita_banco',
+        schema='recursos_humanos_ergon_comlurb'
+        materialized='incremental',
+        partition_by={
+            "field": "data_particao",
+            "data_type": "date",
+            "granularity": "month",
+        }
+    ) 
 }}
 SELECT 
     SAFE_CAST(DATE(dtexerc) AS DATE) AS data_inicio_exercicio,
@@ -29,4 +38,16 @@ SELECT
     SAFE_CAST(REGEXP_REPLACE(TRIM(jornada), r'\.0$', '') AS STRING) AS id_jornada,
     SAFE_CAST(TRIM(subcategoria) AS STRING) AS subcategoria_cargo,
     SAFE_CAST(REGEXP_REPLACE(TRIM(cpf), r'\.0$', '') AS STRING) AS id_cpf,
+    SAFE_CAST(data_particao AS DATE) data_particao,
 FROM rj-smfp.recursos_humanos_ergon_comlurb_staging.fita_banco AS t
+WHERE
+    data_particao < CURRENT_DATE('America/Sao_Paulo')
+
+{% if is_incremental() %}
+
+{% set max_partition = run_query("SELECT gr FROM (SELECT IF(max(data_particao) > CURRENT_DATE('America/Sao_Paulo'), CURRENT_DATE('America/Sao_Paulo'), max(data_particao)) as gr FROM " ~ this ~ ")").columns[0].values()[0] %}
+
+AND
+    data_particao > ("{{ max_partition }}")
+
+{% endif %}
