@@ -40,7 +40,7 @@ SELECT
     SAFE_CAST(REGEXP_REPLACE(TRIM(chegbrasil), r'\.0$', '') AS INT64) AS ano_chegada_brasil,
     SAFE_CAST(TRIM(ufempant) AS STRING) AS sigla_uf_emprego_anterior,
     SAFE_CAST(REGEXP_REPLACE(TRIM(anoprimemp), r'\.0$', '') AS INT64) AS ano_primeiro_emprego,
-    SAFE_CAST(REGEXP_REPLACE(TRIM(identprof), r'\.0$', '') AS Não informado) AS id_identidade_profissional,
+    SAFE_CAST(REGEXP_REPLACE(TRIM(identprof), r'\.0$', '') AS STRING) AS id_identidade_profissional,
     SAFE_CAST(TRIM(catmili) AS STRING) AS categoria_documento_militar,
     SAFE_CAST(TRIM(municipio_cart_cod) AS STRING) AS municipio_certidao_civil,
     SAFE_CAST(TRIM(cidadeender_cod) AS STRING) AS municipio_logradouro,

@@ -5,7 +5,7 @@ SELECT
     SAFE_CAST(REGEXP_REPLACE(TRIM(numfunc), r'\.0$', '') AS STRING) AS id_funcionario,
     SAFE_CAST(REGEXP_REPLACE(TRIM(numvinc), r'\.0$', '') AS STRING) AS id_vinculo,
     SAFE_CAST(REGEXP_REPLACE(TRIM(numpens), r'\.0$', '') AS INT64) AS numero_pensionista,
-    SAFE_CAST(TRIM(mes_ano_direito) AS Não informado) AS data_pagamento,
+    SAFE_CAST(TRIM(mes_ano_direito) AS STRING) AS data_pagamento,
     SAFE_CAST(TRIM(rubrica) AS STRING) AS rubrica,
     SAFE_CAST(TRIM(tipo_rubr) AS STRING) AS tipo_rubrica,
     SAFE_CAST(TRIM(desc_vant) AS STRING) AS desconto,
