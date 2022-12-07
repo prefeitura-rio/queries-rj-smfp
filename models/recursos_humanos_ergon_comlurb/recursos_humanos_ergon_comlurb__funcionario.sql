@@ -1,3 +1,6 @@
+{{ 
+    config( alias='funcionario',schema='recursos_humanos_ergon_comlurb') 
+}}
 SELECT 
     SAFE_CAST(TRIM(flex_campo_10) AS STRING) AS emissor_rne,
     SAFE_CAST(DATE(flex_campo_11) AS DATE) AS data_expedicao_rne,
