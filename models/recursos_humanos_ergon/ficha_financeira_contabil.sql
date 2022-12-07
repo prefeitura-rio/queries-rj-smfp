@@ -20,7 +20,7 @@ SELECT
     SAFE_CAST(TRIM(tipo_rubrica) AS STRING) AS tipo_rubrica,
     SAFE_CAST(TRIM(desc_vant) AS STRING) AS desconto,
     SAFE_CAST(TRIM(complemento) AS STRING) AS complemento_rubrica,
-    SAFE_CAST(REGEXP_REPLACE(valor, r',', '.') AS FLOAT64) AS valor_rubrica,    SAFE_CAST(REGEXP_REPLACE(correcao, r',', '.') AS FLOAT64) AS correcao,    SAFE_CAST(TRIM(execucao) AS STRING) AS execucao,
+    SAFE_CAST(REGEXP_REPLACE(valor, r',', '.') AS FLOAT64) AS valor_rubrica,    
     SAFE_CAST(REGEXP_REPLACE(TRIM(emp_codigo), r'\.0$', '') AS STRING) AS id_empresa,
     SAFE_CAST(data_particao AS DATE) data_particao,
 FROM rj-smfp.recursos_humanos_ergon_staging.ficha_financeira_contabil AS t
