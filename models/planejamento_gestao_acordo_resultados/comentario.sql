@@ -6,4 +6,4 @@ SELECT
     SAFE_CAST(comentario AS STRING) as comentario,
     SAFE_CAST(usuarioRegistroID AS STRING) as numero_analista,
     SAFE_CAST(ordem as STRING) as ordem
-FROM `planejamento_gestao_acordo_resultados_staging.comentario`
+FROM `rj-smfp.planejamento_gestao_acordo_resultados_staging.comentario`

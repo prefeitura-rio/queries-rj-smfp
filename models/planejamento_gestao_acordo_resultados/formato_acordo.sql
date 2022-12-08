@@ -13,4 +13,4 @@ SELECT
     SAFE_CAST(REPLACE(nota_minima_para_bonificacao, ",", ".") AS FLOAT64) as nota_minima_bonificacao,
     SAFE_CAST(REPLACE(bonificacao_minima_sem_auditoria, ",", ".") AS FLOAT64) as bonificacao_minima,
     SAFE_CAST(REPLACE(bonificacao_maxima_sem_auditoria, ",", ".") AS FLOAT64) as bonificacao_maxima
-FROM `planejamento_gestao_acordo_resultados_staging.formato_acordo`
+FROM `rj-smfp.planejamento_gestao_acordo_resultados_staging.formato_acordo`
