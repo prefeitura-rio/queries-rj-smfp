@@ -32,6 +32,22 @@ SAFE_CAST(caso_chance_orgao_2_performance AS INT64) as caso_chance_orgao_2,
 SAFE_CAST(pior_caso_chance AS INT64) as pior_caso_chance,
 SAFE_CAST(cor_chance_meta AS INT64) as chance_meta_orgao_1,
 SAFE_CAST(cor_chance_meta_orgao_2 AS INT64) as chance_meta_orgao_2,
-SAFE_CAST(resultado_performance_prefeito AS BOOL) as resultado_peformance_orgao_1,
-SAFE_CAST(resultado_performance2_prefeito AS BOOL) as resultado_performance_orgao_2
+CASE
+    WHEN resultado_performance_prefeito = "TRUE" THEN TRUE
+    WHEN resultado_performance_prefeito = "FALSE" THEN FALSE 
+    WHEN resultado_performance_prefeito = "VERDADEIRO" THEN TRUE
+    WHEN resultado_performance_prefeito = "FALSO" THEN FALSE
+    WHEN resultado_performance_prefeito = "Sim" THEN TRUE
+    WHEN resultado_performance_prefeito = "Não" THEN FALSE
+    ELSE NULL         
+END as indicador_resultado_peformance_orgao_1,
+CASE
+    WHEN resultado_performance2_prefeito = "TRUE" THEN TRUE
+    WHEN resultado_performance2_prefeito = "FALSE" THEN FALSE 
+    WHEN resultado_performance2_prefeito = "VERDADEIRO" THEN TRUE
+    WHEN resultado_performance2_prefeito = "FALSO" THEN FALSE
+    WHEN resultado_performance2_prefeito = "Sim" THEN TRUE
+    WHEN resultado_performance2_prefeito = "Não" THEN FALSE
+    ELSE NULL         
+END as indicador_resultado_peformance_orgao_2
 FROM `planejamento_gestao_acordo_resultados_staging.meta_desdobrada`
