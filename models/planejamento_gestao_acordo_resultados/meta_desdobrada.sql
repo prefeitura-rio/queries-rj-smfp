@@ -50,4 +50,4 @@ CASE
     WHEN resultado_performance2_prefeito = "Não" THEN FALSE
     ELSE NULL         
 END as indicador_resultado_peformance_orgao_2
-FROM `planejamento_gestao_acordo_resultados_staging.meta_desdobrada`
+FROM `rj-smfp.planejamento_gestao_acordo_resultados_staging.meta_desdobrada`

@@ -5,4 +5,4 @@ SELECT
     SAFE_CAST(descricao_ar AS STRING) as legenda_chance_ar,    
     SAFE_CAST(descricao_unificada_pe_ar AS STRING) as legenda_chance_unificada,
     SAFE_CAST(caso AS INT64) as caso
-FROM `planejamento_gestao_acordo_resultados_staging.avaliacao_meta`
+FROM `rj-smfp.planejamento_gestao_acordo_resultados_staging.avaliacao_meta`

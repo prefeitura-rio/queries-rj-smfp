@@ -25,4 +25,4 @@ SELECT
     SAFE_CAST(SAFE_CAST(inicio_do_periodo_apurado AS STRING) AS DATE FORMAT 'DD/MM/YYYY') as inicio_periodo_apurado,
     SAFE_CAST(SAFE_CAST(final_do_periodo_apurado AS STRING) AS DATE FORMAT 'DD/MM/YYYY') as final_periodo_apurado,
     SAFE_CAST(numero_de_recomendacoes AS INT64) as quantidade_recomendacoes
-FROM `planejamento_gestao_acordo_resultados_staging.auditoria`
+FROM `rj-smfp.planejamento_gestao_acordo_resultados_staging.auditoria`

@@ -16,4 +16,4 @@ SELECT
     SAFE_CAST(REPLACE(nota_final, ",", ".") AS FLOAT64) as nota_final,
     SAFE_CAST(bonus_final AS FLOAT64) as bonus_final,
     SAFE_CAST(valor_estimado_bonus AS FLOAT64) valor_estimado_bonus
-FROM `planejamento_gestao_acordo_resultados_staging.acordo_resultado`
+FROM `rj-smfp.planejamento_gestao_acordo_resultados_staging.acordo_resultado`
