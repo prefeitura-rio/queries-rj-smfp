@@ -20,7 +20,7 @@ SELECT
     SAFE_CAST(TRIM(obs) AS STRING) AS observacoes,
     SAFE_CAST(REGEXP_REPLACE(TRIM(emp_codigo), r'\.0$', '') AS STRING) AS id_empresa,
     SAFE_CAST(data_particao AS DATE) data_particao,
-FROM rj-smfp.recursos_humanos_ergon_staging.frequencias AS t
+FROM rj-smfp.recursos_humanos_ergon_staging.frequencia AS t
 WHERE
     data_particao < CURRENT_DATE('America/Sao_Paulo')
 
