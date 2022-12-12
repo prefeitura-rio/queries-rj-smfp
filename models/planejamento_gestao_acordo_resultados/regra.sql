@@ -6,4 +6,4 @@ SELECT
     SAFE_CAST(SAFE_CAST(qtdmeta AS FLOAT64) AS INT64) as quantidade_meta,    
     SAFE_CAST(nota AS FLOAT64) as nota,
     SAFE_CAST(bonus AS FLOAT64) as bonus
-FROM `planejamento_gestao_acordo_resultados_staging.regra`
+FROM `rj-smfp.planejamento_gestao_acordo_resultados_staging.regra`
