@@ -14,7 +14,7 @@ SELECT
     SAFE_CAST(REGEXP_REPLACE(TRIM(numfunc), r'.0$', '') AS STRING) AS id_funcionario,
     SAFE_CAST(REGEXP_REPLACE(TRIM(numvinc), r'.0$', '') AS STRING) AS id_vinculo,
     SAFE_CAST(REGEXP_REPLACE(TRIM(numpens), r'.0$', '') AS INT64) AS numero_pensionista,
-    SAFE_CAST(TRIM(num_folha) AS STRING) AS numero_folha,
+    SAFE_CAST(TRIM(num_folha) AS INT64) AS numero_folha,
     SAFE_CAST(REGEXP_REPLACE(TRIM(setor), r'.0$', '') AS STRING) AS id_setor,
     SAFE_CAST(TRIM(secretaria) AS STRING) AS secretaria,
     SAFE_CAST(TRIM(tipo_func) AS STRING) AS tipo_funcionario,
