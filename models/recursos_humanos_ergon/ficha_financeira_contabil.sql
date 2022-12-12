@@ -18,7 +18,6 @@ SELECT
     SAFE_CAST(REGEXP_REPLACE(TRIM(setor), r'.0$', '') AS STRING) AS id_setor,
     SAFE_CAST(TRIM(secretaria) AS STRING) AS secretaria,
     SAFE_CAST(TRIM(tipo_func) AS STRING) AS tipo_funcionario,
-    SAFE_CAST(TRIM(ativo_inativo_pensionista) AS STRING) AS desconto,
     SAFE_CAST(TRIM(detalha) AS STRING) AS detalhamento,
     SAFE_CAST(TRIM(rubrica) AS STRING) AS rubrica,
     SAFE_CAST(TRIM(tipo_rubrica) AS STRING) AS tipo_rubrica,
