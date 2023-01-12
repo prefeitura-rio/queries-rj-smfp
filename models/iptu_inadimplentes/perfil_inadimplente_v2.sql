@@ -45,7 +45,7 @@ SELECT
     b.id_regiao_planejamento,
     b.id_regiao_administrativa,
     b.nome_regiao_administrativa,
-    -- b.subprefeitura,
+    b.subprefeitura,
     iptu.status_lancamento_iptu,
     iptu.area_planejamento,
     iptu.zona_cidade,
