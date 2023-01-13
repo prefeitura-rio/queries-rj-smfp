@@ -142,7 +142,7 @@ if __name__ == "__main__":
                     ),
                     "columns": metadata[dataset_id][table_id]["columns"],
                 }
+                dump_metadata_into_schema_yaml(
+                    dataset_id, table_id, table_metadata)
             else:
                 print(f"No columns for {table_id} in dataset {dataset_id}")
-
-            dump_metadata_into_schema_yaml(dataset_id, table_id, table_metadata)
