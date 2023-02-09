@@ -30,8 +30,8 @@ SAFE_CAST(resultado_orgao2_performance AS STRING) as resultado_completo_orgao_2,
 SAFE_CAST(caso_chance AS INT64) as caso_chance_orgao_1,
 SAFE_CAST(caso_chance_orgao_2_performance AS INT64) as caso_chance_orgao_2,
 SAFE_CAST(pior_caso_chance AS INT64) as pior_caso_chance,
-SAFE_CAST(cor_chance_meta AS INT64) as chance_meta_orgao_1,
-SAFE_CAST(cor_chance_meta_orgao_2 AS INT64) as chance_meta_orgao_2,
+SAFE_CAST(SAFE_CAST(cor_chance_meta AS FLOAT64) AS INT64) as chance_meta_orgao_1,
+SAFE_CAST(SAFE_CAST(cor_chance_meta_orgao_2 AS FLOAT64) AS INT64) as chance_meta_orgao_2,
 CASE
     WHEN resultado_performance_prefeito = "TRUE" THEN TRUE
     WHEN resultado_performance_prefeito = "FALSE" THEN FALSE 
