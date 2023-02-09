@@ -1,369 +1,7 @@
 {
-    "planejamento_gestao_dashboard_metas": {
-        "pe_ranking": {
-            "title": "Dashboard de Metas: PE Ranking",
-            "short_description": "Tabela auxiliar com valores das metas de ranking do Plano Estratégico.",
-            "long_description": ".",
-            "update_frequency": "Diário",
-            "temporal_coverage": ".",
-            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
-            "publisher_name": "Bruno Almeida",
-            "publisher_email": "brunodepauloalmeida@gmail.com",
-            "tags": [],
-            "categories": [],
-            "columns": []
-        },
-        "pe_numerico": {
-            "title": "Dashboard de Metas: PE Numérico",
-            "short_description": "Tabela auxiliar com valores das metas numéricas do Plano Estratégico.",
-            "long_description": ".",
-            "update_frequency": "Diário",
-            "temporal_coverage": ".",
-            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
-            "publisher_name": "Bruno Almeida",
-            "publisher_email": "brunodepauloalmeida@gmail.com",
-            "tags": [],
-            "categories": [],
-            "columns": []
-        },
-        "todos_percentual": {
-            "title": "Dashboard de Metas: Todos Percentual",
-            "short_description": "Tabela final com valores das metas percentual do Plano Estratégico e do Acordo de Resultados.",
-            "long_description": ".",
-            "update_frequency": "Diário",
-            "temporal_coverage": ".",
-            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
-            "publisher_name": "Bruno Almeida",
-            "publisher_email": "brunodepauloalmeida@gmail.com",
-            "tags": [],
-            "categories": [],
-            "columns": []
-        },
-        "todos_textual": {
-            "title": "Dashboard de Metas: Todos Textual",
-            "short_description": "Tabela final com valores das metas textuais do Plano Estratégico e do Acordo de Resultados.",
-            "long_description": ".",
-            "update_frequency": "Diário",
-            "temporal_coverage": ".",
-            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
-            "publisher_name": "Bruno Almeida",
-            "publisher_email": "brunodepauloalmeida@gmail.com",
-            "tags": [],
-            "categories": [],
-            "columns": []
-        },
-        "todos_detalhes": {
-            "title": "Dashboard de Metas: Todos Detalhes",
-            "short_description": "Tabela final com detalhes das metas do Plano Estratégico e do Acordo de Resultados.",
-            "long_description": ".",
-            "update_frequency": "Diário",
-            "temporal_coverage": ".",
-            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
-            "publisher_name": "Bruno Almeida",
-            "publisher_email": "brunodepauloalmeida@gmail.com",
-            "tags": [],
-            "categories": [],
-            "columns": []
-        },
-        "todos_ranking": {
-            "title": "Dashboard de Metas: Todos Ranking",
-            "short_description": "Tabela final com valores das metas de ranking do Plano Estratégico e do Acordo de Resultados.",
-            "long_description": ".",
-            "update_frequency": "Diário",
-            "temporal_coverage": ".",
-            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
-            "publisher_name": "Bruno Almeida",
-            "publisher_email": "brunodepauloalmeida@gmail.com",
-            "tags": [],
-            "categories": [],
-            "columns": []
-        },
-        "orgaos": {
-            "title": "Dashboard de Metas: Órgãos",
-            "short_description": "Órgãos da prefeitura do Rio de Janeiro.",
-            "long_description": "Tabela com todos os órgãos que possuem metas do Acordo de Resultados ou do Plano Estratégico.",
-            "update_frequency": "Diário",
-            "temporal_coverage": ".",
-            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
-            "publisher_name": "Bruno Almeida",
-            "publisher_email": "brunodepauloalmeida@gmail.com",
-            "tags": [],
-            "categories": [],
-            "columns": []
-        },
-        "pe_detalhes": {
-            "title": "Dashboard de Metas: PE Detalhes",
-            "short_description": "Tabela auxiliar com detalhes das metas do Plano Estratégico.",
-            "long_description": ".",
-            "update_frequency": "Diário",
-            "temporal_coverage": ".",
-            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
-            "publisher_name": "Bruno Almeida",
-            "publisher_email": "brunodepauloalmeida@gmail.com",
-            "tags": [],
-            "categories": [],
-            "columns": []
-        },
-        "pe_porcentagem": {
-            "title": "Dashboard de Metas: PE Percentual",
-            "short_description": "Tabela auxiliar com valores das metas percentuais do Plano Estratégico.",
-            "long_description": ".",
-            "update_frequency": "Diário",
-            "temporal_coverage": ".",
-            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
-            "publisher_name": "Bruno Almeida",
-            "publisher_email": "brunodepauloalmeida@gmail.com",
-            "tags": [],
-            "categories": [],
-            "columns": []
-        },
-        "todos_numerico": {
-            "title": "Dashboard de Metas: Todos Numérico",
-            "short_description": "Tabela final com valores das metas numéricas do Plano Estratégico e do Acordo de Resultados.",
-            "long_description": ".",
-            "update_frequency": "Diário",
-            "temporal_coverage": ".",
-            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
-            "publisher_name": "Bruno Almeida",
-            "publisher_email": "brunodepauloalmeida@gmail.com",
-            "tags": [],
-            "categories": [],
-            "columns": []
-        },
-        "ar_valores": {
-            "title": "Dashboard de Metas: AR Valores",
-            "short_description": "Tabela auxiliar com valores das metas do Acordo de Resultados.",
-            "long_description": ".",
-            "update_frequency": "Diário",
-            "temporal_coverage": ".",
-            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
-            "publisher_name": "Bruno Almeida",
-            "publisher_email": "brunodepauloalmeida@gmail.com",
-            "tags": [],
-            "categories": [],
-            "columns": []
-        },
-        "ar_detalhes": {
-            "title": "Dashboard de Metas: AR Detalhes",
-            "short_description": "Tabela auxiliar com detalhes das metas do Acordo de Resultados.",
-            "long_description": ".",
-            "update_frequency": "Diário",
-            "temporal_coverage": ".",
-            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
-            "publisher_name": "Bruno Almeida",
-            "publisher_email": "brunodepauloalmeida@gmail.com",
-            "tags": [],
-            "categories": [],
-            "columns": []
-        },
-        "pe_textual": {
-            "title": "Dashboard de Metas: PE Textual",
-            "short_description": "Tabela auxiliar com valores das metas textuais do Plano Estratégico.",
-            "long_description": ".",
-            "update_frequency": "Diário",
-            "temporal_coverage": ".",
-            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
-            "publisher_name": "Bruno Almeida",
-            "publisher_email": "brunodepauloalmeida@gmail.com",
-            "tags": [],
-            "categories": [],
-            "columns": []
-        }
-    },
-    "iptu_inadimplentes": {
-        "perfil_inadimplente": {
-            "title": "Inadimplentes do IPTU: Perfil dos inadimplentes",
-            "short_description": "Perfil de inadimplentes do IPTU",
-            "long_description": "Perfil de inadimplentes do IPTU",
-            "update_frequency": "Semanal",
-            "temporal_coverage": "Indefinido",
-            "data_owner": "Indefinido",
-            "publisher_name": "Indefinido",
-            "publisher_email": "indefinido@mail.com",
-            "tags": [],
-            "categories": [],
-            "columns": [
-                {
-                    "name": "ano_competencia",
-                    "description": "Ano da competência"
-                },
-                {
-                    "name": "valor_lancado",
-                    "description": "Valor de IPTU lançado para a inscrição imobiliária"
-                },
-                {
-                    "name": "valor_pago",
-                    "description": "Valor de IPTU pago para a inscrição imobiliária"
-                },
-                {
-                    "name": "valor_devido",
-                    "description": "Valor de IPTU devido para a inscrição imobiliária"
-                },
-                {
-                    "name": "tipo_guia",
-                    "description": "Tipo de guia da inscrição imobiliária"
-                },
-                {
-                    "name": "bairro",
-                    "description": "Bairro da inscrição imobiliária"
-                },
-                {
-                    "name": "status_lancamento_iptu",
-                    "description": "Situação do lançamento do IPTU"
-                },
-                {
-                    "name": "area_planejamento",
-                    "description": "Área de planejamento da cidade"
-                },
-                {
-                    "name": "zona_cidade",
-                    "description": "Zona da cidade"
-                },
-                {
-                    "name": "regiao_administrativa",
-                    "description": "Região administrativa da cidade"
-                },
-                {
-                    "name": "regiao_fiscal",
-                    "description": "Região fiscal da cidade"
-                },
-                {
-                    "name": "ano_construcao_imovel",
-                    "description": "Ano de construção do imóvel"
-                },
-                {
-                    "name": "situacao_terreno",
-                    "description": "Situação do terreno"
-                },
-                {
-                    "name": "tipologia",
-                    "description": "Tipologia do terreno"
-                },
-                {
-                    "name": "utilizacao_principal",
-                    "description": "Utilização principal do imóvel"
-                },
-                {
-                    "name": "area_tributada_nao_residencial",
-                    "description": "Área tributada não residencial do imóvel"
-                },
-                {
-                    "name": "area_tributada_residencial",
-                    "description": "Área tributada residencial do imóvel"
-                },
-                {
-                    "name": "area_tributada_territorial",
-                    "description": "Área tributada territorial do imóvel"
-                },
-                {
-                    "name": "area_terreno",
-                    "description": "Área total do terreno"
-                },
-                {
-                    "name": "valor_isento_iptu",
-                    "description": "Valor isento de IPTU"
-                },
-                {
-                    "name": "tributacao",
-                    "description": "Tributação da inscrição imobiliária"
-                },
-                {
-                    "name": "area_residencial",
-                    "description": "Área residencial do imóvel"
-                },
-                {
-                    "name": "area_nao_residencial",
-                    "description": "Área não residencial do imóvel"
-                },
-                {
-                    "name": "inscricao_imobiliaria",
-                    "description": "Inscrição imobiliária do imóvel"
-                }
-            ]
-        },
-        "perfil_inadimplente_v2": {}
-    },
     "planejamento_gestao_acordo_resultados": {
         "meta_desdobrada": {},
-        "regra": {},
-        "acordo_resultado": {},
-        "auditoria": {},
-        "indicador": {
-            "title": "Acordo de Resultados: Indicador",
-            "short_description": "Indicadores que medem o atingimento das metas.",
-            "long_description": "Indicadores, apurados mensalmente, que servem para medir o quanto foi alcançado das metas dos acordos de resultados.",
-            "update_frequency": "Mensal",
-            "temporal_coverage": "Desde 2022 até a data corrente.",
-            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
-            "publisher_name": "Bruno Almeida",
-            "publisher_email": "brunodepauloalmeida@gmail.com",
-            "tags": [
-                "administração pública",
-                "acordo de resultados",
-                "EGP Rio"
-            ],
-            "categories": [
-                "48df9fb6643d477bb1bb7bf595915a23"
-            ],
-            "columns": [
-                {
-                    "name": "id_meta",
-                    "description": "Código identificador da meta medida pelo indicador."
-                },
-                {
-                    "name": "ano",
-                    "description": "Ano de aferição do indicador."
-                },
-                {
-                    "name": "mes",
-                    "description": "Mês de aferição do indicador."
-                },
-                {
-                    "name": "valor",
-                    "description": "Valor alcançado pelo indicador no mês. Pode ser um dado número, um percentual ou uma sinalização indicando que foi entregue ou não."
-                }
-            ]
-        },
         "formato_acordo": {},
-        "nota_meta": {
-            "title": "Acordo de Resultados: Notas das Metas",
-            "short_description": "Notas que indicam o andamento do atingimento das metas.",
-            "long_description": "Nota dada pela prefeitura para o que foi alcançado por um órgão para determinado identificador de meta. Uma meta pode ter vários identificadores, um para cada indicador associado a ela.",
-            "update_frequency": "Mensal",
-            "temporal_coverage": "Desde 2022 até a data corrente.",
-            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
-            "publisher_name": "Bruno Almeida",
-            "publisher_email": "brunodepauloalmeida@gmail.com",
-            "tags": [
-                "administração pública",
-                "acordo de resultados",
-                "EGP Rio"
-            ],
-            "categories": [
-                "48df9fb6643d477bb1bb7bf595915a23"
-            ],
-            "columns": [
-                {
-                    "name": "id_meta",
-                    "description": "Identificador da meta para a qual a nota foi dada. Existe um identificador para cada meta, por órgão e por indicador."
-                },
-                {
-                    "name": "ano",
-                    "description": "Ano para o qual a nota foi dada."
-                },
-                {
-                    "name": "mes",
-                    "description": "Mês para o qual a nota foi dada."
-                },
-                {
-                    "name": "valor",
-                    "description": "Valor da nota."
-                }
-            ]
-        },
-        "estimativa_premiacao": {},
-        "recurso": {},
-        "avaliacao_meta": {},
         "meta": {
             "title": "Acordo de Resultados: Meta",
             "short_description": "Informações das metas do Acordo de Resultados.",
@@ -512,6 +150,45 @@
                 }
             ]
         },
+        "acordo_resultado": {},
+        "recurso": {},
+        "avaliacao_meta": {},
+        "indicador": {
+            "title": "Acordo de Resultados: Indicador",
+            "short_description": "Indicadores que medem o atingimento das metas.",
+            "long_description": "Indicadores, apurados mensalmente, que servem para medir o quanto foi alcançado das metas dos acordos de resultados.",
+            "update_frequency": "Mensal",
+            "temporal_coverage": "Desde 2022 até a data corrente.",
+            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
+            "publisher_name": "Bruno Almeida",
+            "publisher_email": "brunodepauloalmeida@gmail.com",
+            "tags": [
+                "administração pública",
+                "acordo de resultados",
+                "EGP Rio"
+            ],
+            "categories": [
+                "48df9fb6643d477bb1bb7bf595915a23"
+            ],
+            "columns": [
+                {
+                    "name": "id_meta",
+                    "description": "Código identificador da meta medida pelo indicador."
+                },
+                {
+                    "name": "ano",
+                    "description": "Ano de aferição do indicador."
+                },
+                {
+                    "name": "mes",
+                    "description": "Mês de aferição do indicador."
+                },
+                {
+                    "name": "valor",
+                    "description": "Valor alcançado pelo indicador no mês. Pode ser um dado número, um percentual ou uma sinalização indicando que foi entregue ou não."
+                }
+            ]
+        },
         "chance": {
             "title": "Acordo de Resultados: Chance",
             "short_description": "Chance de atingimento das metas.",
@@ -552,6 +229,8 @@
                 }
             ]
         },
+        "auditoria": {},
+        "regra": {},
         "comentario": {
             "title": "Acordo de Resultados: Comentários",
             "short_description": "Comentários sobre o atingimento das metas.",
@@ -599,43 +278,345 @@
                     "description": "Ordem do comentário. Pode haver mais de um comentário para uma mesma meta em um mesmo período (ano e mês)."
                 }
             ]
+        },
+        "estimativa_premiacao": {},
+        "nota_meta": {
+            "title": "Acordo de Resultados: Notas das Metas",
+            "short_description": "Notas que indicam o andamento do atingimento das metas.",
+            "long_description": "Nota dada pela prefeitura para o que foi alcançado por um órgão para determinado identificador de meta. Uma meta pode ter vários identificadores, um para cada indicador associado a ela.",
+            "update_frequency": "Mensal",
+            "temporal_coverage": "Desde 2022 até a data corrente.",
+            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
+            "publisher_name": "Bruno Almeida",
+            "publisher_email": "brunodepauloalmeida@gmail.com",
+            "tags": [
+                "administração pública",
+                "acordo de resultados",
+                "EGP Rio"
+            ],
+            "categories": [
+                "48df9fb6643d477bb1bb7bf595915a23"
+            ],
+            "columns": [
+                {
+                    "name": "id_meta",
+                    "description": "Identificador da meta para a qual a nota foi dada. Existe um identificador para cada meta, por órgão e por indicador."
+                },
+                {
+                    "name": "ano",
+                    "description": "Ano para o qual a nota foi dada."
+                },
+                {
+                    "name": "mes",
+                    "description": "Mês para o qual a nota foi dada."
+                },
+                {
+                    "name": "valor",
+                    "description": "Valor da nota."
+                }
+            ]
+        }
+    },
+    "recursos_humanos_ergon_comlurb": {
+        "recursos_humanos_ergon_comlurb__vinculo": {},
+        "recursos_humanos_ergon_comlurb__cargo": {},
+        "recursos_humanos_ergon_comlurb__fita_banco": {},
+        "recursos_humanos_ergon_comlurb__ficha_financeira": {},
+        "recursos_humanos_ergon_comlurb__h_setor": {},
+        "recursos_humanos_ergon_comlurb__dependente": {},
+        "recursos_humanos_ergon_comlurb__funcionario": {},
+        "recursos_humanos_ergon_comlurb__funcionario_evento": {},
+        "recursos_humanos_ergon_comlurb__setor": {}
+    },
+    "planejamento_gestao_dashboard_metas": {
+        "todos_ranking": {
+            "title": "Dashboard de Metas: Todos Ranking",
+            "short_description": "Tabela final com valores das metas de ranking do Plano Estratégico e do Acordo de Resultados.",
+            "long_description": ".",
+            "update_frequency": "Diário",
+            "temporal_coverage": ".",
+            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
+            "publisher_name": "Bruno Almeida",
+            "publisher_email": "brunodepauloalmeida@gmail.com",
+            "tags": [],
+            "categories": [],
+            "columns": []
+        },
+        "pe_numerico": {
+            "title": "Dashboard de Metas: PE Numérico",
+            "short_description": "Tabela auxiliar com valores das metas numéricas do Plano Estratégico.",
+            "long_description": ".",
+            "update_frequency": "Diário",
+            "temporal_coverage": ".",
+            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
+            "publisher_name": "Bruno Almeida",
+            "publisher_email": "brunodepauloalmeida@gmail.com",
+            "tags": [],
+            "categories": [],
+            "columns": []
+        },
+        "todos_detalhes": {
+            "title": "Dashboard de Metas: Todos Detalhes",
+            "short_description": "Tabela final com detalhes das metas do Plano Estratégico e do Acordo de Resultados.",
+            "long_description": ".",
+            "update_frequency": "Diário",
+            "temporal_coverage": ".",
+            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
+            "publisher_name": "Bruno Almeida",
+            "publisher_email": "brunodepauloalmeida@gmail.com",
+            "tags": [],
+            "categories": [],
+            "columns": []
+        },
+        "todos_numerico": {
+            "title": "Dashboard de Metas: Todos Numérico",
+            "short_description": "Tabela final com valores das metas numéricas do Plano Estratégico e do Acordo de Resultados.",
+            "long_description": ".",
+            "update_frequency": "Diário",
+            "temporal_coverage": ".",
+            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
+            "publisher_name": "Bruno Almeida",
+            "publisher_email": "brunodepauloalmeida@gmail.com",
+            "tags": [],
+            "categories": [],
+            "columns": []
+        },
+        "orgaos": {
+            "title": "Dashboard de Metas: Órgãos",
+            "short_description": "Órgãos da prefeitura do Rio de Janeiro.",
+            "long_description": "Tabela com todos os órgãos que possuem metas do Acordo de Resultados ou do Plano Estratégico.",
+            "update_frequency": "Diário",
+            "temporal_coverage": ".",
+            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
+            "publisher_name": "Bruno Almeida",
+            "publisher_email": "brunodepauloalmeida@gmail.com",
+            "tags": [],
+            "categories": [],
+            "columns": []
+        },
+        "pe_ranking": {
+            "title": "Dashboard de Metas: PE Ranking",
+            "short_description": "Tabela auxiliar com valores das metas de ranking do Plano Estratégico.",
+            "long_description": ".",
+            "update_frequency": "Diário",
+            "temporal_coverage": ".",
+            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
+            "publisher_name": "Bruno Almeida",
+            "publisher_email": "brunodepauloalmeida@gmail.com",
+            "tags": [],
+            "categories": [],
+            "columns": []
+        },
+        "pe_porcentagem": {
+            "title": "Dashboard de Metas: PE Percentual",
+            "short_description": "Tabela auxiliar com valores das metas percentuais do Plano Estratégico.",
+            "long_description": ".",
+            "update_frequency": "Diário",
+            "temporal_coverage": ".",
+            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
+            "publisher_name": "Bruno Almeida",
+            "publisher_email": "brunodepauloalmeida@gmail.com",
+            "tags": [],
+            "categories": [],
+            "columns": []
+        },
+        "pe_textual": {
+            "title": "Dashboard de Metas: PE Textual",
+            "short_description": "Tabela auxiliar com valores das metas textuais do Plano Estratégico.",
+            "long_description": ".",
+            "update_frequency": "Diário",
+            "temporal_coverage": ".",
+            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
+            "publisher_name": "Bruno Almeida",
+            "publisher_email": "brunodepauloalmeida@gmail.com",
+            "tags": [],
+            "categories": [],
+            "columns": []
+        },
+        "todos_percentual": {
+            "title": "Dashboard de Metas: Todos Percentual",
+            "short_description": "Tabela final com valores das metas percentual do Plano Estratégico e do Acordo de Resultados.",
+            "long_description": ".",
+            "update_frequency": "Diário",
+            "temporal_coverage": ".",
+            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
+            "publisher_name": "Bruno Almeida",
+            "publisher_email": "brunodepauloalmeida@gmail.com",
+            "tags": [],
+            "categories": [],
+            "columns": []
+        },
+        "todos_textual": {
+            "title": "Dashboard de Metas: Todos Textual",
+            "short_description": "Tabela final com valores das metas textuais do Plano Estratégico e do Acordo de Resultados.",
+            "long_description": ".",
+            "update_frequency": "Diário",
+            "temporal_coverage": ".",
+            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
+            "publisher_name": "Bruno Almeida",
+            "publisher_email": "brunodepauloalmeida@gmail.com",
+            "tags": [],
+            "categories": [],
+            "columns": []
+        },
+        "ar_valores": {
+            "title": "Dashboard de Metas: AR Valores",
+            "short_description": "Tabela auxiliar com valores das metas do Acordo de Resultados.",
+            "long_description": ".",
+            "update_frequency": "Diário",
+            "temporal_coverage": ".",
+            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
+            "publisher_name": "Bruno Almeida",
+            "publisher_email": "brunodepauloalmeida@gmail.com",
+            "tags": [],
+            "categories": [],
+            "columns": []
+        },
+        "ar_detalhes": {
+            "title": "Dashboard de Metas: AR Detalhes",
+            "short_description": "Tabela auxiliar com detalhes das metas do Acordo de Resultados.",
+            "long_description": ".",
+            "update_frequency": "Diário",
+            "temporal_coverage": ".",
+            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
+            "publisher_name": "Bruno Almeida",
+            "publisher_email": "brunodepauloalmeida@gmail.com",
+            "tags": [],
+            "categories": [],
+            "columns": []
+        },
+        "pe_detalhes": {
+            "title": "Dashboard de Metas: PE Detalhes",
+            "short_description": "Tabela auxiliar com detalhes das metas do Plano Estratégico.",
+            "long_description": ".",
+            "update_frequency": "Diário",
+            "temporal_coverage": ".",
+            "data_owner": "Secretaria Municipal de Fazenda e Planejamento (SMFP)",
+            "publisher_name": "Bruno Almeida",
+            "publisher_email": "brunodepauloalmeida@gmail.com",
+            "tags": [],
+            "categories": [],
+            "columns": []
+        }
+    },
+    "iptu_inadimplentes": {
+        "perfil_inadimplente_v2": {},
+        "perfil_inadimplente": {
+            "title": "Inadimplentes do IPTU: Perfil dos inadimplentes",
+            "short_description": "Perfil de inadimplentes do IPTU",
+            "long_description": "Perfil de inadimplentes do IPTU",
+            "update_frequency": "Semanal",
+            "temporal_coverage": "Indefinido",
+            "data_owner": "Indefinido",
+            "publisher_name": "Indefinido",
+            "publisher_email": "indefinido@mail.com",
+            "tags": [],
+            "categories": [],
+            "columns": [
+                {
+                    "name": "ano_competencia",
+                    "description": "Ano da competência"
+                },
+                {
+                    "name": "valor_lancado",
+                    "description": "Valor de IPTU lançado para a inscrição imobiliária"
+                },
+                {
+                    "name": "valor_pago",
+                    "description": "Valor de IPTU pago para a inscrição imobiliária"
+                },
+                {
+                    "name": "valor_devido",
+                    "description": "Valor de IPTU devido para a inscrição imobiliária"
+                },
+                {
+                    "name": "tipo_guia",
+                    "description": "Tipo de guia da inscrição imobiliária"
+                },
+                {
+                    "name": "bairro",
+                    "description": "Bairro da inscrição imobiliária"
+                },
+                {
+                    "name": "status_lancamento_iptu",
+                    "description": "Situação do lançamento do IPTU"
+                },
+                {
+                    "name": "area_planejamento",
+                    "description": "Área de planejamento da cidade"
+                },
+                {
+                    "name": "zona_cidade",
+                    "description": "Zona da cidade"
+                },
+                {
+                    "name": "regiao_administrativa",
+                    "description": "Região administrativa da cidade"
+                },
+                {
+                    "name": "regiao_fiscal",
+                    "description": "Região fiscal da cidade"
+                },
+                {
+                    "name": "ano_construcao_imovel",
+                    "description": "Ano de construção do imóvel"
+                },
+                {
+                    "name": "situacao_terreno",
+                    "description": "Situação do terreno"
+                },
+                {
+                    "name": "tipologia",
+                    "description": "Tipologia do terreno"
+                },
+                {
+                    "name": "utilizacao_principal",
+                    "description": "Utilização principal do imóvel"
+                },
+                {
+                    "name": "area_tributada_nao_residencial",
+                    "description": "Área tributada não residencial do imóvel"
+                },
+                {
+                    "name": "area_tributada_residencial",
+                    "description": "Área tributada residencial do imóvel"
+                },
+                {
+                    "name": "area_tributada_territorial",
+                    "description": "Área tributada territorial do imóvel"
+                },
+                {
+                    "name": "area_terreno",
+                    "description": "Área total do terreno"
+                },
+                {
+                    "name": "valor_isento_iptu",
+                    "description": "Valor isento de IPTU"
+                },
+                {
+                    "name": "tributacao",
+                    "description": "Tributação da inscrição imobiliária"
+                },
+                {
+                    "name": "area_residencial",
+                    "description": "Área residencial do imóvel"
+                },
+                {
+                    "name": "area_nao_residencial",
+                    "description": "Área não residencial do imóvel"
+                },
+                {
+                    "name": "inscricao_imobiliaria",
+                    "description": "Inscrição imobiliária do imóvel"
+                }
+            ]
         }
     },
     "recursos_humanos_ergon": {
-        "orgaos_regime_juridico": {
-            "title": "TODO_TITLE_PREFIX: Regimes Jurídicos",
-            "short_description": "Regimes jurídicos da prefeitura do Rio de Janeiro.",
-            "long_description": "Regimes jurídicos que podem ser aceitos para contratação de funcionários nos órgãos da administração direta ou indireta da prefeitura do Rio de Janeiro assim como outras empresas de interesse da prefeitura do Rio de Janeiro.",
-            "update_frequency": "Nunca",
-            "temporal_coverage": "Até data corrente",
-            "data_owner": "SMFP/SUBGCC/CGRH",
-            "publisher_name": "Anderson Ferraz Carneiro",
-            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
-            "tags": [
-                "administração pública",
-                "recursos humanos",
-                "funcionário",
-                "órgão",
-                "ERGON"
-            ],
-            "categories": [
-                "48df9fb6643d477bb1bb7bf595915a23"
-            ],
-            "columns": [
-                {
-                    "name": "sigla",
-                    "description": "Sigla do regime jurídico. Ex. CLT, EFETIVO etc"
-                },
-                {
-                    "name": "nome",
-                    "description": "Código, dado pela prefeitura do Rio de Janeiro, da empresa."
-                }
-            ]
-        },
-        "afastamento_antigo": {
-            "title": "TODO_TITLE_PREFIX: afastamento_antigo",
-            "short_description": "Afastamentos de sistemas antigos",
-            "long_description": "Nesta tabela são armazenadas informações referentes a afastamentos dos servidores da Prefeitura da Cidade do Rio de Janeiro cadastrados em sistemas de recursos humanos antigos.",
+        "pre_contagem": {
+            "title": "TODO_TITLE_PREFIX: pre_contagem",
+            "short_description": "Informações sobre contagens pregressas do servidor.",
+            "long_description": "A tabela armazena informações de contagens anteriores ao início do sistema recursos humanos ou da entrada do servidor no sistema, se por algum motivo não possuía informações anteriormente.",
             "update_frequency": "Nunca",
             "temporal_coverage": "Não informado",
             "data_owner": "Não informado",
@@ -645,296 +626,36 @@
             "categories": [],
             "columns": [
                 {
-                    "name": "id_matricula_vinculo",
-                    "description": "Matrícula do servidor."
-                },
-                {
-                    "name": "data_inicio",
-                    "description": "Data incial do afastamento."
-                },
-                {
-                    "name": "data_previsao_retorno",
-                    "description": "Data de previsão do retorno do afastamento."
-                },
-                {
-                    "name": "data_fim",
-                    "description": "Data final do afastamento, representa o efetivo retorno do servidor à atividade."
-                }
-            ]
-        },
-        "frequencia_antigo": {
-            "title": "TODO_TITLE_PREFIX: frequencia_antigo",
-            "short_description": "Frequência do servidor em sistemas antigos",
-            "long_description": "Frequência de servidores da Prefeitura da Cidade do Rio de Janeiro cadastrada em sistemas de recursos humanos antigos.",
-            "update_frequency": "Nunca",
-            "temporal_coverage": "Não informado",
-            "data_owner": "Não informado",
-            "publisher_name": "Não informado",
-            "publisher_email": "naoinformado@naoinformado.com",
-            "tags": [],
-            "categories": [],
-            "columns": [
-                {
-                    "name": "id_matricula_vinculo",
-                    "description": "Matrícula do serivdor."
-                },
-                {
-                    "name": "id_frequencia",
-                    "description": "Código de frequência."
-                },
-                {
-                    "name": "data_frequencia",
-                    "description": "Data da ocorrência de frequência."
-                }
-            ]
-        },
-        "jornada": {
-            "title": "TODO_TITLE_PREFIX: Jornada",
-            "short_description": "Tipos de jornadas existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro.",
-            "long_description": "Tipos de jornadas existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro. Jornada é a carga horária semanal.",
-            "update_frequency": "Anual",
-            "temporal_coverage": "Até data corrente",
-            "data_owner": "SMFP/SUBGCC/CGRH",
-            "publisher_name": "Anderson Ferraz Carneiro",
-            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
-            "tags": [
-                "administração pública",
-                "recursos humanos",
-                "funcionário",
-                "ERGON"
-            ],
-            "categories": [],
-            "columns": [
-                {
-                    "name": "sigla",
-                    "description": "Sigla da jornada. Ex. 40 horas."
-                },
-                {
-                    "name": "nome",
-                    "description": "Nome da jornada. Ex. 40 horas semanais."
-                },
-                {
-                    "name": "horas_semana",
-                    "description": "Número de horas semanais da jornada."
-                },
-                {
-                    "name": "horas_mes",
-                    "description": "Número de horas mensais da jornada."
-                }
-            ]
-        },
-        "horario_trabalho": {
-            "title": "TODO_TITLE_PREFIX: Horário",
-            "short_description": "Horários possíveis para funcionários da administração direta da prefeitura do Rio de Janeiro.",
-            "long_description": "Horários possíveis para funcionários da administração direta da prefeitura do Rio de Janeiro (ainda não tem dados disponibilizados) (esperado colocação também da administração indireta).",
-            "update_frequency": "Nunca",
-            "temporal_coverage": "Até data corrente",
-            "data_owner": "SMFP/SUBGCC/CGRH",
-            "publisher_name": "Anderson Ferraz Carneiro",
-            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
-            "tags": [
-                "administração pública",
-                "recursos humanos",
-                "funcionário",
-                "órgão",
-                "empresa",
-                "ERGON"
-            ],
-            "categories": [
-                "48df9fb6643d477bb1bb7bf595915a23"
-            ],
-            "columns": [
-                {
-                    "name": "id_horario",
-                    "description": "Identificador do horário na base de dados."
-                },
-                {
-                    "name": "descricao",
-                    "description": "Descrição do horário. Neste atributo deve constar o horário de entrada, de almoço e de saída relativos a todos os dias da semana."
-                },
-                {
-                    "name": "publicacao_diario_oficial",
-                    "description": "Publicação em diário oficial autorizando o horário."
-                },
-                {
-                    "name": "carga_horaria_mes",
-                    "description": "Carga mensal em horas do horário."
-                },
-                {
-                    "name": "carga_horaria_semana",
-                    "description": "Carga semanal em horas do horário."
-                },
-                {
-                    "name": "carga_horaria_dia",
-                    "description": "Carga diária em horas do horário."
-                },
-                {
-                    "name": "id_registro",
-                    "description": "Identificação do Registro"
-                }
-            ]
-        },
-        "matricula": {
-            "title": "TODO_TITLE_PREFIX: Matricula",
-            "short_description": "Matrículas dadas pela prefeitura do Rio de Janeiro para pessoas que devem receber pagamento",
-            "long_description": "Matrículas dadas pela prefeitura do Rio de Janeiro para pessoas que devem receber pagamento ou para pessoas em outros casos de interesse da prefeitura do Rio de Janeiro",
-            "update_frequency": "Diário",
-            "temporal_coverage": "Até data corrente",
-            "data_owner": "SMFP/SUBGCC/CGRH",
-            "publisher_name": "Anderson Ferraz Carneiro",
-            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
-            "tags": [
-                "administração pública",
-                "recursos humanos",
-                "funcionário",
-                "ERGON"
-            ],
-            "categories": [
-                "48df9fb6643d477bb1bb7bf595915a23"
-            ],
-            "columns": [
-                {
-                    "name": "id_funcionario",
-                    "description": "Número do funcionário. Número dado a pessoa que ganhou sua primeira matrícula da prefeitura do Rio de Janeiro."
-                },
-                {
-                    "name": "id_matricula",
-                    "description": "Número da matrícula."
-                }
-            ]
-        },
-        "provimento": {
-            "title": "TODO_TITLE_PREFIX: Provimento",
-            "short_description": "Eventos relacionados aos vínculos funcionais tanto com a administração direta como indireta da prefeitura do Rio de Janeiro.",
-            "long_description": "Eventos relacionados aos vínculos funcionais tanto com a administração direta como indireta da prefeitura do Rio de Janeiro. \r\nUm provimento pode ser uma progressão, mudança de lotação, mudança de vencimento (referência) etc. Um provimento é um evento na situação funcional do vínculo.",
-            "update_frequency": "Semanal",
-            "temporal_coverage": "Até data corrente",
-            "data_owner": "SMFP/SUBGCC/CGRH",
-            "publisher_name": "Anderson Ferraz Carneiro",
-            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
-            "tags": [
-                "cargo",
-                "administração pública",
-                "recursos humanos",
-                "funcionário",
-                "ERGON"
-            ],
-            "categories": [
-                "48df9fb6643d477bb1bb7bf595915a23"
-            ],
-            "columns": [
-                {
-                    "name": "id_vinculo",
-                    "description": "Identificador no banco de dados do vínculo da pessoa."
-                },
-                {
-                    "name": "data_inicio",
-                    "description": "Data de inicio de um provimento."
-                },
-                {
-                    "name": "data_fim",
-                    "description": "Data de fim do provimento"
-                },
-                {
-                    "name": "id_setor",
-                    "description": "Código dado pela prefeitura do Rio de Janeiro para o setor de lotação do servidor após o provimento. Código da estrutura organizacional atribuidos pela GI/CGGI/CSIC."
-                },
-                {
-                    "name": "id_cargo",
-                    "description": "Código dado pela prefeitura do Rio de Janeiro para o cargo/emprego relacionado ao vínculo do servidor. Regime juridicos A DISPOSICAO, APOS. SERV. PUBLICO, CONT. SAL. FAMILIA e EST. AOS QUADROS o cargo é 999990 - ESPECIAL"
-                },
-                {
-                    "name": "id_referencia",
-                    "description": "Código do nível/posicionamento após o provimento. Ex PROFESSOR II, MM1, MM2, MM3, MM4, MM5, MM6, MM7, 999990 - ESPECIAL o valor do vencimento é zero."
-                },
-                {
-                    "name": "id_jornada",
-                    "description": "Código dado pela prefeitura do Rio de Janeiro para a jornada semanal do cargo/emprego associado ao vínculo. Não é modificada pelos provimentos."
-                },
-                {
-                    "name": "forma",
-                    "description": "Forma de provimento. Ex. 10 (EM EXERCÍCIO - CC/FG, ocorre quando a pessoa entra exercício em cargo em comissão)."
-                },
-                {
-                    "name": "observacoes",
-                    "description": "Observação - texto livre.  Ex. NOMEADA C/ VAL. 30/03/20 P/ C.C COORDENADOR TECNICO, 074842 CVL/SUBSC/CGRH/CTNRH, PCCS - LEI 6.739/2020 etc"
-                },
-                {
-                    "name": "regime_horas",
-                    "description": "Regime de horas após o provimento. Ex. Plantonista ou Rotina. Utilizado pela RIOSAUDE."
-                },
-                {
-                    "name": "empresa_vinculo",
-                    "description": "Empresa do servidor após o provimento. Sempre é a mesma empresa do vínculo."
+                    "name": "finalidade",
+                    "description": "Tipo da finalidade que motivou o cadastro da pré-contagem. \r\nEx.: \"Aposentadoria\", \"Progressão\"."
                 },
                 {
                     "name": "id_funcionario",
-                    "description": "Identificador no banco de dados da pessoa cadastrada na tabela de funcionários."
-                }
-            ]
-        },
-        "licenca_afastamento": {
-            "title": "TODO_TITLE_PREFIX: Não informado",
-            "short_description": "Afastamentos dos servidores Prefeitura do Rio de Janeiro",
-            "long_description": "Tabela contendo o início e fim dos afastamentos, seu motivo e o tipo de afastamento.",
-            "update_frequency": "Nunca",
-            "temporal_coverage": "Não informado",
-            "data_owner": "Não informado",
-            "publisher_name": "Não informado",
-            "publisher_email": "nao.informado@gmail.com",
-            "tags": [
-                "SMA",
-                "recursos humanos"
-            ],
-            "categories": [],
-            "columns": [
-                {
-                    "name": "id_funcionario",
-                    "description": "Não informado"
+                    "description": "Número do funcionário gerado pelo ERGON."
                 },
                 {
                     "name": "id_vinculo",
-                    "description": "Não informado"
+                    "description": "Número do vínculo relativo ao pagamento."
                 },
                 {
-                    "name": "data_inicio",
-                    "description": "Não informado"
+                    "name": "periodos",
+                    "description": "Quantidade de períodos de contagem para determinada finalidade."
                 },
                 {
-                    "name": "data_final",
-                    "description": "Não informado"
+                    "name": "dias",
+                    "description": "Total de dias da pré-contagem."
                 },
                 {
-                    "name": "tipo_afastamento",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "id_afastamento",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "motivo",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "data_previsao_retorno",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "parecer",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "data_atendimento",
-                    "description": "Não informado"
+                    "name": "data_validade",
+                    "description": "Data de validade da pré-contagem."
                 },
                 {
                     "name": "id_empresa",
-                    "description": "Não informado"
+                    "description": "Código da empresa."
                 },
                 {
-                    "name": "crm",
-                    "description": "Não informado"
+                    "name": "observacoes",
+                    "description": "Campo de observações sobre a pré-contagem."
                 }
             ]
         },
@@ -1086,6 +807,553 @@
                 }
             ]
         },
+        "regime_juridico": {
+            "title": "TODO_TITLE_PREFIX: Regime Juridico",
+            "short_description": "Tipos de regimes jurídicos existentes entre os vínculos de funcionários e a administração direta ou indireta da prefeitura do Rio de Janeiro.",
+            "long_description": "Tipos de regimes jurídicos existentes entre os vínculos de funcionários e a administração direta ou indireta da prefeitura do Rio de Janeiro.",
+            "update_frequency": "Nunca",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "administração pública",
+                "recursos humanos",
+                "órgão",
+                "empresa",
+                "ERGON"
+            ],
+            "categories": [],
+            "columns": [
+                {
+                    "name": "sigla",
+                    "description": "Sigla do regime jurídico. Ex. CLT, EFETIVO etc"
+                },
+                {
+                    "name": "nome",
+                    "description": "Nome do regime jurídico. Ex. Celetista, estatutário."
+                }
+            ]
+        },
+        "afastamento_antigo": {
+            "title": "TODO_TITLE_PREFIX: afastamento_antigo",
+            "short_description": "Afastamentos de sistemas antigos",
+            "long_description": "Nesta tabela são armazenadas informações referentes a afastamentos dos servidores da Prefeitura da Cidade do Rio de Janeiro cadastrados em sistemas de recursos humanos antigos.",
+            "update_frequency": "Nunca",
+            "temporal_coverage": "Não informado",
+            "data_owner": "Não informado",
+            "publisher_name": "Não informado",
+            "publisher_email": "naoinformado@naoinformado.com",
+            "tags": [],
+            "categories": [],
+            "columns": [
+                {
+                    "name": "id_matricula_vinculo",
+                    "description": "Matrícula do servidor."
+                },
+                {
+                    "name": "data_inicio",
+                    "description": "Data incial do afastamento."
+                },
+                {
+                    "name": "data_previsao_retorno",
+                    "description": "Data de previsão do retorno do afastamento."
+                },
+                {
+                    "name": "data_fim",
+                    "description": "Data final do afastamento, representa o efetivo retorno do servidor à atividade."
+                }
+            ]
+        },
+        "averbacoes_contagem": {
+            "title": "TODO_TITLE_PREFIX: averbacoes_contagem",
+            "short_description": "Informações de contagem de averbação",
+            "long_description": "Nesta tabela são armazenadas informações referentes sobre finalidade de contagem e total do tempo de contagem referentes a períodos averbados pelos servidores.",
+            "update_frequency": "Nunca",
+            "temporal_coverage": "Não informado",
+            "data_owner": "Não informado",
+            "publisher_name": "Não informado",
+            "publisher_email": "naoinformado@naoinformado.com",
+            "tags": [],
+            "categories": [],
+            "columns": [
+                {
+                    "name": "id_funcionario",
+                    "description": "Número do funcionário gerado pelo ERGON."
+                },
+                {
+                    "name": "id_vinculo",
+                    "description": "Número do vínculo relativo ao pagamento."
+                },
+                {
+                    "name": "id_averbacao",
+                    "description": "Chave gerada pelo banco para registro de averbação."
+                },
+                {
+                    "name": "finalidade",
+                    "description": "Tipo da finalidade da averbação."
+                },
+                {
+                    "name": "dias",
+                    "description": "Total de dias averbados para determinada finalidade."
+                }
+            ]
+        },
+        "ficha_financeira_contabil": {
+            "title": "TODO_TITLE_PREFIX: Não informado",
+            "short_description": "Valores de rubricas de fichas financeiras dos funcionários da PCRJ com infromações contábeis",
+            "long_description": "Valores de rubricas de fichas financeiras dos funcionários da Prefeitura da Cidade do Rio de Janeiro. Constam fichas desde o início do ERGON. Uma ficha financeira é um resumo do contracheque do servidor. Nesta tabela estão incluídas informações sobre a natureza da despesa e o plano trabalho.",
+            "update_frequency": "Nunca",
+            "temporal_coverage": "Não informado",
+            "data_owner": "SUBGGC",
+            "publisher_name": "Não informado",
+            "publisher_email": "nao.informado@gmail.com",
+            "tags": [],
+            "categories": [],
+            "columns": [
+                {
+                    "name": "data_folha",
+                    "description": "Mês e ano da folha da ficha financeira."
+                },
+                {
+                    "name": "id_funcionario",
+                    "description": "Número do funcionário gerado pelo ERGON."
+                },
+                {
+                    "name": "id_vinculo",
+                    "description": "Número do vínculo relativo ao pagamento."
+                },
+                {
+                    "name": "numero_pensionista",
+                    "description": "Número do pensionista, caso o pagamento seja relativo a um pensionista."
+                },
+                {
+                    "name": "numero_folha",
+                    "description": "Número da folha da ficha financeira."
+                },
+                {
+                    "name": "id_setor",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "secretaria",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "tipo_funcionario",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "detalhamento",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "rubrica",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "tipo_rubrica",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "competencia_direito",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "descricao_vantagem",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "valor",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "complemento",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "tipo_classificacao",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "classificacao",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "id_empresa",
+                    "description": "Não informado"
+                }
+            ]
+        },
+        "vinculo": {
+            "title": "TODO_TITLE_PREFIX: Vínculos de Pagamento",
+            "short_description": "Vínculos de pagamento ( em geral empregatícios ), tanto antigos como atuais, da administração direta e indireta da prefeitura do Rio de Janeiro.",
+            "long_description": "Vínculos de pagamento ( em geral empregatícios ), tanto antigos como atuais, da administração direta e indireta da prefeitura do Rio de Janeiro. Um vínculo, em geral, está associado a uma matrícula. Uma pessoa pode ter vários vínculos com a prefeitura.",
+            "update_frequency": "Mensal",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "cargo",
+                "administração pública",
+                "recursos humanos",
+                "funcionário",
+                "ERGON"
+            ],
+            "categories": [],
+            "columns": [
+                {
+                    "name": "id_vinculo",
+                    "description": "Número do vínculo da pessoa. O número é dado sequencialmente, com 1 para o primeiro vínculo, 2 para o segundo e assim por diante. Ex. Uma pessoa que é professora, e funcionária do IPLANRIO, tem dois vínculos."
+                },
+                {
+                    "name": "tipo",
+                    "description": "Detalhamento do regime jurídico. Exemplo: CLT - Contrato indeterminado, CLT - Contrato determinado."
+                },
+                {
+                    "name": "data_nomeacao",
+                    "description": "Data de nomeação do funcionário relativa ao vínculo."
+                },
+                {
+                    "name": "data_posse",
+                    "description": "Data da posse do funcionário relativo a este vínculo."
+                },
+                {
+                    "name": "data_exercicio",
+                    "description": "Data do início do exercício do funcionário relativo a este vínculo."
+                },
+                {
+                    "name": "regime_juridico",
+                    "description": "Regime jurídico do vínculo. Ex.: Estatutário, celetista, aposentado etc"
+                },
+                {
+                    "name": "categoria",
+                    "description": "Categoria do vínculo. Exemplo: Educação, saúde etc. Categoria é um conjunto de cargos."
+                },
+                {
+                    "name": "desconta_ir",
+                    "description": "Booleano indicando se o vínculo desconta IR ou não. Valores N ou S."
+                },
+                {
+                    "name": "descricao_provimento",
+                    "description": "Descrição do provimento. Campo livre."
+                },
+                {
+                    "name": "classificacao_concurso",
+                    "description": "Classificação no concurso relativo a este vínculo, caso tenha sido feito concurso. Em branco caso não tenha feito."
+                },
+                {
+                    "name": "data_inicio_cessao",
+                    "description": "Data de inicio da cessão, quanto o servidor é cedido. Quando o servidor não é cedido o atributo fica em branco. Cessão é o emprestimo de funcionário de órgão externo à prefeitura (ou da administração indireta) para a administração direta da prefeitura do Rio de Janeiro."
+                },
+                {
+                    "name": "data_fim_cessao",
+                    "description": "Data do fim da cessão, quanto o servidor é cedido. Quando o servidor não é cedido ou não foi devolvido fica em branco."
+                },
+                {
+                    "name": "data_concurso",
+                    "description": "Data do concurso relativo ao vínculo. Caso não tenha havido concurso fica em branco."
+                },
+                {
+                    "name": "data_fgts",
+                    "description": "Data em que o funcionário optou pelo FGTS, caso o funcionário seja celetista. Caso não fica em branco."
+                },
+                {
+                    "name": "data_inicio_contrato",
+                    "description": "Data de início do contrato por tempo determinado, caso o vínculo esteja relacionado a um contrato. Caso não fica em branco."
+                },
+                {
+                    "name": "data_fim_contrato",
+                    "description": "Data de fim do contrato por tempo determinado, caso o vínculo esteja relacionado a um contrato. Caso não fica em branco."
+                },
+                {
+                    "name": "data_prorrogacao_contrato",
+                    "description": "Data da prorrogação do contrato relacionado ao vínculo, caso tenha sido assinado um contrato por tempo determinado. Caso não fica em branco"
+                },
+                {
+                    "name": "data_aposentadoria",
+                    "description": "Data de aposentadoria relacionada ao vínculo. Caso não tenha havido ainda aposentadoria fica em branco."
+                },
+                {
+                    "name": "tipo_aposentadoria",
+                    "description": "Tipo da aposentadoria relativa ao vínculo. Exemplo: 47 - integral art 3"
+                },
+                {
+                    "name": "data_vacancia",
+                    "description": "Data de vacância relativa ao vínculo. A vacância ocorre quando se encerra o vínculo."
+                },
+                {
+                    "name": "id_vinculo_anterior",
+                    "description": "Número do vínculo anterior, caso haja algum. Se não fica em branco."
+                },
+                {
+                    "name": "id_vinculo_posterior",
+                    "description": "Número do vínculo posterior, caso haja algum. Se não fica em branco."
+                },
+                {
+                    "name": "tipo_orgao_origem",
+                    "description": "Tipo do órgão da origem do funcionário ( em caso do funcionário ser cedido para a prefeitura do Rio de Janeiro). Exemplo: DIR.EST. (Direta estatual)"
+                },
+                {
+                    "name": "funcao_origem_requisicao",
+                    "description": "Função, na origem, da pessoa requisitada. Atributo de preenchimento livre. Em branco caso não tenha havido requisição."
+                },
+                {
+                    "name": "telefone_requisicao",
+                    "description": "Telefone de onde o funcionário foi requisitado. Em branco caso não tenha havido requisição."
+                },
+                {
+                    "name": "id_matricula_vinculo",
+                    "description": "Matricula do funcionário relativa a este vínculo."
+                },
+                {
+                    "name": "orgao_origem_requisicao",
+                    "description": "Órgão de origem do funcionário que foi requisitado. Caso a pessoa associada ao vínculo tenha sido requisitada pela prefeitura. Caso não tenha sido requisitado fica em branco."
+                },
+                {
+                    "name": "tipo_onus_requisicao",
+                    "description": "Tipo de ônus da requisição. Exemplo: Com ônus, sem ônus, não se aplica."
+                },
+                {
+                    "name": "tipo_ressarcimento_requisicao",
+                    "description": "Tipo de ressarcimento da requisição. Exemplo Sim ou não. Está associado ao atributo TIPO_ONUS_REQ."
+                },
+                {
+                    "name": "tipo_requisicao",
+                    "description": "Tipo da requisição. Exemplo: Externo, interna, permuta."
+                },
+                {
+                    "name": "data_pagamento_requisicao",
+                    "description": "Data de pagamento da rescisão do vínculo, caso tenha havido rescisão."
+                },
+                {
+                    "name": "origem_servidor_cedido",
+                    "description": "Origem do servidor cedido. Ex direta estadual, indireta estatual."
+                },
+                {
+                    "name": "id_processo_origem",
+                    "description": "Número do processo que deu origem da vaga associada ao vínculo."
+                },
+                {
+                    "name": "contrato_suspenso",
+                    "description": "Booleana que indica se o contrato do empregado público cedido encontra-se suspenso."
+                },
+                {
+                    "name": "professor",
+                    "description": "Caso o vínculo seja de professor contém a disciplina que ele leciona. Caso não seja professor fica em branco."
+                },
+                {
+                    "name": "cota",
+                    "description": "Indica se o vínculo foi preenchido por cota. Em branco, não entrou por cota. Caso esteja preenchido o vínculo foi preenchido por cota.  Valores possíveis Lei 2.111/1994 para DEFICIENTE, LEi 5.401/2012 para Raça, lei 5.695/2014 para Raça."
+                },
+                {
+                    "name": "id_empresa",
+                    "description": "Codigo da empresa onde se tem o vínculo, caso o vínculo seja associado a uma empresa. Caso não fica em branco."
+                },
+                {
+                    "name": "data_homologacao_aposentadoria",
+                    "description": "Data da homologação da aposentadoria. A homologação é feita pelo TCM, para verificar a legalidade da aposentadoria."
+                },
+                {
+                    "name": "id_funcionario",
+                    "description": "Número do funcionário, pode estar repetido nesta visão, caso o funcionário tenha ou tenha tido outros vínculos. Existe um para cada pessoa, independente do número de vínculos."
+                },
+                {
+                    "name": "id_vacancia",
+                    "description": "Código de vacância relativa ao vínculo."
+                },
+                {
+                    "name": "motivo_vacancia",
+                    "description": "Motivo da vacância. O que encerrou o vínculo, caso ele tenha sido encerrado. Caso não o atributo está em branco. Campo livre para preenchimento."
+                }
+            ]
+        },
+        "total_contagem": {
+            "title": "TODO_TITLE_PREFIX: total_contagem",
+            "short_description": "Tabela de contagem de tempo para benefícios",
+            "long_description": "Tabela que armazena o resultado das contagens de tempo para benefícios dos servidores municipais.",
+            "update_frequency": "Nunca",
+            "temporal_coverage": "Não informado",
+            "data_owner": "Não informado",
+            "publisher_name": "Não informado",
+            "publisher_email": "naoinformado@naoinformado.com",
+            "tags": [],
+            "categories": [],
+            "columns": [
+                {
+                    "name": "id_funcionario",
+                    "description": "Número do funcionário gerado pelo ERGON."
+                },
+                {
+                    "name": "id_vinculo",
+                    "description": "Número do vínculo relativo ao pagamento."
+                },
+                {
+                    "name": "id_chave",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "finalidade",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "total_dias",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "diasfpub",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "diasfpubesp",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "total_periodos_contagem",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "total_anos_contagem",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "data_previsao_proximo_periodo",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "nome_finalidade",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "id_empresa",
+                    "description": "Não informado"
+                }
+            ]
+        },
+        "orgaos_externos": {
+            "title": "TODO_TITLE_PREFIX: Órgaos Externos",
+            "short_description": "Órgãos de outros entes federativos que não da prefeitura do Rio de Janeiro mas que são de interesse da prefeitura do Rio de Janeiro.",
+            "long_description": "Órgãos de outros entes federativos que não da prefeitura do Rio de Janeiro mas que são de interesse da prefeitura do Rio de Janeiro.\r\nUsada, geralmente, para documentar a origem de servidores cedidos à prefeitura do Rio de Janeiro.",
+            "update_frequency": "Anual",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "administração pública",
+                "órgão",
+                "ERGON"
+            ],
+            "categories": [],
+            "columns": [
+                {
+                    "name": "nome",
+                    "description": "Nome do órgão. Ex. GE ACRE (Governo do estado do Acre),PR NITEROI (Prefeitura de Niteroi)"
+                },
+                {
+                    "name": "nome_completo",
+                    "description": "Nome por extenso do órgão. Ex. Prefeitura da cidade de Niteroi."
+                },
+                {
+                    "name": "tipo",
+                    "description": "Tipo do órgão. Ex. OUT.GOV. (outro governo estadual, que não o do Rio de Janeiro), OUT.PREF. (outra prefeitura que não a do Rio de Janeiro)"
+                }
+            ]
+        },
+        "jornada": {
+            "title": "TODO_TITLE_PREFIX: Jornada",
+            "short_description": "Tipos de jornadas existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro.",
+            "long_description": "Tipos de jornadas existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro. Jornada é a carga horária semanal.",
+            "update_frequency": "Anual",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "administração pública",
+                "recursos humanos",
+                "funcionário",
+                "ERGON"
+            ],
+            "categories": [],
+            "columns": [
+                {
+                    "name": "sigla",
+                    "description": "Sigla da jornada. Ex. 40 horas."
+                },
+                {
+                    "name": "nome",
+                    "description": "Nome da jornada. Ex. 40 horas semanais."
+                },
+                {
+                    "name": "horas_semana",
+                    "description": "Número de horas semanais da jornada."
+                },
+                {
+                    "name": "horas_mes",
+                    "description": "Número de horas mensais da jornada."
+                }
+            ]
+        },
+        "tipo_tempo": {
+            "title": "TODO_TITLE_PREFIX: tipo_tempo",
+            "short_description": "Tipos de tempos para contagem de benfício",
+            "long_description": "Esta tabela armazena os tipos de tempo utilizados para contagem de benefícios categorizados como finalidades. Nesta tabela se encontram os nomes dos tipos de tempo.",
+            "update_frequency": "Nunca",
+            "temporal_coverage": "Não informado",
+            "data_owner": "SUBGGC",
+            "publisher_name": "Não informado",
+            "publisher_email": "naoinformado@naoinformado.com",
+            "tags": [],
+            "categories": [],
+            "columns": [
+                {
+                    "name": "id_tipo_tempo",
+                    "description": "Coluna que armazena o código numérico referente ao tipo de tempo."
+                },
+                {
+                    "name": "nome_tipo_tempo",
+                    "description": "Campo que armazena o nome do tipo de tempo."
+                },
+                {
+                    "name": "aposentadoria",
+                    "description": "Booleano que informa se aquele tempo é computado para fins de aposentadoria."
+                },
+                {
+                    "name": "ferias",
+                    "description": "Booleano que informa se aquele tempo é computado para fins de contagem de período aquisitivo de férias."
+                },
+                {
+                    "name": "dias_de_ferias",
+                    "description": "Booleano que informa se aquele tempo é computado para fins de contagem para o saldo de dias de férias."
+                },
+                {
+                    "name": "trienio",
+                    "description": "Booleano que informa se aquele tempo é computado para fins de contagem para a contagem de períodos de triênio."
+                },
+                {
+                    "name": "licenca_especial",
+                    "description": "Booleano que informa se aquele tempo é computado para fins de contagem para a contagem de períodos de licença especial."
+                },
+                {
+                    "name": "dias_de_licenca_especial",
+                    "description": "Booleano que informa se aquele tempo é computado para fins de contagem para o saldo de dias de licença especial."
+                },
+                {
+                    "name": "tempo_de_chefia",
+                    "description": "Booleano que informa se aquele tempo é computado para fins de contagem para a contagem de incorporação de cargo em fidúcia."
+                },
+                {
+                    "name": "progressao",
+                    "description": "Booleano que informa se aquele tempo é computado para fins de contagem para a contagem de progressão no cargo."
+                },
+                {
+                    "name": "avaliacao",
+                    "description": "Booleano que informa se aquele tempo é computado para fins de contagem para a contagem de avalição em estágio probatório."
+                }
+            ]
+        },
         "tipo_orgao": {
             "title": "TODO_TITLE_PREFIX: Tipo de Orgão",
             "short_description": "Tipos de órgãos tanto da administração direta como indireta da prefeitura do Rio de Janeiro.",
@@ -1178,6 +1446,366 @@
                 }
             ]
         },
+        "afastamento_antigo_nomes": {
+            "title": "TODO_TITLE_PREFIX: Não informado",
+            "short_description": "Tabela de afastamentos de Sistemas de Cadastro antigos",
+            "long_description": "Nesta tabela são armazenadas informações sobre os códigos de afastamentos utilizados em sistemas antigos da Prefeitura do Rio de Janeiro.",
+            "update_frequency": "Nunca",
+            "temporal_coverage": "Não informado",
+            "data_owner": "Não informado",
+            "publisher_name": "Não informado",
+            "publisher_email": "nao.informado@gmail.com",
+            "tags": [],
+            "categories": [],
+            "columns": [
+                {
+                    "name": "id_empresa",
+                    "description": "Código da empresa."
+                },
+                {
+                    "name": "id_afastamento",
+                    "description": "Código do afastamento."
+                },
+                {
+                    "name": "nome_afastamento",
+                    "description": "Nome do afastamento."
+                }
+            ]
+        },
+        "provimento": {
+            "title": "TODO_TITLE_PREFIX: Provimento",
+            "short_description": "Eventos relacionados aos vínculos funcionais tanto com a administração direta como indireta da prefeitura do Rio de Janeiro.",
+            "long_description": "Eventos relacionados aos vínculos funcionais tanto com a administração direta como indireta da prefeitura do Rio de Janeiro. \r\nUm provimento pode ser uma progressão, mudança de lotação, mudança de vencimento (referência) etc. Um provimento é um evento na situação funcional do vínculo.",
+            "update_frequency": "Semanal",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "cargo",
+                "administração pública",
+                "recursos humanos",
+                "funcionário",
+                "ERGON"
+            ],
+            "categories": [
+                "48df9fb6643d477bb1bb7bf595915a23"
+            ],
+            "columns": [
+                {
+                    "name": "id_vinculo",
+                    "description": "Identificador no banco de dados do vínculo da pessoa."
+                },
+                {
+                    "name": "data_inicio",
+                    "description": "Data de inicio de um provimento."
+                },
+                {
+                    "name": "data_fim",
+                    "description": "Data de fim do provimento"
+                },
+                {
+                    "name": "id_setor",
+                    "description": "Código dado pela prefeitura do Rio de Janeiro para o setor de lotação do servidor após o provimento. Código da estrutura organizacional atribuidos pela GI/CGGI/CSIC."
+                },
+                {
+                    "name": "id_cargo",
+                    "description": "Código dado pela prefeitura do Rio de Janeiro para o cargo/emprego relacionado ao vínculo do servidor. Regime juridicos A DISPOSICAO, APOS. SERV. PUBLICO, CONT. SAL. FAMILIA e EST. AOS QUADROS o cargo é 999990 - ESPECIAL"
+                },
+                {
+                    "name": "id_referencia",
+                    "description": "Código do nível/posicionamento após o provimento. Ex PROFESSOR II, MM1, MM2, MM3, MM4, MM5, MM6, MM7, 999990 - ESPECIAL o valor do vencimento é zero."
+                },
+                {
+                    "name": "id_jornada",
+                    "description": "Código dado pela prefeitura do Rio de Janeiro para a jornada semanal do cargo/emprego associado ao vínculo. Não é modificada pelos provimentos."
+                },
+                {
+                    "name": "forma",
+                    "description": "Forma de provimento. Ex. 10 (EM EXERCÍCIO - CC/FG, ocorre quando a pessoa entra exercício em cargo em comissão)."
+                },
+                {
+                    "name": "observacoes",
+                    "description": "Observação - texto livre.  Ex. NOMEADA C/ VAL. 30/03/20 P/ C.C COORDENADOR TECNICO, 074842 CVL/SUBSC/CGRH/CTNRH, PCCS - LEI 6.739/2020 etc"
+                },
+                {
+                    "name": "regime_horas",
+                    "description": "Regime de horas após o provimento. Ex. Plantonista ou Rotina. Utilizado pela RIOSAUDE."
+                },
+                {
+                    "name": "empresa_vinculo",
+                    "description": "Empresa do servidor após o provimento. Sempre é a mesma empresa do vínculo."
+                },
+                {
+                    "name": "id_funcionario",
+                    "description": "Identificador no banco de dados da pessoa cadastrada na tabela de funcionários."
+                }
+            ]
+        },
+        "frequencia": {},
+        "averbacoes": {
+            "title": "TODO_TITLE_PREFIX: averbacoes",
+            "short_description": "Averbações dos servidores da Prefeitura da Cidade do Rio de Janeiro",
+            "long_description": "Tabela que armazena o cadastro das averbações.",
+            "update_frequency": "Nunca",
+            "temporal_coverage": "Não informado",
+            "data_owner": "Não informado",
+            "publisher_name": "Não informado",
+            "publisher_email": "naoinformado@naoinformado.com",
+            "tags": [],
+            "categories": [],
+            "columns": [
+                {
+                    "name": "id_funcionario",
+                    "description": "Número do funcionário gerado pelo ERGON."
+                },
+                {
+                    "name": "id_vinculo",
+                    "description": "Número do vínculo relativo ao pagamento."
+                },
+                {
+                    "name": "id_averbacao",
+                    "description": "Chave gerada pelo banco para registro de averbação."
+                },
+                {
+                    "name": "data_inicio",
+                    "description": "Data inicial do período averbado."
+                },
+                {
+                    "name": "data_final",
+                    "description": "Data final do período averbado."
+                },
+                {
+                    "name": "instituicao",
+                    "description": "Instituição a qual o servidor prestou serviço referente ao tempo averbado."
+                },
+                {
+                    "name": "id_tipo_tempo",
+                    "description": "Coluna que armazena o código numérico referente ao tipo de tempo."
+                },
+                {
+                    "name": "data_validade",
+                    "description": "Data de validade da averbação."
+                },
+                {
+                    "name": "total_dias_averbados",
+                    "description": "Total de dias averbados."
+                },
+                {
+                    "name": "motivo",
+                    "description": "Campo para cadastrar o motivo, geralmente ligado à desaverbação de tempo."
+                },
+                {
+                    "name": "sobrepoe",
+                    "description": "Booleano que indica se o período averbado permite concomitância com outro período averbado."
+                },
+                {
+                    "name": "id_empresa",
+                    "description": "Código da empresa."
+                },
+                {
+                    "name": "obs",
+                    "description": "Coluna de observações, campo de texto livre."
+                },
+                {
+                    "name": "regime_previdenciario",
+                    "description": "Coluna que informa o regime previdenciário ao qual pertencia o tempo averbado."
+                }
+            ]
+        },
+        "tipo_vinculo": {
+            "title": "TODO_TITLE_PREFIX: Tipo de Vinculo",
+            "short_description": "Tipos de vínculos existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro.",
+            "long_description": "Tipos de vínculos existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro.",
+            "update_frequency": "Anual",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "cargo",
+                "administração pública",
+                "recursos humanos",
+                "funcionário",
+                "ERGON"
+            ],
+            "categories": [],
+            "columns": [
+                {
+                    "name": "sigla",
+                    "description": "Sigla do tipo de vínculo. Ex. A DISPOSICAO-CLT."
+                },
+                {
+                    "name": "nome",
+                    "description": "Nome do tipo de vínculo. Ex. A DISPOSICAO DA PREFEITURA-CLT."
+                }
+            ]
+        },
+        "vantagens": {
+            "title": "TODO_TITLE_PREFIX: vantagens",
+            "short_description": "Cadastro de vantagens do servidor",
+            "long_description": "Tabela que armazena informações sobre atributos cadastrados que representam vantagens dos servidores. Os atributos podem se referir a situações funcionais que não geram repercursão financeira e apenas existem para fins de cadastro.",
+            "update_frequency": "Nunca",
+            "temporal_coverage": "Não informado",
+            "data_owner": "Não informado",
+            "publisher_name": "Não informado",
+            "publisher_email": "naoinformado@naoinformado.com",
+            "tags": [],
+            "categories": [],
+            "columns": [
+                {
+                    "name": "id_funcionario",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "id_vinculo",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "nome_vantagem",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "data_inicio",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "data_final",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "valor_vantagem",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "informacao_atributo",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "tipo_incorporacao_cargo_fiducia",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "percentual_incorporacao_cargo_fiducia",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "incide_tabela_vencimentos",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "incide_tabela_simbolo",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "observacoes",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "valor_complementar",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "informacao_complementar",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "valor_complementar_2",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "informacao_complementar_2",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "valor_coplementar_3",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "informacao_complementar_3",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "valor_complementar_4",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "informacao_complementar_4",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "valor_complementar_5",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "informacao_complementar_5",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "valor_incorporado",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "id_empresa",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "id_vantagem",
+                    "description": "Não informado"
+                }
+            ]
+        },
+        "horario_trabalho": {
+            "title": "TODO_TITLE_PREFIX: Horário",
+            "short_description": "Horários possíveis para funcionários da administração direta da prefeitura do Rio de Janeiro.",
+            "long_description": "Horários possíveis para funcionários da administração direta da prefeitura do Rio de Janeiro (ainda não tem dados disponibilizados) (esperado colocação também da administração indireta).",
+            "update_frequency": "Nunca",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "administração pública",
+                "recursos humanos",
+                "funcionário",
+                "órgão",
+                "empresa",
+                "ERGON"
+            ],
+            "categories": [
+                "48df9fb6643d477bb1bb7bf595915a23"
+            ],
+            "columns": [
+                {
+                    "name": "id_horario",
+                    "description": "Identificador do horário na base de dados."
+                },
+                {
+                    "name": "descricao",
+                    "description": "Descrição do horário. Neste atributo deve constar o horário de entrada, de almoço e de saída relativos a todos os dias da semana."
+                },
+                {
+                    "name": "publicacao_diario_oficial",
+                    "description": "Publicação em diário oficial autorizando o horário."
+                },
+                {
+                    "name": "carga_horaria_mes",
+                    "description": "Carga mensal em horas do horário."
+                },
+                {
+                    "name": "carga_horaria_semana",
+                    "description": "Carga semanal em horas do horário."
+                },
+                {
+                    "name": "carga_horaria_dia",
+                    "description": "Carga diária em horas do horário."
+                },
+                {
+                    "name": "id_registro",
+                    "description": "Identificação do Registro"
+                }
+            ]
+        },
         "setor": {
             "title": "TODO_TITLE_PREFIX: Setor",
             "short_description": "Setores existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro.",
@@ -1240,6 +1868,205 @@
                 {
                     "name": "extinto",
                     "description": "Booleano que indica que o setor foi extinto."
+                }
+            ]
+        },
+        "cargo": {
+            "title": "TODO_TITLE_PREFIX: Não informado",
+            "short_description": "Tipos de cargos existentes na administração direta ou indireta da PCRJ.",
+            "long_description": "Tipos de cargos existentes na administração direta ou indireta da PCRJ. Não entram os tipos de cargos em comissão.",
+            "update_frequency": "Nunca",
+            "temporal_coverage": "Não informado",
+            "data_owner": "Não informado",
+            "publisher_name": "Não informado",
+            "publisher_email": "nao.informado@gmail.com",
+            "tags": [
+                "cargo",
+                "administração pública",
+                "SMA",
+                "recursos humanos",
+                "funcionário",
+                "ERGON"
+            ],
+            "categories": [],
+            "columns": [
+                {
+                    "name": "id_cargo",
+                    "description": "Código dado pela prefeitura do Rio de Janeiro ao tipo de cargo."
+                },
+                {
+                    "name": "nome",
+                    "description": "Nome do tipo de cargo. Ex. Analista de Sistemas."
+                },
+                {
+                    "name": "categoria",
+                    "description": "Categoria do tipo de cargo. Exemplo: Educação, saúde etc. Categoria é um conjunto de cargos."
+                },
+                {
+                    "name": "subcategoria",
+                    "description": "Subcategoria do tipo de cargo. É uma subdivisão da categoria. Ex. Apoio, Geral, lotados na saúde."
+                },
+                {
+                    "name": "tipo_controle_vaga",
+                    "description": "Tipo de controle de vaga: Livre (não existe controle de vagas no ERGON), Quadro (O ERGON controla o número máximo de vagas no cargo) ou Numerada."
+                },
+                {
+                    "name": "escolaridade",
+                    "description": "Escolaridade minima exigida para o tipo de cargo."
+                },
+                {
+                    "name": "aglutinador",
+                    "description": "Todos cadastrados com N."
+                }
+            ]
+        },
+        "orgaos_regime_juridico": {
+            "title": "TODO_TITLE_PREFIX: Regimes Jurídicos",
+            "short_description": "Regimes jurídicos da prefeitura do Rio de Janeiro.",
+            "long_description": "Regimes jurídicos que podem ser aceitos para contratação de funcionários nos órgãos da administração direta ou indireta da prefeitura do Rio de Janeiro assim como outras empresas de interesse da prefeitura do Rio de Janeiro.",
+            "update_frequency": "Nunca",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "administração pública",
+                "recursos humanos",
+                "funcionário",
+                "órgão",
+                "ERGON"
+            ],
+            "categories": [
+                "48df9fb6643d477bb1bb7bf595915a23"
+            ],
+            "columns": [
+                {
+                    "name": "sigla",
+                    "description": "Sigla do regime jurídico. Ex. CLT, EFETIVO etc"
+                },
+                {
+                    "name": "nome",
+                    "description": "Código, dado pela prefeitura do Rio de Janeiro, da empresa."
+                }
+            ]
+        },
+        "frequencia_antigo": {
+            "title": "TODO_TITLE_PREFIX: frequencia_antigo",
+            "short_description": "Frequência do servidor em sistemas antigos",
+            "long_description": "Frequência de servidores da Prefeitura da Cidade do Rio de Janeiro cadastrada em sistemas de recursos humanos antigos.",
+            "update_frequency": "Nunca",
+            "temporal_coverage": "Não informado",
+            "data_owner": "Não informado",
+            "publisher_name": "Não informado",
+            "publisher_email": "naoinformado@naoinformado.com",
+            "tags": [],
+            "categories": [],
+            "columns": [
+                {
+                    "name": "id_matricula_vinculo",
+                    "description": "Matrícula do serivdor."
+                },
+                {
+                    "name": "id_frequencia",
+                    "description": "Código de frequência."
+                },
+                {
+                    "name": "data_frequencia",
+                    "description": "Data da ocorrência de frequência."
+                }
+            ]
+        },
+        "licenca_afastamento": {
+            "title": "TODO_TITLE_PREFIX: Não informado",
+            "short_description": "Afastamentos dos servidores Prefeitura do Rio de Janeiro",
+            "long_description": "Tabela contendo o início e fim dos afastamentos, seu motivo e o tipo de afastamento.",
+            "update_frequency": "Nunca",
+            "temporal_coverage": "Não informado",
+            "data_owner": "Não informado",
+            "publisher_name": "Não informado",
+            "publisher_email": "nao.informado@gmail.com",
+            "tags": [
+                "SMA",
+                "recursos humanos"
+            ],
+            "categories": [],
+            "columns": [
+                {
+                    "name": "id_funcionario",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "id_vinculo",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "data_inicio",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "data_final",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "tipo_afastamento",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "id_afastamento",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "motivo",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "data_previsao_retorno",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "parecer",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "data_atendimento",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "id_empresa",
+                    "description": "Não informado"
+                },
+                {
+                    "name": "crm",
+                    "description": "Não informado"
+                }
+            ]
+        },
+        "matricula": {
+            "title": "TODO_TITLE_PREFIX: Matricula",
+            "short_description": "Matrículas dadas pela prefeitura do Rio de Janeiro para pessoas que devem receber pagamento",
+            "long_description": "Matrículas dadas pela prefeitura do Rio de Janeiro para pessoas que devem receber pagamento ou para pessoas em outros casos de interesse da prefeitura do Rio de Janeiro",
+            "update_frequency": "Diário",
+            "temporal_coverage": "Até data corrente",
+            "data_owner": "SMFP/SUBGCC/CGRH",
+            "publisher_name": "Anderson Ferraz Carneiro",
+            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
+            "tags": [
+                "administração pública",
+                "recursos humanos",
+                "funcionário",
+                "ERGON"
+            ],
+            "categories": [
+                "48df9fb6643d477bb1bb7bf595915a23"
+            ],
+            "columns": [
+                {
+                    "name": "id_funcionario",
+                    "description": "Número do funcionário. Número dado a pessoa que ganhou sua primeira matrícula da prefeitura do Rio de Janeiro."
+                },
+                {
+                    "name": "id_matricula",
+                    "description": "Número da matrícula."
                 }
             ]
         },
@@ -1718,218 +2545,6 @@
                 }
             ]
         },
-        "regime_juridico": {
-            "title": "TODO_TITLE_PREFIX: Regime Juridico",
-            "short_description": "Tipos de regimes jurídicos existentes entre os vínculos de funcionários e a administração direta ou indireta da prefeitura do Rio de Janeiro.",
-            "long_description": "Tipos de regimes jurídicos existentes entre os vínculos de funcionários e a administração direta ou indireta da prefeitura do Rio de Janeiro.",
-            "update_frequency": "Nunca",
-            "temporal_coverage": "Até data corrente",
-            "data_owner": "SMFP/SUBGCC/CGRH",
-            "publisher_name": "Anderson Ferraz Carneiro",
-            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
-            "tags": [
-                "administração pública",
-                "recursos humanos",
-                "órgão",
-                "empresa",
-                "ERGON"
-            ],
-            "categories": [],
-            "columns": [
-                {
-                    "name": "sigla",
-                    "description": "Sigla do regime jurídico. Ex. CLT, EFETIVO etc"
-                },
-                {
-                    "name": "nome",
-                    "description": "Nome do regime jurídico. Ex. Celetista, estatutário."
-                }
-            ]
-        },
-        "vinculo": {
-            "title": "TODO_TITLE_PREFIX: Vínculos de Pagamento",
-            "short_description": "Vínculos de pagamento ( em geral empregatícios ), tanto antigos como atuais, da administração direta e indireta da prefeitura do Rio de Janeiro.",
-            "long_description": "Vínculos de pagamento ( em geral empregatícios ), tanto antigos como atuais, da administração direta e indireta da prefeitura do Rio de Janeiro. Um vínculo, em geral, está associado a uma matrícula. Uma pessoa pode ter vários vínculos com a prefeitura.",
-            "update_frequency": "Mensal",
-            "temporal_coverage": "Até data corrente",
-            "data_owner": "SMFP/SUBGCC/CGRH",
-            "publisher_name": "Anderson Ferraz Carneiro",
-            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
-            "tags": [
-                "cargo",
-                "administração pública",
-                "recursos humanos",
-                "funcionário",
-                "ERGON"
-            ],
-            "categories": [],
-            "columns": [
-                {
-                    "name": "id_vinculo",
-                    "description": "Número do vínculo da pessoa. O número é dado sequencialmente, com 1 para o primeiro vínculo, 2 para o segundo e assim por diante. Ex. Uma pessoa que é professora, e funcionária do IPLANRIO, tem dois vínculos."
-                },
-                {
-                    "name": "tipo",
-                    "description": "Detalhamento do regime jurídico. Exemplo: CLT - Contrato indeterminado, CLT - Contrato determinado."
-                },
-                {
-                    "name": "data_nomeacao",
-                    "description": "Data de nomeação do funcionário relativa ao vínculo."
-                },
-                {
-                    "name": "data_posse",
-                    "description": "Data da posse do funcionário relativo a este vínculo."
-                },
-                {
-                    "name": "data_exercicio",
-                    "description": "Data do início do exercício do funcionário relativo a este vínculo."
-                },
-                {
-                    "name": "regime_juridico",
-                    "description": "Regime jurídico do vínculo. Ex.: Estatutário, celetista, aposentado etc"
-                },
-                {
-                    "name": "categoria",
-                    "description": "Categoria do vínculo. Exemplo: Educação, saúde etc. Categoria é um conjunto de cargos."
-                },
-                {
-                    "name": "desconta_ir",
-                    "description": "Booleano indicando se o vínculo desconta IR ou não. Valores N ou S."
-                },
-                {
-                    "name": "descricao_provimento",
-                    "description": "Descrição do provimento. Campo livre."
-                },
-                {
-                    "name": "classificacao_concurso",
-                    "description": "Classificação no concurso relativo a este vínculo, caso tenha sido feito concurso. Em branco caso não tenha feito."
-                },
-                {
-                    "name": "data_inicio_cessao",
-                    "description": "Data de inicio da cessão, quanto o servidor é cedido. Quando o servidor não é cedido o atributo fica em branco. Cessão é o emprestimo de funcionário de órgão externo à prefeitura (ou da administração indireta) para a administração direta da prefeitura do Rio de Janeiro."
-                },
-                {
-                    "name": "data_fim_cessao",
-                    "description": "Data do fim da cessão, quanto o servidor é cedido. Quando o servidor não é cedido ou não foi devolvido fica em branco."
-                },
-                {
-                    "name": "data_concurso",
-                    "description": "Data do concurso relativo ao vínculo. Caso não tenha havido concurso fica em branco."
-                },
-                {
-                    "name": "data_fgts",
-                    "description": "Data em que o funcionário optou pelo FGTS, caso o funcionário seja celetista. Caso não fica em branco."
-                },
-                {
-                    "name": "data_inicio_contrato",
-                    "description": "Data de início do contrato por tempo determinado, caso o vínculo esteja relacionado a um contrato. Caso não fica em branco."
-                },
-                {
-                    "name": "data_fim_contrato",
-                    "description": "Data de fim do contrato por tempo determinado, caso o vínculo esteja relacionado a um contrato. Caso não fica em branco."
-                },
-                {
-                    "name": "data_prorrogacao_contrato",
-                    "description": "Data da prorrogação do contrato relacionado ao vínculo, caso tenha sido assinado um contrato por tempo determinado. Caso não fica em branco"
-                },
-                {
-                    "name": "data_aposentadoria",
-                    "description": "Data de aposentadoria relacionada ao vínculo. Caso não tenha havido ainda aposentadoria fica em branco."
-                },
-                {
-                    "name": "tipo_aposentadoria",
-                    "description": "Tipo da aposentadoria relativa ao vínculo. Exemplo: 47 - integral art 3"
-                },
-                {
-                    "name": "data_vacancia",
-                    "description": "Data de vacância relativa ao vínculo. A vacância ocorre quando se encerra o vínculo."
-                },
-                {
-                    "name": "id_vinculo_anterior",
-                    "description": "Número do vínculo anterior, caso haja algum. Se não fica em branco."
-                },
-                {
-                    "name": "id_vinculo_posterior",
-                    "description": "Número do vínculo posterior, caso haja algum. Se não fica em branco."
-                },
-                {
-                    "name": "tipo_orgao_origem",
-                    "description": "Tipo do órgão da origem do funcionário ( em caso do funcionário ser cedido para a prefeitura do Rio de Janeiro). Exemplo: DIR.EST. (Direta estatual)"
-                },
-                {
-                    "name": "funcao_origem_requisicao",
-                    "description": "Função, na origem, da pessoa requisitada. Atributo de preenchimento livre. Em branco caso não tenha havido requisição."
-                },
-                {
-                    "name": "telefone_requisicao",
-                    "description": "Telefone de onde o funcionário foi requisitado. Em branco caso não tenha havido requisição."
-                },
-                {
-                    "name": "id_matricula_vinculo",
-                    "description": "Matricula do funcionário relativa a este vínculo."
-                },
-                {
-                    "name": "orgao_origem_requisicao",
-                    "description": "Órgão de origem do funcionário que foi requisitado. Caso a pessoa associada ao vínculo tenha sido requisitada pela prefeitura. Caso não tenha sido requisitado fica em branco."
-                },
-                {
-                    "name": "tipo_onus_requisicao",
-                    "description": "Tipo de ônus da requisição. Exemplo: Com ônus, sem ônus, não se aplica."
-                },
-                {
-                    "name": "tipo_ressarcimento_requisicao",
-                    "description": "Tipo de ressarcimento da requisição. Exemplo Sim ou não. Está associado ao atributo TIPO_ONUS_REQ."
-                },
-                {
-                    "name": "tipo_requisicao",
-                    "description": "Tipo da requisição. Exemplo: Externo, interna, permuta."
-                },
-                {
-                    "name": "data_pagamento_requisicao",
-                    "description": "Data de pagamento da rescisão do vínculo, caso tenha havido rescisão."
-                },
-                {
-                    "name": "origem_servidor_cedido",
-                    "description": "Origem do servidor cedido. Ex direta estadual, indireta estatual."
-                },
-                {
-                    "name": "id_processo_origem",
-                    "description": "Número do processo que deu origem da vaga associada ao vínculo."
-                },
-                {
-                    "name": "contrato_suspenso",
-                    "description": "Booleana que indica se o contrato do empregado público cedido encontra-se suspenso."
-                },
-                {
-                    "name": "professor",
-                    "description": "Caso o vínculo seja de professor contém a disciplina que ele leciona. Caso não seja professor fica em branco."
-                },
-                {
-                    "name": "cota",
-                    "description": "Indica se o vínculo foi preenchido por cota. Em branco, não entrou por cota. Caso esteja preenchido o vínculo foi preenchido por cota.  Valores possíveis Lei 2.111/1994 para DEFICIENTE, LEi 5.401/2012 para Raça, lei 5.695/2014 para Raça."
-                },
-                {
-                    "name": "id_empresa",
-                    "description": "Codigo da empresa onde se tem o vínculo, caso o vínculo seja associado a uma empresa. Caso não fica em branco."
-                },
-                {
-                    "name": "data_homologacao_aposentadoria",
-                    "description": "Data da homologação da aposentadoria. A homologação é feita pelo TCM, para verificar a legalidade da aposentadoria."
-                },
-                {
-                    "name": "id_funcionario",
-                    "description": "Número do funcionário, pode estar repetido nesta visão, caso o funcionário tenha ou tenha tido outros vínculos. Existe um para cada pessoa, independente do número de vínculos."
-                },
-                {
-                    "name": "id_vacancia",
-                    "description": "Código de vacância relativa ao vínculo."
-                },
-                {
-                    "name": "motivo_vacancia",
-                    "description": "Motivo da vacância. O que encerrou o vínculo, caso ele tenha sido encerrado. Caso não o atributo está em branco. Campo livre para preenchimento."
-                }
-            ]
-        },
         "forma_provimento": {
             "title": "TODO_TITLE_PREFIX: Forma de Provimento",
             "short_description": "Formas de provimentos possiveis tanto na administração direta como indireta da prefeitura do Rio de Janeiro.",
@@ -1970,621 +2585,6 @@
                     "description": "Booleano que indica que a forma de provimento é válida para funcionários ativos."
                 }
             ]
-        },
-        "frequencia": {},
-        "afastamento_antigo_nomes": {
-            "title": "TODO_TITLE_PREFIX: Não informado",
-            "short_description": "Tabela de afastamentos de Sistemas de Cadastro antigos",
-            "long_description": "Nesta tabela são armazenadas informações sobre os códigos de afastamentos utilizados em sistemas antigos da Prefeitura do Rio de Janeiro.",
-            "update_frequency": "Nunca",
-            "temporal_coverage": "Não informado",
-            "data_owner": "Não informado",
-            "publisher_name": "Não informado",
-            "publisher_email": "nao.informado@gmail.com",
-            "tags": [],
-            "categories": [],
-            "columns": [
-                {
-                    "name": "id_empresa",
-                    "description": "Código da empresa."
-                },
-                {
-                    "name": "id_afastamento",
-                    "description": "Código do afastamento."
-                },
-                {
-                    "name": "nome_afastamento",
-                    "description": "Nome do afastamento."
-                }
-            ]
-        },
-        "orgaos_externos": {
-            "title": "TODO_TITLE_PREFIX: Órgaos Externos",
-            "short_description": "Órgãos de outros entes federativos que não da prefeitura do Rio de Janeiro mas que são de interesse da prefeitura do Rio de Janeiro.",
-            "long_description": "Órgãos de outros entes federativos que não da prefeitura do Rio de Janeiro mas que são de interesse da prefeitura do Rio de Janeiro.\r\nUsada, geralmente, para documentar a origem de servidores cedidos à prefeitura do Rio de Janeiro.",
-            "update_frequency": "Anual",
-            "temporal_coverage": "Até data corrente",
-            "data_owner": "SMFP/SUBGCC/CGRH",
-            "publisher_name": "Anderson Ferraz Carneiro",
-            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
-            "tags": [
-                "administração pública",
-                "órgão",
-                "ERGON"
-            ],
-            "categories": [],
-            "columns": [
-                {
-                    "name": "nome",
-                    "description": "Nome do órgão. Ex. GE ACRE (Governo do estado do Acre),PR NITEROI (Prefeitura de Niteroi)"
-                },
-                {
-                    "name": "nome_completo",
-                    "description": "Nome por extenso do órgão. Ex. Prefeitura da cidade de Niteroi."
-                },
-                {
-                    "name": "tipo",
-                    "description": "Tipo do órgão. Ex. OUT.GOV. (outro governo estadual, que não o do Rio de Janeiro), OUT.PREF. (outra prefeitura que não a do Rio de Janeiro)"
-                }
-            ]
-        },
-        "cargo": {
-            "title": "TODO_TITLE_PREFIX: Não informado",
-            "short_description": "Tipos de cargos existentes na administração direta ou indireta da PCRJ.",
-            "long_description": "Tipos de cargos existentes na administração direta ou indireta da PCRJ. Não entram os tipos de cargos em comissão.",
-            "update_frequency": "Nunca",
-            "temporal_coverage": "Não informado",
-            "data_owner": "Não informado",
-            "publisher_name": "Não informado",
-            "publisher_email": "nao.informado@gmail.com",
-            "tags": [
-                "cargo",
-                "administração pública",
-                "SMA",
-                "recursos humanos",
-                "funcionário",
-                "ERGON"
-            ],
-            "categories": [],
-            "columns": [
-                {
-                    "name": "id_cargo",
-                    "description": "Código dado pela prefeitura do Rio de Janeiro ao tipo de cargo."
-                },
-                {
-                    "name": "nome",
-                    "description": "Nome do tipo de cargo. Ex. Analista de Sistemas."
-                },
-                {
-                    "name": "categoria",
-                    "description": "Categoria do tipo de cargo. Exemplo: Educação, saúde etc. Categoria é um conjunto de cargos."
-                },
-                {
-                    "name": "subcategoria",
-                    "description": "Subcategoria do tipo de cargo. É uma subdivisão da categoria. Ex. Apoio, Geral, lotados na saúde."
-                },
-                {
-                    "name": "tipo_controle_vaga",
-                    "description": "Tipo de controle de vaga: Livre (não existe controle de vagas no ERGON), Quadro (O ERGON controla o número máximo de vagas no cargo) ou Numerada."
-                },
-                {
-                    "name": "escolaridade",
-                    "description": "Escolaridade minima exigida para o tipo de cargo."
-                },
-                {
-                    "name": "aglutinador",
-                    "description": "Todos cadastrados com N."
-                }
-            ]
-        },
-        "ficha_financeira_contabil": {
-            "title": "TODO_TITLE_PREFIX: Não informado",
-            "short_description": "Valores de rubricas de fichas financeiras dos funcionários da PCRJ com infromações contábeis",
-            "long_description": "Valores de rubricas de fichas financeiras dos funcionários da Prefeitura da Cidade do Rio de Janeiro. Constam fichas desde o início do ERGON. Uma ficha financeira é um resumo do contracheque do servidor. Nesta tabela estão incluídas informações sobre a natureza da despesa e o plano trabalho.",
-            "update_frequency": "Nunca",
-            "temporal_coverage": "Não informado",
-            "data_owner": "SUBGGC",
-            "publisher_name": "Não informado",
-            "publisher_email": "nao.informado@gmail.com",
-            "tags": [],
-            "categories": [],
-            "columns": [
-                {
-                    "name": "data_folha",
-                    "description": "Mês e ano da folha da ficha financeira."
-                },
-                {
-                    "name": "id_funcionario",
-                    "description": "Número do funcionário gerado pelo ERGON."
-                },
-                {
-                    "name": "id_vinculo",
-                    "description": "Número do vínculo relativo ao pagamento."
-                },
-                {
-                    "name": "numero_pensionista",
-                    "description": "Número do pensionista, caso o pagamento seja relativo a um pensionista."
-                },
-                {
-                    "name": "numero_folha",
-                    "description": "Número da folha da ficha financeira."
-                },
-                {
-                    "name": "id_setor",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "secretaria",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "tipo_funcionario",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "detalhamento",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "rubrica",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "tipo_rubrica",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "competencia_direito",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "descricao_vantagem",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "valor",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "complemento",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "tipo_classificacao",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "classificacao",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "id_empresa",
-                    "description": "Não informado"
-                }
-            ]
-        },
-        "pre_contagem": {
-            "title": "TODO_TITLE_PREFIX: pre_contagem",
-            "short_description": "Informações sobre contagens pregressas do servidor.",
-            "long_description": "A tabela armazena informações de contagens anteriores ao início do sistema recursos humanos ou da entrada do servidor no sistema, se por algum motivo não possuía informações anteriormente.",
-            "update_frequency": "Nunca",
-            "temporal_coverage": "Não informado",
-            "data_owner": "Não informado",
-            "publisher_name": "Não informado",
-            "publisher_email": "naoinformado@naoinformado.com",
-            "tags": [],
-            "categories": [],
-            "columns": [
-                {
-                    "name": "finalidade",
-                    "description": "Tipo da finalidade que motivou o cadastro da pré-contagem. \r\nEx.: \"Aposentadoria\", \"Progressão\"."
-                },
-                {
-                    "name": "id_funcionario",
-                    "description": "Número do funcionário gerado pelo ERGON."
-                },
-                {
-                    "name": "id_vinculo",
-                    "description": "Número do vínculo relativo ao pagamento."
-                },
-                {
-                    "name": "periodos",
-                    "description": "Quantidade de períodos de contagem para determinada finalidade."
-                },
-                {
-                    "name": "dias",
-                    "description": "Total de dias da pré-contagem."
-                },
-                {
-                    "name": "data_validade",
-                    "description": "Data de validade da pré-contagem."
-                },
-                {
-                    "name": "id_empresa",
-                    "description": "Código da empresa."
-                },
-                {
-                    "name": "observacoes",
-                    "description": "Campo de observações sobre a pré-contagem."
-                }
-            ]
-        },
-        "total_contagem": {
-            "title": "TODO_TITLE_PREFIX: total_contagem",
-            "short_description": "Tabela de contagem de tempo para benefícios",
-            "long_description": "Tabela que armazena o resultado das contagens de tempo para benefícios dos servidores municipais.",
-            "update_frequency": "Nunca",
-            "temporal_coverage": "Não informado",
-            "data_owner": "Não informado",
-            "publisher_name": "Não informado",
-            "publisher_email": "naoinformado@naoinformado.com",
-            "tags": [],
-            "categories": [],
-            "columns": [
-                {
-                    "name": "id_funcionario",
-                    "description": "Número do funcionário gerado pelo ERGON."
-                },
-                {
-                    "name": "id_vinculo",
-                    "description": "Número do vínculo relativo ao pagamento."
-                },
-                {
-                    "name": "id_chave",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "finalidade",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "total_dias",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "diasfpub",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "diasfpubesp",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "total_periodos_contagem",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "total_anos_contagem",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "data_previsao_proximo_periodo",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "nome_finalidade",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "id_empresa",
-                    "description": "Não informado"
-                }
-            ]
-        },
-        "tipo_tempo": {
-            "title": "TODO_TITLE_PREFIX: tipo_tempo",
-            "short_description": "Tipos de tempos para contagem de benfício",
-            "long_description": "Esta tabela armazena os tipos de tempo utilizados para contagem de benefícios categorizados como finalidades. Nesta tabela se encontram os nomes dos tipos de tempo.",
-            "update_frequency": "Nunca",
-            "temporal_coverage": "Não informado",
-            "data_owner": "SUBGGC",
-            "publisher_name": "Não informado",
-            "publisher_email": "naoinformado@naoinformado.com",
-            "tags": [],
-            "categories": [],
-            "columns": [
-                {
-                    "name": "id_tipo_tempo",
-                    "description": "Coluna que armazena o código numérico referente ao tipo de tempo."
-                },
-                {
-                    "name": "nome_tipo_tempo",
-                    "description": "Campo que armazena o nome do tipo de tempo."
-                },
-                {
-                    "name": "aposentadoria",
-                    "description": "Booleano que informa se aquele tempo é computado para fins de aposentadoria."
-                },
-                {
-                    "name": "ferias",
-                    "description": "Booleano que informa se aquele tempo é computado para fins de contagem de período aquisitivo de férias."
-                },
-                {
-                    "name": "dias_de_ferias",
-                    "description": "Booleano que informa se aquele tempo é computado para fins de contagem para o saldo de dias de férias."
-                },
-                {
-                    "name": "trienio",
-                    "description": "Booleano que informa se aquele tempo é computado para fins de contagem para a contagem de períodos de triênio."
-                },
-                {
-                    "name": "licenca_especial",
-                    "description": "Booleano que informa se aquele tempo é computado para fins de contagem para a contagem de períodos de licença especial."
-                },
-                {
-                    "name": "dias_de_licenca_especial",
-                    "description": "Booleano que informa se aquele tempo é computado para fins de contagem para o saldo de dias de licença especial."
-                },
-                {
-                    "name": "tempo_de_chefia",
-                    "description": "Booleano que informa se aquele tempo é computado para fins de contagem para a contagem de incorporação de cargo em fidúcia."
-                },
-                {
-                    "name": "progressao",
-                    "description": "Booleano que informa se aquele tempo é computado para fins de contagem para a contagem de progressão no cargo."
-                },
-                {
-                    "name": "avaliacao",
-                    "description": "Booleano que informa se aquele tempo é computado para fins de contagem para a contagem de avalição em estágio probatório."
-                }
-            ]
-        },
-        "vantagens": {
-            "title": "TODO_TITLE_PREFIX: vantagens",
-            "short_description": "Cadastro de vantagens do servidor",
-            "long_description": "Tabela que armazena informações sobre atributos cadastrados que representam vantagens dos servidores. Os atributos podem se referir a situações funcionais que não geram repercursão financeira e apenas existem para fins de cadastro.",
-            "update_frequency": "Nunca",
-            "temporal_coverage": "Não informado",
-            "data_owner": "Não informado",
-            "publisher_name": "Não informado",
-            "publisher_email": "naoinformado@naoinformado.com",
-            "tags": [],
-            "categories": [],
-            "columns": [
-                {
-                    "name": "id_funcionario",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "id_vinculo",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "nome_vantagem",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "data_inicio",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "data_final",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "valor_vantagem",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "informacao_atributo",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "tipo_incorporacao_cargo_fiducia",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "percentual_incorporacao_cargo_fiducia",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "incide_tabela_vencimentos",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "incide_tabela_simbolo",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "observacoes",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "valor_complementar",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "informacao_complementar",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "valor_complementar_2",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "informacao_complementar_2",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "valor_coplementar_3",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "informacao_complementar_3",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "valor_complementar_4",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "informacao_complementar_4",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "valor_complementar_5",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "informacao_complementar_5",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "valor_incorporado",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "id_empresa",
-                    "description": "Não informado"
-                },
-                {
-                    "name": "id_vantagem",
-                    "description": "Não informado"
-                }
-            ]
-        },
-        "tipo_vinculo": {
-            "title": "TODO_TITLE_PREFIX: Tipo de Vinculo",
-            "short_description": "Tipos de vínculos existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro.",
-            "long_description": "Tipos de vínculos existentes tanto na administração direta como indireta da prefeitura do Rio de Janeiro.",
-            "update_frequency": "Anual",
-            "temporal_coverage": "Até data corrente",
-            "data_owner": "SMFP/SUBGCC/CGRH",
-            "publisher_name": "Anderson Ferraz Carneiro",
-            "publisher_email": "anderson.carneiro@rio.rj.gov.br",
-            "tags": [
-                "cargo",
-                "administração pública",
-                "recursos humanos",
-                "funcionário",
-                "ERGON"
-            ],
-            "categories": [],
-            "columns": [
-                {
-                    "name": "sigla",
-                    "description": "Sigla do tipo de vínculo. Ex. A DISPOSICAO-CLT."
-                },
-                {
-                    "name": "nome",
-                    "description": "Nome do tipo de vínculo. Ex. A DISPOSICAO DA PREFEITURA-CLT."
-                }
-            ]
-        },
-        "averbacoes": {
-            "title": "TODO_TITLE_PREFIX: averbacoes",
-            "short_description": "Averbações dos servidores da Prefeitura da Cidade do Rio de Janeiro",
-            "long_description": "Tabela que armazena o cadastro das averbações.",
-            "update_frequency": "Nunca",
-            "temporal_coverage": "Não informado",
-            "data_owner": "Não informado",
-            "publisher_name": "Não informado",
-            "publisher_email": "naoinformado@naoinformado.com",
-            "tags": [],
-            "categories": [],
-            "columns": [
-                {
-                    "name": "id_funcionario",
-                    "description": "Número do funcionário gerado pelo ERGON."
-                },
-                {
-                    "name": "id_vinculo",
-                    "description": "Número do vínculo relativo ao pagamento."
-                },
-                {
-                    "name": "id_averbacao",
-                    "description": "Chave gerada pelo banco para registro de averbação."
-                },
-                {
-                    "name": "data_inicio",
-                    "description": "Data inicial do período averbado."
-                },
-                {
-                    "name": "data_final",
-                    "description": "Data final do período averbado."
-                },
-                {
-                    "name": "instituicao",
-                    "description": "Instituição a qual o servidor prestou serviço referente ao tempo averbado."
-                },
-                {
-                    "name": "id_tipo_tempo",
-                    "description": "Coluna que armazena o código numérico referente ao tipo de tempo."
-                },
-                {
-                    "name": "data_validade",
-                    "description": "Data de validade da averbação."
-                },
-                {
-                    "name": "total_dias_averbados",
-                    "description": "Total de dias averbados."
-                },
-                {
-                    "name": "motivo",
-                    "description": "Campo para cadastrar o motivo, geralmente ligado à desaverbação de tempo."
-                },
-                {
-                    "name": "sobrepoe",
-                    "description": "Booleano que indica se o período averbado permite concomitância com outro período averbado."
-                },
-                {
-                    "name": "id_empresa",
-                    "description": "Código da empresa."
-                },
-                {
-                    "name": "obs",
-                    "description": "Coluna de observações, campo de texto livre."
-                },
-                {
-                    "name": "regime_previdenciario",
-                    "description": "Coluna que informa o regime previdenciário ao qual pertencia o tempo averbado."
-                }
-            ]
-        },
-        "averbacoes_contagem": {
-            "title": "TODO_TITLE_PREFIX: averbacoes_contagem",
-            "short_description": "Informações de contagem de averbação",
-            "long_description": "Nesta tabela são armazenadas informações referentes sobre finalidade de contagem e total do tempo de contagem referentes a períodos averbados pelos servidores.",
-            "update_frequency": "Nunca",
-            "temporal_coverage": "Não informado",
-            "data_owner": "Não informado",
-            "publisher_name": "Não informado",
-            "publisher_email": "naoinformado@naoinformado.com",
-            "tags": [],
-            "categories": [],
-            "columns": [
-                {
-                    "name": "id_funcionario",
-                    "description": "Número do funcionário gerado pelo ERGON."
-                },
-                {
-                    "name": "id_vinculo",
-                    "description": "Número do vínculo relativo ao pagamento."
-                },
-                {
-                    "name": "id_averbacao",
-                    "description": "Chave gerada pelo banco para registro de averbação."
-                },
-                {
-                    "name": "finalidade",
-                    "description": "Tipo da finalidade da averbação."
-                },
-                {
-                    "name": "dias",
-                    "description": "Total de dias averbados para determinada finalidade."
-                }
-            ]
         }
-    },
-    "recursos_humanos_ergon_comlurb": {
-        "recursos_humanos_ergon_comlurb__funcionario": {},
-        "recursos_humanos_ergon_comlurb__setor": {},
-        "recursos_humanos_ergon_comlurb__dependente": {},
-        "recursos_humanos_ergon_comlurb__funcionario_evento": {},
-        "recursos_humanos_ergon_comlurb__cargo": {},
-        "recursos_humanos_ergon_comlurb__h_setor": {},
-        "recursos_humanos_ergon_comlurb__vinculo": {},
-        "recursos_humanos_ergon_comlurb__ficha_financeira": {},
-        "recursos_humanos_ergon_comlurb__fita_banco": {}
     }
 }
