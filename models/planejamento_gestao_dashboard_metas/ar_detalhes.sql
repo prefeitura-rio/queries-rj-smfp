@@ -119,8 +119,8 @@ with chance_com_comentario as (
     END orgao_sigla,
   `rj-smfp.planejamento_gestao_dashboard_metas_staging`.tradutor_unidade_medida(meta.unidade_medida) ar_unidade_medida,
   meta.orgao,
-  arp.chave_meta_ar_2022,
-  arp.descricao_meta_ar_2022_desdobrada as descricao_planilha,
+  arp.chave_meta_ar,
+  arp.descricao_meta_ar_desdobrada as descricao_planilha,
   meta.descricao,
   meta.observacao,
   meta.ordem,
@@ -150,9 +150,9 @@ with chance_com_comentario as (
   meta.novembro,
   meta.dezembro
   FROM `rj-smfp.planejamento_gestao_acordo_resultados.meta` as meta
-  LEFT JOIN (SELECT * FROM `rj-smfp.planejamento_gestao_dashboard_metas_staging.metas_acordo_resultados_planilha`) as arp
+  LEFT JOIN (SELECT * FROM `rj-smfp.planejamento_gestao_acordo_resultados_staging.meta_desdobrada` WHERE ano = '2023') as arp
     ON meta.id_meta = CAST(CAST(arp.codigo_egpweb AS FLOAT64) AS STRING)
-  WHERE meta.ano = 2022
+  WHERE meta.ano = 2023
 )
 
 , info_tendencia as (
