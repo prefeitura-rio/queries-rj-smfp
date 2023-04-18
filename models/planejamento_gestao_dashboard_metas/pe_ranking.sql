@@ -4,11 +4,11 @@ WITH pe_geral AS (
     SAFE_CAST(_metas AS STRING) id_numerico_meta_pe,
     SAFE_CAST(_meta AS STRING) id_meta_pe,
     "Plano Estratégico" as origem,
-    CASE WHEN tendencia_cumprimento_meta_2022 = "Cumprida" or tendencia_cumprimento_meta_2022 = "Tendência de cumprir" then "Cumprir"
-      WHEN tendencia_cumprimento_meta_2022 = "Cumprida parcialmente" or tendencia_cumprimento_meta_2022 = "Tendência de cumprir parcialmente" then "Cumprir parcialmente"
-      WHEN tendencia_cumprimento_meta_2022 = "Não cumprida" or tendencia_cumprimento_meta_2022 = "Tendência de não cumprir" then "Cumprir"
-      ELSE tendencia_cumprimento_meta_2022 END 
-      AS tendencia_subdivisao,
+    -- CASE WHEN tendencia_cumprimento_meta_2022 = "Cumprida" or tendencia_cumprimento_meta_2022 = "Tendência de cumprir" then "Cumprir"
+    --   WHEN tendencia_cumprimento_meta_2022 = "Cumprida parcialmente" or tendencia_cumprimento_meta_2022 = "Tendência de cumprir parcialmente" then "Cumprir parcialmente"
+    --   WHEN tendencia_cumprimento_meta_2022 = "Não cumprida" or tendencia_cumprimento_meta_2022 = "Tendência de não cumprir" then "Cumprir"
+    --   ELSE tendencia_cumprimento_meta_2022 END 
+    --   AS tendencia_subdivisao,
     SAFE_CAST(codigo_tema AS STRING) codigo_tema,
     SAFE_CAST(tema_transversal AS STRING) tema_transversal,
     SAFE_CAST(inciativa_estrategica__nome_de_trabalho AS STRING) iniciativa_estrategica_nome_de_trabalho,
@@ -49,6 +49,7 @@ WITH pe_geral AS (
     SAFE_CAST(resumo_executivo AS STRING) resumo_executivo,
     SAFE_CAST(tendencia_cumprimento_meta_2021 AS STRING) tendencia_cumprimento_meta_2021,
     SAFE_CAST(tendencia_cumprimento_meta_2022 AS STRING) tendencia_cumprimento_meta_2022,
+    SAFE_CAST(tendencia_cumprimento_meta_2023 AS STRING) tendencia_cumprimento_meta_2023,
     SAFE_CAST(tendencia_cumprimento_meta_2024 AS STRING) tendencia_cumprimento_meta_2024,
     SAFE_CAST(jan_21 AS STRING) jan_21,
     SAFE_CAST(fev_21 AS STRING) fev_21,
@@ -142,8 +143,8 @@ pe_valores as (
 SELECT
   id_meta_secretaria,
   origem,
-  tendencia_cumprimento_meta_2022,
-  tendencia_subdivisao,
+  tendencia_cumprimento_meta_2023,
+  -- tendencia_subdivisao,
   tipo_meta,
   casas_decimais,
   valor_meta_final,
@@ -214,8 +215,8 @@ pe_ranking as (
   SELECT
     id_meta_secretaria,
     origem,
-    tendencia_cumprimento_meta_2022,
-    tendencia_subdivisao,
+    tendencia_cumprimento_meta_2023,
+    -- tendencia_subdivisao,
     tipo_meta,
     casas_decimais,
     valor_meta_final,
