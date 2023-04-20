@@ -145,7 +145,7 @@ SELECT
   id_numerico_meta_pe,
   id_meta_pe,
   origem,
-  tendencia_subdivisao,
+  --tendencia_subdivisao,
   CASE 
     WHEN LOWER(tendencia_cumprimento_meta_2023) = "tendência de cumprir" or              LOWER(tendencia_cumprimento_meta_2023) = "cumprida" then "#005A38" 
     WHEN LOWER(tendencia_cumprimento_meta_2023) = "tendência de cumprir parcialmente" or LOWER(tendencia_cumprimento_meta_2023) = "cumprida parcialmente" then "#ABAD67" 
@@ -308,7 +308,7 @@ SELECT
   NULL AS id_numerico_meta_pe,
   NULL AS id_meta_pe,
   NULL AS origem,
-  NULL AS tendencia_subdivisao,
+  --NULL AS tendencia_subdivisao,
   NULL AS cor_fonte,
   NULL AS pe_tendencia_normalizada,
   NULL AS codigo_tema,
