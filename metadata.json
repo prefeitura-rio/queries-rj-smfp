@@ -1753,6 +1753,10 @@
                     "name": "id_vantagem",
                     "description": "Não informado"
                 }
+                {
+                    "name": "data_particao",
+                    "description": "Não informado"
+                }
             ]
         },
         "horario_trabalho": {
