@@ -685,6 +685,8 @@ models :
         description: Não informado
       - name: id_vantagem
         description: Não informado
+      - name: data_particao
+        description: Não informado
   - name: horario_trabalho
     description: "**Descrição**: Horários possíveis para funcionários da administração\
       \ direta da prefeitura do Rio de Janeiro (ainda não tem dados disponibilizados)\
