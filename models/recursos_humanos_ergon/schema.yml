@@ -1,10 +1,10 @@
 version: 2
 models :
   - name: categoria
-    description: "**Descrição**: Categorias existentes na administração direta ou\
-      \ indireta da Prefeitura do Rio de Janeiro. \r\nExemplo: Educação, saúde etc.\
-      \ Categoria é um conjunto de cargos.\n**Frequência de atualização**: Anual\n\
-      **Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n\
+    description: "**Descrição**: Categorias existentes na administração direta ou
+      indireta da Prefeitura do Rio de Janeiro. \r\nExemplo: Educação, saúde etc.
+      Categoria é um conjunto de cargos.\n**Frequência de atualização**: Anual\n**Cobertura
+      temporal**: Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n
       **Publicado por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
     columns:
       - name: sigla
@@ -12,10 +12,10 @@ models :
       - name: nome
         description: Nome da categoria. Ex. Educação.
   - name: frequencias
-    description: "**Descrição**: Tabela que armazena as ocorrências de frequência\
-      \ do servidor municipal.\n**Frequência de atualização**: Nunca\n**Cobertura\
-      \ temporal**: Não informado\n**Órgão gestor dos dados**: Não informado\n**Publicado\
-      \ por**: Não informado\n**Publicado por (email)**: naoinformado@naoinformado.com\n"
+    description: "**Descrição**: Tabela que armazena as ocorrências de frequência
+      do servidor municipal.\n**Frequência de atualização**: Nunca\n**Cobertura temporal**:
+      Não informado\n**Órgão gestor dos dados**: Não informado\n**Publicado por**:
+      Não informado\n**Publicado por (email)**: naoinformado@naoinformado.com\n"
     columns:
       - name: id_funcionario
         description: Número do funcionário gerado pelo ERGON.
@@ -33,36 +33,92 @@ models :
         description: Observções referentes à frequência do servidor.
       - name: id_empresa
         description: Código da empresa.
-  - name: pre_contagem
-    description: "**Descrição**: A tabela armazena informações de contagens anteriores\
-      \ ao início do sistema recursos humanos ou da entrada do servidor no sistema,\
-      \ se por algum motivo não possuía informações anteriormente.\n**Frequência de\
-      \ atualização**: Nunca\n**Cobertura temporal**: Não informado\n**Órgão gestor\
-      \ dos dados**: Não informado\n**Publicado por**: Não informado\n**Publicado\
-      \ por (email)**: naoinformado@naoinformado.com\n"
+  - name: regime_juridico
+    description: "**Descrição**: Tipos de regimes jurídicos existentes entre os vínculos
+      de funcionários e a administração direta ou indireta da prefeitura do Rio de
+      Janeiro.\n**Frequência de atualização**: Nunca\n**Cobertura temporal**: Até
+      data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n**Publicado por**:
+      Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
     columns:
-      - name: finalidade
-        description: "Tipo da finalidade que motivou o cadastro da pré-contagem. \r\
-          \nEx.: \"Aposentadoria\", \"Progressão\"."
+      - name: sigla
+        description: Sigla do regime jurídico. Ex. CLT, EFETIVO etc
+      - name: nome
+        description: Nome do regime jurídico. Ex. Celetista, estatutário.
+  - name: tipo_orgao
+    description: "**Descrição**: Tipos de órgãos tanto da administração direta como
+      indireta da prefeitura do Rio de Janeiro.\n**Frequência de atualização**: Nunca\n
+      **Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n
+      **Publicado por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
+    columns:
+      - name: tipo
+        description: Sigla do tipo do órgão. Ex. DIR.EST.
+      - name: descricao
+        description: Descrição do tipo do órgão. Ex. ADMINISTRACAO DIRETA ESTADUAL.
+  - name: vantagens
+    description: "**Descrição**: Tabela que armazena informações sobre atributos cadastrados
+      que representam vantagens dos servidores. Os atributos podem se referir a situações
+      funcionais que não geram repercursão financeira e apenas existem para fins de
+      cadastro.\n**Frequência de atualização**: Nunca\n**Cobertura temporal**: Não
+      informado\n**Órgão gestor dos dados**: Não informado\n**Publicado por**: Não
+      informado\n**Publicado por (email)**: naoinformado@naoinformado.com\n"
+    columns:
       - name: id_funcionario
-        description: Número do funcionário gerado pelo ERGON.
+        description: Não informado
       - name: id_vinculo
-        description: Número do vínculo relativo ao pagamento.
-      - name: periodos
-        description: Quantidade de períodos de contagem para determinada finalidade.
-      - name: dias
-        description: Total de dias da pré-contagem.
-      - name: data_validade
-        description: Data de validade da pré-contagem.
-      - name: id_empresa
-        description: Código da empresa.
+        description: Não informado
+      - name: nome_vantagem
+        description: Não informado
+      - name: valor_vantagem
+        description: Não informado
+      - name: informacao_atributo
+        description: Não informado
+      - name: tipo_incorporacao_cargo_fiducia
+        description: Não informado
+      - name: percentual_incorporacao_cargo_fiducia
+        description: Não informado
+      - name: incide_tabela_vencimentos
+        description: Não informado
+      - name: incide_tabela_simbolo
+        description: Não informado
       - name: observacoes
-        description: Campo de observações sobre a pré-contagem.
+        description: Não informado
+      - name: valor_complementar
+        description: Não informado
+      - name: informacao_complementar
+        description: Não informado
+      - name: valor_complementar_2
+        description: Não informado
+      - name: informacao_complementar_2
+        description: Não informado
+      - name: valor_coplementar_3
+        description: Não informado
+      - name: informacao_complementar_3
+        description: Não informado
+      - name: valor_complementar_4
+        description: Não informado
+      - name: informacao_complementar_4
+        description: Não informado
+      - name: valor_complementar_5
+        description: Não informado
+      - name: informacao_complementar_5
+        description: Não informado
+      - name: valor_incorporado
+        description: Não informado
+      - name: id_empresa
+        description: Não informado
+      - name: id_vantagem
+        description: Não informado
+      - name: data_inicio
+        description: Não informado
+      - name: data_final
+        description: Não informado
+      - name: data_particao
+        description: Não informado
   - name: fita_banco
-    description: "**Descrição**: Fitas enviadas para o tesouro municipal contendo\
-      \ informações sobre pagamentos a serem feitos a funcionários tanto pela administração\
-      \ direta quanto indireta.\n**Frequência de atualização**: Mensal\n**Cobertura\
-      \ temporal**: Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n\
+    description: "**Descrição**: Fitas enviadas para o tesouro municipal contendo
+      informações sobre pagamentos a serem feitos a funcionários tanto pela administração
+      direta quanto indireta.\n**Frequência de atualização**: Mensal\n**Cobertura
+      temporal**: Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n
       **Publicado por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
     columns:
       - name: id_lancamento
@@ -153,58 +209,49 @@ models :
       - name: id_jornada
         description: Código dado pela prefeitura do Rio de Janeiro para a jornada
           semanal do cargo/emprego associado ao vínculo.
-  - name: regime_juridico
-    description: "**Descrição**: Tipos de regimes jurídicos existentes entre os vínculos\
-      \ de funcionários e a administração direta ou indireta da prefeitura do Rio\
-      \ de Janeiro.\n**Frequência de atualização**: Nunca\n**Cobertura temporal**:\
-      \ Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n**Publicado\
-      \ por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
+  - name: ficha_financeira
+    description: "**Descrição**: Valores de rubricas de fichas financeiras dos funcionários
+      da COMLURB. Constam fichas desde o início do ERGON COMLURB. Uma ficha financeira
+      é um resumo do contracheque do servidor.\n**Frequência de atualização**: Mensal\n
+      **Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n
+      **Publicado por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: nao.informado@gmail.com\n"
     columns:
-      - name: sigla
-        description: Sigla do regime jurídico. Ex. CLT, EFETIVO etc
-      - name: nome
-        description: Nome do regime jurídico. Ex. Celetista, estatutário.
-  - name: afastamento_antigo
-    description: "**Descrição**: Nesta tabela são armazenadas informações referentes\
-      \ a afastamentos dos servidores da Prefeitura da Cidade do Rio de Janeiro cadastrados\
-      \ em sistemas de recursos humanos antigos.\n**Frequência de atualização**: Nunca\n\
-      **Cobertura temporal**: Não informado\n**Órgão gestor dos dados**: Não informado\n\
-      **Publicado por**: Não informado\n**Publicado por (email)**: naoinformado@naoinformado.com\n"
-    columns:
-      - name: id_matricula_vinculo
-        description: Matrícula do servidor.
-      - name: data_inicio
-        description: Data incial do afastamento.
-      - name: data_previsao_retorno
-        description: Data de previsão do retorno do afastamento.
-      - name: data_fim
-        description: Data final do afastamento, representa o efetivo retorno do servidor
-          à atividade.
-  - name: averbacoes_contagem
-    description: "**Descrição**: Nesta tabela são armazenadas informações referentes\
-      \ sobre finalidade de contagem e total do tempo de contagem referentes a períodos\
-      \ averbados pelos servidores.\n**Frequência de atualização**: Nunca\n**Cobertura\
-      \ temporal**: Não informado\n**Órgão gestor dos dados**: Não informado\n**Publicado\
-      \ por**: Não informado\n**Publicado por (email)**: naoinformado@naoinformado.com\n"
-    columns:
+      - name: data_folha
+        description: Mês e ano da folha da ficha financeira.
+      - name: numero_folha
+        description: Número da folha da ficha financeira.
       - name: id_funcionario
         description: Número do funcionário gerado pelo ERGON.
       - name: id_vinculo
         description: Número do vínculo relativo ao pagamento.
-      - name: id_averbacao
-        description: Chave gerada pelo banco para registro de averbação.
-      - name: finalidade
-        description: Tipo da finalidade da averbação.
-      - name: dias
-        description: Total de dias averbados para determinada finalidade.
+      - name: numero_pensionista
+        description: Número do pensionista, caso o pagamento seja relativo a um pensionista.
+      - name: data_pagamento
+        description: Mês e ano trabalhado relativo ao pagamento.
+      - name: rubrica
+        description: Rubrica da despesa. Caso o funcionário receba em rubricas diferentes
+          haverá mais de um registro nesta visão.
+      - name: tipo_rubrica
+        description: Tipo de rubrica. Ex, Auxiliar, consignatária, desconto ou vantagem.
+      - name: desconto
+        description: Booleana que indica se a rubrica é de desconto ou não. 1 quando
+          tem desconto e 2 quando não tem desconto.
+      - name: complemento_rubrica
+        description: Informações adicionais para descrever a rubrica.
+      - name: valor_rubrica
+        description: Valor referente à rubrica.
+      - name: correcao
+        description: Valor da correção monetária.
+      - name: id_empresa
+        description: Código da empresa.
   - name: ficha_financeira_contabil
-    description: "**Descrição**: Valores de rubricas de fichas financeiras dos funcionários\
-      \ da Prefeitura da Cidade do Rio de Janeiro. Constam fichas desde o início do\
-      \ ERGON. Uma ficha financeira é um resumo do contracheque do servidor. Nesta\
-      \ tabela estão incluídas informações sobre a natureza da despesa e o plano trabalho.\n\
-      **Frequência de atualização**: Nunca\n**Cobertura temporal**: Não informado\n\
-      **Órgão gestor dos dados**: SUBGGC\n**Publicado por**: Não informado\n**Publicado\
-      \ por (email)**: nao.informado@gmail.com\n"
+    description: "**Descrição**: Valores de rubricas de fichas financeiras dos funcionários
+      da Prefeitura da Cidade do Rio de Janeiro. Constam fichas desde o início do
+      ERGON. Uma ficha financeira é um resumo do contracheque do servidor. Nesta tabela
+      estão incluídas informações sobre a natureza da despesa e o plano trabalho.\n
+      **Frequência de atualização**: Nunca\n**Cobertura temporal**: Não informado\n
+      **Órgão gestor dos dados**: SUBGGC\n**Publicado por**: Não informado\n**Publicado
+      por (email)**: nao.informado@gmail.com\n"
     columns:
       - name: data_folha
         description: Mês e ano da folha da ficha financeira.
@@ -242,14 +289,41 @@ models :
         description: Não informado
       - name: id_empresa
         description: Não informado
+  - name: jornada
+    description: "**Descrição**: Tipos de jornadas existentes tanto na administração
+      direta como indireta da prefeitura do Rio de Janeiro. Jornada é a carga horária
+      semanal.\n**Frequência de atualização**: Anual\n**Cobertura temporal**: Até
+      data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n**Publicado por**:
+      Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
+    columns:
+      - name: sigla
+        description: Sigla da jornada. Ex. 40 horas.
+      - name: nome
+        description: Nome da jornada. Ex. 40 horas semanais.
+      - name: horas_semana
+        description: Número de horas semanais da jornada.
+      - name: horas_mes
+        description: Número de horas mensais da jornada.
+  - name: orgaos_regime_juridico
+    description: "**Descrição**: Regimes jurídicos que podem ser aceitos para contratação
+      de funcionários nos órgãos da administração direta ou indireta da prefeitura
+      do Rio de Janeiro assim como outras empresas de interesse da prefeitura do Rio
+      de Janeiro.\n**Frequência de atualização**: Nunca\n**Cobertura temporal**: Até
+      data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n**Publicado por**:
+      Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
+    columns:
+      - name: sigla
+        description: Sigla do regime jurídico. Ex. CLT, EFETIVO etc
+      - name: nome
+        description: Código, dado pela prefeitura do Rio de Janeiro, da empresa.
   - name: vinculo
-    description: "**Descrição**: Vínculos de pagamento ( em geral empregatícios ),\
-      \ tanto antigos como atuais, da administração direta e indireta da prefeitura\
-      \ do Rio de Janeiro. Um vínculo, em geral, está associado a uma matrícula. Uma\
-      \ pessoa pode ter vários vínculos com a prefeitura.\n**Frequência de atualização**:\
-      \ Mensal\n**Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**:\
-      \ SMFP/SUBGCC/CGRH\n**Publicado por**: Anderson Ferraz Carneiro\n**Publicado\
-      \ por (email)**: anderson.carneiro@rio.rj.gov.br\n"
+    description: "**Descrição**: Vínculos de pagamento ( em geral empregatícios ),
+      tanto antigos como atuais, da administração direta e indireta da prefeitura
+      do Rio de Janeiro. Um vínculo, em geral, está associado a uma matrícula. Uma
+      pessoa pode ter vários vínculos com a prefeitura.\n**Frequência de atualização**:
+      Mensal\n**Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**:
+      SMFP/SUBGCC/CGRH\n**Publicado por**: Anderson Ferraz Carneiro\n**Publicado por
+      (email)**: anderson.carneiro@rio.rj.gov.br\n"
     columns:
       - name: id_vinculo
         description: Número do vínculo da pessoa. O número é dado sequencialmente,
@@ -372,173 +446,35 @@ models :
       - name: motivo_vacancia
         description: Motivo da vacância. O que encerrou o vínculo, caso ele tenha
           sido encerrado. Caso não o atributo está em branco. Campo livre para preenchimento.
-  - name: total_contagem
-    description: "**Descrição**: Tabela que armazena o resultado das contagens de\
-      \ tempo para benefícios dos servidores municipais.\n**Frequência de atualização**:\
-      \ Nunca\n**Cobertura temporal**: Não informado\n**Órgão gestor dos dados**:\
-      \ Não informado\n**Publicado por**: Não informado\n**Publicado por (email)**:\
-      \ naoinformado@naoinformado.com\n"
-    columns:
-      - name: id_funcionario
-        description: Número do funcionário gerado pelo ERGON.
-      - name: id_vinculo
-        description: Número do vínculo relativo ao pagamento.
-      - name: id_chave
-        description: Não informado
-      - name: finalidade
-        description: Não informado
-      - name: total_dias
-        description: Não informado
-      - name: diasfpub
-        description: Não informado
-      - name: diasfpubesp
-        description: Não informado
-      - name: total_periodos_contagem
-        description: Não informado
-      - name: total_anos_contagem
-        description: Não informado
-      - name: data_previsao_proximo_periodo
-        description: Não informado
-      - name: nome_finalidade
-        description: Não informado
-      - name: id_empresa
-        description: Não informado
-  - name: orgaos_externos
-    description: "**Descrição**: Órgãos de outros entes federativos que não da prefeitura\
-      \ do Rio de Janeiro mas que são de interesse da prefeitura do Rio de Janeiro.\r\
-      \nUsada, geralmente, para documentar a origem de servidores cedidos à prefeitura\
-      \ do Rio de Janeiro.\n**Frequência de atualização**: Anual\n**Cobertura temporal**:\
-      \ Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n**Publicado\
-      \ por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
-    columns:
-      - name: nome
-        description: Nome do órgão. Ex. GE ACRE (Governo do estado do Acre),PR NITEROI
-          (Prefeitura de Niteroi)
-      - name: nome_completo
-        description: Nome por extenso do órgão. Ex. Prefeitura da cidade de Niteroi.
-      - name: tipo
-        description: Tipo do órgão. Ex. OUT.GOV. (outro governo estadual, que não
-          o do Rio de Janeiro), OUT.PREF. (outra prefeitura que não a do Rio de Janeiro)
-  - name: jornada
-    description: "**Descrição**: Tipos de jornadas existentes tanto na administração\
-      \ direta como indireta da prefeitura do Rio de Janeiro. Jornada é a carga horária\
-      \ semanal.\n**Frequência de atualização**: Anual\n**Cobertura temporal**: Até\
-      \ data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n**Publicado por**:\
-      \ Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
+  - name: forma_provimento
+    description: "**Descrição**: Formas de provimentos possíveis tanto na administração
+      direta como indireta da prefeitura do Rio de Janeiro. O provimento é a investidura
+      em um cargo público.\n**Frequência de atualização**: Semanal\n**Cobertura temporal**:
+      Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n**Publicado
+      por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
     columns:
       - name: sigla
-        description: Sigla da jornada. Ex. 40 horas.
+        description: Sigla da forma de provimento. Ex. 01.
       - name: nome
-        description: Nome da jornada. Ex. 40 horas semanais.
-      - name: horas_semana
-        description: Número de horas semanais da jornada.
-      - name: horas_mes
-        description: Número de horas mensais da jornada.
-  - name: tipo_tempo
-    description: "**Descrição**: Esta tabela armazena os tipos de tempo utilizados\
-      \ para contagem de benefícios categorizados como finalidades. Nesta tabela se\
-      \ encontram os nomes dos tipos de tempo.\n**Frequência de atualização**: Nunca\n\
-      **Cobertura temporal**: Não informado\n**Órgão gestor dos dados**: SUBGGC\n\
-      **Publicado por**: Não informado\n**Publicado por (email)**: naoinformado@naoinformado.com\n"
-    columns:
-      - name: id_tipo_tempo
-        description: Coluna que armazena o código numérico referente ao tipo de tempo.
-      - name: nome_tipo_tempo
-        description: Campo que armazena o nome do tipo de tempo.
-      - name: aposentadoria
-        description: Booleano que informa se aquele tempo é computado para fins de
-          aposentadoria.
-      - name: ferias
-        description: Booleano que informa se aquele tempo é computado para fins de
-          contagem de período aquisitivo de férias.
-      - name: dias_de_ferias
-        description: Booleano que informa se aquele tempo é computado para fins de
-          contagem para o saldo de dias de férias.
-      - name: trienio
-        description: Booleano que informa se aquele tempo é computado para fins de
-          contagem para a contagem de períodos de triênio.
-      - name: licenca_especial
-        description: Booleano que informa se aquele tempo é computado para fins de
-          contagem para a contagem de períodos de licença especial.
-      - name: dias_de_licenca_especial
-        description: Booleano que informa se aquele tempo é computado para fins de
-          contagem para o saldo de dias de licença especial.
-      - name: tempo_de_chefia
-        description: Booleano que informa se aquele tempo é computado para fins de
-          contagem para a contagem de incorporação de cargo em fidúcia.
-      - name: progressao
-        description: Booleano que informa se aquele tempo é computado para fins de
-          contagem para a contagem de progressão no cargo.
-      - name: avaliacao
-        description: Booleano que informa se aquele tempo é computado para fins de
-          contagem para a contagem de avalição em estágio probatório.
-  - name: tipo_orgao
-    description: "**Descrição**: Tipos de órgãos tanto da administração direta como\
-      \ indireta da prefeitura do Rio de Janeiro.\n**Frequência de atualização**:\
-      \ Nunca\n**Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**:\
-      \ SMFP/SUBGCC/CGRH\n**Publicado por**: Anderson Ferraz Carneiro\n**Publicado\
-      \ por (email)**: anderson.carneiro@rio.rj.gov.br\n"
-    columns:
-      - name: tipo
-        description: Sigla do tipo do órgão. Ex. DIR.EST.
-      - name: descricao
-        description: Descrição do tipo do órgão. Ex. ADMINISTRACAO DIRETA ESTADUAL.
-  - name: ficha_financeira
-    description: "**Descrição**: Valores de rubricas de fichas financeiras dos funcionários\
-      \ da COMLURB. Constam fichas desde o início do ERGON COMLURB. Uma ficha financeira\
-      \ é um resumo do contracheque do servidor.\n**Frequência de atualização**: Mensal\n\
-      **Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n\
-      **Publicado por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: nao.informado@gmail.com\n"
-    columns:
-      - name: data_folha
-        description: Mês e ano da folha da ficha financeira.
-      - name: numero_folha
-        description: Número da folha da ficha financeira.
-      - name: id_funcionario
-        description: Número do funcionário gerado pelo ERGON.
-      - name: id_vinculo
-        description: Número do vínculo relativo ao pagamento.
-      - name: numero_pensionista
-        description: Número do pensionista, caso o pagamento seja relativo a um pensionista.
-      - name: data_pagamento
-        description: Mês e ano trabalhado relativo ao pagamento.
-      - name: rubrica
-        description: Rubrica da despesa. Caso o funcionário receba em rubricas diferentes
-          haverá mais de um registro nesta visão.
-      - name: tipo_rubrica
-        description: Tipo de rubrica. Ex, Auxiliar, consignatária, desconto ou vantagem.
-      - name: desconto
-        description: Booleana que indica se a rubrica é de desconto ou não. 1 quando
-          tem desconto e 2 quando não tem desconto.
-      - name: complemento_rubrica
-        description: Informações adicionais para descrever a rubrica.
-      - name: valor_rubrica
-        description: Valor referente à rubrica.
-      - name: correcao
-        description: Valor da correção monetária.
-      - name: id_empresa
-        description: Código da empresa.
-  - name: afastamento_antigo_nomes
-    description: "**Descrição**: Nesta tabela são armazenadas informações sobre os\
-      \ códigos de afastamentos utilizados em sistemas antigos da Prefeitura do Rio\
-      \ de Janeiro.\n**Frequência de atualização**: Nunca\n**Cobertura temporal**:\
-      \ Não informado\n**Órgão gestor dos dados**: Não informado\n**Publicado por**:\
-      \ Não informado\n**Publicado por (email)**: nao.informado@gmail.com\n"
-    columns:
-      - name: id_empresa
-        description: Código da empresa.
-      - name: id_afastamento
-        description: Código do afastamento.
-      - name: nome_afastamento
-        description: Nome do afastamento.
+        description: Nome da forma de provimento. Ex. NOMEACAO OU PROVIMENTO (relativo
+          a sigla 01).
+      - name: inativo
+        description: Booleano que indica que a forma de provimento é válida para funcionários
+          inativos.
+      - name: primeiro_provimento
+        description: Booleano que indica se a forma de provimento pode ser um primeiro
+          tipo de provimento ( quando se entra na prefeitura ).
+      - name: ativo
+        description: Booleano que indica que a forma de provimento é válida para funcionários
+          ativos.
   - name: provimento
-    description: "**Descrição**: Eventos relacionados aos vínculos funcionais tanto\
-      \ com a administração direta como indireta da prefeitura do Rio de Janeiro.\
-      \ \r\nUm provimento pode ser uma progressão, mudança de lotação, mudança de\
-      \ vencimento (referência) etc. Um provimento é um evento na situação funcional\
-      \ do vínculo.\n**Frequência de atualização**: Semanal\n**Cobertura temporal**:\
-      \ Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n**Publicado\
-      \ por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
+    description: "**Descrição**: Eventos relacionados aos vínculos funcionais tanto
+      com a administração direta como indireta da prefeitura do Rio de Janeiro. \r
+      \nUm provimento pode ser uma progressão, mudança de lotação, mudança de vencimento
+      (referência) etc. Um provimento é um evento na situação funcional do vínculo.\n
+      **Frequência de atualização**: Semanal\n**Cobertura temporal**: Até data corrente\n
+      **Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n**Publicado por**: Anderson Ferraz
+      Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
     columns:
       - name: id_vinculo
         description: Identificador no banco de dados do vínculo da pessoa.
@@ -578,173 +514,67 @@ models :
       - name: id_funcionario
         description: Identificador no banco de dados da pessoa cadastrada na tabela
           de funcionários.
-  - name: averbacoes
-    description: "**Descrição**: Tabela que armazena o cadastro das averbações.\n\
-      **Frequência de atualização**: Nunca\n**Cobertura temporal**: Não informado\n\
-      **Órgão gestor dos dados**: Não informado\n**Publicado por**: Não informado\n\
-      **Publicado por (email)**: naoinformado@naoinformado.com\n"
+  - name: total_contagem
+    description: "**Descrição**: Tabela que armazena o resultado das contagens de
+      tempo para benefícios dos servidores municipais.\n**Frequência de atualização**:
+      Nunca\n**Cobertura temporal**: Não informado\n**Órgão gestor dos dados**: Não
+      informado\n**Publicado por**: Não informado\n**Publicado por (email)**: naoinformado@naoinformado.com\n"
     columns:
       - name: id_funcionario
         description: Número do funcionário gerado pelo ERGON.
       - name: id_vinculo
         description: Número do vínculo relativo ao pagamento.
-      - name: id_averbacao
-        description: Chave gerada pelo banco para registro de averbação.
-      - name: data_inicio
-        description: Data inicial do período averbado.
-      - name: data_final
-        description: Data final do período averbado.
-      - name: instituicao
-        description: Instituição a qual o servidor prestou serviço referente ao tempo
-          averbado.
-      - name: id_tipo_tempo
-        description: Coluna que armazena o código numérico referente ao tipo de tempo.
+      - name: id_chave
+        description: Não informado
+      - name: finalidade
+        description: Não informado
+      - name: total_dias
+        description: Não informado
+      - name: diasfpub
+        description: Não informado
+      - name: diasfpubesp
+        description: Não informado
+      - name: total_periodos_contagem
+        description: Não informado
+      - name: total_anos_contagem
+        description: Não informado
+      - name: data_previsao_proximo_periodo
+        description: Não informado
+      - name: nome_finalidade
+        description: Não informado
+      - name: id_empresa
+        description: Não informado
+  - name: pre_contagem
+    description: "**Descrição**: A tabela armazena informações de contagens anteriores
+      ao início do sistema recursos humanos ou da entrada do servidor no sistema,
+      se por algum motivo não possuía informações anteriormente.\n**Frequência de
+      atualização**: Nunca\n**Cobertura temporal**: Não informado\n**Órgão gestor
+      dos dados**: Não informado\n**Publicado por**: Não informado\n**Publicado por
+      (email)**: naoinformado@naoinformado.com\n"
+    columns:
+      - name: finalidade
+        description: "Tipo da finalidade que motivou o cadastro da pré-contagem. \r
+          \nEx.: \"Aposentadoria\", \"Progressão\"."
+      - name: id_funcionario
+        description: Número do funcionário gerado pelo ERGON.
+      - name: id_vinculo
+        description: Número do vínculo relativo ao pagamento.
+      - name: periodos
+        description: Quantidade de períodos de contagem para determinada finalidade.
+      - name: dias
+        description: Total de dias da pré-contagem.
       - name: data_validade
-        description: Data de validade da averbação.
-      - name: total_dias_averbados
-        description: Total de dias averbados.
-      - name: motivo
-        description: Campo para cadastrar o motivo, geralmente ligado à desaverbação
-          de tempo.
-      - name: sobrepoe
-        description: Booleano que indica se o período averbado permite concomitância
-          com outro período averbado.
+        description: Data de validade da pré-contagem.
       - name: id_empresa
         description: Código da empresa.
-      - name: obs
-        description: Coluna de observações, campo de texto livre.
-      - name: regime_previdenciario
-        description: Coluna que informa o regime previdenciário ao qual pertencia
-          o tempo averbado.
-  - name: tipo_vinculo
-    description: "**Descrição**: Tipos de vínculos existentes tanto na administração\
-      \ direta como indireta da prefeitura do Rio de Janeiro.\n**Frequência de atualização**:\
-      \ Anual\n**Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**:\
-      \ SMFP/SUBGCC/CGRH\n**Publicado por**: Anderson Ferraz Carneiro\n**Publicado\
-      \ por (email)**: anderson.carneiro@rio.rj.gov.br\n"
-    columns:
-      - name: sigla
-        description: Sigla do tipo de vínculo. Ex. A DISPOSICAO-CLT.
-      - name: nome
-        description: Nome do tipo de vínculo. Ex. A DISPOSICAO DA PREFEITURA-CLT.
-  - name: vantagens
-    description: "**Descrição**: Tabela que armazena informações sobre atributos cadastrados\
-      \ que representam vantagens dos servidores. Os atributos podem se referir a\
-      \ situações funcionais que não geram repercursão financeira e apenas existem\
-      \ para fins de cadastro.\n**Frequência de atualização**: Nunca\n**Cobertura\
-      \ temporal**: Não informado\n**Órgão gestor dos dados**: Não informado\n**Publicado\
-      \ por**: Não informado\n**Publicado por (email)**: naoinformado@naoinformado.com\n"
-    columns:
-      - name: id_funcionario
-        description: Não informado
-      - name: id_vinculo
-        description: Não informado
-      - name: nome_vantagem
-        description: Não informado
-      - name: data_inicio
-        description: Não informado
-      - name: data_final
-        description: Não informado
-      - name: valor_vantagem
-        description: Não informado
-      - name: informacao_atributo
-        description: Não informado
-      - name: tipo_incorporacao_cargo_fiducia
-        description: Não informado
-      - name: percentual_incorporacao_cargo_fiducia
-        description: Não informado
-      - name: incide_tabela_vencimentos
-        description: Não informado
-      - name: incide_tabela_simbolo
-        description: Não informado
       - name: observacoes
-        description: Não informado
-      - name: valor_complementar
-        description: Não informado
-      - name: informacao_complementar
-        description: Não informado
-      - name: valor_complementar_2
-        description: Não informado
-      - name: informacao_complementar_2
-        description: Não informado
-      - name: valor_coplementar_3
-        description: Não informado
-      - name: informacao_complementar_3
-        description: Não informado
-      - name: valor_complementar_4
-        description: Não informado
-      - name: informacao_complementar_4
-        description: Não informado
-      - name: valor_complementar_5
-        description: Não informado
-      - name: informacao_complementar_5
-        description: Não informado
-      - name: valor_incorporado
-        description: Não informado
-      - name: id_empresa
-        description: Não informado
-      - name: id_vantagem
-        description: Não informado
-      - name: data_particao
-        description: Não informado
-  - name: horario_trabalho
-    description: "**Descrição**: Horários possíveis para funcionários da administração\
-      \ direta da prefeitura do Rio de Janeiro (ainda não tem dados disponibilizados)\
-      \ (esperado colocação também da administração indireta).\n**Frequência de atualização**:\
-      \ Nunca\n**Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**:\
-      \ SMFP/SUBGCC/CGRH\n**Publicado por**: Anderson Ferraz Carneiro\n**Publicado\
-      \ por (email)**: anderson.carneiro@rio.rj.gov.br\n"
-    columns:
-      - name: id_horario
-        description: Identificador do horário na base de dados.
-      - name: descricao
-        description: Descrição do horário. Neste atributo deve constar o horário de
-          entrada, de almoço e de saída relativos a todos os dias da semana.
-      - name: publicacao_diario_oficial
-        description: Publicação em diário oficial autorizando o horário.
-      - name: carga_horaria_mes
-        description: Carga mensal em horas do horário.
-      - name: carga_horaria_semana
-        description: Carga semanal em horas do horário.
-      - name: carga_horaria_dia
-        description: Carga diária em horas do horário.
-      - name: id_registro
-        description: Identificação do Registro
-  - name: setor
-    description: "**Descrição**: Setores existentes tanto na administração direta\
-      \ como indireta da prefeitura do Rio de Janeiro.\r\nOs setores são os mesmos\
-      \ do SICI.\n**Frequência de atualização**: Anual\n**Cobertura temporal**: Até\
-      \ data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n**Publicado por**:\
-      \ Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
-    columns:
-      - name: data_inicio
-        description: Data em que o setor foi colocado no presente organograma.
-      - name: data_fim
-        description: Data em que o setor saiu do organograma.
-      - name: id_setor_pai
-        description: Código, dado pelo SICI, do setor que está acima.
-      - name: id_setor
-        description: Código, dado pelo SICI, do setor.
-      - name: nome
-        description: Nome do setor, possivelmente abreviado pelo tamanho do atributo.
-      - name: nome_completo
-        description: Nome completo setor.
-      - name: sigla
-        description: Sigla do setor. Ex. FP/SUBGGC.
-      - name: id_empresa
-        description: Código, dado pelo SICI, da empresa onde está localizada o setor.
-      - name: id_empresa_prevrio
-        description: Código da empresa na PREVRIO.
-      - name: id_secretaria
-        description: Código, dado pelo SICI. da secretaria onde está o setor.
-      - name: extinto
-        description: Booleano que indica que o setor foi extinto.
+        description: Campo de observações sobre a pré-contagem.
   - name: cargo
-    description: "**Descrição**: Tipos de cargos existentes na administração direta\
-      \ ou indireta da PCRJ. Não entram os tipos de cargos em comissão.\n**Frequência\
-      \ de atualização**: Nunca\n**Cobertura temporal**: Não informado\n**Órgão gestor\
-      \ dos dados**: Não informado\n**Publicado por**: Não informado\n**Publicado\
-      \ por (email)**: nao.informado@gmail.com\n"
+    description: "**Descrição**: Tipos de cargos existentes na administração direta
+      ou indireta da PCRJ. Não entram os tipos de cargos em comissão.\n**Frequência
+      de atualização**: Nunca\n**Cobertura temporal**: Não informado\n**Órgão gestor
+      dos dados**: Não informado\n**Publicado por**: Não informado\n**Publicado por
+      (email)**: nao.informado@gmail.com\n"
     columns:
       - name: id_cargo
         description: Código dado pela prefeitura do Rio de Janeiro ao tipo de cargo.
@@ -764,35 +594,10 @@ models :
         description: Escolaridade minima exigida para o tipo de cargo.
       - name: aglutinador
         description: Todos cadastrados com N.
-  - name: orgaos_regime_juridico
-    description: "**Descrição**: Regimes jurídicos que podem ser aceitos para contratação\
-      \ de funcionários nos órgãos da administração direta ou indireta da prefeitura\
-      \ do Rio de Janeiro assim como outras empresas de interesse da prefeitura do\
-      \ Rio de Janeiro.\n**Frequência de atualização**: Nunca\n**Cobertura temporal**:\
-      \ Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n**Publicado\
-      \ por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
-    columns:
-      - name: sigla
-        description: Sigla do regime jurídico. Ex. CLT, EFETIVO etc
-      - name: nome
-        description: Código, dado pela prefeitura do Rio de Janeiro, da empresa.
-  - name: frequencia_antigo
-    description: "**Descrição**: Frequência de servidores da Prefeitura da Cidade\
-      \ do Rio de Janeiro cadastrada em sistemas de recursos humanos antigos.\n**Frequência\
-      \ de atualização**: Nunca\n**Cobertura temporal**: Não informado\n**Órgão gestor\
-      \ dos dados**: Não informado\n**Publicado por**: Não informado\n**Publicado\
-      \ por (email)**: naoinformado@naoinformado.com\n"
-    columns:
-      - name: id_matricula_vinculo
-        description: Matrícula do serivdor.
-      - name: id_frequencia
-        description: Código de frequência.
-      - name: data_frequencia
-        description: Data da ocorrência de frequência.
   - name: licenca_afastamento
-    description: "**Descrição**: Tabela contendo o início e fim dos afastamentos,\
-      \ seu motivo e o tipo de afastamento.\n**Frequência de atualização**: Nunca\n\
-      **Cobertura temporal**: Não informado\n**Órgão gestor dos dados**: Não informado\n\
+    description: "**Descrição**: Tabela contendo o início e fim dos afastamentos,
+      seu motivo e o tipo de afastamento.\n**Frequência de atualização**: Nunca\n
+      **Cobertura temporal**: Não informado\n**Órgão gestor dos dados**: Não informado\n
       **Publicado por**: Não informado\n**Publicado por (email)**: nao.informado@gmail.com\n"
     columns:
       - name: id_funcionario
@@ -819,28 +624,94 @@ models :
         description: Não informado
       - name: crm
         description: Não informado
+  - name: horario_trabalho
+    description: "**Descrição**: Horários possíveis para funcionários da administração
+      direta da prefeitura do Rio de Janeiro (ainda não tem dados disponibilizados)
+      (esperado colocação também da administração indireta).\n**Frequência de atualização**:
+      Nunca\n**Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**:
+      SMFP/SUBGCC/CGRH\n**Publicado por**: Anderson Ferraz Carneiro\n**Publicado por
+      (email)**: anderson.carneiro@rio.rj.gov.br\n"
+    columns:
+      - name: id_horario
+        description: Identificador do horário na base de dados.
+      - name: descricao
+        description: Descrição do horário. Neste atributo deve constar o horário de
+          entrada, de almoço e de saída relativos a todos os dias da semana.
+      - name: publicacao_diario_oficial
+        description: Publicação em diário oficial autorizando o horário.
+      - name: carga_horaria_mes
+        description: Carga mensal em horas do horário.
+      - name: carga_horaria_semana
+        description: Carga semanal em horas do horário.
+      - name: carga_horaria_dia
+        description: Carga diária em horas do horário.
+      - name: id_registro
+        description: Identificação do Registro
+  - name: tipo_vinculo
+    description: "**Descrição**: Tipos de vínculos existentes tanto na administração
+      direta como indireta da prefeitura do Rio de Janeiro.\n**Frequência de atualização**:
+      Anual\n**Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**:
+      SMFP/SUBGCC/CGRH\n**Publicado por**: Anderson Ferraz Carneiro\n**Publicado por
+      (email)**: anderson.carneiro@rio.rj.gov.br\n"
+    columns:
+      - name: sigla
+        description: Sigla do tipo de vínculo. Ex. A DISPOSICAO-CLT.
+      - name: nome
+        description: Nome do tipo de vínculo. Ex. A DISPOSICAO DA PREFEITURA-CLT.
   - name: matricula
-    description: "**Descrição**: Matrículas dadas pela prefeitura do Rio de Janeiro\
-      \ para pessoas que devem receber pagamento ou para pessoas em outros casos de\
-      \ interesse da prefeitura do Rio de Janeiro\n**Frequência de atualização**:\
-      \ Diário\n**Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**:\
-      \ SMFP/SUBGCC/CGRH\n**Publicado por**: Anderson Ferraz Carneiro\n**Publicado\
-      \ por (email)**: anderson.carneiro@rio.rj.gov.br\n"
+    description: "**Descrição**: Matrículas dadas pela prefeitura do Rio de Janeiro
+      para pessoas que devem receber pagamento ou para pessoas em outros casos de
+      interesse da prefeitura do Rio de Janeiro\n**Frequência de atualização**: Diário\n
+      **Cobertura temporal**: Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n
+      **Publicado por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
     columns:
       - name: id_funcionario
         description: Número do funcionário. Número dado a pessoa que ganhou sua primeira
           matrícula da prefeitura do Rio de Janeiro.
       - name: id_matricula
         description: Número da matrícula.
+  - name: orgaos_externos
+    description: "**Descrição**: Órgãos de outros entes federativos que não da prefeitura
+      do Rio de Janeiro mas que são de interesse da prefeitura do Rio de Janeiro.\r
+      \nUsada, geralmente, para documentar a origem de servidores cedidos à prefeitura
+      do Rio de Janeiro.\n**Frequência de atualização**: Anual\n**Cobertura temporal**:
+      Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n**Publicado
+      por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
+    columns:
+      - name: nome
+        description: Nome do órgão. Ex. GE ACRE (Governo do estado do Acre),PR NITEROI
+          (Prefeitura de Niteroi)
+      - name: nome_completo
+        description: Nome por extenso do órgão. Ex. Prefeitura da cidade de Niteroi.
+      - name: tipo
+        description: Tipo do órgão. Ex. OUT.GOV. (outro governo estadual, que não
+          o do Rio de Janeiro), OUT.PREF. (outra prefeitura que não a do Rio de Janeiro)
+  - name: averbacoes_contagem
+    description: "**Descrição**: Nesta tabela são armazenadas informações referentes
+      sobre finalidade de contagem e total do tempo de contagem referentes a períodos
+      averbados pelos servidores.\n**Frequência de atualização**: Nunca\n**Cobertura
+      temporal**: Não informado\n**Órgão gestor dos dados**: Não informado\n**Publicado
+      por**: Não informado\n**Publicado por (email)**: naoinformado@naoinformado.com\n"
+    columns:
+      - name: id_funcionario
+        description: Número do funcionário gerado pelo ERGON.
+      - name: id_vinculo
+        description: Número do vínculo relativo ao pagamento.
+      - name: id_averbacao
+        description: Chave gerada pelo banco para registro de averbação.
+      - name: finalidade
+        description: Tipo da finalidade da averbação.
+      - name: dias
+        description: Total de dias averbados para determinada finalidade.
   - name: funcionario
-    description: "**Descrição**: Pessoas físicas que precisam ter suas informações\
-      \ guardadas pela prefeitura para algum controle, como controle de pagamento,\
-      \ de frequência ou de lotação. Em geral são pessoas que entram ou entraram em\
-      \ alguma folha de pagamento da prefeitura do Rio de Janeiro, sendo funcionário\
-      \ ou não, prestando serviço ou não (ex. pensionista previdenciário).\n**Frequência\
-      \ de atualização**: Não informado\n**Cobertura temporal**: Não informado\n**Órgão\
-      \ gestor dos dados**: Não informado\n**Publicado por**: Não informado\n**Publicado\
-      \ por (email)**: nao.informado@gmail.com\n"
+    description: "**Descrição**: Pessoas físicas que precisam ter suas informações
+      guardadas pela prefeitura para algum controle, como controle de pagamento, de
+      frequência ou de lotação. Em geral são pessoas que entram ou entraram em alguma
+      folha de pagamento da prefeitura do Rio de Janeiro, sendo funcionário ou não,
+      prestando serviço ou não (ex. pensionista previdenciário).\n**Frequência de
+      atualização**: Não informado\n**Cobertura temporal**: Não informado\n**Órgão
+      gestor dos dados**: Não informado\n**Publicado por**: Não informado\n**Publicado
+      por (email)**: nao.informado@gmail.com\n"
     columns:
       - name: id_vinculo
         description: Identificador no banco de dados do vínculo da pessoa. A pessoa
@@ -1027,9 +898,8 @@ models :
       - name: data_ultima_atualizacao_bancaria
         description: Data da última atualização das informações bancárias da pessoa.
       - name: tipo_certidao
-        description: "Tipo da certidão que altera o estado civil, caso o servidor\
-          \ tenha modificado seu estado civil apresentada, caso não tenha fica em\
-          \ branco.\n"
+        description: "Tipo da certidão que altera o estado civil, caso o servidor
+          tenha modificado seu estado civil apresentada, caso não tenha fica em branco.\n"
       - name: numero_certidao
         description: Número da certidão de casamento, nascimento ou união estável
           da pessoa.
@@ -1068,8 +938,8 @@ models :
         description: Booleano que indica se existe interesse da pessoa em participar
           de projetos sociais.
       - name: recebe_beneficio_previdenciario
-        description: "Booleano indicando se a pessoa já percebe algum benefício previdenciário\
-          \ (pensão, aposentadoria).\ncampo em branco"
+        description: "Booleano indicando se a pessoa já percebe algum benefício previdenciário
+          (pensão, aposentadoria).\ncampo em branco"
       - name: nome_posse_alteracao_sexo
         description: Nome na posse da pessoa que mudou de sexo.
       - name: sexo_posse_alteracao_sexo
@@ -1107,24 +977,150 @@ models :
         description: Login da pessoa no Linkedln.
       - name: login_myspace
         description: Login da pessoa no MySpace.
-  - name: forma_provimento
-    description: "**Descrição**: Formas de provimentos possíveis tanto na administração\
-      \ direta como indireta da prefeitura do Rio de Janeiro. O provimento é a investidura\
-      \ em um cargo público.\n**Frequência de atualização**: Semanal\n**Cobertura\
-      \ temporal**: Até data corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n\
-      **Publicado por**: Anderson Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
+  - name: averbacoes
+    description: "**Descrição**: Tabela que armazena o cadastro das averbações.\n
+      **Frequência de atualização**: Nunca\n**Cobertura temporal**: Não informado\n
+      **Órgão gestor dos dados**: Não informado\n**Publicado por**: Não informado\n
+      **Publicado por (email)**: naoinformado@naoinformado.com\n"
     columns:
-      - name: sigla
-        description: Sigla da forma de provimento. Ex. 01.
+      - name: id_funcionario
+        description: Número do funcionário gerado pelo ERGON.
+      - name: id_vinculo
+        description: Número do vínculo relativo ao pagamento.
+      - name: id_averbacao
+        description: Chave gerada pelo banco para registro de averbação.
+      - name: data_inicio
+        description: Data inicial do período averbado.
+      - name: data_final
+        description: Data final do período averbado.
+      - name: instituicao
+        description: Instituição a qual o servidor prestou serviço referente ao tempo
+          averbado.
+      - name: id_tipo_tempo
+        description: Coluna que armazena o código numérico referente ao tipo de tempo.
+      - name: data_validade
+        description: Data de validade da averbação.
+      - name: total_dias_averbados
+        description: Total de dias averbados.
+      - name: motivo
+        description: Campo para cadastrar o motivo, geralmente ligado à desaverbação
+          de tempo.
+      - name: sobrepoe
+        description: Booleano que indica se o período averbado permite concomitância
+          com outro período averbado.
+      - name: id_empresa
+        description: Código da empresa.
+      - name: obs
+        description: Coluna de observações, campo de texto livre.
+      - name: regime_previdenciario
+        description: Coluna que informa o regime previdenciário ao qual pertencia
+          o tempo averbado.
+  - name: tipo_tempo
+    description: "**Descrição**: Esta tabela armazena os tipos de tempo utilizados
+      para contagem de benefícios categorizados como finalidades. Nesta tabela se
+      encontram os nomes dos tipos de tempo.\n**Frequência de atualização**: Nunca\n
+      **Cobertura temporal**: Não informado\n**Órgão gestor dos dados**: SUBGGC\n
+      **Publicado por**: Não informado\n**Publicado por (email)**: naoinformado@naoinformado.com\n"
+    columns:
+      - name: id_tipo_tempo
+        description: Coluna que armazena o código numérico referente ao tipo de tempo.
+      - name: nome_tipo_tempo
+        description: Campo que armazena o nome do tipo de tempo.
+      - name: aposentadoria
+        description: Booleano que informa se aquele tempo é computado para fins de
+          aposentadoria.
+      - name: ferias
+        description: Booleano que informa se aquele tempo é computado para fins de
+          contagem de período aquisitivo de férias.
+      - name: dias_de_ferias
+        description: Booleano que informa se aquele tempo é computado para fins de
+          contagem para o saldo de dias de férias.
+      - name: trienio
+        description: Booleano que informa se aquele tempo é computado para fins de
+          contagem para a contagem de períodos de triênio.
+      - name: licenca_especial
+        description: Booleano que informa se aquele tempo é computado para fins de
+          contagem para a contagem de períodos de licença especial.
+      - name: dias_de_licenca_especial
+        description: Booleano que informa se aquele tempo é computado para fins de
+          contagem para o saldo de dias de licença especial.
+      - name: tempo_de_chefia
+        description: Booleano que informa se aquele tempo é computado para fins de
+          contagem para a contagem de incorporação de cargo em fidúcia.
+      - name: progressao
+        description: Booleano que informa se aquele tempo é computado para fins de
+          contagem para a contagem de progressão no cargo.
+      - name: avaliacao
+        description: Booleano que informa se aquele tempo é computado para fins de
+          contagem para a contagem de avalição em estágio probatório.
+  - name: setor
+    description: "**Descrição**: Setores existentes tanto na administração direta
+      como indireta da prefeitura do Rio de Janeiro.\r\nOs setores são os mesmos do
+      SICI.\n**Frequência de atualização**: Anual\n**Cobertura temporal**: Até data
+      corrente\n**Órgão gestor dos dados**: SMFP/SUBGCC/CGRH\n**Publicado por**: Anderson
+      Ferraz Carneiro\n**Publicado por (email)**: anderson.carneiro@rio.rj.gov.br\n"
+    columns:
+      - name: data_inicio
+        description: Data em que o setor foi colocado no presente organograma.
+      - name: data_fim
+        description: Data em que o setor saiu do organograma.
+      - name: id_setor_pai
+        description: Código, dado pelo SICI, do setor que está acima.
+      - name: id_setor
+        description: Código, dado pelo SICI, do setor.
       - name: nome
-        description: Nome da forma de provimento. Ex. NOMEACAO OU PROVIMENTO (relativo
-          a sigla 01).
-      - name: inativo
-        description: Booleano que indica que a forma de provimento é válida para funcionários
-          inativos.
-      - name: primeiro_provimento
-        description: Booleano que indica se a forma de provimento pode ser um primeiro
-          tipo de provimento ( quando se entra na prefeitura ).
-      - name: ativo
-        description: Booleano que indica que a forma de provimento é válida para funcionários
-          ativos.
+        description: Nome do setor, possivelmente abreviado pelo tamanho do atributo.
+      - name: nome_completo
+        description: Nome completo setor.
+      - name: sigla
+        description: Sigla do setor. Ex. FP/SUBGGC.
+      - name: id_empresa
+        description: Código, dado pelo SICI, da empresa onde está localizada o setor.
+      - name: id_empresa_prevrio
+        description: Código da empresa na PREVRIO.
+      - name: id_secretaria
+        description: Código, dado pelo SICI. da secretaria onde está o setor.
+      - name: extinto
+        description: Booleano que indica que o setor foi extinto.
+  - name: afastamento_antigo
+    description: "**Descrição**: Nesta tabela são armazenadas informações referentes
+      a afastamentos dos servidores da Prefeitura da Cidade do Rio de Janeiro cadastrados
+      em sistemas de recursos humanos antigos.\n**Frequência de atualização**: Nunca\n
+      **Cobertura temporal**: Não informado\n**Órgão gestor dos dados**: Não informado\n
+      **Publicado por**: Não informado\n**Publicado por (email)**: naoinformado@naoinformado.com\n"
+    columns:
+      - name: id_matricula_vinculo
+        description: Matrícula do servidor.
+      - name: data_inicio
+        description: Data incial do afastamento.
+      - name: data_previsao_retorno
+        description: Data de previsão do retorno do afastamento.
+      - name: data_fim
+        description: Data final do afastamento, representa o efetivo retorno do servidor
+          à atividade.
+  - name: frequencia_antigo
+    description: "**Descrição**: Frequência de servidores da Prefeitura da Cidade
+      do Rio de Janeiro cadastrada em sistemas de recursos humanos antigos.\n**Frequência
+      de atualização**: Nunca\n**Cobertura temporal**: Não informado\n**Órgão gestor
+      dos dados**: Não informado\n**Publicado por**: Não informado\n**Publicado por
+      (email)**: naoinformado@naoinformado.com\n"
+    columns:
+      - name: id_matricula_vinculo
+        description: Matrícula do serivdor.
+      - name: id_frequencia
+        description: Código de frequência.
+      - name: data_frequencia
+        description: Data da ocorrência de frequência.
+  - name: afastamento_antigo_nomes
+    description: "**Descrição**: Nesta tabela são armazenadas informações sobre os
+      códigos de afastamentos utilizados em sistemas antigos da Prefeitura do Rio
+      de Janeiro.\n**Frequência de atualização**: Nunca\n**Cobertura temporal**: Não
+      informado\n**Órgão gestor dos dados**: Não informado\n**Publicado por**: Não
+      informado\n**Publicado por (email)**: nao.informado@gmail.com\n"
+    columns:
+      - name: id_empresa
+        description: Código da empresa.
+      - name: id_afastamento
+        description: Código do afastamento.
+      - name: nome_afastamento
+        description: Nome do afastamento.
