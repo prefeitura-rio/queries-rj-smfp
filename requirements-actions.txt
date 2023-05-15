@@ -4,5 +4,4 @@ pandas
 requests
 openpyxl
 ruamel.yaml
-arcgis==1.9.1
 markdown
