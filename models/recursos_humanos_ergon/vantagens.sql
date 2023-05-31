@@ -36,7 +36,7 @@ SELECT
     SAFE_CAST(TRIM(flex_campo_05) AS STRING) AS valor_incorporado,
     SAFE_CAST(REGEXP_REPLACE(TRIM(emp_codigo), r'\.0$', '') AS STRING) AS id_empresa,
     SAFE_CAST(REGEXP_REPLACE(TRIM(chavevant), r'\.0$', '') AS STRING) AS id_vantagem,
-    SAFE_CAST(data_particao AS DATE) data_particao,
+    SAFE_CAST(TRIM(SUBSTR(data_particao, 1, 10)) AS DATE) data_particao,
 FROM rj-smfp.recursos_humanos_ergon_staging.vantagens AS t
 WHERE
     data_particao < CURRENT_DATE('America/Sao_Paulo')
