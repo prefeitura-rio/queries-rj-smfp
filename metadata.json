@@ -199,6 +199,8 @@
                 }
             ]
         },
+        "fitabanco_orgSociais_acima2021": {},
+        "dTb_Empresas_Setor_admIndireta": {},
         "tipo_orgao": {
             "title": "TODO_TITLE_PREFIX: Tipo de Orgão",
             "short_description": "Tipos de órgãos tanto da administração direta como indireta da prefeitura do Rio de Janeiro.",
@@ -225,6 +227,7 @@
                 }
             ]
         },
+        "fitabanco_ativos_indireta": {},
         "vantagens": {
             "title": "TODO_TITLE_PREFIX: vantagens",
             "short_description": "Cadastro de vantagens do servidor",
@@ -491,6 +494,7 @@
                 }
             ]
         },
+        "dTb_Empresas_c_Setor": {},
         "ficha_financeira": {
             "title": "TODO_TITLE_PREFIX: Não informado",
             "short_description": "Valores de rubricas de fichas financeiras dos funcionários da COMLURB.",
@@ -708,6 +712,7 @@
                 }
             ]
         },
+        "dTb_Empresas_Setor_admDireta": {},
         "vinculo": {
             "title": "TODO_TITLE_PREFIX: Vínculos de Pagamento",
             "short_description": "Vínculos de pagamento ( em geral empregatícios ), tanto antigos como atuais, da administração direta e indireta da prefeitura do Rio de Janeiro.",
@@ -933,6 +938,7 @@
                 }
             ]
         },
+        "dTb_Empresas_Setor_comlurb": {},
         "provimento": {
             "title": "TODO_TITLE_PREFIX: Provimento",
             "short_description": "Eventos relacionados aos vínculos funcionais tanto com a administração direta como indireta da prefeitura do Rio de Janeiro.",
@@ -1003,6 +1009,7 @@
                 }
             ]
         },
+        "dTb_Empresa_setor_org_sociais": {},
         "total_contagem": {
             "title": "TODO_TITLE_PREFIX: total_contagem",
             "short_description": "Tabela de contagem de tempo para benefícios",
@@ -1065,6 +1072,7 @@
                 }
             ]
         },
+        "fitabanco_comlurb": {},
         "pre_contagem": {
             "title": "TODO_TITLE_PREFIX: pre_contagem",
             "short_description": "Informações sobre contagens pregressas do servidor.",
@@ -1304,6 +1312,7 @@
                 }
             ]
         },
+        "fitabanco_ativos_pcrj": {},
         "matricula": {
             "title": "TODO_TITLE_PREFIX: Matricula",
             "short_description": "Matrículas dadas pela prefeitura do Rio de Janeiro para pessoas que devem receber pagamento",
@@ -1363,6 +1372,7 @@
                 }
             ]
         },
+        "dbt_Empresa": {},
         "frequencia": {},
         "averbacoes_contagem": {
             "title": "TODO_TITLE_PREFIX: averbacoes_contagem",
@@ -1873,6 +1883,7 @@
                 }
             ]
         },
+        "dTb_Empresa_setor_inativos_pensionistas": {},
         "averbacoes": {
             "title": "TODO_TITLE_PREFIX: averbacoes",
             "short_description": "Averbações dos servidores da Prefeitura da Cidade do Rio de Janeiro",
@@ -2147,7 +2158,8 @@
                     "description": "Nome do afastamento."
                 }
             ]
-        }
+        },
+        "fitabanco_inativos_pensionistas": {}
     },
     "iptu_inadimplentes": {
         "perfil_inadimplente_v2": {},
