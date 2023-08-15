@@ -55,6 +55,7 @@ LEFT JOIN (
     MIN(chave_meta_ar_egpweb) chave_meta_ar_egpweb
   FROM `rj-smfp.planejamento_gestao_dashboard_metas_staging.relacao_metas` 
   WHERE relacao_entre_indicadores = '1 - Direta (Mesmo indicador)'
+  AND   chave_meta_ar like '2023%'
   GROUP BY chave_meta_pe
   ) as rm
   ON ard.id_meta = rm.chave_meta_ar_egpweb
@@ -117,6 +118,7 @@ ORDER BY pe_tipo_meta DESC
     MIN(chave_meta_ar_egpweb) chave_meta_ar_egpweb
   FROM `rj-smfp.planejamento_gestao_dashboard_metas_staging.relacao_metas` 
   WHERE relacao_entre_indicadores = '1 - Direta (Mesmo indicador)'
+  AND   chave_meta_ar like '2023%'
   GROUP BY chave_meta_pe
   ) as rm
   ON rm.chave_meta_pe = ped.codigo_meta_desdobrada
@@ -281,7 +283,8 @@ LEFT JOIN (SELECT
       WHEN relacao_entre_indicadores = "2 - Direta (Outro indicador)" THEN TRUE
       ELSE FALSE
     END as colocar_logo_abaixo
-  FROM `rj-smfp.planejamento_gestao_dashboard_metas_staging.relacao_metas`) as rel_ind
+  FROM `rj-smfp.planejamento_gestao_dashboard_metas_staging.relacao_metas`
+  WHERE chave_meta_ar like '2023%') as rel_ind
     ON tj.id_meta_principal = rel_ind.chave_meta_ar_egpweb
 LEFT JOIN (SELECT codigo_egpweb, MIN(nod) as ordem_meta_ar FROM `rj-smfp.planejamento_gestao_acordo_resultados_staging.meta_desdobrada` group by codigo_egpweb) as rm
     ON tj.id_meta_principal = SAFE_CAST(SAFE_CAST(rm.codigo_egpweb AS FLOAT64) AS STRING)
