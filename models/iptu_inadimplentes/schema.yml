@@ -1,10 +1,10 @@
 version: 2
 models :
   - name: perfil_inadimplente
-    description: "**Descrição**: Perfil de inadimplentes do IPTU\n**Frequência de
-      atualização**: Semanal\n**Cobertura temporal**: Indefinido\n**Órgão gestor dos
-      dados**: Indefinido\n**Publicado por**: Indefinido\n**Publicado por (email)**:
-      indefinido@mail.com\n"
+    description: "**Descrição**: Perfil de inadimplentes do IPTU\n**Frequência de\
+      \ atualização**: Semanal\n**Cobertura temporal**: Indefinido\n**Órgão gestor\
+      \ dos dados**: Indefinido\n**Publicado por**: Indefinido\n**Publicado por (email)**:\
+      \ indefinido@mail.com\n"
     columns:
       - name: ano_competencia
         description: Ano da competência

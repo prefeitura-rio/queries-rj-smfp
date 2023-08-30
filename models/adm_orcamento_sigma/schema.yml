@@ -1,0 +1,45 @@
+version: 2
+models :
+  - name: sancao_fornecedor
+    description: "**Descrição**: Sanções administrativas aplicadas por não cumprimento\
+      \ de contrato a fornecedores contratados pelo município do Rio de Janeiro.\n\
+      **Frequência de atualização**: Nunca\n**Cobertura temporal**: A partir de 15/01/2007\
+      \ até o momento\n**Órgão gestor dos dados**: SMFP\n**Publicado por**: Fabio\
+      \ Barbosa Baptista\n**Publicado por (email)**: fabio.baptista@rio.rj.gov.br\n"
+    columns:
+      - name: cpf_cnpj
+        description: CPF/CNPJ do fornecedor que recebeu a sanção.
+      - name: razao_social
+        description: Razão social ou nome do fornecedor que recebeu a sanção.
+      - name: id_ordem
+        description: Sequencial começado por 1 e é incrementado sempre que há uma
+          nova sanção aplicada pelo mesmo órgão e com o mesmo número de processo administrativo
+          descrito no atributo processo_fatura.
+      - name: id_processo_origem
+        description: É o número do processo administrativo correspondente à licitação
+          ou sua dispensa ou inexigibilidade relacionada a contratação do fornecedor.
+          A sanção está sendo aplicada por causa de descumprimento de contrato ligado
+          a este processo administrativo.
+      - name: id_processo_instrutivo
+        description: É o número do processo administrativo relacionado à contratação
+          do fornecedor por um órgão. Está sempre relacionado a um processo descrito
+          no atributo em Processo_Origem.
+      - name: id_sancao
+        description: Código do tipo da sanção aplicada ao fornecedor.
+      - name: id_processo_fatura
+        description: É o número do processo administrativo relacionado ao pagamento
+          do serviço ou produto solicitado pelo processo instrutivo. Caso não haja
+          um processo fatura é copiado o número do processo instrutivo para este atributo.
+      - name: descricao_sancao
+        description: Descrição do tipo da sanção aplicado ao fornecedor. Ex. Multa,
+          suspensão, inidoneidade etc.
+      - name: data_sancao
+        description: Data de Início da sanção aplicada ao fornecedor. Ex. Data do
+          início da suspensão, data da aplicação da multa etc.
+      - name: data_extincao_sancao
+        description: Data de extinção da sanção aplicada ao fornecedor Ex. Data do
+          fim da suspensão, data da confirmação do pagamento da multa etc.
+      - name: tipo_documento
+        description: Indica se o documento é CPF ou CNPJ
+      - name: cpf_cnpj_formatado
+        description: CPF ou CNPJ na versão formatada

@@ -53,3 +53,6 @@ models:
     iptu_inadimplentes:
       +materialized: table
       +schema: iptu_inadimplentes
+    adm_orcamento_sigma:
+      +materialized: table
+      +schema: adm_orcamento_sigma 

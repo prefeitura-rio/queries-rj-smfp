@@ -38,6 +38,7 @@ def build_initial_dict(sql_files: List[Path]) -> dict:
     for sql_file in sql_files:
         dataset_id = sql_file.parent.name
         table_id = sql_file.stem
+        table_id = table_id.split("__")[-1] if "__" in table_id else table_id
         if dataset_id not in initial_dict:
             initial_dict[dataset_id] = {}
         initial_dict[dataset_id][table_id] = {}
