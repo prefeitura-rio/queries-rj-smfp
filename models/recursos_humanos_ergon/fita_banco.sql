@@ -43,14 +43,14 @@ SELECT
     SAFE_CAST(REGEXP_REPLACE(jornada, r'\.0$', '') AS STRING) AS id_jornada,
     SAFE_CAST(data_particao AS DATE) data_particao,
     FROM rj-smfp.recursos_humanos_ergon_staging.fita_banco AS t
-WHERE
-    data_particao < CURRENT_DATE('America/Sao_Paulo')
+WHERE 
+    SAFE_CAST(data_particao AS DATE) < CURRENT_DATE('America/Sao_Paulo')
 
 {% if is_incremental() %}
 
 {% set max_partition = run_query("SELECT gr FROM (SELECT IF(max(data_particao) > CURRENT_DATE('America/Sao_Paulo'), CURRENT_DATE('America/Sao_Paulo'), max(data_particao)) as gr FROM " ~ this ~ ")").columns[0].values()[0] %}
 
 AND
-    data_particao > ("{{ max_partition }}")
+    SAFE_CAST(data_particao AS DATE) > ("{{ max_partition }}")
 
 {% endif %}
