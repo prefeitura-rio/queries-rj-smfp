@@ -286,7 +286,7 @@ LEFT JOIN (SELECT
   FROM `rj-smfp.planejamento_gestao_dashboard_metas_staging.relacao_metas`
   WHERE chave_meta_ar like '2023%') as rel_ind
     ON tj.id_meta_principal = rel_ind.chave_meta_ar_egpweb
-LEFT JOIN (SELECT codigo_egpweb, MIN(nod) as ordem_meta_ar FROM `rj-smfp.planejamento_gestao_acordo_resultados_staging.meta_desdobrada` group by codigo_egpweb) as rm
+LEFT JOIN (SELECT codigo_egpweb, MIN(cod_meta_d) as ordem_meta_ar FROM `rj-smfp.planejamento_gestao_acordo_resultados_staging.meta_desdobrada` group by codigo_egpweb) as rm
     ON tj.id_meta_principal = SAFE_CAST(SAFE_CAST(rm.codigo_egpweb AS FLOAT64) AS STRING)
 )
 
