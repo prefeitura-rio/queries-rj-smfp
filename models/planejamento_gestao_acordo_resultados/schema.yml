@@ -1,38 +1,5 @@
 version: 2
 models :
-  - name: nota_meta
-    description: "**Descrição**: Nota dada pela prefeitura para o que foi alcançado
-      por um órgão para determinado identificador de meta. Uma meta pode ter vários
-      identificadores, um para cada indicador associado a ela.\n**Frequência de atualização**:
-      Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n**Órgão gestor
-      dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n**Publicado
-      por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
-    columns:
-      - name: id_meta
-        description: Identificador da meta para a qual a nota foi dada. Existe um
-          identificador para cada meta, por órgão e por indicador.
-      - name: ano
-        description: Ano para o qual a nota foi dada.
-      - name: mes
-        description: Mês para o qual a nota foi dada.
-      - name: valor
-        description: Valor da nota.
-  - name: indicador
-    description: "**Descrição**: Indicadores, apurados mensalmente, que servem para
-      medir o quanto foi alcançado das metas dos acordos de resultados.\n**Frequência
-      de atualização**: Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n
-      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n
-      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
-    columns:
-      - name: id_meta
-        description: Código identificador da meta medida pelo indicador.
-      - name: ano
-        description: Ano de aferição do indicador.
-      - name: mes
-        description: Mês de aferição do indicador.
-      - name: valor
-        description: Valor alcançado pelo indicador no mês. Pode ser um dado número,
-          um percentual ou uma sinalização indicando que foi entregue ou não.
   - name: comentario
     description: "**Descrição**: Comentários feitos pelos analistas de gerenciamento
       de projetos e metas sobre as apurações mensais do desempenho dos órgãos para
@@ -83,6 +50,39 @@ models :
           'Atraso grave',\r\nse ch.cor_chance = '4' então 'Atraso Recuperável',\r\n
           se ch.cor_chance = '5' então 'Andamento Satisfatório',\r\nse ch.cor_chance
           = '6' então 'Cumprida'."
+  - name: nota_meta
+    description: "**Descrição**: Nota dada pela prefeitura para o que foi alcançado
+      por um órgão para determinado identificador de meta. Uma meta pode ter vários
+      identificadores, um para cada indicador associado a ela.\n**Frequência de atualização**:
+      Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n**Órgão gestor
+      dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n**Publicado
+      por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
+    columns:
+      - name: id_meta
+        description: Identificador da meta para a qual a nota foi dada. Existe um
+          identificador para cada meta, por órgão e por indicador.
+      - name: ano
+        description: Ano para o qual a nota foi dada.
+      - name: mes
+        description: Mês para o qual a nota foi dada.
+      - name: valor
+        description: Valor da nota.
+  - name: indicador
+    description: "**Descrição**: Indicadores, apurados mensalmente, que servem para
+      medir o quanto foi alcançado das metas dos acordos de resultados.\n**Frequência
+      de atualização**: Mensal\n**Cobertura temporal**: Desde 2022 até a data corrente.\n
+      **Órgão gestor dos dados**: Secretaria Municipal de Fazenda e Planejamento (SMFP)\n
+      **Publicado por**: Bruno Almeida\n**Publicado por (email)**: brunodepauloalmeida@gmail.com\n"
+    columns:
+      - name: id_meta
+        description: Código identificador da meta medida pelo indicador.
+      - name: ano
+        description: Ano de aferição do indicador.
+      - name: mes
+        description: Mês de aferição do indicador.
+      - name: valor
+        description: Valor alcançado pelo indicador no mês. Pode ser um dado número,
+          um percentual ou uma sinalização indicando que foi entregue ou não.
   - name: meta
     description: "**Descrição**: Metas, por indicador e por órgão, dos Acordos de
       Resultados. Se uma meta tiver dois indicadores ela aparecerá duas vezes. Uma
