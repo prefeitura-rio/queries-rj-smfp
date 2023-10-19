@@ -1,3 +1,9 @@
+{{ 
+    config( 
+        alias='setor',
+        schema='recursos_humanos_ergon'
+    ) 
+}}
 SELECT 
     SAFE_CAST(dataini AS DATE) AS data_inicio,
     SAFE_CAST(datafim AS DATE) AS data_fim,

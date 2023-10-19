@@ -1,3 +1,9 @@
+{{ 
+    config( 
+        alias='funcionario', 
+        schema='recursos_humanos_ergon'
+    ) 
+}}
 SELECT 
     SAFE_CAST(REGEXP_REPLACE(numero, r'\.0$', '') AS STRING) AS id_vinculo,
     SAFE_CAST(nome AS STRING) AS nome,
