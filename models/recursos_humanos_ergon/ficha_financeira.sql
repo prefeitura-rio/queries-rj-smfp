@@ -1,6 +1,7 @@
-
 {{
     config(
+        alias='ficha_financeira',
+        schema='recursos_humanos_ergon',
         materialized='incremental',
         partition_by={
             "field": "data_particao",

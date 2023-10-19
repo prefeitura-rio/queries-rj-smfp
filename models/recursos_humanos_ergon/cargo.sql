@@ -1,3 +1,9 @@
+{{ 
+    config(
+        alias='cargo',
+        schema='recursos_humanos_ergon'
+    ) 
+}}
 SELECT 
     SAFE_CAST(REGEXP_REPLACE(cargo, r'\.0$', '') AS STRING) AS id_cargo,
     SAFE_CAST(nome AS STRING) AS nome,
