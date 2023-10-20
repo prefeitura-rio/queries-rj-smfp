@@ -1,5 +1,5 @@
 {{ 
-    config( alias='h_setor',schema='recursos_humanos_ergon_comlurb') 
+    config( alias='setor_h',schema='recursos_humanos_ergon_comlurb') 
 }}
 SELECT 
     SAFE_CAST(DATE(dataini) AS DATE) AS data_inicio,
@@ -13,4 +13,4 @@ SELECT
     SAFE_CAST(REGEXP_REPLACE(TRIM(flex_campo_05), r'\.0$', '') AS STRING) AS id_secretaria_sici,
     SAFE_CAST(TRIM(extinto) AS STRING) AS extinto,
     SAFE_CAST(TRIM(nomesetorlongo) AS STRING) AS nome_completo,
-FROM rj-smfp.recursos_humanos_ergon_comlurb_staging.h_setor AS t
+FROM rj-smfp.recursos_humanos_ergon_comlurb_staging.setor_h AS t

@@ -119,7 +119,7 @@ models :
           etc'
       - name: data_pagamento_recisao
         description: Data de pagamento da rescisão do vínculo, caso tenha havido rescisão.
-  - name: recursos_humanos_ergon_comlurb__h_setor
+  - name: recursos_humanos_ergon_comlurb__setor_h
     description: "**Descrição**: Setores existentes na COMLURB. São setores existentes
       no SICI.\n**Frequência de atualização**: Nunca\n**Cobertura temporal**: Não
       informado\n**Órgão gestor dos dados**: SUBGGC\n**Publicado por**: Não informado\n
