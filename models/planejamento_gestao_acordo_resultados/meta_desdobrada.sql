@@ -1,6 +1,6 @@
 SELECT
 SAFE_CAST(codigo_egpweb AS STRING) as codigo_meta_egpweb,
-SAFE_CAST(ano AS INT64) as ano,
+SAFE_CAST(SAFE_CAST(ano AS FLOAT64) AS INT64) as ano,
 SAFE_CAST(orgao_ar AS STRING) as orgao_egpweb,
 SAFE_CAST(orgao_resp AS STRING) as orgao_responsavel,
 SAFE_CAST(cod_meta AS STRING) as codigo_meta,

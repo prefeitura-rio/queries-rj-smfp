@@ -212,4 +212,4 @@ LEFT JOIN tendencia_por_meta_mae as tmm
 )
 
 SELECT * FROM ar_detalhes_1 
-WHERE id_meta != id_meta_mae --retirando metas que deveriam ter sido excluidas
+--WHERE id_meta != id_meta_mae --retirando metas que deveriam ter sido excluidas
