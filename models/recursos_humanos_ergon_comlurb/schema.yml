@@ -1,6 +1,6 @@
 version: 2
 models :
-  - name: vinculo
+  - name: recursos_humanos_ergon_comlurb__vinculo
     description: "**Descrição**: Vínculos de pagamento ( em geral empregatícios ),
       tanto antigos como atuais, da COMLURB. Um vínculo, em geral, está associado
       a uma matrícula.\n**Frequência de atualização**: Nunca\n**Cobertura temporal**:
@@ -119,7 +119,7 @@ models :
           etc'
       - name: data_pagamento_recisao
         description: Data de pagamento da rescisão do vínculo, caso tenha havido rescisão.
-  - name: h_setor
+  - name: recursos_humanos_ergon_comlurb__h_setor
     description: "**Descrição**: Setores existentes na COMLURB. São setores existentes
       no SICI.\n**Frequência de atualização**: Nunca\n**Cobertura temporal**: Não
       informado\n**Órgão gestor dos dados**: SUBGGC\n**Publicado por**: Não informado\n
@@ -147,7 +147,7 @@ models :
         description: Booleano que indica que o setor foi extinto.
       - name: nome_completo
         description: Nome completo do setor.
-  - name: funcionario_evento
+  - name: recursos_humanos_ergon_comlurb__funcionario_evento
     description: "**Descrição**: Eventos relacionados a situação funcional do funcionário
       da Comlurb. Ex. Contratação, progressão, designação em cargo de comissão, etc;\n
       **Frequência de atualização**: Nunca\n**Cobertura temporal**: Não informado\n
@@ -193,7 +193,7 @@ models :
         description: Código numérico do cargo do funcionário.
       - name: id_setor
         description: Código do setor onde o funcionário trabalha.
-  - name: dependente
+  - name: recursos_humanos_ergon_comlurb__dependente
     description: "**Descrição**: Dependentes dos empregados da Comlurb.\n**Frequência
       de atualização**: Nunca\n**Cobertura temporal**: Não informado\n**Órgão gestor
       dos dados**: SUBGGC\n**Publicado por**: Não informado\n**Publicado por (email)**:
@@ -304,7 +304,7 @@ models :
       - name: agencia
         description: Número da agência onde está a conta corrente para recebimento
           de pagamentos da Comlurb.
-  - name: cargo
+  - name: recursos_humanos_ergon_comlurb__cargo
     description: "**Descrição**: Tipos de cargos existentes na COMLURB. Não entram
       os tipos de cargos em comissão.\n**Frequência de atualização**: Nunca\n**Cobertura
       temporal**: Não informado\n**Órgão gestor dos dados**: SUBGGC\n**Publicado por**:
@@ -328,7 +328,7 @@ models :
         description: Todos cadastrados com N.
       - name: escolaridade
         description: Escolaridade Minima exigida para o cargo/emprego.
-  - name: ficha_financeira
+  - name: recursos_humanos_ergon_comlurb__ficha_financeira
     description: "**Descrição**: Valores de rubricas de fichas financeiras dos funcionários
       da COMLURB. Constam fichas desde o início do ERGON COMLURB. Uma ficha financeira
       é um resumo do contracheque do servidor.\n**Frequência de atualização**: Nunca\n
@@ -363,7 +363,7 @@ models :
         description: Mês e ano da folha da ficha financeira.
       - name: numero_folha
         description: Número da folha da ficha financeira.
-  - name: funcionario
+  - name: recursos_humanos_ergon_comlurb__funcionario
     description: "**Descrição**: Pessoas físicas que precisam ter suas informações
       guardadas pela COMLURB para controle, como controle de pagamento, de frequência
       ou de lotação. Em geral são pessoas que entram ou entraram em alguma folha da
@@ -638,7 +638,7 @@ models :
       - name: impedimento
         description: Preenchido caso a pessoa tenha algum impedimento. Ex. Impedimento
           judicial, Curatela definitiva, interditado provisoriamente.
-  - name: fita_banco
+  - name: recursos_humanos_ergon_comlurb__fita_banco
     description: "**Descrição**: Fitas enviadas para o tesouro municipal contendo
       informações sobre pagamentos a serem feitos a funcionários da COMLURB.\n**Frequência
       de atualização**: Nunca\n**Cobertura temporal**: Não informado\n**Órgão gestor
@@ -727,7 +727,7 @@ models :
           Geral, lotados na saúde.
       - name: id_cpf
         description: CPF da pessoa que vai receber o pagamento.
-  - name: setor
+  - name: recursos_humanos_ergon_comlurb__setor
     description: "**Descrição**: Setores existentes na COMLURB. São setores existentes
       no SICI.\n**Frequência de atualização**: Nunca\n**Cobertura temporal**: Não
       informado\n**Órgão gestor dos dados**: SUBGGC\n**Publicado por**: Não informado\n
