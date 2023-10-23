@@ -9,5 +9,4 @@ SELECT
     SAFE_CAST(TRIM(dias_licesp) AS BOOLEAN) AS dias_de_licenca_especial,
     SAFE_CAST(TRIM(adictchefia) AS BOOLEAN) AS tempo_de_chefia,
     SAFE_CAST(TRIM(progressao) AS BOOLEAN) AS progressao,
-    SAFE_CAST(TRIM(avaliacao) AS BOOLEAN) AS avaliacao,
 FROM rj-smfp.recursos_humanos_ergon_staging.tipo_tempo AS t
