@@ -45,7 +45,6 @@ SELECT
     SAFE_CAST(TRIM(catmili) AS STRING) AS categoria_documento_militar,
     SAFE_CAST(TRIM(municipio_cart_cod) AS STRING) AS municipio_certidao_civil,
     SAFE_CAST(TRIM(cidadeender_cod) AS STRING) AS municipio_logradouro,
-    SAFE_CAST(TRIM(cidnasc_cod) AS STRING) AS municipio_nascimento,
     SAFE_CAST(TRIM(flex_campo_03) AS STRING) AS nome,
     SAFE_CAST(REGEXP_REPLACE(TRIM(flex_campo_06), r'\.0$', '') AS STRING) AS id_ric,
     SAFE_CAST(TRIM(flex_campo_07) AS STRING) AS orgao_ric,
