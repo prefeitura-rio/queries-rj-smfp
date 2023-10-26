@@ -17,3 +17,11 @@ default:
       location: US
       threads: 2
       keyfile: /credentials-prod/prod.json
+    compile:
+      type: bigquery
+      method: service-account
+      project: rj-smfp
+      dataset: dbt
+      location: US
+      threads: 2
+      keyfile: credentials/dev.json
