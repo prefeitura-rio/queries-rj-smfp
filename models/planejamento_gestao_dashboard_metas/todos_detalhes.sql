@@ -172,6 +172,7 @@ SELECT
     WHEN pe_tendencia_meta_desdobrada = "Cumprida parcialmente" then "#ABAD67" 
     WHEN pe_tendencia_meta_desdobrada = "Atraso grave" then "#E2843C"
     WHEN pe_tendencia_meta_desdobrada = "Não cumprida" then "#BD443F" 
+    WHEN pe_tendencia_meta_desdobrada = "Descontinuada" then "#8B0000" 
     ELSE "#4F4F4F"
     END                               as dashboard_cor_fonte_pe,
   ar_nome_meta                        as dashboard_descricao,
@@ -230,6 +231,7 @@ SELECT
     WHEN pe_tendencia_meta_desdobrada = "Cumprida parcialmente" then "#ABAD67" 
     WHEN pe_tendencia_meta_desdobrada = "Atraso grave" then "#E2843C"
     WHEN pe_tendencia_meta_desdobrada = "Não cumprida" then "#BD443F" 
+    WHEN pe_tendencia_meta_desdobrada = "Descontinuada" then "#8B0000" 
     ELSE "#4F4F4F"
     END                               as dashboard_cor_fonte_pe,
   CASE 
