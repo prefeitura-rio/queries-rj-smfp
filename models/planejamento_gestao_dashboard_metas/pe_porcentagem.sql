@@ -158,7 +158,10 @@ SELECT
   _2024,
   _2025,
   data_valor,
-  valor
+  CASE
+    WHEN valor IN ('nan') THEN NULL
+    ELSE valor 
+  END valor
 FROM pe_geral
 UNPIVOT(valor FOR data_valor IN (
   jan_21,
