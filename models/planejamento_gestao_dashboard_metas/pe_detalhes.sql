@@ -147,22 +147,22 @@ SELECT
   origem,
   --tendencia_subdivisao,
   CASE 
-    WHEN LOWER(tendencia_cumprimento_meta_2023) = "tendência de cumprir" or              LOWER(tendencia_cumprimento_meta_2023) = "cumprida" then "#005A38" 
-    WHEN LOWER(tendencia_cumprimento_meta_2023) = "tendência de cumprir parcialmente" or LOWER(tendencia_cumprimento_meta_2023) = "cumprida parcialmente" then "#ABAD67" 
-    WHEN LOWER(tendencia_cumprimento_meta_2023) = "tendência de não cumprir" or          LOWER(tendencia_cumprimento_meta_2023) = "não cumprida" then "#DE9B89" 
-    WHEN LOWER(tendencia_cumprimento_meta_2023) = "descontinuada" then "#8B0000"
+    WHEN LOWER(tendencia_cumprimento_meta_2024) = "tendência de cumprir" or              LOWER(tendencia_cumprimento_meta_2024) = "cumprida" then "#005A38" 
+    WHEN LOWER(tendencia_cumprimento_meta_2024) = "tendência de cumprir parcialmente" or LOWER(tendencia_cumprimento_meta_2024) = "cumprida parcialmente" then "#ABAD67" 
+    WHEN LOWER(tendencia_cumprimento_meta_2024) = "tendência de não cumprir" or          LOWER(tendencia_cumprimento_meta_2024) = "não cumprida" then "#DE9B89" 
+    WHEN LOWER(tendencia_cumprimento_meta_2024) = "descontinuada" then "#8B0000"
     ELSE "#4F4F4F" END 
     AS cor_fonte,
   CASE 
-    WHEN LOWER(tendencia_cumprimento_meta_2023) = "cumprida" then "Cumprida"
-    WHEN LOWER(tendencia_cumprimento_meta_2023) = "cumprida parcialmente" then "Cumprida parcialmente"
-    WHEN LOWER(tendencia_cumprimento_meta_2023) = "não cumprida" then "Não cumprida"
-    WHEN LOWER(tendencia_cumprimento_meta_2023) = "tendência de cumprir" then "Andamento Satisfatório"
-    WHEN LOWER(tendencia_cumprimento_meta_2023) = "tendência de cumprir parcialmente" then "Atraso Recuperável"
-    WHEN LOWER(tendencia_cumprimento_meta_2023) = "tendência de não cumprir" then "Atraso grave"
-    WHEN LOWER(tendencia_cumprimento_meta_2023) = "indefinida" then "Indefinida"
-    WHEN LOWER(tendencia_cumprimento_meta_2023) = "não se aplica" then "Sem informações/Não se aplica" 
-    WHEN LOWER(tendencia_cumprimento_meta_2023) = "descontinuada" then "Descontinuada" 
+    WHEN LOWER(tendencia_cumprimento_meta_2024) = "cumprida" then "Cumprida"
+    WHEN LOWER(tendencia_cumprimento_meta_2024) = "cumprida parcialmente" then "Cumprida parcialmente"
+    WHEN LOWER(tendencia_cumprimento_meta_2024) = "não cumprida" then "Não cumprida"
+    WHEN LOWER(tendencia_cumprimento_meta_2024) = "tendência de cumprir" then "Andamento Satisfatório"
+    WHEN LOWER(tendencia_cumprimento_meta_2024) = "tendência de cumprir parcialmente" then "Atraso Recuperável"
+    WHEN LOWER(tendencia_cumprimento_meta_2024) = "tendência de não cumprir" then "Atraso grave"
+    WHEN LOWER(tendencia_cumprimento_meta_2024) = "indefinida" then "Indefinida"
+    WHEN LOWER(tendencia_cumprimento_meta_2024) = "não se aplica" then "Sem informações/Não se aplica" 
+    WHEN LOWER(tendencia_cumprimento_meta_2024) = "descontinuada" then "Descontinuada" 
     ELSE "VALOR NÃO ENCONTRADO" END
     AS pe_tendencia_normalizada,
   codigo_tema,
@@ -186,7 +186,7 @@ SELECT
     ELSE _2021
   END _2021,
   CASE 
-    WHEN CONTAINS_SUBSTR(_2021, "Sem valor alvo") AND _2022 != "Sem valor alvo" THEN REPLACE(_2022, "Sem valor alvo", "")
+    WHEN CONTAINS_SUBSTR(_2022, "Sem valor alvo") AND _2022 != "Sem valor alvo" THEN REPLACE(_2022, "Sem valor alvo", "")
     ELSE _2022
   END _2022,
   CASE 
@@ -194,7 +194,7 @@ SELECT
     ELSE _2023
   END _2023,
   CASE 
-    WHEN CONTAINS_SUBSTR(_2021, "Sem valor alvo") AND _2024 != "Sem valor alvo" THEN REPLACE(_2024, "Sem valor alvo", "")
+    WHEN CONTAINS_SUBSTR(_2024, "Sem valor alvo") AND _2024 != "Sem valor alvo" THEN REPLACE(_2024, "Sem valor alvo", "")
     ELSE _2024
   END _2024,
   CASE 
@@ -269,15 +269,15 @@ SELECT
   --orgao_responsavel,
   codigo_meta,                                
   MIN(CASE
-    WHEN LOWER(tendencia_cumprimento_meta_2023) = "não cumprida" then 0
-    WHEN LOWER(tendencia_cumprimento_meta_2023) = "descontinuada" then 1
-    WHEN LOWER(tendencia_cumprimento_meta_2023) = "indefinida" then 2
-    WHEN LOWER(tendencia_cumprimento_meta_2023) = "tendência de não cumprir" then 3
-    WHEN LOWER(tendencia_cumprimento_meta_2023) = "cumprida parcialmente" then 4
-    WHEN LOWER(tendencia_cumprimento_meta_2023) = "tendência de cumprir parcialmente" then 5    
-    WHEN LOWER(tendencia_cumprimento_meta_2023) = "tendência de cumprir" then 6
-    WHEN LOWER(tendencia_cumprimento_meta_2023) = "não se aplica" or LOWER(tendencia_cumprimento_meta_2023) = "não" then 7
-    WHEN LOWER(tendencia_cumprimento_meta_2023) = "cumprida" then 8
+    WHEN LOWER(tendencia_cumprimento_meta_2024) = "não cumprida" then 0
+    WHEN LOWER(tendencia_cumprimento_meta_2024) = "descontinuada" then 1
+    WHEN LOWER(tendencia_cumprimento_meta_2024) = "indefinida" then 2
+    WHEN LOWER(tendencia_cumprimento_meta_2024) = "tendência de não cumprir" then 3
+    WHEN LOWER(tendencia_cumprimento_meta_2024) = "cumprida parcialmente" then 4
+    WHEN LOWER(tendencia_cumprimento_meta_2024) = "tendência de cumprir parcialmente" then 5    
+    WHEN LOWER(tendencia_cumprimento_meta_2024) = "tendência de cumprir" then 6
+    WHEN LOWER(tendencia_cumprimento_meta_2024) = "não se aplica" or LOWER(tendencia_cumprimento_meta_2024) = "não" then 7
+    WHEN LOWER(tendencia_cumprimento_meta_2024) = "cumprida" then 8
 
     ELSE 999 END) tendencia_numero_pe,
 FROM pe_geral

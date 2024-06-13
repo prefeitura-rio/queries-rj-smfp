@@ -150,9 +150,9 @@ with chance_com_comentario as (
   meta.novembro,
   meta.dezembro
   FROM `rj-smfp.planejamento_gestao_acordo_resultados.meta` as meta
-  LEFT JOIN (SELECT * FROM `rj-smfp.planejamento_gestao_acordo_resultados_staging.meta_desdobrada` WHERE ano = '2023') as arp
+  LEFT JOIN (SELECT * FROM `rj-smfp.planejamento_gestao_acordo_resultados_staging.meta_desdobrada` WHERE ano = '2024') as arp
     ON meta.id_meta = CAST(CAST(arp.codigo_egpweb AS FLOAT64) AS STRING)
-  WHERE meta.ano = 2023
+  WHERE meta.ano = 2024
 )
 
 , info_tendencia as (
