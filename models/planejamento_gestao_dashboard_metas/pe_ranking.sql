@@ -143,7 +143,7 @@ pe_valores as (
 SELECT
   id_meta_secretaria,
   origem,
-  tendencia_cumprimento_meta_2023,
+  tendencia_cumprimento_meta_2024,
   -- tendencia_subdivisao,
   tipo_meta,
   casas_decimais,
@@ -218,7 +218,7 @@ pe_ranking as (
   SELECT
     id_meta_secretaria,
     origem,
-    tendencia_cumprimento_meta_2023,
+    tendencia_cumprimento_meta_2024,
     -- tendencia_subdivisao,
     tipo_meta,
     casas_decimais,

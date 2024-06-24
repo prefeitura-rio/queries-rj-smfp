@@ -26,7 +26,7 @@ SELECT
     WHEN ar_unidade_medida = "Percentual" THEN REPLACE(CONCAT(FORMAT("%'d", CAST(FLOOR(dezembro) AS int64)), SUBSTR(FORMAT("%.2f", CAST(dezembro AS float64)), -3), "%"), ".", ",")
     WHEN ar_unidade_medida = "Textual" THEN "Meta entregue"
     ELSE SAFE_CAST(dezembro AS STRING)
-  END as ar_objetivo_2023,
+  END as ar_objetivo_2024,
   ped.id_meta_secretaria as pe_id_meta_secretaria,
   ped.codigo_meta,
   ped.tendencia_pe,
@@ -34,8 +34,8 @@ SELECT
   ped.orgao_responsavel as pe_orgao,
   ped.tipo_meta as pe_tipo_meta,
   ped.casas_decimais as pe_casas_decimais,
-  ped.valor_meta_final AS pe_objetivo_2024,
-  ped._2023 as pe_objetivo_2023,
+  ped.valor_meta_final AS pe_objetivo_final_2024,
+  ped._2024 as pe_objetivo_anual_2024,
   ped.ultimo_resultado as pe_ultimo_resultado,
   ped.data_referencia_resultado as pe_data_referencia_ultimo_resultado,
   ped.descricao_meta_desdobrada as pe_nome_meta,
@@ -55,7 +55,7 @@ LEFT JOIN (
     MIN(chave_meta_ar_egpweb) chave_meta_ar_egpweb
   FROM `rj-smfp.planejamento_gestao_dashboard_metas_staging.relacao_metas` 
   WHERE relacao_entre_indicadores = '1 - Direta (Mesmo indicador)'
-  AND   chave_meta_ar like '2023%'
+  AND   chave_meta_ar like '2024%'
   GROUP BY chave_meta_pe
   ) as rm
   ON ard.id_meta = rm.chave_meta_ar_egpweb
@@ -75,8 +75,8 @@ ORDER BY pe_tipo_meta DESC
     ped.orgao_responsavel as pe_orgao,
     ped.tipo_meta as pe_tipo_meta,
     ped.casas_decimais as pe_casas_decimais,
-    ped.valor_meta_final AS pe_objetivo_2024,
-    ped._2023 as pe_objetivo_2023,
+    ped.valor_meta_final AS pe_objetivo_final_2024,
+    ped._2024 as pe_objetivo_anual_2024,
     ped.ultimo_resultado as pe_ultimo_resultado,
     ped.data_referencia_resultado as pe_data_referencia_ultimo_resultado,
     ped.descricao_meta_desdobrada as pe_nome_meta,
@@ -109,7 +109,7 @@ ORDER BY pe_tipo_meta DESC
       WHEN ar_unidade_medida = "Percentual" THEN REPLACE(CONCAT(FORMAT("%'d", CAST(FLOOR(dezembro) AS int64)), SUBSTR(FORMAT("%.2f", CAST(dezembro AS float64)), -3), "%"), ".", ",")
       WHEN ar_unidade_medida = "Textual" THEN "Meta entregue"
       ELSE SAFE_CAST(dezembro AS STRING)
-      END as ar_objetivo_2023
+      END as ar_objetivo_2024
   FROM {{ ref('pe_detalhes') }} as ped
   --FROM rj-smfp.planejamento_gestao_dashboard_metas.pe_detalhes as ped
   LEFT JOIN (
@@ -118,7 +118,7 @@ ORDER BY pe_tipo_meta DESC
     MIN(chave_meta_ar_egpweb) chave_meta_ar_egpweb
   FROM `rj-smfp.planejamento_gestao_dashboard_metas_staging.relacao_metas` 
   WHERE relacao_entre_indicadores = '1 - Direta (Mesmo indicador)'
-  AND   chave_meta_ar like '2023%'
+  AND   chave_meta_ar like '2024%'
   GROUP BY chave_meta_pe
   ) as rm
   ON rm.chave_meta_pe = ped.codigo_meta_desdobrada
@@ -136,8 +136,8 @@ SELECT
   ar_origem                           as origem_meta,
   ar_orgao                            as orgao_sigla,
   ar_nome_meta                        as dashboard_nome,
-  pe_objetivo_2023                    as dashboard_objetivo_pe,
-  ar_objetivo_2023                    as dashboard_objetivo_ar,
+  pe_objetivo_anual_2024              as dashboard_objetivo_pe,
+  ar_objetivo_2024                    as dashboard_objetivo_ar,
   CASE
     WHEN ar_data_referencia_ultimo_resultado IS NULL and pe_data_referencia_ultimo_resultado IS NULL THEN NULL
     WHEN ar_data_referencia_ultimo_resultado IS NULL THEN pe_ultimo_resultado
@@ -179,7 +179,7 @@ SELECT
   ar_resumo_comentarios               as dashboard_resumo,
   ar_resumo_comentarios               as dashboard_comentarios,
   "ACORDO DE RESULTADOS"              as dashboard_tema,
-  ar_objetivo_2023                    as dashboard_detalhamento_objetivo,
+  ar_objetivo_2024                    as dashboard_detalhamento_objetivo,
   ar_tipo_meta                        as tipo_meta,
   NULL                                as desdobramento_anual_da_meta,
   pe_codigo_meta_desdobrada           as pe_codigo_meta_desdobrada
@@ -195,8 +195,8 @@ SELECT
   pe_origem                           as origem_meta,
   pe_orgao                            as orgao_sigla,
   pe_nome_meta                        as dashboard_nome,
-  pe_objetivo_2023                    as dashboard_objetivo_pe,
-  ar_objetivo_2023                    as dashboard_objetivo_ar,
+  pe_objetivo_anual_2024              as dashboard_objetivo_pe,
+  ar_objetivo_2024                    as dashboard_objetivo_ar,
   CASE
     WHEN ar_data_referencia_ultimo_resultado IS NULL and pe_data_referencia_ultimo_resultado IS NULL THEN NULL
     WHEN ar_data_referencia_ultimo_resultado IS NULL THEN pe_ultimo_resultado
@@ -241,7 +241,7 @@ SELECT
   pe_resumo_executivo                 as dashboard_resumo,
   pe_comentarios_da_meta              as dashboard_comentarios,
   pe_tema_transversal                 as dashboard_tema,
-  pe_objetivo_2023                    as dashboard_detalhamento_objetivo,
+  pe_objetivo_anual_2024              as dashboard_detalhamento_objetivo,
   pe_tipo_meta                        as tipo_meta,
   pe_desdobramento_anual_da_meta      as desdobramento_anual_da_meta,
   pe_codigo_meta_desdobrada           as pe_codigo_meta_desdobrada
@@ -286,7 +286,7 @@ LEFT JOIN (SELECT
       ELSE FALSE
     END as colocar_logo_abaixo
   FROM `rj-smfp.planejamento_gestao_dashboard_metas_staging.relacao_metas`
-  WHERE chave_meta_ar like '2023%') as rel_ind
+  WHERE chave_meta_ar like '2024%') as rel_ind
     ON tj.id_meta_principal = rel_ind.chave_meta_ar_egpweb
 LEFT JOIN (SELECT codigo_egpweb, MIN(cod_meta_d) as ordem_meta_ar FROM `rj-smfp.planejamento_gestao_acordo_resultados_staging.meta_desdobrada` group by codigo_egpweb) as rm
     ON tj.id_meta_principal = SAFE_CAST(SAFE_CAST(rm.codigo_egpweb AS FLOAT64) AS STRING)
