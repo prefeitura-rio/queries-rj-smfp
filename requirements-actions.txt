@@ -1,7 +1,0 @@
-pyyaml
-gspread
-pandas
-requests
-openpyxl
-ruamel.yaml
-markdown

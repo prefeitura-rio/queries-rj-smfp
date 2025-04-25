@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: unidades_administrativas_staging
+    database: rj-iplanrio
+    schema: unidades_administrativas_staging
+    tables:
+      - name: orgaos
