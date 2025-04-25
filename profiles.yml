@@ -1,27 +1,26 @@
-default:
+smfp:
   target: dev
   outputs:
     dev:
-      type: bigquery
-      method: service-account
-      project: rj-smfp
       dataset: dbt
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: /tmp/credentials.json
       location: US
-      threads: 2
-      keyfile: /credentials-dev/dev.json
+      method: service-account
+      priority: interactive
+      project: rj-smfp-dev
+      threads: 8
+      type: bigquery
     prod:
-      type: bigquery
-      method: service-account
-      project: rj-smfp
       dataset: dbt
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: /tmp/credentials.json
       location: US
-      threads: 2
-      keyfile: /credentials-prod/prod.json
-    compile:
-      type: bigquery
       method: service-account
+      priority: interactive
       project: rj-smfp
-      dataset: dbt
-      location: US
-      threads: 2
-      keyfile: credentials/dev.json
+      threads: 8
+      type: bigquery
+
