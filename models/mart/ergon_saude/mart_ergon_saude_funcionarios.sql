@@ -65,7 +65,7 @@ with
     ),
 
     vacancia_vinculo as (
-        select id_funcionario, id_vinculo, data_vacancia
+        select id_funcionario, id_vinculo, data_vacancia, id_matricula_vinculo as matricula
         from  {{ ref("raw_ergon_vinculo") }}
     -- get the most recent id_vinculo
     -- qualify
@@ -97,6 +97,7 @@ with
             array_agg(
                 struct(
                     f.id_funcionario,
+                    vv.matricula,
                     f.nome,
                     case
                         when (p.provimento_fim is null) and (vv.data_vacancia is null)
