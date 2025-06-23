@@ -1,7 +1,7 @@
 {{
     config(
         alias='vinculo',
-        schema='brutos_ergon'
+        schema='recursos_humanos_ergon'
     )
 }}
 

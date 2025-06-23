@@ -1,7 +1,7 @@
 {{
     config(
         alias='setor',
-        schema='brutos_ergon'
+        schema='recursos_humanos_ergon'
     )
 }}
 SELECT
